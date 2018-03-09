@@ -58,9 +58,13 @@ public class ScrTail implements Screen, InputProcessor {
         nY = nY+nDy;
         if (nDy!=0) {
             nY2= nY+nDy-nY3;
+        } else {
+            nY2= nY;
         }
         if (nDx!=0) {
             nX2= nX+nDx-nX3;
+        } else {
+            nX2=nX;
         }
         sprMhead.setX(nX);
         sprMhead.setY(nY);
