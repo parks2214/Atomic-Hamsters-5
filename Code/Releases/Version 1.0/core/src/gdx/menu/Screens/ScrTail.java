@@ -9,8 +9,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.Input;
-import com.badlogic.gdx.graphics.g2d.Animation;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
+
 import gdx.menu.GamMenu;
 import gdx.menu.images.Button;
 import gdx.menu.images.Wall;
@@ -18,17 +17,13 @@ import gdx.menu.images.Wall;
 public class ScrTail implements Screen, InputProcessor {
 
     Button btnMenu, btnQuit;
-    Wall[] arWall = new Wall[4];
     GamMenu gamMenu;
     OrthographicCamera oc;
     SpriteBatch batch;
-    Texture txNamP, txWall, txSheet;
-    Sprite sprNamP, sprMouse, sprAni;
-    int nFrame, nPos, nW, nH, nSx, nSy, nX = 100, nY = 100, nX2, nY2;
-    Animation araniMouse[];
-    TextureRegion trTemp;
-    boolean arbDirection[] = new boolean[4];
-    float fSpeed = 1, fW, fH;
+    Texture txMHead, txMTail;
+    Sprite sprMouse, sprAni, sprMhead,sprMtail;
+    int  nX2, nY2, nX = 50, nY = 50,nY3=60,nX3=60, nDx, nDy;
+
 
     public ScrTail(GamMenu _gamMenu) {  //Referencing the main class.
         gamMenu = _gamMenu;
@@ -39,45 +34,48 @@ public class ScrTail implements Screen, InputProcessor {
         oc = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.setToOrtho(true, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.update();
-        txWall = new Texture("Wall2.jpg");
-        //Setting up Walls
-       // arWall[0] = new Wall(Gdx.graphics.getWidth(), 50, 0, 50);    //Top Wall
-       // arWall[1] = new Wall(50, Gdx.graphics.getHeight() - 100, Gdx.graphics.getWidth() - 50, 50);   //Right Wall
-        //arWall[2] = new Wall(50, Gdx.graphics.getHeight() - 100, 0, 50);     //Left Wall
-        //arWall[3] = new Wall(Gdx.graphics.getWidth(), 50, 0, Gdx.graphics.getHeight() - 100);       //Bottom Wall
         batch = new SpriteBatch();
-        txNamP = new Texture("P.jpg");
-        txSheet = new Texture("hamsterhead.png");
-        fW = txSheet.getWidth() / 4;
-        fH = txSheet.getHeight() / 4;
-        sprMouse = new Sprite(txSheet);
-        sprMouse.setFlip(false, true);
-        nX2 = 0;
-        nY2 = 0;
-        sprMouse.setPosition(30, 40);
-        sprNamP = new Sprite(txNamP);
-        sprNamP.setSize(60, 80);
-        sprNamP.setFlip(false, true);
-        sprNamP.setPosition(Gdx.graphics.getWidth() / 2 - 30, Gdx.graphics.getHeight() / 2 - 40);
+        txMTail = new Texture("Hamstertail.png");
+        sprMtail = new Sprite (txMTail);
+        sprMtail.setSize (20,40);
+        sprMtail.setFlip(false,true);
+        sprMtail.setPosition(nX,nY);
+        txMHead = new Texture("hamsterhead.png");
+        sprMhead = new Sprite(txMHead);
+        sprMhead.setSize(60, 80);
+        sprMhead.setFlip(false, true);
+        sprMhead.setPosition(nX, nY);
         btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Menu.jpg");
         btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Quit.jpg");
-        //Animation stuff
         Gdx.input.setInputProcessor(this);
     }
 
     @Override
     public void render(float delta) {
-        Gdx.gl.glClearColor(1, 1, 1, 1); //White background.
+        Gdx.gl.glClearColor(1, 1, 1, 1);//White background
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+        nX = nX+nDx;
+        nY = nY+nDy;
+        if (nDy!=0) {
+            nY2= nY+nDy-nY3;
+        } else {
+            nY2= nY;
+        }
+        if (nDx!=0) {
+            nX2= nX+nDx-nX3;
+        } else {
+            nX2=nX;
+        }
+        sprMhead.setX(nX);
+        sprMhead.setY(nY);
+        sprMtail.setX(nX2);
+        sprMtail.setY(nY2);
         batch.begin();
         batch.setProjectionMatrix(oc.combined);
         btnMenu.draw(batch);
-        sprNamP.draw(batch);
         btnQuit.draw(batch);
-        batch.draw(txSheet, nX2, nY2);
-        /*for (int i = 0; i < arWall.length; i++) {
-            arWall[i].draw(batch);
-        }*/
+        sprMhead.draw(batch);
+        sprMtail.draw(batch);
         batch.end();
 
     }
@@ -101,24 +99,24 @@ public class ScrTail implements Screen, InputProcessor {
     @Override
     public void dispose() {
         batch.dispose();
-        txNamP.dispose();
     }
 
     @Override
     public boolean keyDown(int keycode) {
-        if (keycode == Input.Keys.UP) {
-            nY2++;
-        } else if (keycode == Input.Keys.DOWN) {
-            nY2--;
-        } else if (keycode == Input.Keys.LEFT) {
-            nX2--;
-        } else if (keycode == Input.Keys.RIGHT) {
-            nX2++;
-        } else {
-            System.out.println("Zappa for President");
+        if (keycode == Input.Keys.A) {
+            nDx=-1;
+            nDy=0;
+        } else if (keycode == Input.Keys.D) {
+            nDx=1;
+            nDy=0;
+        } else if (keycode == Input.Keys.W) {
+            nDy=-1;
+            nDx=0;
+        } else if (keycode == Input.Keys.S) {
+            nDy=1;
+            nDx=0;
         }
-
-        return true;
+        return false;
     }
 
     @Override
