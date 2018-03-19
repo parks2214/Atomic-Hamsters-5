@@ -103,7 +103,7 @@ public class ScrFood implements Screen, InputProcessor {
         trTemp = araniMouse[nPos].getKeyFrame(nFrame, false);
         if (isHitS(sprAni, sprHamP) && nTrig == 0) {
             System.out.println("He hecking ate it");
-            fSpeed += 1;
+            fSpeed += 0.5f;
             System.out.println(fSpeed);
             nTrig = 1;
         } else if (isHitS(sprAni, sprHamP) && nTrig == 3) {
