@@ -1,4 +1,4 @@
-package gdx.menu.desktop;
+ package gdx.menu.desktop;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
