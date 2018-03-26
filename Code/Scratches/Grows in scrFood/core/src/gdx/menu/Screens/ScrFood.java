@@ -105,9 +105,11 @@ public class ScrFood implements Screen, InputProcessor {
             System.out.println("He hecking ate it");
             fSpeed += 0.5f;
             System.out.println(fSpeed);
-            nTrig = 1;
-            nSizeX += 10;
-            nSizeY += 10;
+            if (nSizeX < 100 && nSizeY < 100) {
+                nSizeX += 3;
+                nSizeY += 3;
+                System.out.println(nSizeX + "   " + nSizeY);
+            }
         } else if (isHitS(sprAni, sprHamP) && nTrig == 3) {
             nTrig = 3;
         } else if (!isHitS(sprAni, sprHamP)) {
@@ -227,7 +229,9 @@ public class ScrFood implements Screen, InputProcessor {
             if (isHitB(screenX, screenY, btnMenu)) {
                 gamMenu.updateState(0);
                 System.out.println("Hit Menu");
-                fSpeed=1;
+                fSpeed = 0;
+                nSizeX = 50;
+                nSizeY = 50;
             } else if (isHitB(screenX, screenY, btnQuit)) {
                 System.out.println("Quit");
                 System.exit(0);

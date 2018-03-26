@@ -27,7 +27,7 @@ public class ScrGame implements Screen, InputProcessor {
     Sprite arsprTextbox[] = new Sprite[2];
     int nFrame, nPos, nX = 100, nY = 100, nTrig = 0;
     Animation araniMouse[];
-    int fSx, fSy, fW, fH, nDir = 0;
+    int fSx, fSy, fW, fH, nDir = 0, nSizeX = 50, nSizeY = 50;
     Wall[] arWall = new Wall[4];
     int DX[] = {1, 0, -1, 0};
     int DY[] = {0, -1, 0, 1};
@@ -109,6 +109,11 @@ public class ScrGame implements Screen, InputProcessor {
             fSpeed += 0.5f;
             System.out.println(fSpeed);
             nTrig = 1;
+            if (nSizeX < 100 && nSizeY < 100) {
+                nSizeX += 3;
+                nSizeY += 3;
+                System.out.println(nSizeX + "   " + nSizeY);
+            }
         } else if (isHitS(sprMouse, sprHamP) && nTrig == 3) {
             nTrig = 3;
         } else if (!isHitS(sprMouse, sprHamP)) {
@@ -131,28 +136,26 @@ public class ScrGame implements Screen, InputProcessor {
         if (DY[nDir] == 0) {
             sprMouse.setY(sprMouse.getY() + DY[nDir]);
             nY = nY += DY[nDir];
-        } else if (DY[nDir] < 0){
+        } else if (DY[nDir] < 0) {
             sprMouse.setY(sprMouse.getY() + DY[nDir] - fSpeed);
             nY = nY += DY[nDir] - fSpeed;
-        } 
-        else {
+        } else {
             sprMouse.setY(sprMouse.getY() + DY[nDir] + fSpeed);
             nY = nY += DY[nDir] + fSpeed;
-            
+
         }
         if (DX[nDir] == 0) {
             sprMouse.setX(sprMouse.getX() + DX[nDir]);
             nX = nX += DX[nDir];
-        } else if (DX[nDir] < 0){
+        } else if (DX[nDir] < 0) {
             sprMouse.setX(sprMouse.getX() + DX[nDir] - fSpeed);
             nX = nX += DX[nDir] - fSpeed;
-        } 
-        else {
+        } else {
             sprMouse.setX(sprMouse.getX() + DX[nDir] + fSpeed);
             nX = nX += DX[nDir] + fSpeed;
-            
+
         }
-        
+
         nFrame++;
         if (nDir == 0) {
             nPos = 2;
@@ -163,7 +166,7 @@ public class ScrGame implements Screen, InputProcessor {
         } else if (nDir == 3) {
             nPos = 0;
         }
-        
+
         for (int i = 0; i < arWall.length; i++) {
             if (isHitS(sprMouse, arWall[i])) {
                 sprMouse.setPosition(fSx, fSy);
@@ -176,9 +179,9 @@ public class ScrGame implements Screen, InputProcessor {
         }
         sprMap.draw(batch);
         sprHamP.draw(batch);
-        batch.draw(trTemp, fSx, fSy);
         btnMenu.draw(batch);
         btnQuit.draw(batch);
+        batch.draw(trTemp, fSx, fSy, nSizeX, nSizeY);
         batch.end();
     }
 
@@ -226,7 +229,9 @@ public class ScrGame implements Screen, InputProcessor {
             if (isHitB(screenX, screenY, btnMenu)) {
                 gamMenu.updateState(0);
                 System.out.println("Hit Menu");
-                fSpeed = 1;
+                fSpeed = 0;
+                nSizeX = 50;
+                nSizeY = 50;
             } else if (isHitB(screenX, screenY, btnQuit)) {
                 System.out.println("Quit");
                 System.exit(0);
@@ -267,4 +272,3 @@ public class ScrGame implements Screen, InputProcessor {
         return spr1.getBoundingRectangle().overlaps(spr2.getBoundingRectangle());
     }
 }
-
