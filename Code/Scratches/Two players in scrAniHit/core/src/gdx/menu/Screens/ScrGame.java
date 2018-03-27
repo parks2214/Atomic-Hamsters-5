@@ -25,7 +25,7 @@ public class ScrGame implements Screen, InputProcessor {
     Texture txSheet, txNamGame, txMap, txHamP, txTextbox1, txTextbox2, txHouse;// txTextbox3, txHouse;
     Sprite sprNamGame, sprMouse, sprMouse2, sprMap, sprHamP, sprHouse;   //sprAni is a ghost, a sprite used for hit detection, maybe a bit redundant
     Sprite arsprTextbox[] = new Sprite[2];
-    int nFrame, nPos, nPos2, nX = 100, nY = 100, nX2 = 100, nY2 = 100, nTrig = 0;
+    int nFrame, nPos, nPos2, nX = 100, nY = 100, nX2 = 100, nY2 = 100, nTrig = 0, nTrig2 = 0;
     Animation araniMouse[], araniMouse2[];
     int fSx, fSy, fSx2, fSy2, fW, fH, nDir = 0, nDir2 = 0;
     Wall[] arWall = new Wall[4];
@@ -129,15 +129,15 @@ public class ScrGame implements Screen, InputProcessor {
             nTrig = 0;
         }
         //Pellet for hamster 2
-        if (isHitS(sprMouse2, sprHamP) && nTrig == 0) {
+        if (isHitS(sprMouse2, sprHamP) && nTrig2 == 0) {
             System.out.println("He hecking ate it");
             fSpeed2 += 0.5f;
             System.out.println(fSpeed2);
-            nTrig = 1;
-        } else if (isHitS(sprMouse2, sprHamP) && nTrig == 3) {
-            nTrig = 3;
+            nTrig2 = 1;
+        } else if (isHitS(sprMouse2, sprHamP) && nTrig2 == 3) {
+            nTrig2 = 3;
         } else if (!isHitS(sprMouse2, sprHamP)) {
-            nTrig = 0;
+            nTrig2 = 0;
         }
         //Input for hamster 1
         if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
@@ -160,7 +160,7 @@ public class ScrGame implements Screen, InputProcessor {
             nDir2 = 3;
         }
 
-        //Direction instruction      
+        //Direction instruction for mouse 1    
         if (DY[nDir] == 0) {
             sprMouse.setY(sprMouse.getY() + DY[nDir]);
             nY = nY += DY[nDir];
@@ -186,10 +186,10 @@ public class ScrGame implements Screen, InputProcessor {
             
         }
         //Direction instruction for mouse 2     
-        if (DY2[nDir2] == 4) {
+        if (DY2[nDir2] == 0) {
             sprMouse2.setY(sprMouse2.getY() + DY2[nDir2]);
             nY2 = nY2 += DY2[nDir2];
-        } else if (DY2[nDir2] < 4){
+        } else if (DY2[nDir2] < 0){
             sprMouse2.setY(sprMouse2.getY() + DY2[nDir2] - fSpeed2);
             nY2 = nY2 += DY2[nDir2] - fSpeed2;
         } 
@@ -198,10 +198,10 @@ public class ScrGame implements Screen, InputProcessor {
             nY2 = nY2 += DY2[nDir2] + fSpeed2;
             
         }
-        if (DX2[nDir2] == 4) {
+        if (DX2[nDir2] == 0) {
             sprMouse2.setX(sprMouse2.getX() + DX2[nDir2]);
             nX2 = nX2 += DX2[nDir2];
-        } else if (DX2[nDir2] < 4){
+        } else if (DX2[nDir2] < 0){
             sprMouse2.setX(sprMouse2.getX() + DX2[nDir2] - fSpeed2);
             nX2 = nX2 += DX2[nDir2] - fSpeed2;
         } 
