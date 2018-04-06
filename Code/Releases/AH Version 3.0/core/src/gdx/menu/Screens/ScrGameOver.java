@@ -1,5 +1,6 @@
 package gdx.menu.Screens;
 
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
@@ -13,6 +14,7 @@ import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import gdx.menu.GamMenu;
 import gdx.menu.images.Button;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 
 public class ScrGameOver implements Screen, InputProcessor {
 
@@ -22,6 +24,8 @@ public class ScrGameOver implements Screen, InputProcessor {
     OrthographicCamera oc;
     SpriteBatch batch;
     Sprite sprBackground;
+    BitmapFont font;
+    int nPoints, nPoints2;
 
     public ScrGameOver(GamMenu _gamMenu) {  //Referencing the main class.
         gamMenu = _gamMenu;
@@ -30,16 +34,22 @@ public class ScrGameOver implements Screen, InputProcessor {
     @Override
     public void show() {
         oc = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
-        oc.setToOrtho(true, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+        oc.setToOrtho(false, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.update();
         batch = new SpriteBatch();
+        font = new BitmapFont();
+        font.setColor (Color.BLACK);
         btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Menu.jpg");
         btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Quit.jpg");
+        btnMenu.setFlip(false, false);
+        btnQuit.setFlip(false, false);
         txBackground = new Texture ("explosion.png");
         sprBackground = new Sprite (txBackground);
         sprBackground.setScale(0.9f,0.7f);
         sprBackground.setPosition(Gdx.graphics.getWidth() / 2 - sprBackground.getWidth() / 2, Gdx.graphics.getHeight() / 2 - sprBackground.getHeight() / 2);
-        sprBackground.setFlip(false, true);
+        sprBackground.setFlip(false, false);
+        nPoints = ScrGame.nPoints;
+        nPoints2 = ScrGame.nPoints2;
         Gdx.input.setInputProcessor(this);
     }
 
@@ -53,6 +63,8 @@ public class ScrGameOver implements Screen, InputProcessor {
         sprBackground.draw(batch);
         btnMenu.draw(batch);
         btnQuit.draw(batch);
+        font.draw(batch, "Second Player's Points: " + nPoints2, 20, 50);
+        font.draw(batch, "First Player's Points: " + nPoints, 20, 80);
         batch.end();
     }
 
@@ -75,6 +87,7 @@ public class ScrGameOver implements Screen, InputProcessor {
     @Override
     public void dispose() {
         batch.dispose();
+        font.dispose();
     }
 
     @Override
