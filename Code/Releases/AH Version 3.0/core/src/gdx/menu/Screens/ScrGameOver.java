@@ -10,8 +10,6 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.Animation;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import gdx.menu.GamMenu;
 import gdx.menu.images.Button;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -37,10 +35,9 @@ public class ScrGameOver implements Screen, InputProcessor {
         oc.setToOrtho(false, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.update();
         batch = new SpriteBatch();
-        font = new BitmapFont();
         font.setColor (Color.BLACK);
-        btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Menu.jpg");
-        btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Quit.jpg");
+        btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, 0, "Menu.jpg");
+        btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, Gdx.graphics.getHeight() - 50, "Quit.jpg");
         btnMenu.setFlip(false, false);
         btnQuit.setFlip(false, false);
         txBackground = new Texture ("explosion.png");
@@ -65,6 +62,13 @@ public class ScrGameOver implements Screen, InputProcessor {
         btnQuit.draw(batch);
         font.draw(batch, "Second Player's Points: " + nPoints2, 20, 50);
         font.draw(batch, "First Player's Points: " + nPoints, 20, 80);
+        if (nPoints > nPoints2) {
+            font.draw(batch, "WINNER: Player 1", 20, 450);
+        } else if (nPoints2 > nPoints) {
+            font.draw(batch, "WINNER: Player 2", 20, 450);
+        } else {
+            font.draw(batch, "PLAYERS TIED!", 20, 450);
+        }
         batch.end();
     }
 
@@ -120,6 +124,7 @@ public class ScrGameOver implements Screen, InputProcessor {
 
         return false;
     }
+
 
     @Override
     public boolean touchUp(int screenX, int screenY, int pointer, int button) {
