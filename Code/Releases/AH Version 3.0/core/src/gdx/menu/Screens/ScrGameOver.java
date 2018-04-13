@@ -11,8 +11,6 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.math.Matrix4;
-import com.badlogic.gdx.math.Vector3;
 import gdx.menu.GamMenu;
 import gdx.menu.images.Button;
 
@@ -23,11 +21,9 @@ public class ScrGameOver implements Screen, InputProcessor {
     Texture txBackground;
     OrthographicCamera oc;
     SpriteBatch batch = new SpriteBatch();
-    SpriteBatch batchFont = new SpriteBatch();
     Sprite sprBackground;
     BitmapFont font;
     int nPoints, nPoints2;
-    Matrix4 mx4Font;
 
     public ScrGameOver(GamMenu _gamMenu) {  //Referencing the main class.
         gamMenu = _gamMenu;
@@ -38,10 +34,7 @@ public class ScrGameOver implements Screen, InputProcessor {
         oc = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.setToOrtho(true, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.update();
-        font = new BitmapFont(true);
-        mx4Font = new Matrix4();
-        mx4Font.setToRotation(new Vector3(200, 200, 0), 180);
-        batchFont.setTransformMatrix(mx4Font);
+        font = new BitmapFont(true);//this flips the font (https://stackoverflow.com/questions/8508749/draw-a-bitmapfont-rotated-in-libgdx)
         font.setColor(Color.BLACK);
         font.getData().setScale(1.2f);
         font.getRegion().getTexture().setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
@@ -69,11 +62,11 @@ public class ScrGameOver implements Screen, InputProcessor {
         font.draw(batch, "Second Player's Points: " + nPoints2, 20, 60);
         font.draw(batch, "First Player's Points: " + nPoints, 20, 80);
         if (nPoints > nPoints2) {
-            font.draw(batch, "WINNER: Player 1", 500, 70);
+            font.draw(batch, "WINNER: Player 1", 490, 70);
         } else if (nPoints2 > nPoints) {
-            font.draw(batch, "WINNER: Player 2", 500, 70);
+            font.draw(batch, "WINNER: Player 2", 490, 70);
         } else {
-            font.draw(batch, "PLAYERS TIED!", 500, 70);
+            font.draw(batch, "PLAYERS TIED!", 490, 70);
         }
         batch.end();
     }
