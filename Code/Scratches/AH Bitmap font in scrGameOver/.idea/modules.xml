@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
+      <module fileurl="file://$PROJECT_DIR$/.idea/AH Bitmap font in scrGameOver.iml" filepath="$PROJECT_DIR$/.idea/AH Bitmap font in scrGameOver.iml" />
+=======
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Game_over_screen.iml" filepath="$PROJECT_DIR$/.idea/modules/Game_over_screen.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/core.iml" filepath="$PROJECT_DIR$/.idea/modules/core/core.iml" group="core" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/core_main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/core_main.iml" group="core" />
@@ -12,6 +15,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/html/html.iml" filepath="$PROJECT_DIR$/.idea/modules/html/html.iml" group="html" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/html/html_main.iml" filepath="$PROJECT_DIR$/.idea/modules/html/html_main.iml" group="html" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/html/html_test.iml" filepath="$PROJECT_DIR$/.idea/modules/html/html_test.iml" group="html" />
+>>>>>>> fcae29c84192dc812e2cb8739c22881781ec5dc5
     </modules>
   </component>
 </project>
