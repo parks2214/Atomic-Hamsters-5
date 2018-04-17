@@ -4,10 +4,12 @@
  */
 package gdx.menu.images;
 
+import com.badlogic.gdx.graphics.g2d.Sprite;
+
 /**
  *
  * @author parks2214
  */
-public class Animation {
-    
+public class Animation extends Sprite {
+
 }
