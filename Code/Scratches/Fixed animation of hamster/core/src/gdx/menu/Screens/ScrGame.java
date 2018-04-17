@@ -11,6 +11,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.math.Rectangle;
 import gdx.menu.GamMenu;
 import gdx.menu.images.Button;
 import gdx.menu.images.Wall;
@@ -22,18 +23,19 @@ public class ScrGame implements Screen, InputProcessor {
     OrthographicCamera oc;
     Button btnMenu, btnQuit;
     TextureRegion trTemp, trTemp2;
-    Texture txSheet, txNamGame, txMap, txHamP, txTextbox1, txTextbox2, txHouse;// txTextbox3, txHouse;
-    Sprite sprNamGame, sprMouse, sprMouse2, sprMap, sprHamP, sprHouse;   //sprAni is a ghost, a sprite used for hit detection, maybe a bit redundant
+    Texture txSheet, txMap, txHamP, txTextbox1, txTextbox2, txHouse;// txTextbox3, txHouse;
+    Sprite sprMouse, sprMouse2, sprMap, sprHamP, sprHouse;   //sprAni is a ghost, a sprite used for hit detection, maybe a bit redundant
     Sprite arsprTextbox[] = new Sprite[2];
     int nFrame, nPos, nPos2, nX = 100, nY = 100, nX2 = 100, nY2 = 100, nTrig = 0, nTrig2 = 0;
     Animation araniMouse[], araniMouse2[];
-    int fSx, fSy, fSx2, fSy2, fW, fH, nDir = 0, nDir2 = 0, nSizeX = 50, nSizeY = 50, nSizeX2 = 50, nSizeY2 = 50;
+    int fSx, fSy, fW, fH, nDir = 0, nDir2 = 0, nSizeX = 50, nSizeY = 50, nSizeX2 = 50, nSizeY2 = 50;
     Wall[] arWall = new Wall[4];
     int DX[] = {1, 0, -1, 0};
     int DY[] = {0, -1, 0, 1};
     int DX2[] = {1, 0, -1, 0};
     int DY2[] = {0, -1, 0, 1};
     float fSpeed = 0, fSpeed2 = 0;
+    Rectangle rectMouse, rectMouse2;
 
 
     public ScrGame(GamMenu _gamMenu) {
@@ -345,6 +347,13 @@ public class ScrGame implements Screen, InputProcessor {
 
     public boolean isHitS(Sprite spr1, Sprite spr2) {
         return spr1.getBoundingRectangle().overlaps(spr2.getBoundingRectangle());
+    }
+
+    public Rectangle GetThisRect (Sprite sprMouse) {
+        rectMouse = sprMouse.getBoundingRectangle();
+        rectMouse2 = new Rectangle(rectMouse.getX(), rectMouse.getY() - 10, rectMouse.getWidth(), rectMouse.getHeight() - 10);
+        System.out.println(rectMouse);
+        return rectMouse2;
     }
 }
 
