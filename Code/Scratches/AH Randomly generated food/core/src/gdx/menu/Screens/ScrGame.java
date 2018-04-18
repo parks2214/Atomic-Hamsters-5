@@ -71,7 +71,7 @@ public class ScrGame implements Screen, InputProcessor {
         sprHamP.setPosition(400, 270);
         sprHamP.setSize(50, 50);
         sprHamP.setFlip(false, true);
-        //Animation Stuff
+        //Randomly Stuff
         nFrame = 0;
         nPos = 0;
         nPos2 = 0;
@@ -109,7 +109,7 @@ public class ScrGame implements Screen, InputProcessor {
         float fSy = sprMouse.getY();
         float fSx2 = sprMouse2.getX();
         float fSy2 = sprMouse2.getY();
-        //Animation Stuff
+        //Randomly Stuff
 
         if (nFrame > 7) {
             nFrame = 0;

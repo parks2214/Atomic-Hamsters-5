@@ -67,7 +67,7 @@ public class ScrFood implements Screen, InputProcessor {
         arbDirection[1] = false;
         arbDirection[2] = false;
         arbDirection[3] = false;
-        //Animation stuff
+        //Randomly stuff
         nFrame = 0;
         nPos = 0;
         araniMouse = new Animation[4];
@@ -96,7 +96,7 @@ public class ScrFood implements Screen, InputProcessor {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         float fSx = sprAni.getX();
         float fSy = sprAni.getY();
-        //Animation Stuff
+        //Randomly Stuff
         if (nFrame > 7) {
             nFrame = 0;
         }
