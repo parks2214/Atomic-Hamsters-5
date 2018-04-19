@@ -1,12 +1,6 @@
 package gdx.menu;
 import com.badlogic.gdx.Game;
-import gdx.menu.Screens.ScrMenu;
-import gdx.menu.Screens.ScrTail;
-import gdx.menu.Screens.ScrFood;
-import gdx.menu.Screens.ScrAnimation;
-import gdx.menu.Screens.ScrAniHit;
-import gdx.menu.Screens.ScrGame;
-
+import gdx.menu.Screens.*;
 
 
 public class GamMenu extends Game {

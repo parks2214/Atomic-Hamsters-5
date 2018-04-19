@@ -11,6 +11,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.math.Rectangle;
 import gdx.menu.GamMenu;
 import gdx.menu.images.Button;
 
@@ -25,12 +26,12 @@ public class ScrAnimation implements Screen, InputProcessor {
     int fW, fH, fSx, fSy;
     int nFrame, nPos;
     int nX = 100, nY = 100;
-    Sprite sprButtonMenu, sprButtonSign, sprNamT, sprMouse;
+    Sprite sprNamT, sprMouse;
     SpriteBatch batch;
     int nDir = 0;
     int DX[] = {1, 0, -1, 0};
     int DY[] = {0, -1, 0, 1};
-
+    Rectangle rectMouse, rectMouse2;
     public ScrAnimation(GamMenu _gamMenu) {
         gamMenu = _gamMenu;
     }
@@ -73,7 +74,6 @@ public class ScrAnimation implements Screen, InputProcessor {
         Gdx.input.setInputProcessor(this);
     }
 
-    @Override
     public void render(float delta) {
         Gdx.gl.glClearColor(1, 1, 1, 1); //White background.
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
@@ -198,5 +198,13 @@ public class ScrAnimation implements Screen, InputProcessor {
             return false;
         }
     }
-}
 
+    //Trying to do hitboxes but I'm not good at them
+    //nor do I really understand how to code in java
+    public Rectangle GetThisRect() {
+        rectMouse = sprMouse.getBoundingRectangle();
+        rectMouse2 = new Rectangle(rectMouse.getX(), rectMouse.getY() - 10, rectMouse.getWidth(), rectMouse.getHeight() - 10);
+        System.out.println(rectMouse);
+        return rectMouse2;
+    }
+}

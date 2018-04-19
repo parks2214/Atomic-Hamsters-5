@@ -2,11 +2,172 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff6eba52-1d98-4608-9799-8b7a7aa81931" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../AH Version 3.5/.idea/modules/AH_Version_3.5.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../../Scratches/AH Unique hit detection in scrGame/.idea/modules/AH_Unique_hit_detection_in_scrGame.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/.gradle/2.10/taskArtifacts/cache.properties.lock" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/.gradle/2.10/taskArtifacts/fileHashes.bin" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/.gradle/2.10/taskArtifacts/outputFileStates.bin" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/assets/oldmouse.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/assets/sprmouse.png" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/assets/sprmouse.png" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/out/production/classes/gdx/menu/GamMenu.class" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/out/production/classes/gdx/menu/GamMenu.class" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/out/production/classes/gdx/menu/Screens/ScrAnimation.class" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/out/production/classes/gdx/menu/Screens/ScrAnimation.class" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/out/production/classes/gdx/menu/Screens/ScrGame.class" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/out/production/classes/gdx/menu/Screens/ScrGame.class" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/out/production/classes/gdx/menu/images/Animation.class" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/out/production/classes/gdx/menu/images/Animation.class" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/src/gdx/menu/GamMenu.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/src/gdx/menu/GamMenu.java" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/src/gdx/menu/Screens/ScrAnimation.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/src/gdx/menu/Screens/ScrAnimation.java" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/src/gdx/menu/Screens/ScrGame.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/src/gdx/menu/Screens/ScrGame.java" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/src/gdx/menu/images/Animation.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/src/gdx/menu/images/Animation.java" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.gradle/2.10/taskArtifacts/cache.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/compiler.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/gradle.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_1_9_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_backend_gwt_1_9_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_backend_gwt_sources_1_9_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_backend_lwjgl_1_9_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_box2d_1_9_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_box2d_gwt_sources_1_9_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_box2d_platform_natives_desktop_1_9_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_box2d_sources_1_9_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_platform_natives_desktop_1_9_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_sources_1_9_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_badlogicgames_jlayer_jlayer_1_0_1_gdx.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_google_gwt_gwt_codeserver_2_6_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_google_gwt_gwt_dev_2_6_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_google_gwt_gwt_servlet_2_6_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_google_gwt_gwt_user_2_6_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_google_gwt_gwt_user_2_6_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__javax_validation_validation_api_1_0_0_GA.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__javax_validation_validation_api_sources_1_0_0_GA.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__net_java_jinput_jinput_2_0_5.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__net_java_jinput_jinput_platform_natives_linux_2_0_5.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__net_java_jinput_jinput_platform_natives_osx_2_0_5.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__net_java_jinput_jinput_platform_natives_windows_2_0_5.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__net_java_jutils_jutils_1_0_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__org_jcraft_jorbis_0_0_17.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__org_json_json_20090211.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__org_lwjgl_lwjgl_lwjgl_2_9_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__org_lwjgl_lwjgl_lwjgl_platform_natives_linux_2_9_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__org_lwjgl_lwjgl_lwjgl_platform_natives_osx_2_9_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__org_lwjgl_lwjgl_lwjgl_platform_natives_windows_2_9_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__org_lwjgl_lwjgl_lwjgl_util_2_9_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/Fixed_animation_of_hamster.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/Scratches-Fixed_animation_of_hamster.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/core/Fixed animation of hamster-core.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/core/Fixed animation of hamster-core_test.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/core/Fixed animation of hamster-core_test.iml___jb_tmp___" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/core/core.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/core/core_main.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/core/core_test.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/desktop/Fixed animation of hamster-desktop.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/desktop/desktop.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/desktop/desktop_main.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/desktop/desktop_test.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/html/Fixed animation of hamster-html.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/html/html.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/html/html_main.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/html/html_test.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/vcs.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/out/production/classes/gdx/menu/Screens/ScrGame.class" afterPath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/out/production/classes/gdx/menu/Screens/ScrGame.class" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/src/gdx/menu/Screens/ScrGame.java" afterPath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/src/gdx/menu/Screens/ScrGame.java" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.nb-gradle/private/cache/Atomic-Hamsters--d41d8cd98f00b204e9800998ecf8427e" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.nb-gradle/private/cache/Version 1.0-d41d8cd98f00b204e9800998ecf8427e" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.nb-gradle/private/cache/Version 2.0-d41d8cd98f00b204e9800998ecf8427e" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.nb-gradle/private/cache/Version 2.5-d41d8cd98f00b204e9800998ecf8427e" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.nb-gradle/private/cache/core-fb83b73eb3c879b18d343675f32aca61" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.nb-gradle/private/cache/desktop-9bccb601584b92d9c041663102aef73f" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.nb-gradle/private/cache/html-7853a72bbcb559002d3549c9e93b15fe" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.nb-gradle/profiles/private/aux-config" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/Documents/ICS4UI - Status Report #1.docx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/build.gradle" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/A.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/AniHit.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/Animation.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/EarthBG.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/Food.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/G.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/Game.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/HamP.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/Hamstertail.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/M.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/Menu.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/P.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/Play.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/Quit.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/S.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/SignB.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/Tail.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/Textbox.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/Textbox2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/Wall2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/brokenmouse.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/hamsterhead.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/hamsterhead3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/jupiter.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/sprmouse.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build.gradle" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build/classes/main/gdx/menu/GamMenu.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build/classes/main/gdx/menu/Screens/ScrAniHit.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build/classes/main/gdx/menu/Screens/ScrAnimation.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build/classes/main/gdx/menu/Screens/ScrFood.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build/classes/main/gdx/menu/Screens/ScrGame.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build/classes/main/gdx/menu/Screens/ScrMenu.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build/classes/main/gdx/menu/Screens/ScrTail.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build/classes/main/gdx/menu/images/Animation.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build/classes/main/gdx/menu/images/Button.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build/classes/main/gdx/menu/images/Wall.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build/libs/core-1.0.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build/tmp/jar/MANIFEST.MF" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/out/production/classes/gdx/menu/GamMenu.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/out/production/classes/gdx/menu/Screens/ScrAniHit.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/out/production/classes/gdx/menu/Screens/ScrAnimation.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/out/production/classes/gdx/menu/Screens/ScrFood.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/out/production/classes/gdx/menu/Screens/ScrGame.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/out/production/classes/gdx/menu/Screens/ScrMenu.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/out/production/classes/gdx/menu/Screens/ScrTail.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/out/production/classes/gdx/menu/images/Animation.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/out/production/classes/gdx/menu/images/Button.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/out/production/classes/gdx/menu/images/Wall.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/src/GdxMenu.gwt.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/src/gdx/menu/GamMenu.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/src/gdx/menu/Screens/ScrAniHit.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/src/gdx/menu/Screens/ScrAnimation.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/src/gdx/menu/Screens/ScrFood.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/src/gdx/menu/Screens/ScrGame.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/src/gdx/menu/Screens/ScrMenu.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/src/gdx/menu/Screens/ScrTail.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/src/gdx/menu/images/Animation.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/src/gdx/menu/images/Button.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/src/gdx/menu/images/Wall.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/desktop/build.gradle" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/desktop/build/classes/main/gdx/menu/desktop/DesktopLauncher.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/desktop/out/production/classes/gdx/menu/desktop/DesktopLauncher.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/desktop/src/gdx/menu/desktop/DesktopLauncher.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/gradle.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/gradle/wrapper/gradle-wrapper.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/gradle/wrapper/gradle-wrapper.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/gradlew" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/gradlew.bat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/html/build.gradle" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/html/src/gdx/menu/GdxDefinition.gwt.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/html/src/gdx/menu/GdxDefinitionSuperdev.gwt.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/html/src/gdx/menu/client/HtmlLauncher.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/html/webapp/WEB-INF/web.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/html/webapp/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/html/webapp/refresh.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/html/webapp/soundmanager2-jsmin.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/html/webapp/soundmanager2-setup.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/html/webapp/styles.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/settings.gradle" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/core/.gradle/" />
     <ignored path="$PROJECT_DIR$/core/build/" />
@@ -36,7 +197,7 @@
       <file leaf-file-name="ScrGame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="374">
               <caret line="34" column="34" lean-forward="false" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -61,17 +222,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScrFood.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ScrFood.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrFood.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="63" column="33" lean-forward="false" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
+            <state relative-caret-position="476">
+              <caret line="90" column="5" lean-forward="false" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DesktopLauncher.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DesktopLauncher.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/desktop/src/gdx/menu/desktop/DesktopLauncher.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
@@ -1248,7 +1409,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="21" />
     <option name="width" value="1260" />
@@ -1310,14 +1471,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Scratches/AH Unique hit detection in scrGame" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -1457,7 +1618,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2222,17 +2384,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrFood.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="63" column="33" lean-forward="false" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="374">
           <caret line="34" column="34" lean-forward="false" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -2260,6 +2414,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrFood.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="90" column="5" lean-forward="false" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
           <folding />
         </state>
       </provider>
