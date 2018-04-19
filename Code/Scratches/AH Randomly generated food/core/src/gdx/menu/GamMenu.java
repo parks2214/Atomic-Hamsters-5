@@ -18,7 +18,7 @@ public class GamMenu extends Game {
     ScrAniHit scrAniHit;
     ScrGame scrGame;
     ScrGameOver scrGameOver;
-    int nScreen; // 0 for menu, 1 for play, 2 for Sign, 3 for Randomly, 4 for AniHit, 5 for Game, 6 for GameOver
+    int nScreen; // 0 for menu, 1 for play, 2 for Sign, 3 for PelletMaker, 4 for AniHit, 5 for Game, 6 for GameOver
     
     public void updateState(int _nScreen) {
         nScreen = _nScreen;

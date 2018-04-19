@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff6eba52-1d98-4608-9799-8b7a7aa81931" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/core/src/gdx/menu/images/Pellet.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/core/src/gdx/menu/GamMenu.java" afterPath="$PROJECT_DIR$/core/src/gdx/menu/GamMenu.java" />
       <change beforePath="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrAniHit.java" afterPath="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrAniHit.java" />
@@ -10,7 +10,7 @@
       <change beforePath="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrFood.java" afterPath="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrFood.java" />
       <change beforePath="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame.java" afterPath="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame.java" />
       <change beforePath="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrMenu.java" afterPath="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrMenu.java" />
-      <change beforePath="$PROJECT_DIR$/core/src/gdx/menu/images/Animation.java" afterPath="$PROJECT_DIR$/core/src/gdx/menu/images/Randomly.java" />
+      <change beforePath="$PROJECT_DIR$/core/src/gdx/menu/images/Randomly.java" afterPath="$PROJECT_DIR$/core/src/gdx/menu/images/PelletMaker.java" />
     </list>
     <ignored path="$PROJECT_DIR$/core/.gradle/" />
     <ignored path="$PROJECT_DIR$/core/build/" />
@@ -40,31 +40,34 @@
       <file leaf-file-name="ScrFood.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrFood.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+            <state relative-caret-position="397">
+              <caret line="173" column="9" lean-forward="false" selection-start-line="173" selection-start-column="9" selection-end-line="173" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Randomly.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/images/Randomly.java">
+      <file leaf-file-name="PelletMaker.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/images/PelletMaker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+            <state relative-caret-position="323">
+              <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#401#409#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Button.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/images/Button.java">
+      <file leaf-file-name="Pellet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/images/Pellet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="12" selection-end-column="24" />
-              <folding />
+            <state relative-caret-position="187">
+              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,9 +85,22 @@
       <file leaf-file-name="ScrMenu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
-              <caret line="108" column="38" lean-forward="false" selection-start-line="108" selection-start-column="38" selection-end-line="108" selection-end-column="38" />
+            <state relative-caret-position="170">
+              <caret line="34" column="113" lean-forward="false" selection-start-line="34" selection-start-column="113" selection-end-line="34" selection-end-column="113" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GamMenu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/GamMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="654">
+              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1747#1748#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -120,26 +136,26 @@
       <file leaf-file-name="ScrGame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="109" column="2" lean-forward="true" selection-start-line="109" selection-start-column="2" selection-end-line="110" selection-end-column="38" />
+            <state relative-caret-position="459">
+              <caret line="30" column="17" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1486#1487#0" expanded="true" />
                 <element signature="e#1520#1521#0" expanded="true" />
-                <element signature="e#10918#10919#0" expanded="true" />
-                <element signature="e#10946#10947#0" expanded="true" />
-                <element signature="e#11001#11002#0" expanded="true" />
-                <element signature="e#11029#11030#0" expanded="true" />
-                <element signature="e#11090#11091#0" expanded="true" />
-                <element signature="e#11118#11119#0" expanded="true" />
-                <element signature="e#11858#11859#0" expanded="true" />
-                <element signature="e#11886#11887#0" expanded="true" />
-                <element signature="e#11974#11975#0" expanded="true" />
-                <element signature="e#12002#12003#0" expanded="true" />
-                <element signature="e#12075#12076#0" expanded="true" />
-                <element signature="e#12103#12104#0" expanded="true" />
-                <element signature="e#12160#12161#0" expanded="true" />
-                <element signature="e#12188#12189#0" expanded="true" />
+                <element signature="e#10924#10925#0" expanded="true" />
+                <element signature="e#10952#10953#0" expanded="true" />
+                <element signature="e#11007#11008#0" expanded="true" />
+                <element signature="e#11035#11036#0" expanded="true" />
+                <element signature="e#11096#11097#0" expanded="true" />
+                <element signature="e#11124#11125#0" expanded="true" />
+                <element signature="e#11864#11865#0" expanded="true" />
+                <element signature="e#11892#11893#0" expanded="true" />
+                <element signature="e#11980#11981#0" expanded="true" />
+                <element signature="e#12008#12009#0" expanded="true" />
+                <element signature="e#12081#12082#0" expanded="true" />
+                <element signature="e#12109#12110#0" expanded="true" />
+                <element signature="e#12166#12167#0" expanded="true" />
+                <element signature="e#12194#12195#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1040,6 +1056,7 @@
     </option>
     <option name="modificationStamps">
       <map>
+        <entry key="$PROJECT_DIR$" value="10662985351361" />
         <entry key="$PROJECT_DIR$/build.gradle" value="3571373960" />
         <entry key="$PROJECT_DIR$/core/build.gradle" value="2971590108" />
         <entry key="$PROJECT_DIR$/desktop/build.gradle" value="1728858683" />
@@ -1238,18 +1255,25 @@
     <option name="externalProjectsViewState">
       <projects_view />
     </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/gradle.properties" />
         <option value="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrAniHit.java" />
-        <option value="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrMenu.java" />
         <option value="$PROJECT_DIR$/core/src/gdx/menu/GamMenu.java" />
-        <option value="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrFood.java" />
         <option value="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame.java" />
         <option value="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGameOver.java" />
         <option value="$PROJECT_DIR$/core/src/gdx/menu/images/Randomly.java" />
+        <option value="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrMenu.java" />
+        <option value="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrFood.java" />
+        <option value="$PROJECT_DIR$/core/src/gdx/menu/images/Pellet.java" />
+        <option value="$PROJECT_DIR$/core/src/gdx/menu/images/PelletMaker.java" />
       </list>
     </option>
   </component>
@@ -1275,10 +1299,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1312,10 +1332,22 @@
               <item name="menu" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="AH Randomly generated food" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AH Randomly generated food" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="menu" type="462c0819:PsiDirectoryNode" />
+              <item name="Screens" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1470,7 +1502,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1502,46 +1534,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGameOver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#923#924#0" expanded="true" />
-            <element signature="e#3285#3286#0" expanded="true" />
-            <element signature="e#3313#3314#0" expanded="true" />
-            <element signature="e#3368#3369#0" expanded="true" />
-            <element signature="e#3396#3397#0" expanded="true" />
-            <element signature="e#3457#3458#0" expanded="true" />
-            <element signature="e#3485#3486#0" expanded="true" />
-            <element signature="e#4046#4047#0" expanded="true" />
-            <element signature="e#4074#4075#0" expanded="true" />
-            <element signature="e#4162#4163#0" expanded="true" />
-            <element signature="e#4190#4191#0" expanded="true" />
-            <element signature="e#4263#4264#0" expanded="true" />
-            <element signature="e#4291#4292#0" expanded="true" />
-            <element signature="e#4348#4349#0" expanded="true" />
-            <element signature="e#4376#4377#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/GamMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1714#1715#0" expanded="true" />
-            <element signature="e#1744#1745#0" expanded="true" />
-            <element signature="e#1787#1788#0" expanded="true" />
-            <element signature="e#1818#1819#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -1558,20 +1550,20 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1486#1487#0" expanded="true" />
             <element signature="e#1520#1521#0" expanded="true" />
-            <element signature="e#10918#10919#0" expanded="true" />
-            <element signature="e#10946#10947#0" expanded="true" />
-            <element signature="e#11001#11002#0" expanded="true" />
-            <element signature="e#11029#11030#0" expanded="true" />
-            <element signature="e#11090#11091#0" expanded="true" />
-            <element signature="e#11118#11119#0" expanded="true" />
-            <element signature="e#11858#11859#0" expanded="true" />
-            <element signature="e#11886#11887#0" expanded="true" />
-            <element signature="e#11974#11975#0" expanded="true" />
-            <element signature="e#12002#12003#0" expanded="true" />
-            <element signature="e#12075#12076#0" expanded="true" />
-            <element signature="e#12103#12104#0" expanded="true" />
-            <element signature="e#12160#12161#0" expanded="true" />
-            <element signature="e#12188#12189#0" expanded="true" />
+            <element signature="e#10924#10925#0" expanded="true" />
+            <element signature="e#10952#10953#0" expanded="true" />
+            <element signature="e#11007#11008#0" expanded="true" />
+            <element signature="e#11035#11036#0" expanded="true" />
+            <element signature="e#11096#11097#0" expanded="true" />
+            <element signature="e#11124#11125#0" expanded="true" />
+            <element signature="e#11864#11865#0" expanded="true" />
+            <element signature="e#11892#11893#0" expanded="true" />
+            <element signature="e#11980#11981#0" expanded="true" />
+            <element signature="e#12008#12009#0" expanded="true" />
+            <element signature="e#12081#12082#0" expanded="true" />
+            <element signature="e#12109#12110#0" expanded="true" />
+            <element signature="e#12166#12167#0" expanded="true" />
+            <element signature="e#12194#12195#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1591,9 +1583,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1714#1715#0" expanded="true" />
-            <element signature="e#1744#1745#0" expanded="true" />
             <element signature="e#1787#1788#0" expanded="true" />
-            <element signature="e#1818#1819#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1640,20 +1630,20 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1486#1487#0" expanded="true" />
             <element signature="e#1520#1521#0" expanded="true" />
-            <element signature="e#10918#10919#0" expanded="true" />
-            <element signature="e#10946#10947#0" expanded="true" />
-            <element signature="e#11001#11002#0" expanded="true" />
-            <element signature="e#11029#11030#0" expanded="true" />
-            <element signature="e#11090#11091#0" expanded="true" />
-            <element signature="e#11118#11119#0" expanded="true" />
-            <element signature="e#11858#11859#0" expanded="true" />
-            <element signature="e#11886#11887#0" expanded="true" />
-            <element signature="e#11974#11975#0" expanded="true" />
-            <element signature="e#12002#12003#0" expanded="true" />
-            <element signature="e#12075#12076#0" expanded="true" />
-            <element signature="e#12103#12104#0" expanded="true" />
-            <element signature="e#12160#12161#0" expanded="true" />
-            <element signature="e#12188#12189#0" expanded="true" />
+            <element signature="e#10924#10925#0" expanded="true" />
+            <element signature="e#10952#10953#0" expanded="true" />
+            <element signature="e#11007#11008#0" expanded="true" />
+            <element signature="e#11035#11036#0" expanded="true" />
+            <element signature="e#11096#11097#0" expanded="true" />
+            <element signature="e#11124#11125#0" expanded="true" />
+            <element signature="e#11864#11865#0" expanded="true" />
+            <element signature="e#11892#11893#0" expanded="true" />
+            <element signature="e#11980#11981#0" expanded="true" />
+            <element signature="e#12008#12009#0" expanded="true" />
+            <element signature="e#12081#12082#0" expanded="true" />
+            <element signature="e#12109#12110#0" expanded="true" />
+            <element signature="e#12166#12167#0" expanded="true" />
+            <element signature="e#12194#12195#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1707,9 +1697,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1714#1715#0" expanded="true" />
-            <element signature="e#1744#1745#0" expanded="true" />
             <element signature="e#1787#1788#0" expanded="true" />
-            <element signature="e#1818#1819#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1722,20 +1710,20 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1486#1487#0" expanded="true" />
             <element signature="e#1520#1521#0" expanded="true" />
-            <element signature="e#10918#10919#0" expanded="true" />
-            <element signature="e#10946#10947#0" expanded="true" />
-            <element signature="e#11001#11002#0" expanded="true" />
-            <element signature="e#11029#11030#0" expanded="true" />
-            <element signature="e#11090#11091#0" expanded="true" />
-            <element signature="e#11118#11119#0" expanded="true" />
-            <element signature="e#11858#11859#0" expanded="true" />
-            <element signature="e#11886#11887#0" expanded="true" />
-            <element signature="e#11974#11975#0" expanded="true" />
-            <element signature="e#12002#12003#0" expanded="true" />
-            <element signature="e#12075#12076#0" expanded="true" />
-            <element signature="e#12103#12104#0" expanded="true" />
-            <element signature="e#12160#12161#0" expanded="true" />
-            <element signature="e#12188#12189#0" expanded="true" />
+            <element signature="e#10924#10925#0" expanded="true" />
+            <element signature="e#10952#10953#0" expanded="true" />
+            <element signature="e#11007#11008#0" expanded="true" />
+            <element signature="e#11035#11036#0" expanded="true" />
+            <element signature="e#11096#11097#0" expanded="true" />
+            <element signature="e#11124#11125#0" expanded="true" />
+            <element signature="e#11864#11865#0" expanded="true" />
+            <element signature="e#11892#11893#0" expanded="true" />
+            <element signature="e#11980#11981#0" expanded="true" />
+            <element signature="e#12008#12009#0" expanded="true" />
+            <element signature="e#12081#12082#0" expanded="true" />
+            <element signature="e#12109#12110#0" expanded="true" />
+            <element signature="e#12166#12167#0" expanded="true" />
+            <element signature="e#12194#12195#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1756,20 +1744,20 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1486#1487#0" expanded="true" />
             <element signature="e#1520#1521#0" expanded="true" />
-            <element signature="e#10918#10919#0" expanded="true" />
-            <element signature="e#10946#10947#0" expanded="true" />
-            <element signature="e#11001#11002#0" expanded="true" />
-            <element signature="e#11029#11030#0" expanded="true" />
-            <element signature="e#11090#11091#0" expanded="true" />
-            <element signature="e#11118#11119#0" expanded="true" />
-            <element signature="e#11858#11859#0" expanded="true" />
-            <element signature="e#11886#11887#0" expanded="true" />
-            <element signature="e#11974#11975#0" expanded="true" />
-            <element signature="e#12002#12003#0" expanded="true" />
-            <element signature="e#12075#12076#0" expanded="true" />
-            <element signature="e#12103#12104#0" expanded="true" />
-            <element signature="e#12160#12161#0" expanded="true" />
-            <element signature="e#12188#12189#0" expanded="true" />
+            <element signature="e#10924#10925#0" expanded="true" />
+            <element signature="e#10952#10953#0" expanded="true" />
+            <element signature="e#11007#11008#0" expanded="true" />
+            <element signature="e#11035#11036#0" expanded="true" />
+            <element signature="e#11096#11097#0" expanded="true" />
+            <element signature="e#11124#11125#0" expanded="true" />
+            <element signature="e#11864#11865#0" expanded="true" />
+            <element signature="e#11892#11893#0" expanded="true" />
+            <element signature="e#11980#11981#0" expanded="true" />
+            <element signature="e#12008#12009#0" expanded="true" />
+            <element signature="e#12081#12082#0" expanded="true" />
+            <element signature="e#12109#12110#0" expanded="true" />
+            <element signature="e#12166#12167#0" expanded="true" />
+            <element signature="e#12194#12195#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1819,9 +1807,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1714#1715#0" expanded="true" />
-            <element signature="e#1744#1745#0" expanded="true" />
             <element signature="e#1787#1788#0" expanded="true" />
-            <element signature="e#1818#1819#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1834,20 +1820,20 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1486#1487#0" expanded="true" />
             <element signature="e#1520#1521#0" expanded="true" />
-            <element signature="e#10918#10919#0" expanded="true" />
-            <element signature="e#10946#10947#0" expanded="true" />
-            <element signature="e#11001#11002#0" expanded="true" />
-            <element signature="e#11029#11030#0" expanded="true" />
-            <element signature="e#11090#11091#0" expanded="true" />
-            <element signature="e#11118#11119#0" expanded="true" />
-            <element signature="e#11858#11859#0" expanded="true" />
-            <element signature="e#11886#11887#0" expanded="true" />
-            <element signature="e#11974#11975#0" expanded="true" />
-            <element signature="e#12002#12003#0" expanded="true" />
-            <element signature="e#12075#12076#0" expanded="true" />
-            <element signature="e#12103#12104#0" expanded="true" />
-            <element signature="e#12160#12161#0" expanded="true" />
-            <element signature="e#12188#12189#0" expanded="true" />
+            <element signature="e#10924#10925#0" expanded="true" />
+            <element signature="e#10952#10953#0" expanded="true" />
+            <element signature="e#11007#11008#0" expanded="true" />
+            <element signature="e#11035#11036#0" expanded="true" />
+            <element signature="e#11096#11097#0" expanded="true" />
+            <element signature="e#11124#11125#0" expanded="true" />
+            <element signature="e#11864#11865#0" expanded="true" />
+            <element signature="e#11892#11893#0" expanded="true" />
+            <element signature="e#11980#11981#0" expanded="true" />
+            <element signature="e#12008#12009#0" expanded="true" />
+            <element signature="e#12081#12082#0" expanded="true" />
+            <element signature="e#12109#12110#0" expanded="true" />
+            <element signature="e#12166#12167#0" expanded="true" />
+            <element signature="e#12194#12195#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1902,20 +1888,20 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1486#1487#0" expanded="true" />
             <element signature="e#1520#1521#0" expanded="true" />
-            <element signature="e#10918#10919#0" expanded="true" />
-            <element signature="e#10946#10947#0" expanded="true" />
-            <element signature="e#11001#11002#0" expanded="true" />
-            <element signature="e#11029#11030#0" expanded="true" />
-            <element signature="e#11090#11091#0" expanded="true" />
-            <element signature="e#11118#11119#0" expanded="true" />
-            <element signature="e#11858#11859#0" expanded="true" />
-            <element signature="e#11886#11887#0" expanded="true" />
-            <element signature="e#11974#11975#0" expanded="true" />
-            <element signature="e#12002#12003#0" expanded="true" />
-            <element signature="e#12075#12076#0" expanded="true" />
-            <element signature="e#12103#12104#0" expanded="true" />
-            <element signature="e#12160#12161#0" expanded="true" />
-            <element signature="e#12188#12189#0" expanded="true" />
+            <element signature="e#10924#10925#0" expanded="true" />
+            <element signature="e#10952#10953#0" expanded="true" />
+            <element signature="e#11007#11008#0" expanded="true" />
+            <element signature="e#11035#11036#0" expanded="true" />
+            <element signature="e#11096#11097#0" expanded="true" />
+            <element signature="e#11124#11125#0" expanded="true" />
+            <element signature="e#11864#11865#0" expanded="true" />
+            <element signature="e#11892#11893#0" expanded="true" />
+            <element signature="e#11980#11981#0" expanded="true" />
+            <element signature="e#12008#12009#0" expanded="true" />
+            <element signature="e#12081#12082#0" expanded="true" />
+            <element signature="e#12109#12110#0" expanded="true" />
+            <element signature="e#12166#12167#0" expanded="true" />
+            <element signature="e#12194#12195#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1935,9 +1921,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1714#1715#0" expanded="true" />
-            <element signature="e#1744#1745#0" expanded="true" />
             <element signature="e#1787#1788#0" expanded="true" />
-            <element signature="e#1818#1819#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1984,20 +1968,20 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1486#1487#0" expanded="true" />
             <element signature="e#1520#1521#0" expanded="true" />
-            <element signature="e#10918#10919#0" expanded="true" />
-            <element signature="e#10946#10947#0" expanded="true" />
-            <element signature="e#11001#11002#0" expanded="true" />
-            <element signature="e#11029#11030#0" expanded="true" />
-            <element signature="e#11090#11091#0" expanded="true" />
-            <element signature="e#11118#11119#0" expanded="true" />
-            <element signature="e#11858#11859#0" expanded="true" />
-            <element signature="e#11886#11887#0" expanded="true" />
-            <element signature="e#11974#11975#0" expanded="true" />
-            <element signature="e#12002#12003#0" expanded="true" />
-            <element signature="e#12075#12076#0" expanded="true" />
-            <element signature="e#12103#12104#0" expanded="true" />
-            <element signature="e#12160#12161#0" expanded="true" />
-            <element signature="e#12188#12189#0" expanded="true" />
+            <element signature="e#10924#10925#0" expanded="true" />
+            <element signature="e#10952#10953#0" expanded="true" />
+            <element signature="e#11007#11008#0" expanded="true" />
+            <element signature="e#11035#11036#0" expanded="true" />
+            <element signature="e#11096#11097#0" expanded="true" />
+            <element signature="e#11124#11125#0" expanded="true" />
+            <element signature="e#11864#11865#0" expanded="true" />
+            <element signature="e#11892#11893#0" expanded="true" />
+            <element signature="e#11980#11981#0" expanded="true" />
+            <element signature="e#12008#12009#0" expanded="true" />
+            <element signature="e#12081#12082#0" expanded="true" />
+            <element signature="e#12109#12110#0" expanded="true" />
+            <element signature="e#12166#12167#0" expanded="true" />
+            <element signature="e#12194#12195#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2050,9 +2034,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1714#1715#0" expanded="true" />
-            <element signature="e#1744#1745#0" expanded="true" />
             <element signature="e#1787#1788#0" expanded="true" />
-            <element signature="e#1818#1819#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2065,20 +2047,20 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1486#1487#0" expanded="true" />
             <element signature="e#1520#1521#0" expanded="true" />
-            <element signature="e#10918#10919#0" expanded="true" />
-            <element signature="e#10946#10947#0" expanded="true" />
-            <element signature="e#11001#11002#0" expanded="true" />
-            <element signature="e#11029#11030#0" expanded="true" />
-            <element signature="e#11090#11091#0" expanded="true" />
-            <element signature="e#11118#11119#0" expanded="true" />
-            <element signature="e#11858#11859#0" expanded="true" />
-            <element signature="e#11886#11887#0" expanded="true" />
-            <element signature="e#11974#11975#0" expanded="true" />
-            <element signature="e#12002#12003#0" expanded="true" />
-            <element signature="e#12075#12076#0" expanded="true" />
-            <element signature="e#12103#12104#0" expanded="true" />
-            <element signature="e#12160#12161#0" expanded="true" />
-            <element signature="e#12188#12189#0" expanded="true" />
+            <element signature="e#10924#10925#0" expanded="true" />
+            <element signature="e#10952#10953#0" expanded="true" />
+            <element signature="e#11007#11008#0" expanded="true" />
+            <element signature="e#11035#11036#0" expanded="true" />
+            <element signature="e#11096#11097#0" expanded="true" />
+            <element signature="e#11124#11125#0" expanded="true" />
+            <element signature="e#11864#11865#0" expanded="true" />
+            <element signature="e#11892#11893#0" expanded="true" />
+            <element signature="e#11980#11981#0" expanded="true" />
+            <element signature="e#12008#12009#0" expanded="true" />
+            <element signature="e#12081#12082#0" expanded="true" />
+            <element signature="e#12109#12110#0" expanded="true" />
+            <element signature="e#12166#12167#0" expanded="true" />
+            <element signature="e#12194#12195#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2098,20 +2080,20 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1486#1487#0" expanded="true" />
             <element signature="e#1520#1521#0" expanded="true" />
-            <element signature="e#10918#10919#0" expanded="true" />
-            <element signature="e#10946#10947#0" expanded="true" />
-            <element signature="e#11001#11002#0" expanded="true" />
-            <element signature="e#11029#11030#0" expanded="true" />
-            <element signature="e#11090#11091#0" expanded="true" />
-            <element signature="e#11118#11119#0" expanded="true" />
-            <element signature="e#11858#11859#0" expanded="true" />
-            <element signature="e#11886#11887#0" expanded="true" />
-            <element signature="e#11974#11975#0" expanded="true" />
-            <element signature="e#12002#12003#0" expanded="true" />
-            <element signature="e#12075#12076#0" expanded="true" />
-            <element signature="e#12103#12104#0" expanded="true" />
-            <element signature="e#12160#12161#0" expanded="true" />
-            <element signature="e#12188#12189#0" expanded="true" />
+            <element signature="e#10924#10925#0" expanded="true" />
+            <element signature="e#10952#10953#0" expanded="true" />
+            <element signature="e#11007#11008#0" expanded="true" />
+            <element signature="e#11035#11036#0" expanded="true" />
+            <element signature="e#11096#11097#0" expanded="true" />
+            <element signature="e#11124#11125#0" expanded="true" />
+            <element signature="e#11864#11865#0" expanded="true" />
+            <element signature="e#11892#11893#0" expanded="true" />
+            <element signature="e#11980#11981#0" expanded="true" />
+            <element signature="e#12008#12009#0" expanded="true" />
+            <element signature="e#12081#12082#0" expanded="true" />
+            <element signature="e#12109#12110#0" expanded="true" />
+            <element signature="e#12166#12167#0" expanded="true" />
+            <element signature="e#12194#12195#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2152,54 +2134,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrFood.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="109" column="2" lean-forward="true" selection-start-line="109" selection-start-column="2" selection-end-line="110" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1486#1487#0" expanded="true" />
-            <element signature="e#1520#1521#0" expanded="true" />
-            <element signature="e#10918#10919#0" expanded="true" />
-            <element signature="e#10946#10947#0" expanded="true" />
-            <element signature="e#11001#11002#0" expanded="true" />
-            <element signature="e#11029#11030#0" expanded="true" />
-            <element signature="e#11090#11091#0" expanded="true" />
-            <element signature="e#11118#11119#0" expanded="true" />
-            <element signature="e#11858#11859#0" expanded="true" />
-            <element signature="e#11886#11887#0" expanded="true" />
-            <element signature="e#11974#11975#0" expanded="true" />
-            <element signature="e#12002#12003#0" expanded="true" />
-            <element signature="e#12075#12076#0" expanded="true" />
-            <element signature="e#12103#12104#0" expanded="true" />
-            <element signature="e#12160#12161#0" expanded="true" />
-            <element signature="e#12188#12189#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/GamMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1714#1715#0" expanded="true" />
-            <element signature="e#1744#1745#0" expanded="true" />
-            <element signature="e#1787#1788#0" expanded="true" />
-            <element signature="e#1818#1819#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGameOver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -2226,28 +2160,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrMenu.java">
+    <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="108" column="38" lean-forward="false" selection-start-line="108" selection-start-column="38" selection-end-line="108" selection-end-column="38" />
-          <folding />
+        <state relative-caret-position="459">
+          <caret line="30" column="17" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1486#1487#0" expanded="true" />
+            <element signature="e#1520#1521#0" expanded="true" />
+            <element signature="e#10924#10925#0" expanded="true" />
+            <element signature="e#10952#10953#0" expanded="true" />
+            <element signature="e#11007#11008#0" expanded="true" />
+            <element signature="e#11035#11036#0" expanded="true" />
+            <element signature="e#11096#11097#0" expanded="true" />
+            <element signature="e#11124#11125#0" expanded="true" />
+            <element signature="e#11864#11865#0" expanded="true" />
+            <element signature="e#11892#11893#0" expanded="true" />
+            <element signature="e#11980#11981#0" expanded="true" />
+            <element signature="e#12008#12009#0" expanded="true" />
+            <element signature="e#12081#12082#0" expanded="true" />
+            <element signature="e#12109#12110#0" expanded="true" />
+            <element signature="e#12166#12167#0" expanded="true" />
+            <element signature="e#12194#12195#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/images/Button.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="12" selection-end-column="24" />
+        <state relative-caret-position="102">
+          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/images/Randomly.java">
+    <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        <state relative-caret-position="170">
+          <caret line="34" column="113" lean-forward="false" selection-start-line="34" selection-start-column="113" selection-end-line="34" selection-end-column="113" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.3/2bf97653cc496f9ef2f76ecf2f29b1918821f474/gdx-1.9.3-sources.jar!/com/badlogic/gdx/graphics/Pixmap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="147" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/GamMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1747#1748#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrFood.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="173" column="9" lean-forward="false" selection-start-line="173" selection-start-column="9" selection-end-line="173" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/images/Pellet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/images/PelletMaker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#401#409#0" expanded="true" />
           </folding>
         </state>
       </provider>

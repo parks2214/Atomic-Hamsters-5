@@ -51,7 +51,7 @@ public class ScrAnimation implements Screen, InputProcessor {
         sprNamT.setFlip(false, true);
         sprNamT.setSize(60, 80);
         sprNamT.setPosition(Gdx.graphics.getWidth() / 2 - 30, Gdx.graphics.getHeight() / 2 - 40);
-        //Randomly Stuff
+        //PelletMaker Stuff
         nFrame = 0;
         nPos = 0;
         araniMouse = new Animation[4];
@@ -78,7 +78,7 @@ public class ScrAnimation implements Screen, InputProcessor {
         Gdx.gl.glClearColor(1, 1, 1, 1); //White background.
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
-        //Randomly Stuff
+        //PelletMaker Stuff
 
         if (nFrame > 7) {
             nFrame = 0;

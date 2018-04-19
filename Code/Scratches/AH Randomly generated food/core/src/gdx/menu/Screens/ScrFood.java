@@ -13,6 +13,7 @@ import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import gdx.menu.GamMenu;
 import gdx.menu.images.Button;
+import gdx.menu.images.PelletMaker;
 
 public class ScrFood implements Screen, InputProcessor {
 
@@ -28,6 +29,7 @@ public class ScrFood implements Screen, InputProcessor {
     float fSpeed = 1;
     Animation araniMouse[];
     TextureRegion trTemp;
+    PelletMaker pMaker;
 
     public ScrFood(GamMenu _gamMenu) {  //Referencing the main class.
         gamMenu = _gamMenu;
@@ -35,23 +37,24 @@ public class ScrFood implements Screen, InputProcessor {
 
     @Override
     public void show() {
+        //Camerafy
         oc = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.setToOrtho(true, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.update();
         batch = new SpriteBatch();
+        //button
         btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Menu.jpg");
         btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Quit.jpg");
         txNamS = new Texture("S.png");
+        //mouse stuff
         txSheet = new Texture("sprmouse.png");
+        //tis a sign
         sprNamSign = new Sprite(txNamS);
         sprNamSign.setFlip(false, true);
         sprNamSign.setSize(60, 80);
         sprNamSign.setPosition(Gdx.graphics.getWidth() / 2 - 30, Gdx.graphics.getHeight() / 2 - 40);
-        txHamP = new Texture("HamP.png");
-        sprHamP = new Sprite(txHamP);
-        sprHamP.setPosition(150, 150);
-        sprHamP.setSize(50, 50);
-        sprHamP.setFlip(false, true);
+
+        // Textbox stuff
         txBox1 = new Texture("Textbox.png");
         sprBox1 = new Sprite(txBox1);
         sprBox1.setSize(300, 125);
@@ -62,12 +65,14 @@ public class ScrFood implements Screen, InputProcessor {
         sprBox2.setPosition(Gdx.graphics.getWidth() / 2 - sprBox1.getWidth() / 2, 0);
         sprBox2.setSize(300, 125);
         sprBox2.setFlip(false, true);
+
         //Direction sets
         arbDirection[0] = false;
         arbDirection[1] = false;
         arbDirection[2] = false;
         arbDirection[3] = false;
-        //Randomly stuff
+
+        //Animation stuff
         nFrame = 0;
         nPos = 0;
         araniMouse = new Animation[4];
@@ -88,6 +93,9 @@ public class ScrFood implements Screen, InputProcessor {
         sprAni = new Sprite(txNamS, 0, 0, nW, nH);
         sprAni.setPosition(200, 200);
         Gdx.input.setInputProcessor(this);
+
+        //Pellet maker stuff
+        pMaker = new PelletMaker();
     }
 
     @Override
@@ -96,29 +104,11 @@ public class ScrFood implements Screen, InputProcessor {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         float fSx = sprAni.getX();
         float fSy = sprAni.getY();
-        //Randomly Stuff
+        //Animation Stuff
         if (nFrame > 7) {
             nFrame = 0;
         }
         trTemp = araniMouse[nPos].getKeyFrame(nFrame, false);
-        if (isHitS(sprAni, sprHamP) && nTrig == 0) {
-            System.out.println("He hecking ate it");
-            fSpeed += 0.5f;
-            System.out.println(fSpeed);
-            nTrig = 1;
-            if (nSizeX < 100 && nSizeY < 100) {
-                nSizeX += 3;
-                nSizeY += 3;
-                System.out.println(nSizeX + "   " + nSizeY);
-            }
-        } else if (isHitS(sprAni, sprHamP) && nTrig == 3) {
-            nTrig = 3;
-        } else if (!isHitS(sprAni, sprHamP)) {
-            nTrig = 0;
-        }
-        if (nTrig == 1 && Gdx.input.isKeyPressed(Input.Keys.ENTER)) {
-            nTrig = 3;
-        }
         if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
             arbDirection[0] = true;
             arbDirection[1] = false;
@@ -168,12 +158,14 @@ public class ScrFood implements Screen, InputProcessor {
         }
 
 
+
+
         batch.begin();
         batch.setProjectionMatrix(oc.combined);
         btnMenu.draw(batch);
         sprNamSign.draw(batch);
-        sprHamP.draw(batch);
         btnQuit.draw(batch);
+        pMaker.draw(batch);
         batch.draw(trTemp, fSx, fSy, nSizeX, nSizeY);
         if (nTrig == 1) {
             sprBox1.draw(batch);
@@ -267,8 +259,8 @@ public class ScrFood implements Screen, InputProcessor {
         }
     }
 
-    public boolean isHitS(Sprite spr1, Sprite spr2) {
-        return spr1.getBoundingRectangle().overlaps(spr2.getBoundingRectangle());
-    }
+    //public boolean isHitS(Sprite spr1, Sprite spr2) {
+  //      return spr1.getBoundingRectangle().overlaps(spr2.getBoundingRectangle());
+//    }
 }
 
