@@ -34,6 +34,7 @@ public class ScrGame implements Screen, InputProcessor {
     int DY2[] = {0, -1, 0, 1};
     float fSpeed = 0, fSpeed2 = 0;
     static int nPoints = 0, nPoints2 = 0;
+    static int nWin;
     Rectangle rectMouse, rectMouseNew, rectMouse2, rectMouseNew2;
 
     public ScrGame(GamMenu _gamMenu) {
@@ -72,6 +73,8 @@ public class ScrGame implements Screen, InputProcessor {
         sprHamP.setPosition(400, 270);
         sprHamP.setSize(50, 50);
         sprHamP.setFlip(false, true);
+        nPoints = 0;
+        nPoints2 = 0;
         //Animation Stuff
         nFrame = 0;
         nPos = 0;
@@ -256,6 +259,24 @@ public class ScrGame implements Screen, InputProcessor {
         Rectangle rMouse1 = new Rectangle (sprMouse.getX(), sprMouse.getY(), sprMouse.getWidth(), sprMouse.getHeight());
         Rectangle rMouse2 = new Rectangle (sprMouse2.getX(), sprMouse2.getY(), sprMouse2.getWidth(), sprMouse2.getHeight());
         if (Intersector.overlaps(rMouse1, rMouse2)) {
+            if ((nDir == 0 && nDir2 == 2) || (nDir == 2 && nDir2 == 2)) {
+                if (nSizeX > nSizeX2) {
+                    nWin = 1;
+                } else if (nSizeX2 > nSizeX) {
+                    nWin = 2;
+                } else {
+                    nWin = 0;
+                }
+            } else {
+                if (fSpeed > fSpeed2) {
+                    nWin = 1;
+                } else if (fSpeed2 > fSpeed) {
+                    nWin = 2;
+                } else {
+                    nWin = 0;
+                }
+            }
+            System.out.println(nWin);
             fSpeed = 0;
             fSpeed2 = 0;
             nSizeX = 50;

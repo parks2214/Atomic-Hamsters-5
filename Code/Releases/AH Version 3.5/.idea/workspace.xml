@@ -2,171 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff6eba52-1d98-4608-9799-8b7a7aa81931" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/AH_Version_3.5.iml" />
       <change beforePath="$PROJECT_DIR$/../AH Version 3.0/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../AH Version 3.0/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/.gradle/2.10/taskArtifacts/cache.properties.lock" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/.gradle/2.10/taskArtifacts/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/.gradle/2.10/taskArtifacts/outputFileStates.bin" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/assets/oldmouse.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/assets/sprmouse.png" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/assets/sprmouse.png" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/out/production/classes/gdx/menu/GamMenu.class" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/out/production/classes/gdx/menu/GamMenu.class" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/out/production/classes/gdx/menu/Screens/ScrAnimation.class" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/out/production/classes/gdx/menu/Screens/ScrAnimation.class" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/out/production/classes/gdx/menu/Screens/ScrGame.class" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/out/production/classes/gdx/menu/Screens/ScrGame.class" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/out/production/classes/gdx/menu/images/Animation.class" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/out/production/classes/gdx/menu/images/Animation.class" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/src/gdx/menu/GamMenu.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/src/gdx/menu/GamMenu.java" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/src/gdx/menu/Screens/ScrAnimation.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/src/gdx/menu/Screens/ScrAnimation.java" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/src/gdx/menu/Screens/ScrGame.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/src/gdx/menu/Screens/ScrGame.java" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/src/gdx/menu/images/Animation.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Fixed animation of hamster/core/src/gdx/menu/images/Animation.java" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.gradle/2.10/taskArtifacts/cache.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/compiler.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/gradle.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_1_9_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_backend_gwt_1_9_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_backend_gwt_sources_1_9_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_backend_lwjgl_1_9_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_box2d_1_9_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_box2d_gwt_sources_1_9_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_box2d_platform_natives_desktop_1_9_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_box2d_sources_1_9_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_platform_natives_desktop_1_9_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_sources_1_9_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_badlogicgames_jlayer_jlayer_1_0_1_gdx.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_google_gwt_gwt_codeserver_2_6_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_google_gwt_gwt_dev_2_6_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_google_gwt_gwt_servlet_2_6_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_google_gwt_gwt_user_2_6_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__com_google_gwt_gwt_user_2_6_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__javax_validation_validation_api_1_0_0_GA.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__javax_validation_validation_api_sources_1_0_0_GA.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__net_java_jinput_jinput_2_0_5.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__net_java_jinput_jinput_platform_natives_linux_2_0_5.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__net_java_jinput_jinput_platform_natives_osx_2_0_5.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__net_java_jinput_jinput_platform_natives_windows_2_0_5.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__net_java_jutils_jutils_1_0_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__org_jcraft_jorbis_0_0_17.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__org_json_json_20090211.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__org_lwjgl_lwjgl_lwjgl_2_9_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__org_lwjgl_lwjgl_lwjgl_platform_natives_linux_2_9_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__org_lwjgl_lwjgl_lwjgl_platform_natives_osx_2_9_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__org_lwjgl_lwjgl_lwjgl_platform_natives_windows_2_9_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/libraries/Gradle__org_lwjgl_lwjgl_lwjgl_util_2_9_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/misc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/Fixed_animation_of_hamster.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/Scratches-Fixed_animation_of_hamster.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/core/Fixed animation of hamster-core.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/core/Fixed animation of hamster-core_test.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/core/Fixed animation of hamster-core_test.iml___jb_tmp___" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/core/core.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/core/core_main.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/core/core_test.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/desktop/Fixed animation of hamster-desktop.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/desktop/desktop.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/desktop/desktop_main.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/desktop/desktop_test.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/html/Fixed animation of hamster-html.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/html/html.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/html/html_main.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/modules/html/html_test.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/vcs.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.nb-gradle/private/cache/Atomic-Hamsters--d41d8cd98f00b204e9800998ecf8427e" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.nb-gradle/private/cache/Version 1.0-d41d8cd98f00b204e9800998ecf8427e" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.nb-gradle/private/cache/Version 2.0-d41d8cd98f00b204e9800998ecf8427e" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.nb-gradle/private/cache/Version 2.5-d41d8cd98f00b204e9800998ecf8427e" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.nb-gradle/private/cache/core-fb83b73eb3c879b18d343675f32aca61" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.nb-gradle/private/cache/desktop-9bccb601584b92d9c041663102aef73f" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.nb-gradle/private/cache/html-7853a72bbcb559002d3549c9e93b15fe" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/.nb-gradle/profiles/private/aux-config" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/Documents/ICS4UI - Status Report #1.docx" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/build.gradle" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/A.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/AniHit.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/Animation.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/EarthBG.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/Food.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/G.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/Game.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/HamP.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/Hamstertail.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/M.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/Menu.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/P.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/Play.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/Quit.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/S.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/SignB.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/Tail.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/Textbox.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/Textbox2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/Wall2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/brokenmouse.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/hamsterhead.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/hamsterhead3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/jupiter.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/assets/sprmouse.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build.gradle" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build/classes/main/gdx/menu/GamMenu.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build/classes/main/gdx/menu/Screens/ScrAniHit.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build/classes/main/gdx/menu/Screens/ScrAnimation.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build/classes/main/gdx/menu/Screens/ScrFood.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build/classes/main/gdx/menu/Screens/ScrGame.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build/classes/main/gdx/menu/Screens/ScrMenu.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build/classes/main/gdx/menu/Screens/ScrTail.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build/classes/main/gdx/menu/images/Animation.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build/classes/main/gdx/menu/images/Button.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build/classes/main/gdx/menu/images/Wall.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build/libs/core-1.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/build/tmp/jar/MANIFEST.MF" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/out/production/classes/gdx/menu/GamMenu.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/out/production/classes/gdx/menu/Screens/ScrAniHit.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/out/production/classes/gdx/menu/Screens/ScrAnimation.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/out/production/classes/gdx/menu/Screens/ScrFood.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/out/production/classes/gdx/menu/Screens/ScrGame.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/out/production/classes/gdx/menu/Screens/ScrMenu.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/out/production/classes/gdx/menu/Screens/ScrTail.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/out/production/classes/gdx/menu/images/Animation.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/out/production/classes/gdx/menu/images/Button.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/out/production/classes/gdx/menu/images/Wall.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/src/GdxMenu.gwt.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/src/gdx/menu/GamMenu.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/src/gdx/menu/Screens/ScrAniHit.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/src/gdx/menu/Screens/ScrAnimation.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/src/gdx/menu/Screens/ScrFood.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/src/gdx/menu/Screens/ScrGame.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/src/gdx/menu/Screens/ScrMenu.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/src/gdx/menu/Screens/ScrTail.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/src/gdx/menu/images/Animation.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/src/gdx/menu/images/Button.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/core/src/gdx/menu/images/Wall.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/desktop/build.gradle" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/desktop/build/classes/main/gdx/menu/desktop/DesktopLauncher.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/desktop/out/production/classes/gdx/menu/desktop/DesktopLauncher.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/desktop/src/gdx/menu/desktop/DesktopLauncher.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/gradle.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/gradle/wrapper/gradle-wrapper.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/gradle/wrapper/gradle-wrapper.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/gradlew" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/gradlew.bat" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/html/build.gradle" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/html/src/gdx/menu/GdxDefinition.gwt.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/html/src/gdx/menu/GdxDefinitionSuperdev.gwt.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/html/src/gdx/menu/client/HtmlLauncher.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/html/webapp/WEB-INF/web.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/html/webapp/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/html/webapp/refresh.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/html/webapp/soundmanager2-jsmin.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/html/webapp/soundmanager2-setup.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/html/webapp/styles.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/Fixed animation of hamster/settings.gradle" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame.java" afterPath="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame.java" />
+      <change beforePath="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGameOver.java" afterPath="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGameOver.java" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Unique hit detection in scrGame/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Scratches/AH Unique hit detection in scrGame/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/core/.gradle/" />
     <ignored path="$PROJECT_DIR$/core/build/" />
@@ -193,38 +32,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ScrGame.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ScrGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="36" column="65" lean-forward="false" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
+            <state relative-caret-position="155">
+              <caret line="76" column="21" lean-forward="false" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1552#1553#0" expanded="true" />
-                <element signature="e#1586#1587#0" expanded="true" />
-                <element signature="e#10986#10987#0" expanded="true" />
-                <element signature="e#11014#11015#0" expanded="true" />
-                <element signature="e#11069#11070#0" expanded="true" />
-                <element signature="e#11097#11098#0" expanded="true" />
-                <element signature="e#11158#11159#0" expanded="true" />
-                <element signature="e#11186#11187#0" expanded="true" />
-                <element signature="e#11926#11927#0" expanded="true" />
-                <element signature="e#11954#11955#0" expanded="true" />
-                <element signature="e#12042#12043#0" expanded="true" />
-                <element signature="e#12070#12071#0" expanded="true" />
-                <element signature="e#12143#12144#0" expanded="true" />
-                <element signature="e#12171#12172#0" expanded="true" />
-                <element signature="e#12228#12229#0" expanded="true" />
-                <element signature="e#12256#12257#0" expanded="true" />
+                <element signature="e#1573#1574#0" expanded="true" />
+                <element signature="e#1607#1608#0" expanded="true" />
+                <element signature="e#11637#11638#0" expanded="true" />
+                <element signature="e#11665#11666#0" expanded="true" />
+                <element signature="e#11720#11721#0" expanded="true" />
+                <element signature="e#11748#11749#0" expanded="true" />
+                <element signature="e#11809#11810#0" expanded="true" />
+                <element signature="e#11837#11838#0" expanded="true" />
+                <element signature="e#12577#12578#0" expanded="true" />
+                <element signature="e#12605#12606#0" expanded="true" />
+                <element signature="e#12693#12694#0" expanded="true" />
+                <element signature="e#12721#12722#0" expanded="true" />
+                <element signature="e#12794#12795#0" expanded="true" />
+                <element signature="e#12822#12823#0" expanded="true" />
+                <element signature="e#12879#12880#0" expanded="true" />
+                <element signature="e#12907#12908#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScrFood.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ScrFood.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrFood.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
+            <state relative-caret-position="221">
               <caret line="75" column="37" lean-forward="false" selection-start-line="75" selection-start-column="37" selection-end-line="75" selection-end-column="37" />
               <folding />
             </state>
@@ -234,8 +73,8 @@
       <file leaf-file-name="DesktopLauncher.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/desktop/src/gdx/menu/desktop/DesktopLauncher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+            <state relative-caret-position="170">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -244,7 +83,7 @@
       <file leaf-file-name="ScrMenu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
+            <state relative-caret-position="1530">
               <caret line="108" column="38" lean-forward="false" selection-start-line="108" selection-start-column="38" selection-end-line="108" selection-end-column="38" />
               <folding />
             </state>
@@ -254,26 +93,26 @@
       <file leaf-file-name="ScrGameOver.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGameOver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="59" column="28" lean-forward="false" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
+            <state relative-caret-position="521">
+              <caret line="50" column="28" lean-forward="false" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#858#859#0" expanded="true" />
-                <element signature="e#923#924#0" expanded="true" />
-                <element signature="e#3285#3286#0" expanded="true" />
-                <element signature="e#3313#3314#0" expanded="true" />
-                <element signature="e#3368#3369#0" expanded="true" />
-                <element signature="e#3396#3397#0" expanded="true" />
-                <element signature="e#3457#3458#0" expanded="true" />
-                <element signature="e#3485#3486#0" expanded="true" />
-                <element signature="e#4046#4047#0" expanded="true" />
-                <element signature="e#4074#4075#0" expanded="true" />
-                <element signature="e#4162#4163#0" expanded="true" />
-                <element signature="e#4190#4191#0" expanded="true" />
-                <element signature="e#4263#4264#0" expanded="true" />
-                <element signature="e#4291#4292#0" expanded="true" />
-                <element signature="e#4348#4349#0" expanded="true" />
-                <element signature="e#4376#4377#0" expanded="true" />
+                <element signature="e#872#873#0" expanded="true" />
+                <element signature="e#937#938#0" expanded="true" />
+                <element signature="e#3310#3311#0" expanded="true" />
+                <element signature="e#3338#3339#0" expanded="true" />
+                <element signature="e#3393#3394#0" expanded="true" />
+                <element signature="e#3421#3422#0" expanded="true" />
+                <element signature="e#3482#3483#0" expanded="true" />
+                <element signature="e#3510#3511#0" expanded="true" />
+                <element signature="e#4071#4072#0" expanded="true" />
+                <element signature="e#4099#4100#0" expanded="true" />
+                <element signature="e#4187#4188#0" expanded="true" />
+                <element signature="e#4215#4216#0" expanded="true" />
+                <element signature="e#4288#4289#0" expanded="true" />
+                <element signature="e#4316#4317#0" expanded="true" />
+                <element signature="e#4373#4374#0" expanded="true" />
+                <element signature="e#4401#4402#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1190,6 +1029,7 @@
     </option>
     <option name="modificationStamps">
       <map>
+        <entry key="$PROJECT_DIR$" value="10644778709130" />
         <entry key="$PROJECT_DIR$/build.gradle" value="3571373960" />
         <entry key="$PROJECT_DIR$/core/build.gradle" value="2971590108" />
         <entry key="$PROJECT_DIR$/desktop/build.gradle" value="1728858683" />
@@ -1388,6 +1228,11 @@
     <option name="externalProjectsViewState">
       <projects_view />
     </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -1424,7 +1269,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1454,9 +1298,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1649,22 +1494,22 @@
           <caret line="323" column="21" lean-forward="false" selection-start-line="323" selection-start-column="21" selection-end-line="323" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1552#1553#0" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-            <element signature="e#10986#10987#0" expanded="true" />
-            <element signature="e#11014#11015#0" expanded="true" />
-            <element signature="e#11069#11070#0" expanded="true" />
-            <element signature="e#11097#11098#0" expanded="true" />
-            <element signature="e#11158#11159#0" expanded="true" />
-            <element signature="e#11186#11187#0" expanded="true" />
-            <element signature="e#11926#11927#0" expanded="true" />
-            <element signature="e#11954#11955#0" expanded="true" />
-            <element signature="e#12042#12043#0" expanded="true" />
-            <element signature="e#12070#12071#0" expanded="true" />
-            <element signature="e#12143#12144#0" expanded="true" />
-            <element signature="e#12171#12172#0" expanded="true" />
-            <element signature="e#12228#12229#0" expanded="true" />
-            <element signature="e#12256#12257#0" expanded="true" />
+            <element signature="e#1573#1574#0" expanded="true" />
+            <element signature="e#1607#1608#0" expanded="true" />
+            <element signature="e#11637#11638#0" expanded="true" />
+            <element signature="e#11665#11666#0" expanded="true" />
+            <element signature="e#11720#11721#0" expanded="true" />
+            <element signature="e#11748#11749#0" expanded="true" />
+            <element signature="e#11809#11810#0" expanded="true" />
+            <element signature="e#11837#11838#0" expanded="true" />
+            <element signature="e#12577#12578#0" expanded="true" />
+            <element signature="e#12605#12606#0" expanded="true" />
+            <element signature="e#12693#12694#0" expanded="true" />
+            <element signature="e#12721#12722#0" expanded="true" />
+            <element signature="e#12794#12795#0" expanded="true" />
+            <element signature="e#12822#12823#0" expanded="true" />
+            <element signature="e#12879#12880#0" expanded="true" />
+            <element signature="e#12907#12908#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1683,22 +1528,22 @@
           <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#923#924#0" expanded="true" />
-            <element signature="e#3285#3286#0" expanded="true" />
-            <element signature="e#3313#3314#0" expanded="true" />
-            <element signature="e#3368#3369#0" expanded="true" />
-            <element signature="e#3396#3397#0" expanded="true" />
-            <element signature="e#3457#3458#0" expanded="true" />
-            <element signature="e#3485#3486#0" expanded="true" />
-            <element signature="e#4046#4047#0" expanded="true" />
-            <element signature="e#4074#4075#0" expanded="true" />
-            <element signature="e#4162#4163#0" expanded="true" />
-            <element signature="e#4190#4191#0" expanded="true" />
-            <element signature="e#4263#4264#0" expanded="true" />
-            <element signature="e#4291#4292#0" expanded="true" />
-            <element signature="e#4348#4349#0" expanded="true" />
-            <element signature="e#4376#4377#0" expanded="true" />
+            <element signature="e#872#873#0" expanded="true" />
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#3310#3311#0" expanded="true" />
+            <element signature="e#3338#3339#0" expanded="true" />
+            <element signature="e#3393#3394#0" expanded="true" />
+            <element signature="e#3421#3422#0" expanded="true" />
+            <element signature="e#3482#3483#0" expanded="true" />
+            <element signature="e#3510#3511#0" expanded="true" />
+            <element signature="e#4071#4072#0" expanded="true" />
+            <element signature="e#4099#4100#0" expanded="true" />
+            <element signature="e#4187#4188#0" expanded="true" />
+            <element signature="e#4215#4216#0" expanded="true" />
+            <element signature="e#4288#4289#0" expanded="true" />
+            <element signature="e#4316#4317#0" expanded="true" />
+            <element signature="e#4373#4374#0" expanded="true" />
+            <element signature="e#4401#4402#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1731,22 +1576,22 @@
           <caret line="62" column="10" lean-forward="false" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1552#1553#0" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-            <element signature="e#10986#10987#0" expanded="true" />
-            <element signature="e#11014#11015#0" expanded="true" />
-            <element signature="e#11069#11070#0" expanded="true" />
-            <element signature="e#11097#11098#0" expanded="true" />
-            <element signature="e#11158#11159#0" expanded="true" />
-            <element signature="e#11186#11187#0" expanded="true" />
-            <element signature="e#11926#11927#0" expanded="true" />
-            <element signature="e#11954#11955#0" expanded="true" />
-            <element signature="e#12042#12043#0" expanded="true" />
-            <element signature="e#12070#12071#0" expanded="true" />
-            <element signature="e#12143#12144#0" expanded="true" />
-            <element signature="e#12171#12172#0" expanded="true" />
-            <element signature="e#12228#12229#0" expanded="true" />
-            <element signature="e#12256#12257#0" expanded="true" />
+            <element signature="e#1573#1574#0" expanded="true" />
+            <element signature="e#1607#1608#0" expanded="true" />
+            <element signature="e#11637#11638#0" expanded="true" />
+            <element signature="e#11665#11666#0" expanded="true" />
+            <element signature="e#11720#11721#0" expanded="true" />
+            <element signature="e#11748#11749#0" expanded="true" />
+            <element signature="e#11809#11810#0" expanded="true" />
+            <element signature="e#11837#11838#0" expanded="true" />
+            <element signature="e#12577#12578#0" expanded="true" />
+            <element signature="e#12605#12606#0" expanded="true" />
+            <element signature="e#12693#12694#0" expanded="true" />
+            <element signature="e#12721#12722#0" expanded="true" />
+            <element signature="e#12794#12795#0" expanded="true" />
+            <element signature="e#12822#12823#0" expanded="true" />
+            <element signature="e#12879#12880#0" expanded="true" />
+            <element signature="e#12907#12908#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1779,22 +1624,22 @@
           <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#923#924#0" expanded="true" />
-            <element signature="e#3285#3286#0" expanded="true" />
-            <element signature="e#3313#3314#0" expanded="true" />
-            <element signature="e#3368#3369#0" expanded="true" />
-            <element signature="e#3396#3397#0" expanded="true" />
-            <element signature="e#3457#3458#0" expanded="true" />
-            <element signature="e#3485#3486#0" expanded="true" />
-            <element signature="e#4046#4047#0" expanded="true" />
-            <element signature="e#4074#4075#0" expanded="true" />
-            <element signature="e#4162#4163#0" expanded="true" />
-            <element signature="e#4190#4191#0" expanded="true" />
-            <element signature="e#4263#4264#0" expanded="true" />
-            <element signature="e#4291#4292#0" expanded="true" />
-            <element signature="e#4348#4349#0" expanded="true" />
-            <element signature="e#4376#4377#0" expanded="true" />
+            <element signature="e#872#873#0" expanded="true" />
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#3310#3311#0" expanded="true" />
+            <element signature="e#3338#3339#0" expanded="true" />
+            <element signature="e#3393#3394#0" expanded="true" />
+            <element signature="e#3421#3422#0" expanded="true" />
+            <element signature="e#3482#3483#0" expanded="true" />
+            <element signature="e#3510#3511#0" expanded="true" />
+            <element signature="e#4071#4072#0" expanded="true" />
+            <element signature="e#4099#4100#0" expanded="true" />
+            <element signature="e#4187#4188#0" expanded="true" />
+            <element signature="e#4215#4216#0" expanded="true" />
+            <element signature="e#4288#4289#0" expanded="true" />
+            <element signature="e#4316#4317#0" expanded="true" />
+            <element signature="e#4373#4374#0" expanded="true" />
+            <element signature="e#4401#4402#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1813,22 +1658,22 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1552#1553#0" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-            <element signature="e#10986#10987#0" expanded="true" />
-            <element signature="e#11014#11015#0" expanded="true" />
-            <element signature="e#11069#11070#0" expanded="true" />
-            <element signature="e#11097#11098#0" expanded="true" />
-            <element signature="e#11158#11159#0" expanded="true" />
-            <element signature="e#11186#11187#0" expanded="true" />
-            <element signature="e#11926#11927#0" expanded="true" />
-            <element signature="e#11954#11955#0" expanded="true" />
-            <element signature="e#12042#12043#0" expanded="true" />
-            <element signature="e#12070#12071#0" expanded="true" />
-            <element signature="e#12143#12144#0" expanded="true" />
-            <element signature="e#12171#12172#0" expanded="true" />
-            <element signature="e#12228#12229#0" expanded="true" />
-            <element signature="e#12256#12257#0" expanded="true" />
+            <element signature="e#1573#1574#0" expanded="true" />
+            <element signature="e#1607#1608#0" expanded="true" />
+            <element signature="e#11637#11638#0" expanded="true" />
+            <element signature="e#11665#11666#0" expanded="true" />
+            <element signature="e#11720#11721#0" expanded="true" />
+            <element signature="e#11748#11749#0" expanded="true" />
+            <element signature="e#11809#11810#0" expanded="true" />
+            <element signature="e#11837#11838#0" expanded="true" />
+            <element signature="e#12577#12578#0" expanded="true" />
+            <element signature="e#12605#12606#0" expanded="true" />
+            <element signature="e#12693#12694#0" expanded="true" />
+            <element signature="e#12721#12722#0" expanded="true" />
+            <element signature="e#12794#12795#0" expanded="true" />
+            <element signature="e#12822#12823#0" expanded="true" />
+            <element signature="e#12879#12880#0" expanded="true" />
+            <element signature="e#12907#12908#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1855,22 +1700,22 @@
           <caret line="161" column="0" lean-forward="false" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#923#924#0" expanded="true" />
-            <element signature="e#3285#3286#0" expanded="true" />
-            <element signature="e#3313#3314#0" expanded="true" />
-            <element signature="e#3368#3369#0" expanded="true" />
-            <element signature="e#3396#3397#0" expanded="true" />
-            <element signature="e#3457#3458#0" expanded="true" />
-            <element signature="e#3485#3486#0" expanded="true" />
-            <element signature="e#4046#4047#0" expanded="true" />
-            <element signature="e#4074#4075#0" expanded="true" />
-            <element signature="e#4162#4163#0" expanded="true" />
-            <element signature="e#4190#4191#0" expanded="true" />
-            <element signature="e#4263#4264#0" expanded="true" />
-            <element signature="e#4291#4292#0" expanded="true" />
-            <element signature="e#4348#4349#0" expanded="true" />
-            <element signature="e#4376#4377#0" expanded="true" />
+            <element signature="e#872#873#0" expanded="true" />
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#3310#3311#0" expanded="true" />
+            <element signature="e#3338#3339#0" expanded="true" />
+            <element signature="e#3393#3394#0" expanded="true" />
+            <element signature="e#3421#3422#0" expanded="true" />
+            <element signature="e#3482#3483#0" expanded="true" />
+            <element signature="e#3510#3511#0" expanded="true" />
+            <element signature="e#4071#4072#0" expanded="true" />
+            <element signature="e#4099#4100#0" expanded="true" />
+            <element signature="e#4187#4188#0" expanded="true" />
+            <element signature="e#4215#4216#0" expanded="true" />
+            <element signature="e#4288#4289#0" expanded="true" />
+            <element signature="e#4316#4317#0" expanded="true" />
+            <element signature="e#4373#4374#0" expanded="true" />
+            <element signature="e#4401#4402#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1895,22 +1740,22 @@
           <caret line="124" column="18" lean-forward="false" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1552#1553#0" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-            <element signature="e#10986#10987#0" expanded="true" />
-            <element signature="e#11014#11015#0" expanded="true" />
-            <element signature="e#11069#11070#0" expanded="true" />
-            <element signature="e#11097#11098#0" expanded="true" />
-            <element signature="e#11158#11159#0" expanded="true" />
-            <element signature="e#11186#11187#0" expanded="true" />
-            <element signature="e#11926#11927#0" expanded="true" />
-            <element signature="e#11954#11955#0" expanded="true" />
-            <element signature="e#12042#12043#0" expanded="true" />
-            <element signature="e#12070#12071#0" expanded="true" />
-            <element signature="e#12143#12144#0" expanded="true" />
-            <element signature="e#12171#12172#0" expanded="true" />
-            <element signature="e#12228#12229#0" expanded="true" />
-            <element signature="e#12256#12257#0" expanded="true" />
+            <element signature="e#1573#1574#0" expanded="true" />
+            <element signature="e#1607#1608#0" expanded="true" />
+            <element signature="e#11637#11638#0" expanded="true" />
+            <element signature="e#11665#11666#0" expanded="true" />
+            <element signature="e#11720#11721#0" expanded="true" />
+            <element signature="e#11748#11749#0" expanded="true" />
+            <element signature="e#11809#11810#0" expanded="true" />
+            <element signature="e#11837#11838#0" expanded="true" />
+            <element signature="e#12577#12578#0" expanded="true" />
+            <element signature="e#12605#12606#0" expanded="true" />
+            <element signature="e#12693#12694#0" expanded="true" />
+            <element signature="e#12721#12722#0" expanded="true" />
+            <element signature="e#12794#12795#0" expanded="true" />
+            <element signature="e#12822#12823#0" expanded="true" />
+            <element signature="e#12879#12880#0" expanded="true" />
+            <element signature="e#12907#12908#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1929,22 +1774,22 @@
           <caret line="124" column="18" lean-forward="true" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1552#1553#0" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-            <element signature="e#10986#10987#0" expanded="true" />
-            <element signature="e#11014#11015#0" expanded="true" />
-            <element signature="e#11069#11070#0" expanded="true" />
-            <element signature="e#11097#11098#0" expanded="true" />
-            <element signature="e#11158#11159#0" expanded="true" />
-            <element signature="e#11186#11187#0" expanded="true" />
-            <element signature="e#11926#11927#0" expanded="true" />
-            <element signature="e#11954#11955#0" expanded="true" />
-            <element signature="e#12042#12043#0" expanded="true" />
-            <element signature="e#12070#12071#0" expanded="true" />
-            <element signature="e#12143#12144#0" expanded="true" />
-            <element signature="e#12171#12172#0" expanded="true" />
-            <element signature="e#12228#12229#0" expanded="true" />
-            <element signature="e#12256#12257#0" expanded="true" />
+            <element signature="e#1573#1574#0" expanded="true" />
+            <element signature="e#1607#1608#0" expanded="true" />
+            <element signature="e#11637#11638#0" expanded="true" />
+            <element signature="e#11665#11666#0" expanded="true" />
+            <element signature="e#11720#11721#0" expanded="true" />
+            <element signature="e#11748#11749#0" expanded="true" />
+            <element signature="e#11809#11810#0" expanded="true" />
+            <element signature="e#11837#11838#0" expanded="true" />
+            <element signature="e#12577#12578#0" expanded="true" />
+            <element signature="e#12605#12606#0" expanded="true" />
+            <element signature="e#12693#12694#0" expanded="true" />
+            <element signature="e#12721#12722#0" expanded="true" />
+            <element signature="e#12794#12795#0" expanded="true" />
+            <element signature="e#12822#12823#0" expanded="true" />
+            <element signature="e#12879#12880#0" expanded="true" />
+            <element signature="e#12907#12908#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2006,22 +1851,22 @@
           <caret line="323" column="21" lean-forward="false" selection-start-line="323" selection-start-column="21" selection-end-line="323" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1552#1553#0" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-            <element signature="e#10986#10987#0" expanded="true" />
-            <element signature="e#11014#11015#0" expanded="true" />
-            <element signature="e#11069#11070#0" expanded="true" />
-            <element signature="e#11097#11098#0" expanded="true" />
-            <element signature="e#11158#11159#0" expanded="true" />
-            <element signature="e#11186#11187#0" expanded="true" />
-            <element signature="e#11926#11927#0" expanded="true" />
-            <element signature="e#11954#11955#0" expanded="true" />
-            <element signature="e#12042#12043#0" expanded="true" />
-            <element signature="e#12070#12071#0" expanded="true" />
-            <element signature="e#12143#12144#0" expanded="true" />
-            <element signature="e#12171#12172#0" expanded="true" />
-            <element signature="e#12228#12229#0" expanded="true" />
-            <element signature="e#12256#12257#0" expanded="true" />
+            <element signature="e#1573#1574#0" expanded="true" />
+            <element signature="e#1607#1608#0" expanded="true" />
+            <element signature="e#11637#11638#0" expanded="true" />
+            <element signature="e#11665#11666#0" expanded="true" />
+            <element signature="e#11720#11721#0" expanded="true" />
+            <element signature="e#11748#11749#0" expanded="true" />
+            <element signature="e#11809#11810#0" expanded="true" />
+            <element signature="e#11837#11838#0" expanded="true" />
+            <element signature="e#12577#12578#0" expanded="true" />
+            <element signature="e#12605#12606#0" expanded="true" />
+            <element signature="e#12693#12694#0" expanded="true" />
+            <element signature="e#12721#12722#0" expanded="true" />
+            <element signature="e#12794#12795#0" expanded="true" />
+            <element signature="e#12822#12823#0" expanded="true" />
+            <element signature="e#12879#12880#0" expanded="true" />
+            <element signature="e#12907#12908#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2048,22 +1893,22 @@
           <caret line="33" column="20" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#923#924#0" expanded="true" />
-            <element signature="e#3285#3286#0" expanded="true" />
-            <element signature="e#3313#3314#0" expanded="true" />
-            <element signature="e#3368#3369#0" expanded="true" />
-            <element signature="e#3396#3397#0" expanded="true" />
-            <element signature="e#3457#3458#0" expanded="true" />
-            <element signature="e#3485#3486#0" expanded="true" />
-            <element signature="e#4046#4047#0" expanded="true" />
-            <element signature="e#4074#4075#0" expanded="true" />
-            <element signature="e#4162#4163#0" expanded="true" />
-            <element signature="e#4190#4191#0" expanded="true" />
-            <element signature="e#4263#4264#0" expanded="true" />
-            <element signature="e#4291#4292#0" expanded="true" />
-            <element signature="e#4348#4349#0" expanded="true" />
-            <element signature="e#4376#4377#0" expanded="true" />
+            <element signature="e#872#873#0" expanded="true" />
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#3310#3311#0" expanded="true" />
+            <element signature="e#3338#3339#0" expanded="true" />
+            <element signature="e#3393#3394#0" expanded="true" />
+            <element signature="e#3421#3422#0" expanded="true" />
+            <element signature="e#3482#3483#0" expanded="true" />
+            <element signature="e#3510#3511#0" expanded="true" />
+            <element signature="e#4071#4072#0" expanded="true" />
+            <element signature="e#4099#4100#0" expanded="true" />
+            <element signature="e#4187#4188#0" expanded="true" />
+            <element signature="e#4215#4216#0" expanded="true" />
+            <element signature="e#4288#4289#0" expanded="true" />
+            <element signature="e#4316#4317#0" expanded="true" />
+            <element signature="e#4373#4374#0" expanded="true" />
+            <element signature="e#4401#4402#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2074,22 +1919,22 @@
           <caret line="62" column="10" lean-forward="false" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1552#1553#0" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-            <element signature="e#10986#10987#0" expanded="true" />
-            <element signature="e#11014#11015#0" expanded="true" />
-            <element signature="e#11069#11070#0" expanded="true" />
-            <element signature="e#11097#11098#0" expanded="true" />
-            <element signature="e#11158#11159#0" expanded="true" />
-            <element signature="e#11186#11187#0" expanded="true" />
-            <element signature="e#11926#11927#0" expanded="true" />
-            <element signature="e#11954#11955#0" expanded="true" />
-            <element signature="e#12042#12043#0" expanded="true" />
-            <element signature="e#12070#12071#0" expanded="true" />
-            <element signature="e#12143#12144#0" expanded="true" />
-            <element signature="e#12171#12172#0" expanded="true" />
-            <element signature="e#12228#12229#0" expanded="true" />
-            <element signature="e#12256#12257#0" expanded="true" />
+            <element signature="e#1573#1574#0" expanded="true" />
+            <element signature="e#1607#1608#0" expanded="true" />
+            <element signature="e#11637#11638#0" expanded="true" />
+            <element signature="e#11665#11666#0" expanded="true" />
+            <element signature="e#11720#11721#0" expanded="true" />
+            <element signature="e#11748#11749#0" expanded="true" />
+            <element signature="e#11809#11810#0" expanded="true" />
+            <element signature="e#11837#11838#0" expanded="true" />
+            <element signature="e#12577#12578#0" expanded="true" />
+            <element signature="e#12605#12606#0" expanded="true" />
+            <element signature="e#12693#12694#0" expanded="true" />
+            <element signature="e#12721#12722#0" expanded="true" />
+            <element signature="e#12794#12795#0" expanded="true" />
+            <element signature="e#12822#12823#0" expanded="true" />
+            <element signature="e#12879#12880#0" expanded="true" />
+            <element signature="e#12907#12908#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2122,22 +1967,22 @@
           <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#923#924#0" expanded="true" />
-            <element signature="e#3285#3286#0" expanded="true" />
-            <element signature="e#3313#3314#0" expanded="true" />
-            <element signature="e#3368#3369#0" expanded="true" />
-            <element signature="e#3396#3397#0" expanded="true" />
-            <element signature="e#3457#3458#0" expanded="true" />
-            <element signature="e#3485#3486#0" expanded="true" />
-            <element signature="e#4046#4047#0" expanded="true" />
-            <element signature="e#4074#4075#0" expanded="true" />
-            <element signature="e#4162#4163#0" expanded="true" />
-            <element signature="e#4190#4191#0" expanded="true" />
-            <element signature="e#4263#4264#0" expanded="true" />
-            <element signature="e#4291#4292#0" expanded="true" />
-            <element signature="e#4348#4349#0" expanded="true" />
-            <element signature="e#4376#4377#0" expanded="true" />
+            <element signature="e#872#873#0" expanded="true" />
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#3310#3311#0" expanded="true" />
+            <element signature="e#3338#3339#0" expanded="true" />
+            <element signature="e#3393#3394#0" expanded="true" />
+            <element signature="e#3421#3422#0" expanded="true" />
+            <element signature="e#3482#3483#0" expanded="true" />
+            <element signature="e#3510#3511#0" expanded="true" />
+            <element signature="e#4071#4072#0" expanded="true" />
+            <element signature="e#4099#4100#0" expanded="true" />
+            <element signature="e#4187#4188#0" expanded="true" />
+            <element signature="e#4215#4216#0" expanded="true" />
+            <element signature="e#4288#4289#0" expanded="true" />
+            <element signature="e#4316#4317#0" expanded="true" />
+            <element signature="e#4373#4374#0" expanded="true" />
+            <element signature="e#4401#4402#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2156,22 +2001,22 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1552#1553#0" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-            <element signature="e#10986#10987#0" expanded="true" />
-            <element signature="e#11014#11015#0" expanded="true" />
-            <element signature="e#11069#11070#0" expanded="true" />
-            <element signature="e#11097#11098#0" expanded="true" />
-            <element signature="e#11158#11159#0" expanded="true" />
-            <element signature="e#11186#11187#0" expanded="true" />
-            <element signature="e#11926#11927#0" expanded="true" />
-            <element signature="e#11954#11955#0" expanded="true" />
-            <element signature="e#12042#12043#0" expanded="true" />
-            <element signature="e#12070#12071#0" expanded="true" />
-            <element signature="e#12143#12144#0" expanded="true" />
-            <element signature="e#12171#12172#0" expanded="true" />
-            <element signature="e#12228#12229#0" expanded="true" />
-            <element signature="e#12256#12257#0" expanded="true" />
+            <element signature="e#1573#1574#0" expanded="true" />
+            <element signature="e#1607#1608#0" expanded="true" />
+            <element signature="e#11637#11638#0" expanded="true" />
+            <element signature="e#11665#11666#0" expanded="true" />
+            <element signature="e#11720#11721#0" expanded="true" />
+            <element signature="e#11748#11749#0" expanded="true" />
+            <element signature="e#11809#11810#0" expanded="true" />
+            <element signature="e#11837#11838#0" expanded="true" />
+            <element signature="e#12577#12578#0" expanded="true" />
+            <element signature="e#12605#12606#0" expanded="true" />
+            <element signature="e#12693#12694#0" expanded="true" />
+            <element signature="e#12721#12722#0" expanded="true" />
+            <element signature="e#12794#12795#0" expanded="true" />
+            <element signature="e#12822#12823#0" expanded="true" />
+            <element signature="e#12879#12880#0" expanded="true" />
+            <element signature="e#12907#12908#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2197,22 +2042,22 @@
           <caret line="161" column="0" lean-forward="false" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#923#924#0" expanded="true" />
-            <element signature="e#3285#3286#0" expanded="true" />
-            <element signature="e#3313#3314#0" expanded="true" />
-            <element signature="e#3368#3369#0" expanded="true" />
-            <element signature="e#3396#3397#0" expanded="true" />
-            <element signature="e#3457#3458#0" expanded="true" />
-            <element signature="e#3485#3486#0" expanded="true" />
-            <element signature="e#4046#4047#0" expanded="true" />
-            <element signature="e#4074#4075#0" expanded="true" />
-            <element signature="e#4162#4163#0" expanded="true" />
-            <element signature="e#4190#4191#0" expanded="true" />
-            <element signature="e#4263#4264#0" expanded="true" />
-            <element signature="e#4291#4292#0" expanded="true" />
-            <element signature="e#4348#4349#0" expanded="true" />
-            <element signature="e#4376#4377#0" expanded="true" />
+            <element signature="e#872#873#0" expanded="true" />
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#3310#3311#0" expanded="true" />
+            <element signature="e#3338#3339#0" expanded="true" />
+            <element signature="e#3393#3394#0" expanded="true" />
+            <element signature="e#3421#3422#0" expanded="true" />
+            <element signature="e#3482#3483#0" expanded="true" />
+            <element signature="e#3510#3511#0" expanded="true" />
+            <element signature="e#4071#4072#0" expanded="true" />
+            <element signature="e#4099#4100#0" expanded="true" />
+            <element signature="e#4187#4188#0" expanded="true" />
+            <element signature="e#4215#4216#0" expanded="true" />
+            <element signature="e#4288#4289#0" expanded="true" />
+            <element signature="e#4316#4317#0" expanded="true" />
+            <element signature="e#4373#4374#0" expanded="true" />
+            <element signature="e#4401#4402#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2237,22 +2082,22 @@
           <caret line="124" column="18" lean-forward="false" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1552#1553#0" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-            <element signature="e#10986#10987#0" expanded="true" />
-            <element signature="e#11014#11015#0" expanded="true" />
-            <element signature="e#11069#11070#0" expanded="true" />
-            <element signature="e#11097#11098#0" expanded="true" />
-            <element signature="e#11158#11159#0" expanded="true" />
-            <element signature="e#11186#11187#0" expanded="true" />
-            <element signature="e#11926#11927#0" expanded="true" />
-            <element signature="e#11954#11955#0" expanded="true" />
-            <element signature="e#12042#12043#0" expanded="true" />
-            <element signature="e#12070#12071#0" expanded="true" />
-            <element signature="e#12143#12144#0" expanded="true" />
-            <element signature="e#12171#12172#0" expanded="true" />
-            <element signature="e#12228#12229#0" expanded="true" />
-            <element signature="e#12256#12257#0" expanded="true" />
+            <element signature="e#1573#1574#0" expanded="true" />
+            <element signature="e#1607#1608#0" expanded="true" />
+            <element signature="e#11637#11638#0" expanded="true" />
+            <element signature="e#11665#11666#0" expanded="true" />
+            <element signature="e#11720#11721#0" expanded="true" />
+            <element signature="e#11748#11749#0" expanded="true" />
+            <element signature="e#11809#11810#0" expanded="true" />
+            <element signature="e#11837#11838#0" expanded="true" />
+            <element signature="e#12577#12578#0" expanded="true" />
+            <element signature="e#12605#12606#0" expanded="true" />
+            <element signature="e#12693#12694#0" expanded="true" />
+            <element signature="e#12721#12722#0" expanded="true" />
+            <element signature="e#12794#12795#0" expanded="true" />
+            <element signature="e#12822#12823#0" expanded="true" />
+            <element signature="e#12879#12880#0" expanded="true" />
+            <element signature="e#12907#12908#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2270,22 +2115,22 @@
           <caret line="124" column="18" lean-forward="true" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1552#1553#0" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-            <element signature="e#10986#10987#0" expanded="true" />
-            <element signature="e#11014#11015#0" expanded="true" />
-            <element signature="e#11069#11070#0" expanded="true" />
-            <element signature="e#11097#11098#0" expanded="true" />
-            <element signature="e#11158#11159#0" expanded="true" />
-            <element signature="e#11186#11187#0" expanded="true" />
-            <element signature="e#11926#11927#0" expanded="true" />
-            <element signature="e#11954#11955#0" expanded="true" />
-            <element signature="e#12042#12043#0" expanded="true" />
-            <element signature="e#12070#12071#0" expanded="true" />
-            <element signature="e#12143#12144#0" expanded="true" />
-            <element signature="e#12171#12172#0" expanded="true" />
-            <element signature="e#12228#12229#0" expanded="true" />
-            <element signature="e#12256#12257#0" expanded="true" />
+            <element signature="e#1573#1574#0" expanded="true" />
+            <element signature="e#1607#1608#0" expanded="true" />
+            <element signature="e#11637#11638#0" expanded="true" />
+            <element signature="e#11665#11666#0" expanded="true" />
+            <element signature="e#11720#11721#0" expanded="true" />
+            <element signature="e#11748#11749#0" expanded="true" />
+            <element signature="e#11809#11810#0" expanded="true" />
+            <element signature="e#11837#11838#0" expanded="true" />
+            <element signature="e#12577#12578#0" expanded="true" />
+            <element signature="e#12605#12606#0" expanded="true" />
+            <element signature="e#12693#12694#0" expanded="true" />
+            <element signature="e#12721#12722#0" expanded="true" />
+            <element signature="e#12794#12795#0" expanded="true" />
+            <element signature="e#12822#12823#0" expanded="true" />
+            <element signature="e#12879#12880#0" expanded="true" />
+            <element signature="e#12907#12908#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2332,69 +2177,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGameOver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="59" column="28" lean-forward="false" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#923#924#0" expanded="true" />
-            <element signature="e#3285#3286#0" expanded="true" />
-            <element signature="e#3313#3314#0" expanded="true" />
-            <element signature="e#3368#3369#0" expanded="true" />
-            <element signature="e#3396#3397#0" expanded="true" />
-            <element signature="e#3457#3458#0" expanded="true" />
-            <element signature="e#3485#3486#0" expanded="true" />
-            <element signature="e#4046#4047#0" expanded="true" />
-            <element signature="e#4074#4075#0" expanded="true" />
-            <element signature="e#4162#4163#0" expanded="true" />
-            <element signature="e#4190#4191#0" expanded="true" />
-            <element signature="e#4263#4264#0" expanded="true" />
-            <element signature="e#4291#4292#0" expanded="true" />
-            <element signature="e#4348#4349#0" expanded="true" />
-            <element signature="e#4376#4377#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="36" column="65" lean-forward="false" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1552#1553#0" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-            <element signature="e#10986#10987#0" expanded="true" />
-            <element signature="e#11014#11015#0" expanded="true" />
-            <element signature="e#11069#11070#0" expanded="true" />
-            <element signature="e#11097#11098#0" expanded="true" />
-            <element signature="e#11158#11159#0" expanded="true" />
-            <element signature="e#11186#11187#0" expanded="true" />
-            <element signature="e#11926#11927#0" expanded="true" />
-            <element signature="e#11954#11955#0" expanded="true" />
-            <element signature="e#12042#12043#0" expanded="true" />
-            <element signature="e#12070#12071#0" expanded="true" />
-            <element signature="e#12143#12144#0" expanded="true" />
-            <element signature="e#12171#12172#0" expanded="true" />
-            <element signature="e#12228#12229#0" expanded="true" />
-            <element signature="e#12256#12257#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/desktop/src/gdx/menu/desktop/DesktopLauncher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
+        <state relative-caret-position="1530">
           <caret line="108" column="38" lean-forward="false" selection-start-line="108" selection-start-column="38" selection-end-line="108" selection-end-column="38" />
           <folding />
         </state>
@@ -2402,9 +2187,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrFood.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
+        <state relative-caret-position="221">
           <caret line="75" column="37" lean-forward="false" selection-start-line="75" selection-start-column="37" selection-end-line="75" selection-end-column="37" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGameOver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="50" column="28" lean-forward="false" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#872#873#0" expanded="true" />
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#3310#3311#0" expanded="true" />
+            <element signature="e#3338#3339#0" expanded="true" />
+            <element signature="e#3393#3394#0" expanded="true" />
+            <element signature="e#3421#3422#0" expanded="true" />
+            <element signature="e#3482#3483#0" expanded="true" />
+            <element signature="e#3510#3511#0" expanded="true" />
+            <element signature="e#4071#4072#0" expanded="true" />
+            <element signature="e#4099#4100#0" expanded="true" />
+            <element signature="e#4187#4188#0" expanded="true" />
+            <element signature="e#4215#4216#0" expanded="true" />
+            <element signature="e#4288#4289#0" expanded="true" />
+            <element signature="e#4316#4317#0" expanded="true" />
+            <element signature="e#4373#4374#0" expanded="true" />
+            <element signature="e#4401#4402#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/desktop/src/gdx/menu/desktop/DesktopLauncher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="76" column="21" lean-forward="false" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1573#1574#0" expanded="true" />
+            <element signature="e#1607#1608#0" expanded="true" />
+            <element signature="e#11637#11638#0" expanded="true" />
+            <element signature="e#11665#11666#0" expanded="true" />
+            <element signature="e#11720#11721#0" expanded="true" />
+            <element signature="e#11748#11749#0" expanded="true" />
+            <element signature="e#11809#11810#0" expanded="true" />
+            <element signature="e#11837#11838#0" expanded="true" />
+            <element signature="e#12577#12578#0" expanded="true" />
+            <element signature="e#12605#12606#0" expanded="true" />
+            <element signature="e#12693#12694#0" expanded="true" />
+            <element signature="e#12721#12722#0" expanded="true" />
+            <element signature="e#12794#12795#0" expanded="true" />
+            <element signature="e#12822#12823#0" expanded="true" />
+            <element signature="e#12879#12880#0" expanded="true" />
+            <element signature="e#12907#12908#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
