@@ -21,12 +21,12 @@ public class ScrGame implements Screen, InputProcessor {
     OrthographicCamera oc;
     Button btnMenu, btnQuit;
     TextureRegion trTemp, trTemp2;
-    Texture txSheet, txMap, txHamP, txTextbox1, txTextbox2, txHouse;// txTextbox3, txHouse;
+    Texture txSheet,txSheet2, txMap, txHamP, txTextbox1, txTextbox2, txHouse;// txTextbox3, txHouse;
     Sprite sprMouse, sprMouse2, sprMap, sprHamP, sprHouse;   //sprAni is a ghost, a sprite used for hit detection, maybe a bit redundant
     Sprite arsprTextbox[] = new Sprite[2];
     int nFrame, nPos, nPos2, nX = 100, nY = 100, nX2 = 100, nY2 = 100, nTrig = 0, nTrig2 = 0;
     Animation araniMouse[], araniMouse2[];
-    int fSx, fSy, fSx2, fSy2, fW, fH, nDir = 0, nDir2 = 0, nSizeX = 50, nSizeY = 50, nSizeX2 = 50, nSizeY2 = 50;
+    int fSx, fSy, fSx2, fSy2, fW, fH,fW2,fH2, nDir = 0, nDir2 = 0, nSizeX = 50, nSizeY = 50, nSizeX2 = 50, nSizeY2 = 50;
     Wall[] arWall = new Wall[4];
     int DX[] = {1, 0, -1, 0};
     int DY[] = {0, -1, 0, 1};
@@ -48,11 +48,14 @@ public class ScrGame implements Screen, InputProcessor {
         oc.update();
         btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Menu.jpg");
         btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Quit.jpg");
+       // Choice between which sprite they take
         nChoice = ScrAnimalChoice.nChoice;
         if (nChoice == 1) {
             txSheet = new Texture("sprmouse.png");
+            txSheet2 = new Texture ("sprmouse2.png");
         } else if (nChoice == 2) {
             txSheet = new Texture("sprmouse2.png");
+            txSheet2 = new Texture("sprmouse.png");
         }
         txTextbox1 = new Texture("Textbox.png");
         txTextbox2 = new Texture("Textbox2.png");
@@ -81,52 +84,30 @@ public class ScrGame implements Screen, InputProcessor {
         nPos = 0;
         nPos2 = 0;
         //Animation Stuff for Case 1
-        if (nChoice == 1) {
             araniMouse = new Animation[4];
             araniMouse2 = new Animation[4];
             fW = txSheet.getWidth() / 4;
             fH = txSheet.getHeight() / 4;
+            fW2 = txSheet2.getWidth() /4;
+            fH2 = txSheet2.getHeight() /4;
             for (int i = 0; i < 4; i++) {
                 Sprite[] arSprMouse = new Sprite[4];
                 Sprite[] arSprMouse2 = new Sprite[4];
                 for (int j = 0; j < 4; j++) {
                     fSx = j * fW;
                     fSy = i * fH;
-                    sprMouse = new Sprite(txSheet, fSx, fSy, fW, fH);
-                    sprMouse.setFlip(false, true);
-                    arSprMouse[j] = new Sprite(sprMouse);
-                    sprMouse2 = new Sprite(txSheet, fSx2, fSy2, fW, fH);
+                    fSy2 = i * fH2;
+                    fSx2 = j * fW2;
+                   sprMouse = new Sprite(txSheet, fSx, fSy, fW, fH);
+                   sprMouse.setFlip(false, true);
+                   arSprMouse[j] = new Sprite(sprMouse);
+                   sprMouse2 = new Sprite(txSheet2, fSx2, fSy2, fW2, fH2);
                     sprMouse2.setFlip(false, true);
-                    arSprMouse2[j] = new Sprite(sprMouse);
+                    arSprMouse2[j] = new Sprite(sprMouse2);
                 }
                 araniMouse[i] = new Animation(0.8f, arSprMouse);
                 araniMouse2[i] = new Animation(0.8f, arSprMouse2);
-
             }
-        //Animation stuff for Case 2
-        } else if (nChoice == 2) {
-            araniMouse = new Animation[4];
-            araniMouse2 = new Animation[4];
-            fW = txSheet.getWidth() / 3;
-            fH = txSheet.getHeight() / 4;
-            for (int i = 0; i < 4; i++) {
-                Sprite[] arSprMouse = new Sprite[3];
-                Sprite[] arSprMouse2 = new Sprite[3];
-                for (int j = 0; j < 3; j++) {
-                    fSx = j * fW;
-                    fSy = i * fH;
-                    sprMouse = new Sprite(txSheet, fSx, fSy, fW, fH);
-                    sprMouse.setFlip(false, true);
-                    arSprMouse[j] = new Sprite(sprMouse);
-                    sprMouse2 = new Sprite(txSheet, fSx2, fSy2, fW, fH);
-                    sprMouse2.setFlip(false, true);
-                    arSprMouse2[j] = new Sprite(sprMouse);
-                }
-                araniMouse[i] = new Animation(0.8f, arSprMouse);
-                araniMouse2[i] = new Animation(0.8f, arSprMouse2);
-
-            }
-        }
         sprMouse.setPosition(200, 200);
         sprMouse2.setPosition(300, 200);
         Gdx.input.setInputProcessor(this);
@@ -146,7 +127,7 @@ public class ScrGame implements Screen, InputProcessor {
             nFrame = 0;
         }
         trTemp = araniMouse[nPos].getKeyFrame(nFrame, false);
-        trTemp2 = araniMouse[nPos2].getKeyFrame(nFrame, false);
+        trTemp2 = araniMouse2[nPos2].getKeyFrame(nFrame, false);
         //Pellet for hamster 1
         if (isHitS(sprMouse, sprHamP) && nTrig == 0) {
             System.out.println("He hecking ate it");

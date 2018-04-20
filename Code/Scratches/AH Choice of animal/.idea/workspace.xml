@@ -2,81 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff6eba52-1d98-4608-9799-8b7a7aa81931" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/AH_Choice_of_animal.iml" />
+      <change beforePath="$PROJECT_DIR$/../../Releases/AH Version 3.0/.idea/modules.xml" afterPath="$PROJECT_DIR$/../../Releases/AH Version 3.0/.idea/modules.xml" />
+      <change beforePath="$PROJECT_DIR$/../../Releases/AH Version 3.0/.idea/modules/Game_over_screen.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Releases/AH Version 3.0/.idea/modules/core/core.iml" afterPath="$PROJECT_DIR$/../../Releases/AH Version 3.0/.idea/modules/core/core.iml" />
+      <change beforePath="$PROJECT_DIR$/../../Releases/AH Version 3.0/.idea/modules/core/core_main.iml" afterPath="$PROJECT_DIR$/../../Releases/AH Version 3.0/.idea/modules/core/core_main.iml" />
+      <change beforePath="$PROJECT_DIR$/../../Releases/AH Version 3.0/.idea/modules/core/core_test.iml" afterPath="$PROJECT_DIR$/../../Releases/AH Version 3.0/.idea/modules/core/core_test.iml" />
+      <change beforePath="$PROJECT_DIR$/../../Releases/AH Version 3.0/.idea/modules/desktop/desktop.iml" afterPath="$PROJECT_DIR$/../../Releases/AH Version 3.0/.idea/modules/desktop/desktop.iml" />
+      <change beforePath="$PROJECT_DIR$/../../Releases/AH Version 3.0/.idea/modules/desktop/desktop_main.iml" afterPath="$PROJECT_DIR$/../../Releases/AH Version 3.0/.idea/modules/desktop/desktop_main.iml" />
+      <change beforePath="$PROJECT_DIR$/../../Releases/AH Version 3.0/.idea/modules/desktop/desktop_test.iml" afterPath="$PROJECT_DIR$/../../Releases/AH Version 3.0/.idea/modules/desktop/desktop_test.iml" />
+      <change beforePath="$PROJECT_DIR$/../../Releases/AH Version 3.0/.idea/modules/html/html.iml" afterPath="$PROJECT_DIR$/../../Releases/AH Version 3.0/.idea/modules/html/html.iml" />
+      <change beforePath="$PROJECT_DIR$/../../Releases/AH Version 3.0/.idea/modules/html/html_main.iml" afterPath="$PROJECT_DIR$/../../Releases/AH Version 3.0/.idea/modules/html/html_main.iml" />
+      <change beforePath="$PROJECT_DIR$/../../Releases/AH Version 3.0/.idea/modules/html/html_test.iml" afterPath="$PROJECT_DIR$/../../Releases/AH Version 3.0/.idea/modules/html/html_test.iml" />
       <change beforePath="$PROJECT_DIR$/../../Releases/AH Version 3.0/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Releases/AH Version 3.0/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/compiler.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/gradle.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_1_9_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_backend_gwt_1_9_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_backend_gwt_sources_1_9_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_backend_lwjgl_1_9_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_box2d_1_9_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_box2d_gwt_sources_1_9_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_box2d_platform_natives_desktop_1_9_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_box2d_sources_1_9_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_platform_natives_desktop_1_9_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__com_badlogicgames_gdx_gdx_sources_1_9_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__com_badlogicgames_jlayer_jlayer_1_0_1_gdx.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__com_google_gwt_gwt_codeserver_2_6_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__com_google_gwt_gwt_dev_2_6_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__com_google_gwt_gwt_servlet_2_6_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__com_google_gwt_gwt_user_2_6_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__com_google_gwt_gwt_user_2_6_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__javax_validation_validation_api_1_0_0_GA.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__javax_validation_validation_api_sources_1_0_0_GA.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__net_java_jinput_jinput_2_0_5.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__net_java_jinput_jinput_platform_natives_linux_2_0_5.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__net_java_jinput_jinput_platform_natives_osx_2_0_5.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__net_java_jinput_jinput_platform_natives_windows_2_0_5.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__net_java_jutils_jutils_1_0_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__org_jcraft_jorbis_0_0_17.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__org_json_json_20090211.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__org_lwjgl_lwjgl_lwjgl_2_9_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__org_lwjgl_lwjgl_lwjgl_platform_natives_linux_2_9_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__org_lwjgl_lwjgl_lwjgl_platform_natives_osx_2_9_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__org_lwjgl_lwjgl_lwjgl_platform_natives_windows_2_9_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/libraries/Gradle__org_lwjgl_lwjgl_lwjgl_util_2_9_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/misc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/modules/Version_2.5.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/modules/core/core.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/modules/core/core_main.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/modules/core/core_test.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/modules/desktop/desktop.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/modules/desktop/desktop_main.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/modules/desktop/desktop_test.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/modules/html/html.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/modules/html/html_main.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/modules/html/html_test.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/workspace.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/.idea/workspace.xml___jb_tmp___" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/core/out/production/classes/gdx/menu/GamMenu.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/core/out/production/classes/gdx/menu/Screens/ScrAniHit.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/core/out/production/classes/gdx/menu/Screens/ScrAnimation.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/core/out/production/classes/gdx/menu/Screens/ScrFood.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/core/out/production/classes/gdx/menu/Screens/ScrGame.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/core/out/production/classes/gdx/menu/Screens/ScrMenu.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/core/out/production/classes/gdx/menu/Screens/ScrTail.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/core/out/production/classes/gdx/menu/images/Animation.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/core/out/production/classes/gdx/menu/images/Button.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/core/out/production/classes/gdx/menu/images/Wall.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Releases/Version 2.5/desktop/out/production/classes/gdx/menu/desktop/DesktopLauncher.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/Game_over_screen.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/core/core.iml" afterPath="$PROJECT_DIR$/.idea/modules/core/core.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/core/core_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/core/core_main.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/core/core_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/core/core_test.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/desktop/desktop.iml" afterPath="$PROJECT_DIR$/.idea/modules/desktop/desktop.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/desktop/desktop_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/desktop/desktop_main.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/desktop/desktop_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/desktop/desktop_test.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/html/html.iml" afterPath="$PROJECT_DIR$/.idea/modules/html/html.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/html/html_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/html/html_main.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/html/html_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/html/html_test.iml" />
+      <change beforePath="$PROJECT_DIR$/../../Releases/AH Version 3.0/core/out/production/classes/gdx/menu/Screens/ScrGameOver.class" afterPath="$PROJECT_DIR$/../../Releases/AH Version 3.0/core/out/production/classes/gdx/menu/Screens/ScrGameOver.class" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/core/out/production/classes/gdx/menu/GamMenu.class" afterPath="$PROJECT_DIR$/core/out/production/classes/gdx/menu/GamMenu.class" />
+      <change beforePath="$PROJECT_DIR$/core/assets/btnMouse2.png" afterPath="$PROJECT_DIR$/core/assets/btnMouse2.png" />
+      <change beforePath="$PROJECT_DIR$/core/assets/sprmouse2.png" afterPath="$PROJECT_DIR$/core/assets/sprmouse2.png" />
       <change beforePath="$PROJECT_DIR$/core/out/production/classes/gdx/menu/Screens/ScrGame.class" afterPath="$PROJECT_DIR$/core/out/production/classes/gdx/menu/Screens/ScrGame.class" />
-      <change beforePath="$PROJECT_DIR$/core/out/production/classes/gdx/menu/Screens/ScrGameOver.class" afterPath="$PROJECT_DIR$/core/out/production/classes/gdx/menu/Screens/ScrGameOver.class" />
-      <change beforePath="$PROJECT_DIR$/core/out/production/classes/gdx/menu/Screens/ScrMenu.class" afterPath="$PROJECT_DIR$/core/out/production/classes/gdx/menu/Screens/ScrMenu.class" />
+      <change beforePath="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame.java" afterPath="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame.java" />
+      <change beforePath="$PROJECT_DIR$/../Fixed animation of hamster/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Fixed animation of hamster/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/core/.gradle/" />
     <ignored path="$PROJECT_DIR$/core/build/" />
@@ -106,8 +50,33 @@
       <file leaf-file-name="ScrGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-629">
-              <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+            <state relative-caret-position="653">
+              <caret line="128" column="28" lean-forward="true" selection-start-line="128" selection-start-column="28" selection-end-line="128" selection-end-column="28" />
+              <folding>
+                <element signature="e#11512#11513#0" expanded="true" />
+                <element signature="e#11540#11541#0" expanded="true" />
+                <element signature="e#11595#11596#0" expanded="true" />
+                <element signature="e#11623#11624#0" expanded="true" />
+                <element signature="e#11684#11685#0" expanded="true" />
+                <element signature="e#11712#11713#0" expanded="true" />
+                <element signature="e#12452#12453#0" expanded="true" />
+                <element signature="e#12480#12481#0" expanded="true" />
+                <element signature="e#12568#12569#0" expanded="true" />
+                <element signature="e#12596#12597#0" expanded="true" />
+                <element signature="e#12669#12670#0" expanded="true" />
+                <element signature="e#12697#12698#0" expanded="true" />
+                <element signature="e#12754#12755#0" expanded="true" />
+                <element signature="e#12782#12783#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScrAnimalChoice.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrAnimalChoice.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="108" column="0" lean-forward="false" selection-start-line="107" selection-start-column="28" selection-end-line="108" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -192,13 +161,18 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Trtemp2</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
-        <entry key="$PROJECT_DIR$" value="C:\Users\schun8627\.gradle\wrapper\dists\gradle-2.10-all\dsjfzfdv0b7g6tl0p5fhv6wr3\gradle-2.10" />
+        <entry key="$PROJECT_DIR$" value="C:\Users\parks2214\.gradle\wrapper\dists\gradle-2.10-all\dsjfzfdv0b7g6tl0p5fhv6wr3\gradle-2.10" />
       </map>
     </option>
     <option name="myGradleVersions">
@@ -1078,6 +1052,7 @@
     </option>
     <option name="modificationStamps">
       <map>
+        <entry key="$PROJECT_DIR$" value="10667824397246" />
         <entry key="$PROJECT_DIR$/build.gradle" value="3571373960" />
         <entry key="$PROJECT_DIR$/core/build.gradle" value="2971590108" />
         <entry key="$PROJECT_DIR$/desktop/build.gradle" value="1728858683" />
@@ -1276,6 +1251,11 @@
     <option name="externalProjectsViewState">
       <projects_view />
     </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -1317,52 +1297,50 @@
         <subPane>
           <expand>
             <path>
-              <item name="AH Version 3.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AH Version 3.0" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="AH Choice of animal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AH Choice of animal" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
-              <item name="AH Version 3.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AH Version 3.0" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="desktop" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="AH Choice of animal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AH Choice of animal" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
-              <item name="AH Version 3.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AH Version 3.0" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="desktop" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="AH Choice of animal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AH Choice of animal" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
-              <item name="AH Version 3.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AH Version 3.0" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="desktop" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="AH Choice of animal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AH Choice of animal" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="desktop" type="462c0819:PsiDirectoryNode" />
+              <item name="menu" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="AH Version 3.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AH Version 3.0" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="gradle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AH Version 3.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AH Version 3.0" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="gradle" type="462c0819:PsiDirectoryNode" />
-              <item name="wrapper" type="462c0819:PsiDirectoryNode" />
+              <item name="AH Choice of animal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AH Choice of animal" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="core" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="menu" type="462c0819:PsiDirectoryNode" />
+              <item name="Screens" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Releases/AH Version 3.0" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -1510,13 +1488,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19322033" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22890624" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30829597" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20234375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1528,6 +1505,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30829597" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1542,14 +1520,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5100">
-          <caret line="323" column="21" lean-forward="false" selection-start-line="323" selection-start-column="21" selection-end-line="323" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/desktop/src/gdx/menu/desktop/DesktopLauncher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1606,7 +1576,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="62" column="10" lean-forward="false" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="e#11512#11513#0" expanded="true" />
+            <element signature="e#11540#11541#0" expanded="true" />
+            <element signature="e#11595#11596#0" expanded="true" />
+            <element signature="e#11623#11624#0" expanded="true" />
+            <element signature="e#11684#11685#0" expanded="true" />
+            <element signature="e#11712#11713#0" expanded="true" />
+            <element signature="e#12452#12453#0" expanded="true" />
+            <element signature="e#12480#12481#0" expanded="true" />
+            <element signature="e#12568#12569#0" expanded="true" />
+            <element signature="e#12596#12597#0" expanded="true" />
+            <element signature="e#12669#12670#0" expanded="true" />
+            <element signature="e#12697#12698#0" expanded="true" />
+            <element signature="e#12754#12755#0" expanded="true" />
+            <element signature="e#12782#12783#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1666,7 +1651,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#11512#11513#0" expanded="true" />
+            <element signature="e#11540#11541#0" expanded="true" />
+            <element signature="e#11595#11596#0" expanded="true" />
+            <element signature="e#11623#11624#0" expanded="true" />
+            <element signature="e#11684#11685#0" expanded="true" />
+            <element signature="e#11712#11713#0" expanded="true" />
+            <element signature="e#12452#12453#0" expanded="true" />
+            <element signature="e#12480#12481#0" expanded="true" />
+            <element signature="e#12568#12569#0" expanded="true" />
+            <element signature="e#12596#12597#0" expanded="true" />
+            <element signature="e#12669#12670#0" expanded="true" />
+            <element signature="e#12697#12698#0" expanded="true" />
+            <element signature="e#12754#12755#0" expanded="true" />
+            <element signature="e#12782#12783#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1726,7 +1726,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1853">
           <caret line="124" column="18" lean-forward="false" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
-          <folding />
+          <folding>
+            <element signature="e#11512#11513#0" expanded="true" />
+            <element signature="e#11540#11541#0" expanded="true" />
+            <element signature="e#11595#11596#0" expanded="true" />
+            <element signature="e#11623#11624#0" expanded="true" />
+            <element signature="e#11684#11685#0" expanded="true" />
+            <element signature="e#11712#11713#0" expanded="true" />
+            <element signature="e#12452#12453#0" expanded="true" />
+            <element signature="e#12480#12481#0" expanded="true" />
+            <element signature="e#12568#12569#0" expanded="true" />
+            <element signature="e#12596#12597#0" expanded="true" />
+            <element signature="e#12669#12670#0" expanded="true" />
+            <element signature="e#12697#12698#0" expanded="true" />
+            <element signature="e#12754#12755#0" expanded="true" />
+            <element signature="e#12782#12783#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1742,7 +1757,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1853">
           <caret line="124" column="18" lean-forward="true" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
-          <folding />
+          <folding>
+            <element signature="e#11512#11513#0" expanded="true" />
+            <element signature="e#11540#11541#0" expanded="true" />
+            <element signature="e#11595#11596#0" expanded="true" />
+            <element signature="e#11623#11624#0" expanded="true" />
+            <element signature="e#11684#11685#0" expanded="true" />
+            <element signature="e#11712#11713#0" expanded="true" />
+            <element signature="e#12452#12453#0" expanded="true" />
+            <element signature="e#12480#12481#0" expanded="true" />
+            <element signature="e#12568#12569#0" expanded="true" />
+            <element signature="e#12596#12597#0" expanded="true" />
+            <element signature="e#12669#12670#0" expanded="true" />
+            <element signature="e#12697#12698#0" expanded="true" />
+            <element signature="e#12754#12755#0" expanded="true" />
+            <element signature="e#12782#12783#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1797,7 +1827,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5100">
           <caret line="323" column="21" lean-forward="false" selection-start-line="323" selection-start-column="21" selection-end-line="323" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="e#11512#11513#0" expanded="true" />
+            <element signature="e#11540#11541#0" expanded="true" />
+            <element signature="e#11595#11596#0" expanded="true" />
+            <element signature="e#11623#11624#0" expanded="true" />
+            <element signature="e#11684#11685#0" expanded="true" />
+            <element signature="e#11712#11713#0" expanded="true" />
+            <element signature="e#12452#12453#0" expanded="true" />
+            <element signature="e#12480#12481#0" expanded="true" />
+            <element signature="e#12568#12569#0" expanded="true" />
+            <element signature="e#12596#12597#0" expanded="true" />
+            <element signature="e#12669#12670#0" expanded="true" />
+            <element signature="e#12697#12698#0" expanded="true" />
+            <element signature="e#12754#12755#0" expanded="true" />
+            <element signature="e#12782#12783#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1847,7 +1892,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="62" column="10" lean-forward="false" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="e#11512#11513#0" expanded="true" />
+            <element signature="e#11540#11541#0" expanded="true" />
+            <element signature="e#11595#11596#0" expanded="true" />
+            <element signature="e#11623#11624#0" expanded="true" />
+            <element signature="e#11684#11685#0" expanded="true" />
+            <element signature="e#11712#11713#0" expanded="true" />
+            <element signature="e#12452#12453#0" expanded="true" />
+            <element signature="e#12480#12481#0" expanded="true" />
+            <element signature="e#12568#12569#0" expanded="true" />
+            <element signature="e#12596#12597#0" expanded="true" />
+            <element signature="e#12669#12670#0" expanded="true" />
+            <element signature="e#12697#12698#0" expanded="true" />
+            <element signature="e#12754#12755#0" expanded="true" />
+            <element signature="e#12782#12783#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1907,7 +1967,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#11512#11513#0" expanded="true" />
+            <element signature="e#11540#11541#0" expanded="true" />
+            <element signature="e#11595#11596#0" expanded="true" />
+            <element signature="e#11623#11624#0" expanded="true" />
+            <element signature="e#11684#11685#0" expanded="true" />
+            <element signature="e#11712#11713#0" expanded="true" />
+            <element signature="e#12452#12453#0" expanded="true" />
+            <element signature="e#12480#12481#0" expanded="true" />
+            <element signature="e#12568#12569#0" expanded="true" />
+            <element signature="e#12596#12597#0" expanded="true" />
+            <element signature="e#12669#12670#0" expanded="true" />
+            <element signature="e#12697#12698#0" expanded="true" />
+            <element signature="e#12754#12755#0" expanded="true" />
+            <element signature="e#12782#12783#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1966,7 +2041,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1853">
           <caret line="124" column="18" lean-forward="false" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
-          <folding />
+          <folding>
+            <element signature="e#11512#11513#0" expanded="true" />
+            <element signature="e#11540#11541#0" expanded="true" />
+            <element signature="e#11595#11596#0" expanded="true" />
+            <element signature="e#11623#11624#0" expanded="true" />
+            <element signature="e#11684#11685#0" expanded="true" />
+            <element signature="e#11712#11713#0" expanded="true" />
+            <element signature="e#12452#12453#0" expanded="true" />
+            <element signature="e#12480#12481#0" expanded="true" />
+            <element signature="e#12568#12569#0" expanded="true" />
+            <element signature="e#12596#12597#0" expanded="true" />
+            <element signature="e#12669#12670#0" expanded="true" />
+            <element signature="e#12697#12698#0" expanded="true" />
+            <element signature="e#12754#12755#0" expanded="true" />
+            <element signature="e#12782#12783#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1981,7 +2071,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1853">
           <caret line="124" column="18" lean-forward="true" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
-          <folding />
+          <folding>
+            <element signature="e#11512#11513#0" expanded="true" />
+            <element signature="e#11540#11541#0" expanded="true" />
+            <element signature="e#11595#11596#0" expanded="true" />
+            <element signature="e#11623#11624#0" expanded="true" />
+            <element signature="e#11684#11685#0" expanded="true" />
+            <element signature="e#11712#11713#0" expanded="true" />
+            <element signature="e#12452#12453#0" expanded="true" />
+            <element signature="e#12480#12481#0" expanded="true" />
+            <element signature="e#12568#12569#0" expanded="true" />
+            <element signature="e#12596#12597#0" expanded="true" />
+            <element signature="e#12669#12670#0" expanded="true" />
+            <element signature="e#12697#12698#0" expanded="true" />
+            <element signature="e#12754#12755#0" expanded="true" />
+            <element signature="e#12782#12783#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2073,11 +2178,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrAnimalChoice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="108" column="0" lean-forward="false" selection-start-line="107" selection-start-column="28" selection-end-line="108" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-629">
-          <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="653">
+          <caret line="128" column="28" lean-forward="true" selection-start-line="128" selection-start-column="28" selection-end-line="128" selection-end-column="28" />
+          <folding>
+            <element signature="e#11512#11513#0" expanded="true" />
+            <element signature="e#11540#11541#0" expanded="true" />
+            <element signature="e#11595#11596#0" expanded="true" />
+            <element signature="e#11623#11624#0" expanded="true" />
+            <element signature="e#11684#11685#0" expanded="true" />
+            <element signature="e#11712#11713#0" expanded="true" />
+            <element signature="e#12452#12453#0" expanded="true" />
+            <element signature="e#12480#12481#0" expanded="true" />
+            <element signature="e#12568#12569#0" expanded="true" />
+            <element signature="e#12596#12597#0" expanded="true" />
+            <element signature="e#12669#12670#0" expanded="true" />
+            <element signature="e#12697#12698#0" expanded="true" />
+            <element signature="e#12754#12755#0" expanded="true" />
+            <element signature="e#12782#12783#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
