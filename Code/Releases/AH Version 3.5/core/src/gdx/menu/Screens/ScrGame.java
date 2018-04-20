@@ -59,9 +59,9 @@ public class ScrGame implements Screen, InputProcessor {
             arsprTextbox[i].setSize(300, 125);
             arsprTextbox[i].setPosition(Gdx.graphics.getWidth() / 2 - arsprTextbox[i].getWidth() / 2, 0);
         }
-        txMap = new Texture("jupiter.jpg");
+        txMap = new Texture("pluto.jpg");
         sprMap = new Sprite(txMap);
-        sprMap.setScale(1, 1.5f);
+        sprMap.setScale(0.4f, 0.5f);
         sprMap.setPosition(Gdx.graphics.getWidth() / 2 - sprMap.getWidth() / 2, Gdx.graphics.getHeight() / 2 - sprMap.getHeight() / 2);
         sprMap.setFlip(false, true);
         arWall[0] = new Wall(Gdx.graphics.getWidth(), 50, 0, 0);   //Top Wall
