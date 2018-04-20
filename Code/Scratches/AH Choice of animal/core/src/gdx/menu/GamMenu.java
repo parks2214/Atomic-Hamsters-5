@@ -8,6 +8,7 @@ import gdx.menu.Screens.ScrAniHit;
 import gdx.menu.Screens.ScrGame;
 import gdx.menu.Screens.ScrGameOver;
 import gdx.menu.Screens.ScrAnimalChoice;
+import gdx.menu.Screens.ScrAnimalChoice2;
 
 
 
@@ -20,8 +21,9 @@ public class GamMenu extends Game {
     ScrGame scrGame;
     ScrGameOver scrGameOver;
     ScrAnimalChoice scrAnimalChoice;
-    int nScreen; // 0 for menu, 1 for play, 2 for Sign, 3 for Animation, 4 for AniHit, 5 for Game, 6 for GameOver, 7 for AnimalChoice
-    
+    ScrAnimalChoice2 scrAnimalChoice2;
+    int nScreen; // 0 for menu, 1 for play, 2 for Sign, 3 for Animation, 4 for AniHit, 5 for Game, 6 for GameOver, 7 for AnimalChoice, 8 for AnimalChoice2
+
     public void updateState(int _nScreen) {
         nScreen = _nScreen;
         if ( nScreen == 0) {
@@ -40,6 +42,8 @@ public class GamMenu extends Game {
             setScreen(scrGameOver);
         } else if (nScreen == 7) {
             setScreen(scrAnimalChoice);
+        } else if (nScreen == 8) {
+            setScreen(scrAnimalChoice2);
         }
     }
 
@@ -55,6 +59,7 @@ public class GamMenu extends Game {
         scrGame = new ScrGame(this);
         scrGameOver = new ScrGameOver(this);
         scrAnimalChoice = new ScrAnimalChoice(this);
+        scrAnimalChoice2 = new ScrAnimalChoice2(this);
         updateState(0);
     }
 

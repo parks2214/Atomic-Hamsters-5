@@ -53,7 +53,7 @@ public class ScrAnimalChoice implements Screen, InputProcessor {
         btnQuit.draw(batch);
         btnMouse1.draw(batch);
         btnMouse2.draw(batch);
-        font.draw(batch, "Please choose your character.", Gdx.graphics.getWidth() / 2 - 115, 60);
+        font.draw(batch, "Please choose Player 1's character.", Gdx.graphics.getWidth() / 2 - 115, 60);
         batch.end();
     }
 
@@ -104,13 +104,13 @@ public class ScrAnimalChoice implements Screen, InputProcessor {
                 System.out.println("Menu");
                 gamMenu.updateState(0);
             } else if (isHit(screenX, screenY, btnMouse1)) {
-                System.out.println("Game");
+                System.out.println("AnimalChoice2");
                 nChoice = 1;
-                gamMenu.updateState(5);
+                gamMenu.updateState(8);
             } else if (isHit(screenX, screenY, btnMouse2)) {
-                System.out.println("Game");
+                System.out.println("AnimalChoice2");
                 nChoice = 2;
-                gamMenu.updateState(5);
+                gamMenu.updateState(8);
             }
         }
 

@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff6eba52-1d98-4608-9799-8b7a7aa81931" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/src/gdx/menu/Screens/ScrAnimalChoice2.java" />
       <change beforePath="$PROJECT_DIR$/../AH Version 3.0/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../AH Version 3.0/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame.java" afterPath="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame.java" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/out/production/classes/gdx/menu/Screens/ScrAnimalChoice.class" afterPath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/out/production/classes/gdx/menu/Screens/ScrAnimalChoice.class" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/out/production/classes/gdx/menu/Screens/ScrGame.class" afterPath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/out/production/classes/gdx/menu/Screens/ScrGame.class" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/src/gdx/menu/GamMenu.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/src/gdx/menu/GamMenu.java" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/src/gdx/menu/Screens/ScrAnimalChoice.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/src/gdx/menu/Screens/ScrAnimalChoice.java" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/src/gdx/menu/Screens/ScrGame.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/src/gdx/menu/Screens/ScrGame.java" />
       <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/core/.gradle/" />
@@ -34,8 +40,8 @@
       <file leaf-file-name="ScrGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="63" column="36" lean-forward="false" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
+            <state relative-caret-position="-1715">
+              <caret line="56" column="55" lean-forward="true" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1573#1574#0" expanded="true" />
@@ -1268,8 +1274,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1299,8 +1303,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1449,6 +1455,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1472,7 +1479,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30829597" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -2228,8 +2234,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="63" column="36" lean-forward="false" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
+        <state relative-caret-position="-1715">
+          <caret line="56" column="55" lean-forward="true" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1573#1574#0" expanded="true" />
