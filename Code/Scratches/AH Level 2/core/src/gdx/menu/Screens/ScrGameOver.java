@@ -118,7 +118,11 @@ public class ScrGameOver implements Screen, InputProcessor {
         if (button == Input.Buttons.LEFT) {
             if (isHit(screenX, screenY, btnGame)) {
                 System.out.println("Game");
-                gamMenu.updateState(9);
+                if (nPoints > 9 || nPoints2 > 9) {
+                    gamMenu.updateState(9);
+                } else {
+                    gamMenu.updateState(5);
+                }
 
             } else if (isHit(screenX, screenY, btnMenu)) {
                 System.out.println("Menu");
