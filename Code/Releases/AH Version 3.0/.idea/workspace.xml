@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff6eba52-1d98-4608-9799-8b7a7aa81931" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/src/gdx/menu/Screens/ScrAnimalChoice2.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../AH Version 3.5/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../AH Version 3.5/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../AH Version 3.5/core/src/gdx/menu/Screens/ScrGame.java" afterPath="$PROJECT_DIR$/../AH Version 3.5/core/src/gdx/menu/Screens/ScrGame.java" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/out/production/classes/gdx/menu/Screens/ScrAnimalChoice.class" afterPath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/out/production/classes/gdx/menu/Screens/ScrAnimalChoice.class" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/src/gdx/menu/GamMenu.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/src/gdx/menu/GamMenu.java" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/src/gdx/menu/Screens/ScrAnimalChoice.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/src/gdx/menu/Screens/ScrAnimalChoice.java" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/src/gdx/menu/Screens/ScrGame.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/src/gdx/menu/Screens/ScrGame.java" />
       <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/core/.gradle/" />
@@ -63,8 +67,8 @@
       <file leaf-file-name="ScrFood.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrFood.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="115" column="46" lean-forward="false" selection-start-line="115" selection-start-column="46" selection-end-line="115" selection-end-column="46" />
+            <state relative-caret-position="221">
+              <caret line="97" column="34" lean-forward="true" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -1247,11 +1251,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
-    <option name="y" value="21" />
+    <option name="y" value="20" />
     <option name="width" value="1260" />
-    <option name="height" value="943" />
+    <option name="height" value="944" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -1456,7 +1460,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="7" />
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2258,8 +2262,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrFood.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="115" column="46" lean-forward="false" selection-start-line="115" selection-start-column="46" selection-end-line="115" selection-end-column="46" />
+        <state relative-caret-position="221">
+          <caret line="97" column="34" lean-forward="true" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
           <folding />
         </state>
       </provider>

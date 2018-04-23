@@ -34,7 +34,7 @@ public class ScrGame implements Screen, InputProcessor {
     int DY2[] = {0, -1, 0, 1};
     float fSpeed = 0, fSpeed2 = 0;
     static int nPoints = 0, nPoints2 = 0;
-    int nChoice;
+    int nChoice, nChoice2;
 
     public ScrGame(GamMenu _gamMenu) {
         gamMenu = _gamMenu;
@@ -52,9 +52,12 @@ public class ScrGame implements Screen, InputProcessor {
         nChoice = ScrAnimalChoice.nChoice;
         if (nChoice == 1) {
             txSheet = new Texture("sprmouse.png");
-            txSheet2 = new Texture ("sprmouse2.png");
         } else if (nChoice == 2) {
             txSheet = new Texture("sprmouse2.png");
+        }
+        if (nChoice2 == 1) {
+            txSheet2 = new Texture ("sprmouse2.png");
+        } else if (nChoice == 2) {
             txSheet2 = new Texture("sprmouse.png");
         }
         txTextbox1 = new Texture("Textbox.png");
@@ -84,30 +87,30 @@ public class ScrGame implements Screen, InputProcessor {
         nPos = 0;
         nPos2 = 0;
         //Animation Stuff for Case 1
-            araniMouse = new Animation[4];
-            araniMouse2 = new Animation[4];
-            fW = txSheet.getWidth() / 4;
-            fH = txSheet.getHeight() / 4;
-            fW2 = txSheet2.getWidth() /4;
-            fH2 = txSheet2.getHeight() /4;
-            for (int i = 0; i < 4; i++) {
-                Sprite[] arSprMouse = new Sprite[4];
-                Sprite[] arSprMouse2 = new Sprite[4];
-                for (int j = 0; j < 4; j++) {
-                    fSx = j * fW;
-                    fSy = i * fH;
-                    fSy2 = i * fH2;
-                    fSx2 = j * fW2;
-                   sprMouse = new Sprite(txSheet, fSx, fSy, fW, fH);
-                   sprMouse.setFlip(false, true);
-                   arSprMouse[j] = new Sprite(sprMouse);
-                   sprMouse2 = new Sprite(txSheet2, fSx2, fSy2, fW2, fH2);
-                    sprMouse2.setFlip(false, true);
-                    arSprMouse2[j] = new Sprite(sprMouse2);
-                }
-                araniMouse[i] = new Animation(0.8f, arSprMouse);
-                araniMouse2[i] = new Animation(0.8f, arSprMouse2);
+        araniMouse = new Animation[4];
+        araniMouse2 = new Animation[4];
+        fW = txSheet.getWidth() / 4;
+        fH = txSheet.getHeight() / 4;
+        fW2 = txSheet2.getWidth() /4;
+        fH2 = txSheet2.getHeight() /4;
+        for (int i = 0; i < 4; i++) {
+            Sprite[] arSprMouse = new Sprite[4];
+            Sprite[] arSprMouse2 = new Sprite[4];
+            for (int j = 0; j < 4; j++) {
+                fSx = j * fW;
+                fSy = i * fH;
+                fSy2 = i * fH2;
+                fSx2 = j * fW2;
+                sprMouse = new Sprite(txSheet, fSx, fSy, fW, fH);
+                sprMouse.setFlip(false, true);
+                arSprMouse[j] = new Sprite(sprMouse);
+                sprMouse2 = new Sprite(txSheet2, fSx2, fSy2, fW2, fH2);
+                sprMouse2.setFlip(false, true);
+                arSprMouse2[j] = new Sprite(sprMouse2);
             }
+            araniMouse[i] = new Animation(0.8f, arSprMouse);
+            araniMouse2[i] = new Animation(0.8f, arSprMouse2);
+        }
         sprMouse.setPosition(200, 200);
         sprMouse2.setPosition(300, 200);
         Gdx.input.setInputProcessor(this);
@@ -123,7 +126,7 @@ public class ScrGame implements Screen, InputProcessor {
         float fSy2 = sprMouse2.getY();
         //Animation Stuff
 
-        if (nFrame > 15) {
+        if (nFrame > 7) {
             nFrame = 0;
         }
         trTemp = araniMouse[nPos].getKeyFrame(nFrame, false);

@@ -1,13 +1,6 @@
 package gdx.menu;
 import com.badlogic.gdx.Game;
-import gdx.menu.Screens.ScrMenu;
-import gdx.menu.Screens.ScrTail;
-import gdx.menu.Screens.ScrFood;
-import gdx.menu.Screens.ScrAnimation;
-import gdx.menu.Screens.ScrAniHit;
-import gdx.menu.Screens.ScrGame;
-import gdx.menu.Screens.ScrGameOver;
-
+import gdx.menu.Screens.*;
 
 
 public class GamMenu extends Game {
@@ -18,8 +11,11 @@ public class GamMenu extends Game {
     ScrAniHit scrAniHit;
     ScrGame scrGame;
     ScrGameOver scrGameOver;
-    int nScreen; // 0 for menu, 1 for play, 2 for Sign, 3 for Animation, 4 for AniHit, 5 for Game, 6 for GameOver
-    
+    ScrAnimalChoice scrAnimalChoice;
+    ScrAnimalChoice2 scrAnimalChoice2;
+    ScrGame2 scrGame2;
+    int nScreen; // 0 for menu, 1 for play, 2 for Sign, 3 for Animation, 4 for AniHit, 5 for Game, 6 for GameOver, 7 for AnimalChoice, 8 for AnimalChoice2, 9 for Game2
+
     public void updateState(int _nScreen) {
         nScreen = _nScreen;
         if ( nScreen == 0) {
@@ -36,6 +32,12 @@ public class GamMenu extends Game {
             setScreen(scrGame);
         } else if (nScreen == 6){
             setScreen(scrGameOver);
+        } else if (nScreen == 7){
+            setScreen(scrAnimalChoice);
+        } else if (nScreen == 8){
+            setScreen(scrAnimalChoice2);
+        } else if (nScreen == 9) {
+            setScreen(scrGame2);
         }
     }
 
@@ -50,6 +52,9 @@ public class GamMenu extends Game {
         scrAniHit = new ScrAniHit(this);
         scrGame = new ScrGame(this);
         scrGameOver = new ScrGameOver(this);
+        scrAnimalChoice = new ScrAnimalChoice(this);
+        scrAnimalChoice2 = new ScrAnimalChoice2(this);
+        scrGame2 = new ScrGame2(this);
         updateState(0);
     }
 
