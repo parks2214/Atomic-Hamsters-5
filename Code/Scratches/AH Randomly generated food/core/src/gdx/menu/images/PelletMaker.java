@@ -17,7 +17,7 @@ import static com.badlogic.gdx.math.MathUtils.random;
  * @author parks2214
  */
 public class PelletMaker {
-    int nCounter=6,nActual=0;
+    int nCounter=2,nActual=0;
     public ArrayList <Pellet> alPellets = new ArrayList<Pellet>();
     Texture texture;
     public PelletMaker() {

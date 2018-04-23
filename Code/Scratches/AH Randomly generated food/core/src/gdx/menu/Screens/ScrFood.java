@@ -169,6 +169,15 @@ public class ScrFood implements Screen, InputProcessor {
             Pellet p = pMaker.alPellets.get(i);
             if (isHitS(p, spTemp)) {
                 System.out.println("HERE");
+                System.out.println("He hecking ate it");
+                fSpeed += 0.5f;
+                System.out.println(fSpeed);
+
+                if (nSizeX < 100 && nSizeY < 100) {
+                    nSizeX += 3;
+                    nSizeY += 3;
+                   System.out.println(nSizeX + "   " + nSizeY);
+                }
                 // mouse catche pellet
                 pMaker.removePellet(p);
             }
