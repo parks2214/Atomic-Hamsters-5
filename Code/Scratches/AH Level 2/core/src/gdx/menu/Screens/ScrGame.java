@@ -51,15 +51,16 @@ public class ScrGame implements Screen, InputProcessor {
         btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Quit.jpg");
         // Choice between which sprite they take
         nChoice = ScrAnimalChoice.nChoice;
+        nChoice2 = ScrAnimalChoice2.nChoice2;
         if (nChoice == 1) {
             txSheet = new Texture("sprmouse.png");
         } else if (nChoice == 2) {
             txSheet = new Texture("sprmouse2.png");
         }
         if (nChoice2 == 1) {
-            txSheet2 = new Texture ("sprmouse2.png");
+            txSheet2 = new Texture ("sprmouse.png");
         } else if (nChoice == 2) {
-            txSheet2 = new Texture("sprmouse.png");
+            txSheet2 = new Texture("sprmouse2.png");
         }
         txTextbox1 = new Texture("Textbox.png");
         txTextbox2 = new Texture("Textbox2.png");
