@@ -4,23 +4,22 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.g2d.Animation;
+import com.badlogic.gdx.graphics.g2d.*;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import com.badlogic.gdx.graphics.g2d.Sprite;
 import gdx.menu.GamMenu;
 import gdx.menu.images.Button;
 import gdx.menu.images.Wall;
 
 public class ScrRules implements Screen, InputProcessor {
 
-    SpriteBatch batch;
+    Button btnQuit, btnMenu;
     GamMenu gamMenu;
     OrthographicCamera oc;
-    Button btnMenu,btnQuit;
+    SpriteBatch batch = new SpriteBatch();
+    BitmapFont font;
 
     public ScrRules(GamMenu _gamMenu) {
         gamMenu = _gamMenu;
@@ -32,8 +31,14 @@ public class ScrRules implements Screen, InputProcessor {
         oc = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.setToOrtho(true, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.update();
+        font = new BitmapFont(true);//this flips the font (https://stackoverflow.com/questions/8508749/draw-a-bitmapfont-rotated-in-libgdx)
+        font.setColor(Color.BLACK);
+        font.getData().setScale(1.2f);
+        font.getRegion().getTexture().setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+
+        Gdx.input.setInputProcessor(this);
         //Buttons
-        btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, 0, "Menu.jpg");
+        btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Menu.jpg");
         btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Quit.jpg");
     }
 
@@ -41,12 +46,13 @@ public class ScrRules implements Screen, InputProcessor {
     public void render(float delta) {
         Gdx.gl.glClearColor(1, 1, 1, 1); //White background.
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-
         batch.begin();
         batch.setProjectionMatrix(oc.combined);
-
         btnMenu.draw(batch);
         btnQuit.draw(batch);
+        font.draw(batch, "The Rules are simple. Eat the most pellets without running into each other,", 0, 70);
+        font.draw(batch,"Collecting pellets adds speed and Size to you hamster, ",0,140);
+        font.draw(batch,"The person who collects the most pellets before you hit each other wins",0,210);
         batch.end();
     }
 
@@ -69,6 +75,7 @@ public class ScrRules implements Screen, InputProcessor {
     @Override
     public void dispose() {
         batch.dispose();
+        font.dispose();
     }
 
     @Override
