@@ -10,6 +10,8 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import gdx.menu.GamMenu;
 import gdx.menu.images.Button;
+import gdx.menu.images.Pellet;
+import gdx.menu.images.PelletMaker;
 import gdx.menu.images.Wall;
 import com.badlogic.gdx.math.Intersector;
 import com.badlogic.gdx.math.Rectangle;
@@ -21,8 +23,8 @@ public class ScrGame implements Screen, InputProcessor {
     OrthographicCamera oc;
     Button btnMenu, btnQuit;
     TextureRegion trTemp, trTemp2;
-    Texture txSheet,txSheet2, txMap, txHamP, txTextbox1, txTextbox2, txHouse;// txTextbox3, txHouse;
-    Sprite sprMouse, sprMouse2, sprMap, sprHamP, sprHouse;   //sprAni is a ghost, a sprite used for hit detection, maybe a bit redundant
+    Texture txSheet,txSheet2, txMap, txTextbox1, txTextbox2;
+    Sprite sprMouse, sprMouse2, sprMap;
     Sprite arsprTextbox[] = new Sprite[2];
     int nFrame, nPos, nPos2, nX = 100, nY = 100, nX2 = 100, nY2 = 100, nTrig = 0, nTrig2 = 0;
     Animation araniMouse[], araniMouse2[];
@@ -36,6 +38,8 @@ public class ScrGame implements Screen, InputProcessor {
     static int nPoints = 0, nPoints2 = 0;
     int nChoice, nChoice2;
     static int nWin, nInd;
+    Sprite spTemp, spTemp2;
+    PelletMaker pMaker;
 
     public ScrGame(GamMenu _gamMenu) {
         gamMenu = _gamMenu;
@@ -59,7 +63,7 @@ public class ScrGame implements Screen, InputProcessor {
         }
         if (nChoice2 == 1) {
             txSheet2 = new Texture ("sprmouse.png");
-        } else if (nChoice == 2) {
+        } else if (nChoice2 == 2) {
             txSheet2 = new Texture("sprmouse2.png");
         }
         txTextbox1 = new Texture("Textbox.png");
@@ -80,16 +84,12 @@ public class ScrGame implements Screen, InputProcessor {
         arWall[1] = new Wall(Gdx.graphics.getWidth(), 50, 0, Gdx.graphics.getHeight() - 50);    //Bottom Wall
         arWall[2] = new Wall(50, Gdx.graphics.getHeight() - 20, 0, 50);   //Left Wall
         arWall[3] = new Wall(50, Gdx.graphics.getHeight() - 20, Gdx.graphics.getWidth() - 50, 50);    //Right Wall
-        txHamP = new Texture("HamP.png");
-        sprHamP = new Sprite(txHamP);
-        sprHamP.setPosition(400, 270);
-        sprHamP.setSize(50, 50);
-        sprHamP.setFlip(false, true);
         nFrame = 0;
         nPos = 0;
         nPos2 = 0;
         nPoints = 0;
         nPoints2 = 0;
+        nInd = 1;
         //Animation Stuff for Case 1
         araniMouse = new Animation[4];
         araniMouse2 = new Animation[4];
@@ -118,6 +118,8 @@ public class ScrGame implements Screen, InputProcessor {
         sprMouse.setPosition(200, 200);
         sprMouse2.setPosition(300, 200);
         Gdx.input.setInputProcessor(this);
+
+        pMaker = new PelletMaker(25, 25,"Hamster Pellet.png");
     }
 
     @Override
@@ -136,41 +138,20 @@ public class ScrGame implements Screen, InputProcessor {
         trTemp = araniMouse[nPos].getKeyFrame(nFrame, false);
         trTemp2 = araniMouse2[nPos2].getKeyFrame(nFrame, false);
         //Pellet for hamster 1
-        if (isHitS(sprMouse, sprHamP) && nTrig == 0) {
-            System.out.println("He hecking ate it");
-            fSpeed += 0.5f;
-            System.out.println(fSpeed);
-            nTrig = 1;
-            nPoints += 1;
-            System.out.println("Points for first: " + nPoints);
-            if (nSizeX < 100 && nSizeY < 100) {
-                nSizeX += 3;
-                nSizeY += 3;
-                System.out.println(nSizeX + "   " + nSizeY);
-            }
-        } else if (isHitS(sprMouse, sprHamP) && nTrig == 3) {
-            nTrig = 3;
-        } else if (!isHitS(sprMouse, sprHamP)) {
-            nTrig = 0;
+        if (spTemp == null) {
+            spTemp = new Sprite(trTemp);
+            spTemp.setFlip(false,true);
+        } else {
+            spTemp.setTexture(trTemp.getTexture());
         }
         //Pellet for hamster 2
-        if (isHitS(sprMouse2, sprHamP) && nTrig2 == 0) {
-            System.out.println("He hecking ate it");
-            fSpeed2 += 0.5f;
-            System.out.println(fSpeed2);
-            nTrig2 = 1;
-            nPoints2 += 1;
-            System.out.println("Points for second: " + nPoints2);
-            if (nSizeX2 < 100 && nSizeY2 < 100) {
-                nSizeX2 += 3;
-                nSizeY2 += 3;
-                System.out.println(nSizeX2 + "   " + nSizeY2);
-            }
-        } else if (isHitS(sprMouse2, sprHamP) && nTrig2 == 3) {
-            nTrig2 = 3;
-        } else if (!isHitS(sprMouse2, sprHamP)) {
-            nTrig2 = 0;
+        if (spTemp2 == null) {
+            spTemp2 = new Sprite(trTemp2);
+            spTemp2.setFlip(false,true);
+        } else {
+            spTemp2.setTexture(trTemp2.getTexture());
         }
+
         //Input for hamster 1
         if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
             nDir = 2;
@@ -292,6 +273,39 @@ public class ScrGame implements Screen, InputProcessor {
             System.out.println("Hit");
             gamMenu.updateState(6);
         }
+        for (int i = pMaker.alPellets.size() - 1; i >= 0; i--) {
+            Pellet p = pMaker.alPellets.get(i);
+            if (isHitS(p, spTemp)) {
+                System.out.println("HERE");
+                System.out.println("He hecking ate it");
+                fSpeed += 0.5f;
+                System.out.println(fSpeed);
+                nTrig = 1;
+                nPoints += 1;
+                System.out.println("Points for first: " + nPoints);
+                if (nSizeX < 100 && nSizeY < 100) {
+                    nSizeX += 3;
+                    nSizeY += 3;
+                    System.out.println(nSizeX + "   " + nSizeY);
+                }
+                // mouse catche pellet
+                pMaker.removePellet(p);
+            }if (isHitS(p, spTemp2)) {
+                System.out.println("HERE");
+                System.out.println("He hecking ate it");
+                fSpeed2 += 0.5f;
+                System.out.println(fSpeed2);
+                nPoints2 += 1;
+                System.out.println("Points for first: " + nPoints2);
+                if (nSizeX2 < 100 && nSizeY2 < 100) {
+                    nSizeX2 += 3;
+                    nSizeY2 += 3;
+                    System.out.println(nSizeX2 + "   " + nSizeY2);
+                }
+                // mouse catche pellet
+                pMaker.removePellet(p);
+            }
+        }
 
         batch.begin();
         batch.setProjectionMatrix(oc.combined);
@@ -299,7 +313,9 @@ public class ScrGame implements Screen, InputProcessor {
             arWall[i].draw(batch);
         }
         sprMap.draw(batch);
-        sprHamP.draw(batch);
+        pMaker.draw(batch);
+        spTemp.setPosition(fSx, fSy);
+        spTemp2.setPosition(fSx2, fSy2);
         batch.draw(trTemp, fSx, fSy, nSizeX, nSizeY);
         batch.draw(trTemp2, fSx2, fSy2, nSizeX2, nSizeY2);
         btnMenu.draw(batch);

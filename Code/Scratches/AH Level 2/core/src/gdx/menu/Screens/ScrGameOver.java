@@ -23,9 +23,9 @@ public class ScrGameOver implements Screen, InputProcessor {
     SpriteBatch batch = new SpriteBatch();
     Sprite sprBackground;
     BitmapFont font;
-    int nPoints, nPoints2;
+    int nPoints, nPoints2, nPointsG, nPointsG2;
     int nWin, nWin2;
-    int nInd;
+    int nInd, nInd2;
 
     public ScrGameOver(GamMenu _gamMenu) {  //Referencing the main class.
         gamMenu = _gamMenu;
@@ -49,9 +49,12 @@ public class ScrGameOver implements Screen, InputProcessor {
         sprBackground.setFlip(false, true);
         nPoints = ScrGame.nPoints;
         nPoints2 = ScrGame.nPoints2;
+        nPointsG = ScrGame2.nPointsG;
+        nPointsG2 = ScrGame2.nPointsG2;
         nWin = ScrGame.nWin;
         nWin2 = ScrGame2.nWin2;
         nInd = ScrGame.nInd;
+        nInd2 = ScrGame2.nInd2;
         Gdx.input.setInputProcessor(this);
     }
 
@@ -64,8 +67,13 @@ public class ScrGameOver implements Screen, InputProcessor {
         sprBackground.draw(batch);
         btnMenu.draw(batch);
         btnGame.draw(batch);
-        font.draw(batch, "Second Player's Points: " + nPoints2, 20, 60);
-        font.draw(batch, "First Player's Points: " + nPoints, 20, 80);
+        if (nInd2 == 1) {
+            font.draw(batch, "Second Player's Points: " + nPointsG2, 20, 80);
+            font.draw(batch, "First Player's Points: " + nPointsG, 20, 60);
+        } else if (nInd == 1) {
+            font.draw(batch, "Second Player's Points: " + nPoints2, 20, 80);
+            font.draw(batch, "First Player's Points: " + nPoints, 20, 60);
+        }
         if (nWin2 == 1 || nWin == 1) {
             font.draw(batch, "WINNER: Player 1", 490, 70);
         } else if (nWin2 == 2 || nWin == 2) {

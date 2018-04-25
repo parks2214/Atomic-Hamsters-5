@@ -2,15 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff6eba52-1d98-4608-9799-8b7a7aa81931" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/src/gdx/menu/Screens/ScrAnimalChoice2.java" />
-      <change beforePath="$PROJECT_DIR$/../AH Version 3.0/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../AH Version 3.0/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/out/production/classes/gdx/menu/Screens/ScrAnimalChoice.class" afterPath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/out/production/classes/gdx/menu/Screens/ScrAnimalChoice.class" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/out/production/classes/gdx/menu/Screens/ScrGame.class" afterPath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/out/production/classes/gdx/menu/Screens/ScrGame.class" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/src/gdx/menu/GamMenu.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/src/gdx/menu/GamMenu.java" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/src/gdx/menu/Screens/ScrAnimalChoice.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/src/gdx/menu/Screens/ScrAnimalChoice.java" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/src/gdx/menu/Screens/ScrGame.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Choice of animal/core/src/gdx/menu/Screens/ScrGame.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/compiler.xml" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/gradle.xml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/gradle.xml" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/misc.xml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules.xml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules.xml" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/AH_Level_2.iml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/AH_Level_2.iml" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/core/core.iml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/core/core.iml" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/core/core_main.iml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/core/core_main.iml" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/core/core_test.iml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/core/core_test.iml" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/desktop/desktop.iml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/desktop/desktop.iml" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/desktop/desktop_main.iml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/desktop/desktop_main.iml" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/desktop/desktop_test.iml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/desktop/desktop_test.iml" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/html/html.iml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/html/html.iml" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/html/html_main.iml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/html/html_main.iml" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/html/html_test.iml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/html/html_test.iml" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/build.gradle" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/out/production/classes/gdx/menu/Screens/ScrGame.class" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/out/production/classes/gdx/menu/Screens/ScrGame.class" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/out/production/classes/gdx/menu/Screens/ScrGame2.class" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/out/production/classes/gdx/menu/Screens/ScrGame2.class" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/out/production/classes/gdx/menu/Screens/ScrGameOver.class" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/out/production/classes/gdx/menu/Screens/ScrGameOver.class" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/out/production/classes/gdx/menu/images/Button.class" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/out/production/classes/gdx/menu/images/Button.class" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/src/gdx/menu/Screens/ScrGame.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/src/gdx/menu/Screens/ScrGame.java" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/src/gdx/menu/Screens/ScrGame2.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/src/gdx/menu/Screens/ScrGame2.java" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/src/gdx/menu/Screens/ScrGameOver.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/src/gdx/menu/Screens/ScrGameOver.java" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/src/gdx/menu/images/Button.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/src/gdx/menu/images/Button.java" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/gradle.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/gradlew" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/core/.gradle/" />
     <ignored path="$PROJECT_DIR$/core/build/" />
@@ -37,11 +56,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ScrGame.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ScrGame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1715">
-              <caret line="56" column="55" lean-forward="true" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
+            <state relative-caret-position="68">
+              <caret line="73" column="32" lean-forward="true" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1573#1574#0" expanded="true" />
@@ -75,7 +94,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DesktopLauncher.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DesktopLauncher.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/desktop/src/gdx/menu/desktop/DesktopLauncher.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -1034,7 +1053,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="10644778709130" />
+        <entry key="$PROJECT_DIR$" value="10672059603087" />
         <entry key="$PROJECT_DIR$/build.gradle" value="3571373960" />
         <entry key="$PROJECT_DIR$/core/build.gradle" value="2971590108" />
         <entry key="$PROJECT_DIR$/desktop/build.gradle" value="1728858683" />
@@ -1252,7 +1271,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="21" />
     <option name="width" value="1260" />
@@ -1274,6 +1293,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1304,13 +1326,10 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Scratches/AH Level 2" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -1450,7 +1469,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1461,7 +1480,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2190,14 +2209,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrFood.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="75" column="37" lean-forward="false" selection-start-line="75" selection-start-column="37" selection-end-line="75" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGameOver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -2224,18 +2235,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/desktop/src/gdx/menu/desktop/DesktopLauncher.java">
+    <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrFood.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="1037">
+          <caret line="75" column="37" lean-forward="false" selection-start-line="75" selection-start-column="37" selection-end-line="75" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1715">
-          <caret line="56" column="55" lean-forward="true" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
+        <state relative-caret-position="68">
+          <caret line="73" column="32" lean-forward="true" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1573#1574#0" expanded="true" />
@@ -2255,6 +2266,14 @@
             <element signature="e#12880#12881#0" expanded="true" />
             <element signature="e#12908#12909#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/desktop/src/gdx/menu/desktop/DesktopLauncher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
