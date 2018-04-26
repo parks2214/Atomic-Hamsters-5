@@ -14,7 +14,7 @@ import gdx.menu.images.Button;
 
 public class ScrMenu implements Screen, InputProcessor {
 
-    Button btnPlay, btnAni, btnSign, btnQuit, btnAH, btnGame;
+    Button btnPlay, btnAni, btnSign, btnQuit, btnRules, btnGame;
     GamMenu gamMenu;
     Texture txNamM, txBackground;
     OrthographicCamera oc;
@@ -35,7 +35,7 @@ public class ScrMenu implements Screen, InputProcessor {
         btnAni = new Button(100, 50, Gdx.graphics.getWidth() - 100, Gdx.graphics.getHeight() - 50, "Animation.jpg");
         btnSign = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Food.png");
         btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Quit.jpg");
-        btnAH = new Button(100, 50, Gdx.graphics.getWidth()/2 - 50, 0, "AniHit.png");
+        btnRules = new Button(100, 50, Gdx.graphics.getWidth()/2 - 50, 0, "Rules.png");
         btnGame = new Button(100, 50, 0, 0, "Game.png");
         txBackground = new Texture ("EarthBG.jpg");
         sprBackground = new Sprite (txBackground);
@@ -62,7 +62,7 @@ public class ScrMenu implements Screen, InputProcessor {
         btnAni.draw(batch);
         btnSign.draw(batch);
         btnQuit.draw(batch);
-        btnAH.draw(batch);
+        btnRules.draw(batch);
         btnGame.draw(batch);
         batch.end();
     }
@@ -119,9 +119,9 @@ public class ScrMenu implements Screen, InputProcessor {
             } else if(isHit(screenX, screenY, btnQuit)){
                 System.out.println("Quit");
                 System.exit(0);
-            } else if(isHit(screenX, screenY, btnAH)){
-                System.out.println("Hit AniHit");
-                gamMenu.updateState(4);
+            } else if(isHit(screenX, screenY, btnRules)){
+                System.out.println("Hit Rules");
+                gamMenu.updateState(10);
             } else if(isHit(screenX, screenY, btnGame)){
                 System.out.println("Hit Game");
                 gamMenu.updateState(7);

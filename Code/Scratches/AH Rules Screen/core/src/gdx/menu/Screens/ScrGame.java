@@ -21,8 +21,8 @@ public class ScrGame implements Screen, InputProcessor {
     OrthographicCamera oc;
     Button btnMenu, btnQuit;
     TextureRegion trTemp, trTemp2;
-    Texture txSheet, txMap, txHamP, txTextbox1, txTextbox2, txHouse;// txTextbox3, txHouse;
-    Sprite sprMouse, sprMouse2, sprMap, sprHamP, sprHouse;   //sprAni is a ghost, a sprite used for hit detection, maybe a bit redundant
+    Texture txSheet, txMap, txHamP, txTextbox1, txTextbox2;
+    Sprite sprMouse, sprMouse2, sprMap, sprHamP;
     Sprite arsprTextbox[] = new Sprite[2];
     int nFrame, nPos, nPos2, nX = 100, nY = 100, nX2 = 100, nY2 = 100, nTrig = 0, nTrig2 = 0;
     Animation araniMouse[], araniMouse2[];

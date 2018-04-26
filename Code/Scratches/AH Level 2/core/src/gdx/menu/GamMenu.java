@@ -14,7 +14,9 @@ public class GamMenu extends Game {
     ScrAnimalChoice scrAnimalChoice;
     ScrAnimalChoice2 scrAnimalChoice2;
     ScrGame2 scrGame2;
-    int nScreen; // 0 for menu, 1 for play, 2 for Sign, 3 for Animation, 4 for AniHit, 5 for Game, 6 for GameOver, 7 for AnimalChoice, 8 for AnimalChoice2, 9 for Game2
+    ScrRules scrRules;
+    int nScreen; // 0 for menu, 1 for play, 2 for Sign, 3 for Animation, 4 for AniHit, 5 for Game, 6 for GameOver, 7 for
+    // AnimalChoice, 8 for AnimalChoice2, 9 for Game2, 10 for Rules
 
     public void updateState(int _nScreen) {
         nScreen = _nScreen;
@@ -36,8 +38,10 @@ public class GamMenu extends Game {
             setScreen(scrAnimalChoice);
         } else if (nScreen == 8){
             setScreen(scrAnimalChoice2);
-        } else if (nScreen == 9) {
+        } else if (nScreen == 9){
             setScreen(scrGame2);
+        } else if (nScreen == 10){
+            setScreen(scrRules);
         }
     }
 
@@ -55,6 +59,7 @@ public class GamMenu extends Game {
         scrAnimalChoice = new ScrAnimalChoice(this);
         scrAnimalChoice2 = new ScrAnimalChoice2(this);
         scrGame2 = new ScrGame2(this);
+        scrRules = new ScrRules(this);
         updateState(0);
     }
 

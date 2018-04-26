@@ -2,34 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff6eba52-1d98-4608-9799-8b7a7aa81931" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/src/gdx/menu/Screens/ScrRules.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/compiler.xml" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/gradle.xml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/gradle.xml" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/misc.xml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules.xml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/AH_Level_2.iml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/AH_Level_2.iml" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/core/core.iml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/core/core.iml" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/core/core_main.iml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/core/core_main.iml" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/core/core_test.iml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/core/core_test.iml" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/desktop/desktop.iml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/desktop/desktop.iml" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/desktop/desktop_main.iml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/desktop/desktop_main.iml" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/desktop/desktop_test.iml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/desktop/desktop_test.iml" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/html/html.iml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/html/html.iml" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/html/html_main.iml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/html/html_main.iml" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/html/html_test.iml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/modules/html/html_test.iml" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/build.gradle" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/out/production/classes/gdx/menu/Screens/ScrGame.class" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/out/production/classes/gdx/menu/Screens/ScrGame.class" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/out/production/classes/gdx/menu/Screens/ScrGame2.class" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/out/production/classes/gdx/menu/Screens/ScrGame2.class" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/out/production/classes/gdx/menu/GamMenu.class" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/out/production/classes/gdx/menu/GamMenu.class" />
       <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/out/production/classes/gdx/menu/Screens/ScrGameOver.class" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/out/production/classes/gdx/menu/Screens/ScrGameOver.class" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/out/production/classes/gdx/menu/images/Button.class" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/out/production/classes/gdx/menu/images/Button.class" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/src/gdx/menu/Screens/ScrGame.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/src/gdx/menu/Screens/ScrGame.java" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/src/gdx/menu/Screens/ScrGame2.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/src/gdx/menu/Screens/ScrGame2.java" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/out/production/classes/gdx/menu/Screens/ScrMenu.class" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/out/production/classes/gdx/menu/Screens/ScrMenu.class" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/src/gdx/menu/GamMenu.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/src/gdx/menu/GamMenu.java" />
       <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/src/gdx/menu/Screens/ScrGameOver.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/src/gdx/menu/Screens/ScrGameOver.java" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/src/gdx/menu/images/Button.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/src/gdx/menu/images/Button.java" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/gradle.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/gradlew" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/src/gdx/menu/Screens/ScrMenu.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Level 2/core/src/gdx/menu/Screens/ScrMenu.java" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Rules Screen/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Scratches/AH Rules Screen/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Rules Screen/core/out/production/classes/gdx/menu/Screens/ScrGame.class" afterPath="$PROJECT_DIR$/../../Scratches/AH Rules Screen/core/out/production/classes/gdx/menu/Screens/ScrGame.class" />
+      <change beforePath="$PROJECT_DIR$/../../Scratches/AH Rules Screen/core/src/gdx/menu/Screens/ScrGame.java" afterPath="$PROJECT_DIR$/../../Scratches/AH Rules Screen/core/src/gdx/menu/Screens/ScrGame.java" />
     </list>
     <ignored path="$PROJECT_DIR$/core/.gradle/" />
     <ignored path="$PROJECT_DIR$/core/build/" />
@@ -1271,7 +1255,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="21" />
     <option name="width" value="1260" />
@@ -1329,7 +1313,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Scratches/AH Level 2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Scratches/AH Rules Screen" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -1469,8 +1453,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1480,7 +1463,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
