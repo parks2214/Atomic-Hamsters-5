@@ -16,7 +16,7 @@ import gdx.menu.images.Button;
 
 public class ScrGameOver implements Screen, InputProcessor {
 
-    Button btnGame, btnMenu, btnQuit;
+    Button btnGame, btnMenu, btnLvl2;
     GamMenu gamMenu;
     Texture txBackground;
     OrthographicCamera oc;
@@ -42,6 +42,7 @@ public class ScrGameOver implements Screen, InputProcessor {
         font.getRegion().getTexture().setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
         btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Menu.jpg");
         btnGame = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Game.png");
+        btnLvl2 = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Level 2 button.png");
         txBackground = new Texture("explosion.png");
         sprBackground = new Sprite(txBackground);
         sprBackground.setScale(0.9f, 0.7f);
@@ -66,13 +67,14 @@ public class ScrGameOver implements Screen, InputProcessor {
         batch.setProjectionMatrix(oc.combined);
         sprBackground.draw(batch);
         btnMenu.draw(batch);
-        btnGame.draw(batch);
-        if (nInd2 == 1) {
-            font.draw(batch, "Second Player's Points: " + nPointsG2, 20, 80);
-            font.draw(batch, "First Player's Points: " + nPointsG, 20, 60);
-        } else if (nInd == 1) {
+        if (nInd == 1) {
+            System.out.println("nInd");
             font.draw(batch, "Second Player's Points: " + nPoints2, 20, 80);
             font.draw(batch, "First Player's Points: " + nPoints, 20, 60);
+        } if (nInd2 == 1) {
+            System.out.println("nInd2");
+            font.draw(batch, "Second Player's Points: " + nPointsG2, 20, 80);
+            font.draw(batch, "First Player's Points: " + nPointsG, 20, 60);
         }
         if (nWin2 == 1 || nWin == 1) {
             font.draw(batch, "WINNER: Player 1", 490, 70);
@@ -80,6 +82,11 @@ public class ScrGameOver implements Screen, InputProcessor {
             font.draw(batch, "WINNER: Player 2", 490, 70);
         } else {
             font.draw(batch, "PLAYERS TIED!", 490, 70);
+        }
+        if (nPoints > 9 || nPoints2 > 9) {
+            btnLvl2.draw(batch);
+        } else {
+            btnGame.draw(batch);
         }
         batch.end();
     }
@@ -124,6 +131,8 @@ public class ScrGameOver implements Screen, InputProcessor {
     @Override
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
         if (button == Input.Buttons.LEFT) {
+            nInd = 0;
+            nInd2 = 0;
             if (isHit(screenX, screenY, btnGame)) {
                 System.out.println("Game");
                 if (nPoints > 9 || nPoints2 > 9) {

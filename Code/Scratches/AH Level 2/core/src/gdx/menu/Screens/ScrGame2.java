@@ -276,14 +276,16 @@ public class ScrGame2 implements Screen, InputProcessor {
                 }
             }
             System.out.println(nWin2);
-            fSpeed = 0;
-            fSpeed2 = 0;
+            fSpeed = 1;
+            fSpeed2 = 1;
             nSizeX = 50;
             nSizeY = 50;
             nSizeX2 = 50;
             nSizeY2 = 50;
             System.out.println("Hit");
             gamMenu.updateState(6);
+            nPointsG = 0;
+            nPointsG2 = 0;
         }
         for (int i = pMaker.alPellets.size() - 1; i >= 0; i--) {
             Pellet p = pMaker.alPellets.get(i);
@@ -377,6 +379,10 @@ public class ScrGame2 implements Screen, InputProcessor {
             if (isHitB(screenX, screenY, btnMenu)) {
                 gamMenu.updateState(0);
                 System.out.println("Hit Menu");
+                nInd2 = 0;
+                nPointsG = 0;
+                nPointsG2 = 0;
+                nWin2 = 0;
                 fSpeed = 1;
                 fSpeed2 = 1;
                 nSizeX = 50;
