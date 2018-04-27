@@ -4,13 +4,8 @@
     <list default="true" id="ff6eba52-1d98-4608-9799-8b7a7aa81931" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../../Releases/AH Version 3.5/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Releases/AH Version 3.5/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/../AH Level 2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../AH Level 2/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../AH Pellets/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../AH Pellets/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../AH Pellets/core/out/production/classes/gdx/menu/Screens/ScrGame.class" afterPath="$PROJECT_DIR$/../AH Pellets/core/out/production/classes/gdx/menu/Screens/ScrGame.class" />
-      <change beforePath="$PROJECT_DIR$/../AH Pellets/core/out/production/classes/gdx/menu/Screens/ScrGameOver.class" afterPath="$PROJECT_DIR$/../AH Pellets/core/out/production/classes/gdx/menu/Screens/ScrGameOver.class" />
-      <change beforePath="$PROJECT_DIR$/../AH Randomly generated food/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../AH Randomly generated food/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../AH Randomly generated food/core/out/production/classes/gdx/menu/Screens/ScrFood.class" afterPath="$PROJECT_DIR$/../AH Randomly generated food/core/out/production/classes/gdx/menu/Screens/ScrFood.class" />
-      <change beforePath="$PROJECT_DIR$/../AH Randomly generated food/core/out/production/classes/gdx/menu/images/PelletMaker.class" afterPath="$PROJECT_DIR$/../AH Randomly generated food/core/out/production/classes/gdx/menu/images/PelletMaker.class" />
-      <change beforePath="$PROJECT_DIR$/../Fixed animation of hamster/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../AH Level 2/core/out/production/classes/gdx/menu/Screens/ScrGame2.class" afterPath="$PROJECT_DIR$/../AH Level 2/core/out/production/classes/gdx/menu/Screens/ScrGame2.class" />
+      <change beforePath="$PROJECT_DIR$/../AH Level 2/core/src/gdx/menu/Screens/ScrGame2.java" afterPath="$PROJECT_DIR$/../AH Level 2/core/src/gdx/menu/Screens/ScrGame2.java" />
     </list>
     <ignored path="$PROJECT_DIR$/core/.gradle/" />
     <ignored path="$PROJECT_DIR$/core/build/" />
@@ -97,16 +92,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScrGame2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="299" column="23" lean-forward="false" selection-start-line="299" selection-start-column="23" selection-end-line="299" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ScrRules.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrRules.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -160,6 +145,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
               <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScrGame2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="371">
+              <caret line="310" column="61" lean-forward="false" selection-start-line="310" selection-start-column="61" selection-end-line="310" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -1290,7 +1285,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="21" />
     <option name="width" value="1260" />
@@ -1522,7 +1517,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2219,8 +2214,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="299" column="23" lean-forward="false" selection-start-line="299" selection-start-column="23" selection-end-line="299" selection-end-column="23" />
+        <state relative-caret-position="371">
+          <caret line="310" column="61" lean-forward="false" selection-start-line="310" selection-start-column="61" selection-end-line="310" selection-end-column="61" />
           <folding />
         </state>
       </provider>

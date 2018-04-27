@@ -42,7 +42,7 @@ public class ScrGame2 implements Screen, InputProcessor {
     static int nWin2;
     Rectangle rectMouse, rectMouseNew, rectMouse2, rectMouseNew2;
     int nChoice, nChoice2;
-    PelletMaker pMaker;
+    PelletMaker pMaker, pMaker2;
 
     public ScrGame2(GamMenu _gamMenu) {
         gamMenu = _gamMenu;
@@ -124,6 +124,7 @@ public class ScrGame2 implements Screen, InputProcessor {
         Gdx.input.setInputProcessor(this);
 
         pMaker = new PelletMaker(50, 50, "Strawberry.png");
+        pMaker2 = new PelletMaker(30, 30, "Poison.png");
     }
 
     @Override
@@ -287,6 +288,25 @@ public class ScrGame2 implements Screen, InputProcessor {
                 pMaker.removePellet(p);
             }
         }
+        //poison stuff
+        for (int i = pMaker2.alPellets.size() - 1; i >= 0; i--) {
+            Pellet p2 = pMaker2.alPellets.get(i);
+            if (isHitS(p2, spTemp)) {
+                System.out.println("HERE");
+                System.out.println("He hecking died");
+                fSpeed -= 0.5f;
+                System.out.println(fSpeed);
+                // mouse catche pellet
+                pMaker2.removePellet(p2);
+            }if (isHitS(p2, spTemp2)) {
+                System.out.println("HERE");
+                System.out.println("He hecking died");
+                fSpeed2 -= 0.5f;
+                System.out.println(fSpeed2);
+                // mouse catche pellet
+                pMaker2.removePellet(p2);
+            }
+        }
         //Hit detection between mice
         Rectangle rMouse1 = new Rectangle (sprMouse.getX(), sprMouse.getY(), sprMouse.getWidth(), sprMouse.getHeight());
         Rectangle rMouse2 = new Rectangle (sprMouse2.getX(), sprMouse2.getY(), sprMouse2.getWidth(), sprMouse2.getHeight());
@@ -328,6 +348,7 @@ public class ScrGame2 implements Screen, InputProcessor {
         }
         sprMap.draw(batch);
         pMaker.draw(batch);
+        pMaker2.draw(batch);
         spTemp.setPosition(fSx, fSy);
         spTemp2.setPosition(fSx2, fSy2);
         batch.draw(trTemp, fSx, fSy, nSizeX, nSizeY);
