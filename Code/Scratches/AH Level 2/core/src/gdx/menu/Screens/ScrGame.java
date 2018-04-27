@@ -37,7 +37,8 @@ public class ScrGame implements Screen, InputProcessor {
     float fSpeed = 0, fSpeed2 = 0;
     static int nPoints = 0, nPoints2 = 0;
     int nChoice, nChoice2;
-    static int nWin, nInd = 0;
+    static int nWin;
+    static public int nInd = 0;
     Sprite spTemp, spTemp2;
     PelletMaker pMaker;
 
@@ -363,7 +364,6 @@ public class ScrGame implements Screen, InputProcessor {
             if (isHitB(screenX, screenY, btnMenu)) {
                 gamMenu.updateState(0);
                 System.out.println("Hit Menu");
-                nInd = 0;
                 nPoints = 0;
                 nPoints2 = 0;
                 nWin = 0;

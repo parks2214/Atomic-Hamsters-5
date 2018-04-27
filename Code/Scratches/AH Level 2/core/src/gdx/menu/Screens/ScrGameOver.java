@@ -25,7 +25,7 @@ public class ScrGameOver implements Screen, InputProcessor {
     BitmapFont font;
     int nPoints, nPoints2, nPointsG, nPointsG2;
     int nWin, nWin2;
-    int nInd, nInd2;
+    int nInd;
 
     public ScrGameOver(GamMenu _gamMenu) {  //Referencing the main class.
         gamMenu = _gamMenu;
@@ -55,7 +55,6 @@ public class ScrGameOver implements Screen, InputProcessor {
         nWin = ScrGame.nWin;
         nWin2 = ScrGame2.nWin2;
         nInd = ScrGame.nInd;
-        nInd2 = ScrGame2.nInd2;
         Gdx.input.setInputProcessor(this);
     }
 
@@ -71,7 +70,7 @@ public class ScrGameOver implements Screen, InputProcessor {
             System.out.println("nInd");
             font.draw(batch, "Second Player's Points: " + nPoints2, 20, 80);
             font.draw(batch, "First Player's Points: " + nPoints, 20, 60);
-        } if (nInd2 == 1) {
+        } else if (nInd == 2) {
             System.out.println("nInd2");
             font.draw(batch, "Second Player's Points: " + nPointsG2, 20, 80);
             font.draw(batch, "First Player's Points: " + nPointsG, 20, 60);
@@ -132,10 +131,9 @@ public class ScrGameOver implements Screen, InputProcessor {
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
         if (button == Input.Buttons.LEFT) {
             nInd = 0;
-            nInd2 = 0;
             if (isHit(screenX, screenY, btnGame)) {
                 System.out.println("Game");
-                if (nPoints > 9 || nPoints2 > 9) {
+                if (nPoints > 9 || nPoints2 > 9 || nPointsG2 > 9 || nPointsG > 9) {
                     gamMenu.updateState(9);
                 } else {
                     gamMenu.updateState(5);

@@ -39,7 +39,7 @@ public class ScrGame2 implements Screen, InputProcessor {
     int DY2[] = {0, -1, 0, 1};
     float fSpeed = 0, fSpeed2 = 0;
     static int nPointsG = 0, nPointsG2 = 0;
-    static int nWin2, nInd2 = 0;
+    static int nWin2;
     Rectangle rectMouse, rectMouseNew, rectMouse2, rectMouseNew2;
     int nChoice, nChoice2;
     PelletMaker pMaker;
@@ -89,7 +89,7 @@ public class ScrGame2 implements Screen, InputProcessor {
         arWall[3] = new Wall(50, Gdx.graphics.getHeight() - 20, Gdx.graphics.getWidth() - 50, 50);    //Right Wall
         nPointsG = 0;
         nPointsG2 = 0;
-        nInd2 = 1;
+        ScrGame.nInd = 2;
         //Animation Stuff
         nFrame = 0;
         nPos = 0;
@@ -254,39 +254,7 @@ public class ScrGame2 implements Screen, InputProcessor {
                 sprMouse2.setPosition(fSx2, fSy2);
             }
         }
-        //Hit detection between mice
-        Rectangle rMouse1 = new Rectangle (sprMouse.getX(), sprMouse.getY(), sprMouse.getWidth(), sprMouse.getHeight());
-        Rectangle rMouse2 = new Rectangle (sprMouse2.getX(), sprMouse2.getY(), sprMouse2.getWidth(), sprMouse2.getHeight());
-        if (Intersector.overlaps(rMouse1, rMouse2)) {
-            if ((nDir == 0 && nDir2 == 2) || (nDir == 2 && nDir2 == 2)) {
-                if (nSizeX > nSizeX2) {
-                    nWin2 = 1;
-                } else if (nSizeX2 > nSizeX) {
-                    nWin2 = 2;
-                } else {
-                    nWin2 = 0;
-                }
-            } else {
-                if (fSpeed > fSpeed2) {
-                    nWin2 = 1;
-                } else if (fSpeed2 > fSpeed) {
-                    nWin2 = 2;
-                } else {
-                    nWin2 = 0;
-                }
-            }
-            System.out.println(nWin2);
-            fSpeed = 1;
-            fSpeed2 = 1;
-            nSizeX = 50;
-            nSizeY = 50;
-            nSizeX2 = 50;
-            nSizeY2 = 50;
-            System.out.println("Hit");
-            gamMenu.updateState(6);
-            nPointsG = 0;
-            nPointsG2 = 0;
-        }
+        //pellet stuff
         for (int i = pMaker.alPellets.size() - 1; i >= 0; i--) {
             Pellet p = pMaker.alPellets.get(i);
             if (isHitS(p, spTemp)) {
@@ -318,6 +286,39 @@ public class ScrGame2 implements Screen, InputProcessor {
                 // mouse catche pellet
                 pMaker.removePellet(p);
             }
+        }
+        //Hit detection between mice
+        Rectangle rMouse1 = new Rectangle (sprMouse.getX(), sprMouse.getY(), sprMouse.getWidth(), sprMouse.getHeight());
+        Rectangle rMouse2 = new Rectangle (sprMouse2.getX(), sprMouse2.getY(), sprMouse2.getWidth(), sprMouse2.getHeight());
+        if (Intersector.overlaps(rMouse1, rMouse2)) {
+            if ((nDir == 0 && nDir2 == 2) || (nDir == 2 && nDir2 == 2)) {
+                if (nSizeX > nSizeX2) {
+                    nWin2 = 1;
+                } else if (nSizeX2 > nSizeX) {
+                    nWin2 = 2;
+                } else {
+                    nWin2 = 0;
+                }
+            } else {
+                if (fSpeed > fSpeed2) {
+                    nWin2 = 1;
+                } else if (fSpeed2 > fSpeed) {
+                    nWin2 = 2;
+                } else {
+                    nWin2 = 0;
+                }
+            }
+            System.out.println(nWin2);
+            fSpeed = 0;
+            fSpeed2 = 0;
+            nSizeX = 50;
+            nSizeY = 50;
+            nSizeX2 = 50;
+            nSizeY2 = 50;
+            System.out.println("Hit");
+            gamMenu.updateState(6);
+            nPointsG = 0;
+            nPointsG2 = 0;
         }
 
         batch.begin();
@@ -379,12 +380,11 @@ public class ScrGame2 implements Screen, InputProcessor {
             if (isHitB(screenX, screenY, btnMenu)) {
                 gamMenu.updateState(0);
                 System.out.println("Hit Menu");
-                nInd2 = 0;
                 nPointsG = 0;
                 nPointsG2 = 0;
                 nWin2 = 0;
-                fSpeed = 1;
-                fSpeed2 = 1;
+                fSpeed = 0;
+                fSpeed2 = 0;
                 nSizeX = 50;
                 nSizeY = 50;
                 nSizeX2 = 50;
