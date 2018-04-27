@@ -17,40 +17,54 @@ import static com.badlogic.gdx.math.MathUtils.random;
  * @author parks2214
  */
 public class PelletMaker {
-    int nCounter=2,nActual=0;
+    int nCounter1=2,nActual1=0;
+    int nCounter2=1,nActual2=0;
     public ArrayList <Pellet> alPellets = new ArrayList<Pellet>();
-    Texture texture;
-    public PelletMaker() {
-        texture = new Texture(Gdx.files.internal("HamP.png"));  //For example "SignB.jpg"
-//        for (int x = 0; x < 4; x++) {
-//            for (int y = 0; y < 3; y++) {
-//                alPellets.add(new Pellet(x * 200, y * 200, texture));
-//            }
-//        }
-//        setPosition(nX, nY);
-//        setFlip(false, true);
-//        setSize(fW, fH);
 
+    public ArrayList<Poison> alPoison = new ArrayList<Poison>();
+
+    Texture txPellet,txPoison;
+    public PelletMaker() {
+        txPellet = new Texture(Gdx.files.internal("HamP.png"));  //For example "SignB.jpg"
+        txPoison = new Texture(Gdx.files.internal("Poison.png"));
     }
 
     public void draw(SpriteBatch batch) {
         for (Pellet p : alPellets) {
             p.draw(batch);
         }
-        if (nActual<nCounter) {
+        for (Poison b : alPoison) {
+            b.draw(batch);
+        }
+        if (nActual1<nCounter1) {
             makePellet();
-            nActual++;
+            nActual1++;
+        }
+        if (nActual2<nCounter2) {
+            makePoison();
+            nActual2++;
         }
     }
 
     public void makePellet() {
         float fX = (float) Math.random() * Gdx.graphics.getWidth();
         float fY = (float) Math.random() * Gdx.graphics.getHeight();
-        alPellets.add(new Pellet(fX, fY, texture));
+        alPellets.add(new Pellet(fX, fY, txPellet));
     }
 
     public void removePellet(Pellet pellet) {
         alPellets.remove(pellet);
-        nActual--;
+        nActual1--;
+    }
+
+    public void makePoison() {
+        float fX = (float) Math.random() * Gdx.graphics.getWidth();
+        float fY = (float) Math.random() * Gdx.graphics.getHeight();
+        alPoison.add(new Poison(fX, fY, txPoison));
+    }
+
+    public void removePoison(Poison poison) {
+        alPellets.remove(poison);
+        nActual2--;
     }
 }
