@@ -1,33 +1,29 @@
 package gdx.menu.Screens;
 
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import gdx.menu.GamMenu;
 import gdx.menu.images.Button;
 
-public class ScrGameOver implements Screen, InputProcessor {
+public class ScrAnimalChoice2 implements Screen, InputProcessor {
 
-    Button btnGame, btnMenu, btnLvl2;
+    Button btnQuit, btnMenu, btnMouse1, btnMouse2;
     GamMenu gamMenu;
-    Texture txBackground;
     OrthographicCamera oc;
     SpriteBatch batch = new SpriteBatch();
-    Sprite sprBackground;
     BitmapFont font;
-    int nPoints, nPoints2, nPointsG, nPointsG2;
-    int nWin, nWin2;
-    int nInd;
+    static int nChoice2 = 0;
 
-    public ScrGameOver(GamMenu _gamMenu) {  //Referencing the main class.
+    public ScrAnimalChoice2(GamMenu _gamMenu) {  //Referencing the main class.
         gamMenu = _gamMenu;
     }
 
@@ -41,50 +37,23 @@ public class ScrGameOver implements Screen, InputProcessor {
         font.getData().setScale(1.2f);
         font.getRegion().getTexture().setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
         btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Menu.jpg");
-        btnGame = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Game.png");
-        btnLvl2 = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Level 2 button.png");
-        txBackground = new Texture("explosion.png");
-        sprBackground = new Sprite(txBackground);
-        sprBackground.setScale(0.9f, 0.7f);
-        sprBackground.setPosition(Gdx.graphics.getWidth() / 2 - sprBackground.getWidth() / 2, Gdx.graphics.getHeight() / 2 - sprBackground.getHeight() / 2);
-        sprBackground.setFlip(false, true);
-        nPoints = ScrGame.nPoints;
-        nPoints2 = ScrGame.nPoints2;
-        nPointsG = ScrGame2.nPointsG;
-        nPointsG2 = ScrGame2.nPointsG2;
-        nWin = ScrGame.nWin;
-        nWin2 = ScrGame2.nWin2;
-        nInd = ScrGame.nInd;
+        btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Quit.jpg");
+        btnMouse1 = new Button (100, 150, Gdx.graphics.getWidth() / 2, Gdx.graphics.getHeight() - 400, "btnMouse.png");
+        btnMouse2 = new Button (100, 150, Gdx.graphics.getWidth() / 2 - 100, Gdx.graphics.getHeight() - 400, "btnMouse2.png");
         Gdx.input.setInputProcessor(this);
     }
 
     @Override
     public void render(float delta) {
-        Gdx.gl.glClearColor(0, 0, 0, 0); //black background
+        Gdx.gl.glClearColor(1, 1, 1, 1); //black background
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         batch.begin();
         batch.setProjectionMatrix(oc.combined);
-        sprBackground.draw(batch);
         btnMenu.draw(batch);
-        if (nInd == 1) {
-            font.draw(batch, "Second Player's Points: " + nPoints2, 20, 80);
-            font.draw(batch, "First Player's Points: " + nPoints, 20, 60);
-        } else if (nInd == 2) {
-            font.draw(batch, "Second Player's Points: " + nPointsG2, 20, 80);
-            font.draw(batch, "First Player's Points: " + nPointsG, 20, 60);
-        }
-        if (nWin2 == 1 || nWin == 1) {
-            font.draw(batch, "WINNER: Player 1", 490, 70);
-        } else if (nWin2 == 2 || nWin == 2) {
-            font.draw(batch, "WINNER: Player 2", 490, 70);
-        } else {
-            font.draw(batch, "PLAYERS TIED!", 490, 70);
-        }
-        if (nPoints > 9 || nPoints2 > 9) {
-            btnLvl2.draw(batch);
-        } else {
-            btnGame.draw(batch);
-        }
+        btnQuit.draw(batch);
+        btnMouse1.draw(batch);
+        btnMouse2.draw(batch);
+        font.draw(batch, "Please choose Player 2's character.", Gdx.graphics.getWidth() / 2 - 115, 60);
         batch.end();
     }
 
@@ -128,18 +97,20 @@ public class ScrGameOver implements Screen, InputProcessor {
     @Override
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
         if (button == Input.Buttons.LEFT) {
-            nInd = 0;
-            if (isHit(screenX, screenY, btnGame)) {
-                System.out.println("Game");
-                if (nPoints > 9 || nPoints2 > 9 || nPointsG2 > 9 || nPointsG > 9) {
-                    gamMenu.updateState(9);
-                } else {
-                    gamMenu.updateState(5);
-                }
-
+            if (isHit(screenX, screenY, btnQuit)) {
+                System.out.println("Quit");
+                System.exit(0);
             } else if (isHit(screenX, screenY, btnMenu)) {
                 System.out.println("Menu");
                 gamMenu.updateState(0);
+            } else if (isHit(screenX, screenY, btnMouse1)) {
+                System.out.println("Game");
+                nChoice2 = 1;
+                gamMenu.updateState(5);
+            } else if (isHit(screenX, screenY, btnMouse2)) {
+                System.out.println("Game");
+                nChoice2 = 2;
+                gamMenu.updateState(5);
             }
         }
 
