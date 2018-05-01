@@ -42,7 +42,7 @@ public class ScrGameOver implements Screen, InputProcessor {
         font.getRegion().getTexture().setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
         btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Menu.jpg");
         btnGame = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Game.png");
-        btnLvl2 = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Level 2 button.png");
+        btnLvl2 = new Button(100, 50, Gdx.graphics.getWidth()/2, 0, "Level 2 button.png");
         txBackground = new Texture("explosion.png");
         sprBackground = new Sprite(txBackground);
         sprBackground.setScale(0.9f, 0.7f);
@@ -80,11 +80,11 @@ public class ScrGameOver implements Screen, InputProcessor {
         } else {
             font.draw(batch, "PLAYERS TIED!", 490, 70);
         }
-        if (nPoints > 9 || nPoints2 > 9) {
+        //if (nPoints > 9 || nPoints2 > 9) {
             btnLvl2.draw(batch);
-        } else {
+        //} else {
             btnGame.draw(batch);
-        }
+        //}
         batch.end();
     }
 
@@ -131,17 +131,21 @@ public class ScrGameOver implements Screen, InputProcessor {
             nInd = 0;
             if (isHit(screenX, screenY, btnGame)) {
                 System.out.println("Game");
-                if (nPoints > 9 || nPoints2 > 9 || nPointsG2 > 9 || nPointsG > 9) {
-                    gamMenu.updateState(9);
-                } else {
+                //if (nPoints > 9 || nPoints2 > 9 || nPointsG2 > 9 || nPointsG > 9) {
+                //    gamMenu.updateState(9);
+                //} else {
                     gamMenu.updateState(5);
                 }
+                else if (isHit(screenX,screenY, btnLvl2)) {
+                System.out.println("Level 2");
+                gamMenu.updateState(9);
+            }
 
             } else if (isHit(screenX, screenY, btnMenu)) {
                 System.out.println("Menu");
                 gamMenu.updateState(0);
             }
-        }
+        //}
 
         return false;
     }

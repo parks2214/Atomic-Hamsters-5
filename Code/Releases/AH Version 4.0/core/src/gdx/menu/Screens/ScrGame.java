@@ -274,8 +274,6 @@ public class ScrGame implements Screen, InputProcessor {
         for (int i = pMaker.alPellets.size() - 1; i >= 0; i--) {
             Pellet p = pMaker.alPellets.get(i);
             if (isHitS(p, spTemp)) {
-                System.out.println("HERE");
-                System.out.println("He hecking ate it");
                 fSpeed += 0.5f;
                 System.out.println(fSpeed);
                 nTrig = 1;
@@ -289,8 +287,6 @@ public class ScrGame implements Screen, InputProcessor {
                 // mouse catche pellet
                 pMaker.removePellet(p);
             }if (isHitS(p, spTemp2)) {
-                System.out.println("HERE");
-                System.out.println("He hecking ate it");
                 fSpeed2 += 0.5f;
                 System.out.println(fSpeed2);
                 nPoints2 += 1;
