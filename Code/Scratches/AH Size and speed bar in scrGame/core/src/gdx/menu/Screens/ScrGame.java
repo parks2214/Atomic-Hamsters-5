@@ -26,7 +26,7 @@ public class ScrGame implements Screen, InputProcessor {
     Texture txSheet,txSheet2, txMap, txTextbox1, txTextbox2;
     Sprite sprMouse, sprMouse2, sprMap;
     Sprite arsprTextbox[] = new Sprite[2];
-    int nFrame, nPos, nPos2, nX = 100, nY = 100, nX2 = 100, nY2 = 100, nTrig = 0, nTrig2 = 0;
+    int nFrame, nPos, nPos2, nX = 100, nY = 100, nX2 = 100, nY2 = 100, nTrig = 0;
     Animation araniMouse[], araniMouse2[];
     int fSx, fSy, fSx2, fSy2, fW, fH,fW2,fH2, nDir = 0, nDir2 = 0, nSizeX = 50, nSizeY = 50, nSizeX2 = 50, nSizeY2 = 50;
     Wall[] arWall = new Wall[4];
