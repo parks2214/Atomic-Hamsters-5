@@ -67,11 +67,9 @@ public class ScrGameOver implements Screen, InputProcessor {
         sprBackground.draw(batch);
         btnMenu.draw(batch);
         if (nInd == 1) {
-            System.out.println("nInd");
             font.draw(batch, "Second Player's Points: " + nPoints2, 20, 80);
             font.draw(batch, "First Player's Points: " + nPoints, 20, 60);
         } else if (nInd == 2) {
-            System.out.println("nInd2");
             font.draw(batch, "Second Player's Points: " + nPointsG2, 20, 80);
             font.draw(batch, "First Player's Points: " + nPointsG, 20, 60);
         }

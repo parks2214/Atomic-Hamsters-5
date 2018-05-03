@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff6eba52-1d98-4608-9799-8b7a7aa81931" name="Default" comment="">
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/../../Releases/AH Version 3.5/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Releases/AH Version 3.5/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../AH Poison/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../AH Poison/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../AH Size and speed bar in scrGame/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../AH Size and speed bar in scrGame/.idea/workspace.xml" />
+=======
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame2.java" afterPath="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGame2.java" />
       <change beforePath="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGameOver.java" afterPath="$PROJECT_DIR$/core/src/gdx/menu/Screens/ScrGameOver.java" />
       <change beforePath="$PROJECT_DIR$/../AH Randomly generated food/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../AH Randomly generated food/.idea/workspace.xml" />
+>>>>>>> 2278be38b1661d02959320726ad8a8f364bd4040
     </list>
     <ignored path="$PROJECT_DIR$/core/.gradle/" />
     <ignored path="$PROJECT_DIR$/core/build/" />

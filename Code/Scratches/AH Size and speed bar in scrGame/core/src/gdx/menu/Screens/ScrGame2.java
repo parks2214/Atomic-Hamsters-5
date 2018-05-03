@@ -27,8 +27,8 @@ public class ScrGame2 implements Screen, InputProcessor {
     OrthographicCamera oc;
     Button btnMenu, btnQuit;
     TextureRegion trTemp, trTemp2;
-    Texture txSheet, txMap, txTextbox1, txTextbox2, txSheet2, txShape;
-    Sprite sprMouse, sprMouse2, sprMap, spTemp, spTemp2;
+    Texture txSheet, txMap, txTextbox1, txTextbox2, txSheet2, txShape, txShape2, txShape3, txShape4;
+    Sprite sprMouse, sprMouse2, sprMap, spTemp, spTemp2, sprSpeedBar1, sprSizeBar1, sprSpeedBar2, sprSizeBar2;
     Sprite arsprTextbox[] = new Sprite[2];
     int nFrame, nPos, nPos2, nX = 100, nY = 100, nX2 = 100, nY2 = 100;
     Animation araniMouse[], araniMouse2[];
@@ -38,14 +38,14 @@ public class ScrGame2 implements Screen, InputProcessor {
     int DY[] = {0, -1, 0, 1};
     int DX2[] = {1, 0, -1, 0};
     int DY2[] = {0, -1, 0, 1};
-    int nShapeW, nShapeH;
+    int nShapeW = 50, nShapeW2 = 50, nShapeW3 = 50, nShapeW4 = 50;
     float fSpeed = 0, fSpeed2 = 0;
     static int nPointsG = 0, nPointsG2 = 0;
     static int nWin2;
     Rectangle rectMouse, rectMouseNew, rectMouse2, rectMouseNew2;
     int nChoice, nChoice2;
     PelletMaker pMaker, pMaker2;
-    Pixmap pixmap;
+    Pixmap pixmap, pixmap2, pixmap3, pixmap4;
 
     public ScrGame2(GamMenu _gamMenu) {
         gamMenu = _gamMenu;
@@ -59,13 +59,6 @@ public class ScrGame2 implements Screen, InputProcessor {
         oc.update();
         btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Menu.jpg");
         btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Quit.jpg");
-        //Shapes
-        nShapeW = 50;
-        nShapeH = 50;
-        Pixmap pixmap = new Pixmap(nShapeW, nShapeH, Pixmap.Format.RGBA8888);
-        pixmap.setColor(1, 1, 1, 1);
-        pixmap.fillRectangle(50, 50, nShapeW, nShapeH);
-        txShape = new Texture(pixmap);
         // Choice between which sprite they take
         nChoice = ScrAnimalChoice.nChoice;
         nChoice2 = ScrAnimalChoice2.nChoice2;
@@ -100,6 +93,15 @@ public class ScrGame2 implements Screen, InputProcessor {
         nPointsG = 0;
         nPointsG2 = 0;
         ScrGame.nInd = 2;
+        //Shapes
+        pixmap = new Pixmap(800, 15, Pixmap.Format.RGBA8888);
+        pixmap.setColor(1, 1, 1, 1);
+        pixmap2 = new Pixmap(800, 15, Pixmap.Format.RGBA8888);
+        pixmap2.setColor(1, 1, 1, 1);
+        pixmap3 = new Pixmap(800, 15, Pixmap.Format.RGBA8888);
+        pixmap3.setColor(1, 1, 1, 1);
+        pixmap4 = new Pixmap(800, 15, Pixmap.Format.RGBA8888);
+        pixmap4.setColor(1, 1, 1, 1);
         //Animation Stuff
         nFrame = 0;
         nPos = 0;
@@ -265,6 +267,23 @@ public class ScrGame2 implements Screen, InputProcessor {
                 sprMouse2.setPosition(fSx2, fSy2);
             }
         }
+        //Shapes
+        pixmap.fillRectangle(0, 0, nShapeW, 15);
+        txShape = new Texture(pixmap);
+        sprSpeedBar1 = new Sprite(txShape);
+        sprSpeedBar1.setPosition(40f, 430f);
+        pixmap2.fillRectangle(0, 0, nShapeW2, 15);
+        txShape2 = new Texture(pixmap2);
+        sprSizeBar1 = new Sprite(txShape2);
+        sprSizeBar1.setPosition(40f, 450f);
+        pixmap3.fillRectangle(0, 0, nShapeW3, 15);
+        txShape3 = new Texture(pixmap3);
+        sprSpeedBar2 = new Sprite(txShape3);
+        sprSpeedBar2.setPosition(400f, 430f);
+        pixmap4.fillRectangle(0, 0, nShapeW4, 15);
+        txShape4 = new Texture(pixmap4);
+        sprSizeBar2 = new Sprite(txShape4);
+        sprSizeBar2.setPosition(400f, 450f);
         //pellet stuff
         for (int i = pMaker.alPellets.size() - 1; i >= 0; i--) {
             Pellet p = pMaker.alPellets.get(i);
@@ -272,6 +291,10 @@ public class ScrGame2 implements Screen, InputProcessor {
                 System.out.println("HERE");
                 System.out.println("He hecking ate it");
                 fSpeed += 0.5f;
+                nShapeW += 15;
+                nShapeW2 += 15;
+                System.out.println(nShapeW + " plus");
+                System.out.println(nShapeW2 + " plus");
                 System.out.println(fSpeed);
                 nPointsG += 1;
                 System.out.println("Points for first: " + nPointsG);
@@ -287,6 +310,10 @@ public class ScrGame2 implements Screen, InputProcessor {
                 System.out.println("He hecking ate it");
                 fSpeed2 += 0.5f;
                 System.out.println(fSpeed2);
+                nShapeW3 += 15;
+                nShapeW4 += 15;
+                System.out.println(nShapeW3 + " plus");
+                System.out.println(nShapeW4 + " plus");
                 nPointsG2 += 1;
                 System.out.println("Points for first: " + nPointsG2);
                 if (nSizeX2 < 100 && nSizeY2 < 100) {
@@ -306,6 +333,8 @@ public class ScrGame2 implements Screen, InputProcessor {
                 System.out.println("He hecking died");
                 fSpeed -= 0.5f;
                 System.out.println(fSpeed);
+                nShapeW -= 15;
+                System.out.println(nShapeW + " minus");
                 // mouse catche pellet
                 pMaker2.removePellet(p2);
             }if (isHitS(p2, spTemp2)) {
@@ -313,6 +342,8 @@ public class ScrGame2 implements Screen, InputProcessor {
                 System.out.println("He hecking died");
                 fSpeed2 -= 0.5f;
                 System.out.println(fSpeed2);
+                nShapeW3 -= 15;
+                System.out.println(nShapeW3 + " minus");
                 // mouse catche pellet
                 pMaker2.removePellet(p2);
             }
@@ -357,9 +388,6 @@ public class ScrGame2 implements Screen, InputProcessor {
             arWall[i].draw(batch);
         }
         sprMap.draw(batch);
-        //Shapes
-        batch.draw(txShape, 50, 50, nShapeW, nShapeH);
-
         pMaker.draw(batch);
         pMaker2.draw(batch);
         spTemp.setPosition(fSx, fSy);
@@ -368,6 +396,10 @@ public class ScrGame2 implements Screen, InputProcessor {
         batch.draw(trTemp2, fSx2, fSy2, nSizeX2, nSizeY2);
         btnMenu.draw(batch);
         btnQuit.draw(batch);
+        sprSpeedBar1.draw(batch);
+        sprSizeBar1.draw(batch);
+        sprSpeedBar2.draw(batch);
+        sprSizeBar2.draw(batch);
         batch.end();
     }
 
@@ -423,6 +455,10 @@ public class ScrGame2 implements Screen, InputProcessor {
                 nSizeY = 50;
                 nSizeX2 = 50;
                 nSizeY2 = 50;
+                nShapeW = 50;
+                nShapeW2 = 50;
+                nShapeW3 = 50;
+                nShapeW4 = 50;
             } else if (isHitB(screenX, screenY, btnQuit)) {
                 System.out.println("Quit");
                 System.exit(0);
