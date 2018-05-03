@@ -9,6 +9,8 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.utils.Scaling;
 import gdx.menu.GamMenu;
 import gdx.menu.images.Button;
 
@@ -67,12 +69,18 @@ public class ScrMenu implements Screen, InputProcessor {
         batch.end();
     }
 
-    @Override
-    public void resize(int width, int height) {
-    }
 
     @Override
     public void pause() {
+    }
+    @Override
+    public void resize (int width, int height) {
+        Vector2 size = Scaling.fit.apply(640, 480, width, height);
+        int viewportX = (int)(width - size.x) / 2;
+        int viewportY = (int)(height - size.y) / 2;
+        int viewportWidth = (int)size.x;
+        int viewportHeight = (int)size.y;
+        Gdx.gl.glViewport(viewportX, viewportY, viewportWidth, viewportHeight);
     }
 
     @Override

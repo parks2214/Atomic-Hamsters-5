@@ -8,6 +8,8 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.*;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.utils.viewport.FitViewport;
+import com.badlogic.gdx.utils.viewport.Viewport;
 import gdx.menu.GamMenu;
 import gdx.menu.images.Button;
 import gdx.menu.images.Pellet;
@@ -298,6 +300,11 @@ public class ScrGame implements Screen, InputProcessor {
                 }
                 // mouse catche pellet
                 pMaker.removePellet(p);
+            }
+            for (int w = 0; w < arWall.length; w++) {
+                if (isHitS(p,arWall[w])) {
+                    pMaker.removePellet(p);
+                }
             }
         }
 

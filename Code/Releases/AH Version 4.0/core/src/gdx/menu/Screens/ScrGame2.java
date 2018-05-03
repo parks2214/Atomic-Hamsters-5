@@ -283,6 +283,11 @@ public class ScrGame2 implements Screen, InputProcessor {
                 // mouse catche pellet
                 pMaker.removePellet(p);
             }
+            for (int w = 0; w < arWall.length; w++) {
+                if (isHitS(p,arWall[w])) {
+                    pMaker.removePellet(p);
+                }
+            }
         }
         //poison stuff
         for (int i = pMaker2.alPellets.size() - 1; i >= 0; i--) {
@@ -297,6 +302,11 @@ public class ScrGame2 implements Screen, InputProcessor {
                 System.out.println(fSpeed2);
                 // mouse catche pellet
                 pMaker2.removePellet(p2);
+            }
+            for (int x = 0; x < arWall.length; x++) {
+                if (isHitS(p2,arWall[x])) {
+                    pMaker2.removePellet(p2);
+                }
             }
         }
         //Hit detection between mice

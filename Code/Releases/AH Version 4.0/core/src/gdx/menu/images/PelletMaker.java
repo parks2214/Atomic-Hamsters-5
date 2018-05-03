@@ -34,8 +34,8 @@ public class PelletMaker {
     }
 
     public void makePellet() {
-        float fX = (float) (Math.random() * (((Gdx.graphics.getWidth() - 60) - 50) + 1)) + 50; //640
-        float fY = (float) (Math.random() * (((Gdx.graphics.getHeight() - 60) - 50) + 1)) + 50; //480
+        float fX = (float) (Math.random() * (((Gdx.graphics.getWidth() - 50) - 50) + 1)) + 50; //640
+        float fY = (float) (Math.random() * (((Gdx.graphics.getHeight() - 50) - 50) + 1)) + 50; //480
         alPellets.add(new Pellet(fX, fY, texture));
     }
 
