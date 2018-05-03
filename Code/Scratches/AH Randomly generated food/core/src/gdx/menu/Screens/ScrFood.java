@@ -32,7 +32,7 @@ public class ScrFood implements Screen, InputProcessor {
     TextureRegion trTemp;
     Sprite spTemp;
     PelletMaker pMaker;
-
+    int nTimer=0;
     public ScrFood(GamMenu _gamMenu) {  //Referencing the main class.
         gamMenu = _gamMenu;
     }
@@ -106,6 +106,9 @@ public class ScrFood implements Screen, InputProcessor {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         float fSx = sprAni.getX();
         float fSy = sprAni.getY();
+        //Timer Stuff
+        nTimer++;
+       // System.out.println(nTimer);
         //Animation Stuff
         if (nFrame > 7) {
             nFrame = 0;
@@ -168,17 +171,23 @@ public class ScrFood implements Screen, InputProcessor {
         for (int i = pMaker.alPellets.size() - 1; i >= 0; i--) {
             Pellet p = pMaker.alPellets.get(i);
             if (isHitS(p, spTemp)) {
-                System.out.println("HERE");
                 System.out.println("He hecking ate it");
                 fSpeed += 0.5f;
                 System.out.println(fSpeed);
                 if (nSizeX < 100 && nSizeY < 100) {
                     nSizeX += 3;
                     nSizeY += 3;
-                   System.out.println(nSizeX + "   " + nSizeY);
+                    System.out.println(nSizeX + "   " + nSizeY);
                 }
+
                 // mouse catche pellet
+                nTimer=240;
                 pMaker.removePellet(p);
+            }
+            if (nTimer>=300) {
+                System.out.println("The clock struck 5 seconds");
+                pMaker.removePellet(p);
+                nTimer=0;
             }
         }
 

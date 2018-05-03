@@ -141,11 +141,11 @@ public class ScrGameOver implements Screen, InputProcessor {
                 gamMenu.updateState(9);
             }
 
-            } else if (isHit(screenX, screenY, btnMenu)) {
+             else if (isHit(screenX, screenY, btnMenu)) {
                 System.out.println("Menu");
                 gamMenu.updateState(0);
             }
-        //}
+        }
 
         return false;
     }
