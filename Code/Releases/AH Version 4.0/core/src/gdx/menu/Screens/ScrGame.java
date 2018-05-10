@@ -43,7 +43,7 @@ public class ScrGame implements Screen, InputProcessor {
     static public int nInd = 0;
     Sprite spTemp, spTemp2;
     PelletMaker pMaker;
-
+    int nTimer=0;
     public ScrGame(GamMenu _gamMenu) {
         gamMenu = _gamMenu;
     }
@@ -133,6 +133,8 @@ public class ScrGame implements Screen, InputProcessor {
         float fSy = sprMouse.getY();
         float fSx2 = sprMouse2.getX();
         float fSy2 = sprMouse2.getY();
+        //Timer Stuff
+        nTimer++;
         //Animation Stuff
 
         if (nFrame > 7) {
@@ -277,6 +279,7 @@ public class ScrGame implements Screen, InputProcessor {
             Pellet p = pMaker.alPellets.get(i);
             if (isHitS(p, spTemp)) {
                 fSpeed += 0.5f;
+                nTimer=240;
                 System.out.println(fSpeed);
                 nTrig = 1;
                 nPoints += 1;
@@ -289,6 +292,7 @@ public class ScrGame implements Screen, InputProcessor {
                 // mouse catche pellet
                 pMaker.removePellet(p);
             }if (isHitS(p, spTemp2)) {
+                nTimer=240;
                 fSpeed2 += 0.5f;
                 System.out.println(fSpeed2);
                 nPoints2 += 1;
@@ -305,6 +309,11 @@ public class ScrGame implements Screen, InputProcessor {
                 if (isHitS(p,arWall[w])) {
                     pMaker.removePellet(p);
                 }
+            }
+            if (nTimer>=300) {
+                System.out.println("The clock struck 5 seconds");
+                pMaker.removePellet(p);
+                nTimer=0;
             }
         }
 

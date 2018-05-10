@@ -34,7 +34,6 @@ public class ScrGame implements Screen, InputProcessor {
     int DY2[] = {0, -1, 0, 1};
     float fSpeed = 0, fSpeed2 = 0;
     static int nPoints = 0, nPoints2 = 0;
-
     public ScrGame(GamMenu _gamMenu) {
         gamMenu = _gamMenu;
     }
@@ -109,7 +108,8 @@ public class ScrGame implements Screen, InputProcessor {
         float fSy = sprMouse.getY();
         float fSx2 = sprMouse2.getX();
         float fSy2 = sprMouse2.getY();
-        //PelletMaker Stuff
+
+
 
         if (nFrame > 7) {
             nFrame = 0;
