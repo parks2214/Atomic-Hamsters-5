@@ -6,7 +6,6 @@ import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Sprite;
@@ -44,7 +43,7 @@ public class ScrGame2 implements Screen, InputProcessor {
     Rectangle rectMouse, rectMouseNew, rectMouse2, rectMouseNew2;
     int nChoice, nChoice2;
     PelletMaker pMaker, pMaker2;
-    float fSizeBar1, fSizeBar2, fSpeedBar1, fSpeedBar2;
+    float fSizeBar1 = 1, fSizeBar2 = 1, fSpeedBar1 = 1, fSpeedBar2 = 1;
 
     public ScrGame2(GamMenu _gamMenu) {
         gamMenu = _gamMenu;
@@ -268,8 +267,8 @@ public class ScrGame2 implements Screen, InputProcessor {
                 System.out.println(fSpeed);
                 nPointsG += 1;
                 System.out.println("Points for first: " + nPointsG);
-                fSizeBar1 += 0.05;
-                fSpeedBar1 += 0.05;
+                fSizeBar1 += 0.1;
+                fSpeedBar1 += 0.1;
                 if (nSizeX < 100 && nSizeY < 100) {
                     nSizeX += 3;
                     nSizeY += 3;
@@ -284,8 +283,8 @@ public class ScrGame2 implements Screen, InputProcessor {
                 System.out.println(fSpeed2);
                 nPointsG2 += 1;
                 System.out.println("Points for first: " + nPointsG2);
-                fSizeBar2 += 0.05;
-                fSpeed2 += 0.05;
+                fSizeBar2 += 0.1;
+                fSpeedBar2 += 0.1;
                 if (nSizeX2 < 100 && nSizeY2 < 100) {
                     nSizeX2 += 3;
                     nSizeY2 += 3;
@@ -303,7 +302,7 @@ public class ScrGame2 implements Screen, InputProcessor {
                 System.out.println("He hecking died");
                 fSpeed -= 0.5f;
                 System.out.println(fSpeed);
-                fSpeedBar1 -= 0.05;
+                fSpeedBar1 -= 0.1;
                 // mouse catche pellet
                 pMaker2.removePellet(p2);
             }if (isHitS(p2, spTemp2)) {
@@ -311,7 +310,7 @@ public class ScrGame2 implements Screen, InputProcessor {
                 System.out.println("He hecking died");
                 fSpeed2 -= 0.5f;
                 System.out.println(fSpeed2);
-                fSpeedBar2 -= 0.05;
+                fSpeedBar2 -= 0.1;
                 // mouse catche pellet
                 pMaker2.removePellet(p2);
             }
@@ -356,7 +355,10 @@ public class ScrGame2 implements Screen, InputProcessor {
             arWall[i].draw(batch);
         }
         sprMap.draw(batch);
-        batch.draw(txBar, Gdx.graphics.getWidth() - 50, Gdx.graphics.getHeight() - 50, 50 * fSpeedBar1, 10);
+        batch.draw(txBar, Gdx.graphics.getWidth() - 590, Gdx.graphics.getHeight() - 50, 50 * fSpeedBar1, 20);
+        batch.draw(txBar, Gdx.graphics.getWidth() - 590, Gdx.graphics.getHeight() - 25, 50 * fSizeBar1, 20);
+        batch.draw(txBar, Gdx.graphics.getWidth() - 220, Gdx.graphics.getHeight() - 50, 50 * fSpeedBar2, 20);
+        batch.draw(txBar, Gdx.graphics.getWidth() - 220, Gdx.graphics.getHeight() - 25, 50 * fSizeBar2, 20);
         pMaker.draw(batch);
         pMaker2.draw(batch);
         spTemp.setPosition(fSx, fSy);
