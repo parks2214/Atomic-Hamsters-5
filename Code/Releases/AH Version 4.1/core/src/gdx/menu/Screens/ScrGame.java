@@ -44,6 +44,7 @@ public class ScrGame implements Screen, InputProcessor {
     Sprite spTemp, spTemp2;
     PelletMaker pMaker;
     int nTimer=0;
+    Rectangle rectMouse, rectMouseNew, rectMouse2, rectMouseNew2;
     public ScrGame(GamMenu _gamMenu) {
         gamMenu = _gamMenu;
     }
@@ -422,6 +423,10 @@ public class ScrGame implements Screen, InputProcessor {
     }
 
     public boolean isHitS(Sprite spr1, Sprite spr2) {
-        return spr1.getBoundingRectangle().overlaps(spr2.getBoundingRectangle());
+        rectMouse = spr1.getBoundingRectangle();
+        rectMouseNew = new Rectangle(rectMouse.getX(), (rectMouse.getY() + rectMouse.getHeight() - 45), rectMouse.getWidth(), rectMouse.getHeight() - 10);
+        rectMouse2 = spr2.getBoundingRectangle();
+        rectMouseNew2 = new Rectangle(rectMouse2.getX(), rectMouse2.getY() - 8, rectMouse2.getWidth(), rectMouse2.getHeight() - 8);
+        return rectMouseNew.overlaps(rectMouseNew2);
     }
 }
