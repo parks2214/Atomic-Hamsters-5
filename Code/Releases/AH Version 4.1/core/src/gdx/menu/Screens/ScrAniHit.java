@@ -22,7 +22,7 @@ public class ScrAniHit implements Screen, InputProcessor {
     OrthographicCamera oc;
     Button btnMenu,btnQuit;
     TextureRegion trTemp;
-    Texture txSheet, txNamAH, txNamGame;
+    Texture txSheet, txNamAH, txNamGame, txWall;
     Sprite sprNamAH, sprDude, sprAni, sprMouse;   //sprAni is a ghost, a sprite used for hit detection
     int nFrame, nPos, nX = 100, nY = 100;   //nX and nY coordinates for sprAni  hv
     Animation araniDude[], araniMouse[];
@@ -51,10 +51,11 @@ public class ScrAniHit implements Screen, InputProcessor {
         sprNamAH.setFlip(false, true);
         sprNamAH.setSize(60, 80);
         sprNamAH.setPosition(Gdx.graphics.getWidth() / 2 - 30, Gdx.graphics.getHeight() / 2 - 40);
-        arWall[0] = new Wall(Gdx.graphics.getWidth(), 50, 0, 0);   //Top Wall
-        arWall[1] = new Wall(Gdx.graphics.getWidth(), 50, 0, Gdx.graphics.getHeight() - 50);    //Bottom Wall
-        arWall[2] = new Wall(50, Gdx.graphics.getHeight() - 20, 0, 50);   //Left Wall
-        arWall[3] = new Wall(50, Gdx.graphics.getHeight() - 20, Gdx.graphics.getWidth() - 50, 50);   //Right Wall
+        txWall = new Texture ("Wall2.jpg");
+        arWall[0] = new Wall(Gdx.graphics.getWidth(), 50, 0, 0, txWall);   //Top Wall
+        arWall[1] = new Wall(Gdx.graphics.getWidth(), 50, 0, Gdx.graphics.getHeight() - 50, txWall);    //Bottom Wall
+        arWall[2] = new Wall(50, Gdx.graphics.getHeight() - 20, 0, 50, txWall);   //Left Wall
+        arWall[3] = new Wall(50, Gdx.graphics.getHeight() - 20, Gdx.graphics.getWidth() - 50, 50, txWall);   //Right Wall
         //Direction sets
         arbDirection[0] = false;
         arbDirection[1] = false;

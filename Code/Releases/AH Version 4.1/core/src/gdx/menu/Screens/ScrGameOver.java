@@ -16,15 +16,15 @@ import gdx.menu.images.Button;
 
 public class ScrGameOver implements Screen, InputProcessor {
 
-    Button btnGame, btnMenu, btnLvl2;
+    Button btnGame, btnMenu, btnLvl2, btnLvl3;
     GamMenu gamMenu;
     Texture txBackground;
     OrthographicCamera oc;
     SpriteBatch batch = new SpriteBatch();
     Sprite sprBackground;
     BitmapFont font;
-    int nPoints, nPoints2, nPointsG, nPointsG2;
-    int nWin, nWin2;
+    int nPoints, nPoints2, n2Points, n2Points2, n3Points, n3Points2;
+    int nWin, nWin2, nWin3;
     int nInd;
 
     public ScrGameOver(GamMenu _gamMenu) {  //Referencing the main class.
@@ -40,9 +40,10 @@ public class ScrGameOver implements Screen, InputProcessor {
         font.setColor(Color.BLACK);
         font.getData().setScale(1.2f);
         font.getRegion().getTexture().setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
-        btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Menu.jpg");
+        btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2, Gdx.graphics.getHeight() - 50, "Menu.jpg");
         btnGame = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Game.png");
-        btnLvl2 = new Button(100, 50, Gdx.graphics.getWidth()/2, 0, "Level 2 button.png");
+        btnLvl2 = new Button(100, 50, Gdx.graphics.getWidth() - 250, 0, "Level 2 button.png");
+        btnLvl3 = new Button(100, 50, Gdx.graphics.getWidth() - 400, 0, "Level 2 button.png");
         txBackground = new Texture("explosion.png");
         sprBackground = new Sprite(txBackground);
         sprBackground.setScale(0.9f, 0.7f);
@@ -50,10 +51,13 @@ public class ScrGameOver implements Screen, InputProcessor {
         sprBackground.setFlip(false, true);
         nPoints = ScrGame.nPoints;
         nPoints2 = ScrGame.nPoints2;
-        nPointsG = ScrGame2.nPointsG;
-        nPointsG2 = ScrGame2.nPointsG2;
+        n2Points = ScrGame2.n2Points;
+        n2Points2 = ScrGame2.n2Points2;
+        n3Points = ScrGame3.n3Points;
+        n3Points2 = ScrGame3.n3Points2;
         nWin = ScrGame.nWin;
         nWin2 = ScrGame2.nWin2;
+        nWin3 = ScrGame3. nWin3;
         nInd = ScrGame.nInd;
         Gdx.input.setInputProcessor(this);
     }
@@ -70,20 +74,24 @@ public class ScrGameOver implements Screen, InputProcessor {
             font.draw(batch, "Second Player's Points: " + nPoints2, 20, 80);
             font.draw(batch, "First Player's Points: " + nPoints, 20, 60);
         } else if (nInd == 2) {
-            font.draw(batch, "Second Player's Points: " + nPointsG2, 20, 80);
-            font.draw(batch, "First Player's Points: " + nPointsG, 20, 60);
+            font.draw(batch, "Second Player's Points: " + n2Points2, 20, 80);
+            font.draw(batch, "First Player's Points: " + n2Points, 20, 60);
+        } else if (nInd == 3) {
+            font.draw(batch, "Second Player's Points: " + n3Points2, 20, 80);
+            font.draw(batch, "First Player's Points: " + n3Points, 20, 60);
         }
-        if (nWin2 == 1 || nWin == 1) {
+        if (nWin2 == 1 || nWin == 1 || nWin3 == 1) {
             font.draw(batch, "WINNER: Player 1", 490, 70);
-        } else if (nWin2 == 2 || nWin == 2) {
+        } else if (nWin2 == 2 || nWin == 2 || nWin3 == 2) {
             font.draw(batch, "WINNER: Player 2", 490, 70);
         } else {
             font.draw(batch, "PLAYERS TIED!", 490, 70);
         }
         //if (nPoints > 9 || nPoints2 > 9) {
-            btnLvl2.draw(batch);
+        btnLvl2.draw(batch);
+        btnLvl3.draw(batch);
         //} else {
-            btnGame.draw(batch);
+        btnGame.draw(batch);
         //}
         batch.end();
     }
@@ -134,16 +142,19 @@ public class ScrGameOver implements Screen, InputProcessor {
                 //if (nPoints > 9 || nPoints2 > 9 || nPointsG2 > 9 || nPointsG > 9) {
                 //    gamMenu.updateState(9);
                 //} else {
-                    gamMenu.updateState(5);
-                }
-                else if (isHit(screenX,screenY, btnLvl2)) {
+                gamMenu.updateState(5);
+            }
+            else if (isHit(screenX,screenY, btnLvl2)) {
                 System.out.println("Level 2");
                 gamMenu.updateState(9);
             }
 
-             else if (isHit(screenX, screenY, btnMenu)) {
+            else if (isHit(screenX, screenY, btnMenu)) {
                 System.out.println("Menu");
                 gamMenu.updateState(0);
+            } else if (isHit(screenX, screenY, btnLvl3)) {
+                System.out.println("Game3");
+                gamMenu.updateState(11);
             }
         }
 
@@ -179,3 +190,4 @@ public class ScrGameOver implements Screen, InputProcessor {
     }
 
 }
+

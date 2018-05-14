@@ -20,5 +20,4 @@ public class DesktopLauncher {
 
 		new LwjglApplication(new GamMenu(), config);
 	}
-
 }

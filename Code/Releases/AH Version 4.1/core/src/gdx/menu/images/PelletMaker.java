@@ -7,7 +7,6 @@ package gdx.menu.images;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import gdx.menu.Screens.ScrGame;
 
 import java.util.ArrayList;
 
@@ -34,8 +33,8 @@ public class PelletMaker {
     }
 
     public void makePellet() {
-        float fX = (float) (Math.random() * (((Gdx.graphics.getWidth() - 50) - 50) + 1)) + 50; //640
-        float fY = (float) (Math.random() * (((Gdx.graphics.getHeight() - 50) - 50) + 1)) + 50; //480
+        float fX = 51 + (float)(Math.random() * ((559 - 51) + 1)); //640
+        float fY = 51 + (float)(Math.random() * ((399 - 51) + 1)); //480
         alPellets.add(new Pellet(fX, fY, texture));
     }
 
@@ -44,3 +43,4 @@ public class PelletMaker {
         nActual--;
     }
 }
+
