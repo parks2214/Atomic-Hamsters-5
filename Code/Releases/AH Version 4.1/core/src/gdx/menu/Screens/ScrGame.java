@@ -415,6 +415,10 @@ public class ScrGame implements Screen, InputProcessor {
     }
 
     public boolean isHitS(Sprite spr1, Sprite spr2) {
+        int nSizeInt = 0;
+        if (nSizeX == 3) {
+
+        }
         rectMouse = spr1.getBoundingRectangle();
         rectMouseNew = new Rectangle(rectMouse.getX(), (rectMouse.getY() + rectMouse.getHeight() - 45), rectMouse.getWidth(), rectMouse.getHeight() - 10);
         rectMouse2 = spr2.getBoundingRectangle();

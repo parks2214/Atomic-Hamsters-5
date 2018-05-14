@@ -46,6 +46,7 @@ public class ScrGame3 implements Screen, InputProcessor {
     PelletMaker pMaker, pMaker2;
     float fSizeBar1 = 1, fSizeBar2 = 1, fSpeedBar1 = 1, fSpeedBar2 = 1;
     BitmapFont font, font2;
+    boolean isAdded = false;
     //640, 480
 
     public ScrGame3(GamMenu _gamMenu) {
@@ -292,6 +293,7 @@ public class ScrGame3 implements Screen, InputProcessor {
                 if (nSizeX < 100 && nSizeY < 100) {
                     nSizeX += 3;
                     nSizeY += 3;
+                    isAdded = true;
                     System.out.println(nSizeX + "   " + nSizeY);
                 }
                 // mouse catche pellet
@@ -362,6 +364,10 @@ public class ScrGame3 implements Screen, InputProcessor {
             nSizeY = 50;
             nSizeX2 = 50;
             nSizeY2 = 50;
+            fSizeBar1 = 1;
+            fSpeedBar1 = 1;
+            fSizeBar2 = 1;
+            fSpeedBar2 = 1;
             System.out.println("Hit");
             gamMenu.updateState(6);
             n3Points = 0;
@@ -383,10 +389,10 @@ public class ScrGame3 implements Screen, InputProcessor {
         batch.draw(txBar, Gdx.graphics.getWidth() - 220, Gdx.graphics.getHeight() - 25, 50 * fSizeBar2, 20);
         font.draw(batch, "1", Gdx.graphics.getWidth() - 625, Gdx.graphics.getHeight() - 45);
         font.draw(batch, "2", Gdx.graphics.getWidth() - 35, Gdx.graphics.getHeight() - 45);
-        font2.draw(batch, "Size", Gdx.graphics.getWidth() - 590, Gdx.graphics.getHeight() - 45);
-        font2.draw(batch, "Speed", Gdx.graphics.getWidth() - 590, Gdx.graphics.getHeight() - 20);
-        font2.draw(batch, "Size", Gdx.graphics.getWidth() - 220, Gdx.graphics.getHeight() - 45);
-        font2.draw(batch, "Speed", Gdx.graphics.getWidth() - 220, Gdx.graphics.getHeight() - 20);
+        font2.draw(batch, "Speed", Gdx.graphics.getWidth() - 590, Gdx.graphics.getHeight() - 45);
+        font2.draw(batch, "Size", Gdx.graphics.getWidth() - 590, Gdx.graphics.getHeight() - 20);
+        font2.draw(batch, "Speed", Gdx.graphics.getWidth() - 220, Gdx.graphics.getHeight() - 45);
+        font2.draw(batch, "Size", Gdx.graphics.getWidth() - 220, Gdx.graphics.getHeight() - 20);
         pMaker.draw(batch);
         pMaker2.draw(batch);
         spTemp.setPosition(fSx, fSy);
@@ -450,6 +456,10 @@ public class ScrGame3 implements Screen, InputProcessor {
                 nSizeY = 50;
                 nSizeX2 = 50;
                 nSizeY2 = 50;
+                fSizeBar1 = 1;
+                fSpeedBar1 = 1;
+                fSizeBar2 = 1;
+                fSpeedBar2 = 1;
             } else if (isHitB(screenX, screenY, btnQuit)) {
                 System.out.println("Quit");
                 System.exit(0);
@@ -487,6 +497,7 @@ public class ScrGame3 implements Screen, InputProcessor {
     }
 
     public boolean isHitS(Sprite spr1, Sprite spr2) {
+        if (isAdded == true)
         rectMouse = spr1.getBoundingRectangle();
         rectMouseNew = new Rectangle(rectMouse.getX(), (rectMouse.getY() + rectMouse.getHeight() - 45), rectMouse.getWidth(), rectMouse.getHeight() - 10);
         rectMouse2 = spr2.getBoundingRectangle();
