@@ -46,7 +46,6 @@ public class ScrGame3 implements Screen, InputProcessor {
     PelletMaker pMaker, pMaker2;
     float fSizeBar1 = 1, fSizeBar2 = 1, fSpeedBar1 = 1, fSpeedBar2 = 1;
     BitmapFont font, font2;
-    boolean isAdded = false;
     //640, 480
 
     public ScrGame3(GamMenu _gamMenu) {
@@ -293,7 +292,6 @@ public class ScrGame3 implements Screen, InputProcessor {
                 if (nSizeX < 100 && nSizeY < 100) {
                     nSizeX += 3;
                     nSizeY += 3;
-                    isAdded = true;
                     System.out.println(nSizeX + "   " + nSizeY);
                 }
                 // mouse catche pellet
@@ -497,12 +495,10 @@ public class ScrGame3 implements Screen, InputProcessor {
     }
 
     public boolean isHitS(Sprite spr1, Sprite spr2) {
-        if (isAdded == true)
         rectMouse = spr1.getBoundingRectangle();
         rectMouseNew = new Rectangle(rectMouse.getX(), (rectMouse.getY() + rectMouse.getHeight() - 45), rectMouse.getWidth(), rectMouse.getHeight() - 10);
         rectMouse2 = spr2.getBoundingRectangle();
         rectMouseNew2 = new Rectangle(rectMouse2.getX(), rectMouse2.getY() - 8, rectMouse2.getWidth(), rectMouse2.getHeight() - 8);
         return rectMouseNew.overlaps(rectMouseNew2);
     }
-
 }
