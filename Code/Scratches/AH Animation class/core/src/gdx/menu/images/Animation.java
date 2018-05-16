@@ -49,3 +49,16 @@ public class Animation extends Sprite {
 //araniMouse2[i] = new Animation(0.8f, arSprMouse2);
 //sprMouse.setPosition(200, 200);
 //sprMouse2.setPosition(300, 200);
+//float fSx = sprMouse.getX();
+//    float fSy = sprMouse.getY();
+//    float fSx2 = sprMouse2.getX();
+//    float fSy2 = sprMouse2.getY();
+// if (nFrame > 7) {
+//            nFrame = 0;
+//        }
+//        trTemp = (TextureRegion) araniMouse[nPos].getKeyFrame(nFrame, false);
+//        trTemp2 = (TextureRegion) araniMouse2[nPos2].getKeyFrame(nFrame, false);
+// spTemp.setPosition(fSx, fSy);
+//        spTemp2.setPosition(fSx2, fSy2);
+//        batch.draw(trTemp, fSx, fSy, nSizeX, nSizeY);
+//        batch.draw(trTemp2, fSx2, fSy2, nSizeX2, nSizeY2);
