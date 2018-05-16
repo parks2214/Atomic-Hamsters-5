@@ -1,27 +1,35 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package gdx.menu.images;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 
-/**
- *
- * @author parks2214
- */
-public class Animation extends Sprite {
-    int nHeight = 0, nWidth = 0;
-    Texture txtMouse;
+public class AniSprite extends Sprite {
+    int nFrame, nPos, nW, nH, nSx, nSy;
+    Animation araniMouse[];
+    Sprite sprMouse;
 
-    public Animate(int nX, int nY, String sFileName) {
-        txtMouse = (new Texture(Gdx.files.internal(sFileName)));
-
-
+    public AniSprite(int nW, int nH, int nX, int nY, Texture texture) {
+        super(texture);
+        nFrame = 0;
+        nPos = 0;
+        araniMouse = new Animation[4];
+        nW = texture.getWidth() / 4;
+        nH = texture.getWidth() / 4;
+        for (int i = 0; i < 4; i++) {
+            Sprite[] arSprMouse = new Sprite[4];
+            for (int j = 0; j < 4; j++) {
+                nSx = j * nW;
+                nSy = j * nH;
+                sprMouse = new Sprite(texture, nSx, nSy, nW, nH);
+                sprMouse.setFlip(false, true);
+                arSprMouse[j] = new Sprite(sprMouse);
+            }
+            araniMouse[i] = new Animation(0.8f, arSprMouse);
+        }
+        sprMouse.setPosition(200, 200);
     }
-
 }
 //  nFrame = 0;
 //nPos = 0;
