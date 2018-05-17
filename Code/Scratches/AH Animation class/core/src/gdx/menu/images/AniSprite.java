@@ -4,11 +4,14 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
 public class AniSprite extends Sprite {
     int nFrame, nPos, nW, nH, nSx, nSy;
     Animation araniMouse[];
     Sprite sprMouse;
+    TextureRegion trTemp;
 
     public AniSprite(int nW, int nH, int nX, int nY, Texture texture) {
         super(texture);
@@ -29,6 +32,13 @@ public class AniSprite extends Sprite {
             araniMouse[i] = new Animation(0.8f, arSprMouse);
         }
         sprMouse.setPosition(200, 200);
+    }
+    public void draw (SpriteBatch batch) {
+        if (nFrame > 7) {
+            nFrame = 0;
+        }
+        trTemp = (TextureRegion) araniMouse[nPos].getKeyFrame(nFrame, false);
+        nFrame++;
     }
 }
 //  nFrame = 0;
