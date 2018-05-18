@@ -102,10 +102,10 @@ public class ScrGame4 implements Screen, InputProcessor {
         arObstacle[1] = new Wall(50, 65, (51 + (int)(Math.random() * ((539 - 51) + 1))), (51 + (int)(Math.random() * ((364 - 51) + 1))), txObstacle);    //Vertical obstacle
         n4Points = 0;
         n4Points2 = 0;
-        ScrGame.nInd = 3;
+        ScrGame.nInd = 4;
         //Animation Stuff
         nFrame = 0;
-        nPos = 0;
+        nPos = 0; //dennis was here
         nPos2 = 0;
         araniMouse = new Animation[4];
         araniMouse2 = new Animation[4];
@@ -136,8 +136,8 @@ public class ScrGame4 implements Screen, InputProcessor {
         sprMouse2.setPosition(300, 200);
         Gdx.input.setInputProcessor(this);
 
-        pMaker = new PelletMaker(50, 50, "BluBery.png");
-        pMaker2 = new PelletMaker(30, 30, "Poison.png");
+        pMaker = new PelletMaker(50, 50, "Apple.png");
+        pMaker2 = new PelletMaker(30, 30, "Apple Worm.png");
     }
 
     @Override
@@ -312,15 +312,17 @@ public class ScrGame4 implements Screen, InputProcessor {
         for (int i = pMaker2.alPellets.size() - 1; i >= 0; i--) {
             Pellet p2 = pMaker2.alPellets.get(i);
             if (isHitS(p2, spTemp)) {
-                fSpeed -= 0.5f;
+                nSizeX -=3;
+                nSizeY -=3;
                 System.out.println(fSpeed);
-                fSpeedBar1 -= 0.1;
+                fSizeBar1 -= 0.1;
                 // mouse catche pellet
                 pMaker2.removePellet(p2);
             }if (isHitS(p2, spTemp2)) {
-                fSpeed2 -= 0.5f;
+                nSizeX2-=3;
+                nSizeY2-=3;
                 System.out.println(fSpeed2);
-                fSpeedBar2 -= 0.1;
+                fSizeBar2 -= 0.1;
                 // mouse catche pellet
                 pMaker2.removePellet(p2);
             }
