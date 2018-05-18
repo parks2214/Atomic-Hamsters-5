@@ -21,7 +21,7 @@ public class ScrAnimalChoice implements Screen, InputProcessor {
     OrthographicCamera oc;
     SpriteBatch batch = new SpriteBatch();
     BitmapFont font;
-    static int nChoice = 0;
+    public static int nChoice = 0;
 
     public ScrAnimalChoice(GamMenu _gamMenu) {  //Referencing the main class.
         gamMenu = _gamMenu;

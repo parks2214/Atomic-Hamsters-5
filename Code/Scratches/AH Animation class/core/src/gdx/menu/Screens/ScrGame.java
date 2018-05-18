@@ -89,7 +89,6 @@ public class ScrGame implements Screen, InputProcessor {
         nPoints = 0;
         nPoints2 = 0;
         nInd = 1;
-        AniSprite = new AniSprite(15, 15, 15, 15, txSheet);
         Gdx.input.setInputProcessor(this);
         pMaker = new PelletMaker(25, 25,"Hamster Pellet.png");
     }
@@ -98,7 +97,7 @@ public class ScrGame implements Screen, InputProcessor {
     public void render(float delta) {
         Gdx.gl.glClearColor(1, 1, 1, 1); //White background.
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        /*float fSx = sprMouse.getX();
+        float fSx = sprMouse.getX();
         float fSy = sprMouse.getY();
         float fSx2 = sprMouse2.getX();
         float fSy2 = sprMouse2.getY();
@@ -279,7 +278,7 @@ public class ScrGame implements Screen, InputProcessor {
                 pMaker.removePellet(p);
                 nTimer=0;
             }
-        }*/
+        }
 
         batch.begin();
         batch.setProjectionMatrix(oc.combined);
@@ -287,12 +286,11 @@ public class ScrGame implements Screen, InputProcessor {
             arWall[i].draw(batch);
         }
         sprMap.draw(batch);
-        //pMaker.draw(batch);
-        //spTemp.setPosition(fSx, fSy);
-        //spTemp2.setPosition(fSx2, fSy2);
-        //batch.draw(trTemp, fSx, fSy, nSizeX, nSizeY);
-        //batch.draw(trTemp2, fSx2, fSy2, nSizeX2, nSizeY2);
-        AniSprite.draw(batch);
+        pMaker.draw(batch);
+        spTemp.setPosition(fSx, fSy);
+        spTemp2.setPosition(fSx2, fSy2);
+        batch.draw(trTemp, fSx, fSy, nSizeX, nSizeY);
+        batch.draw(trTemp2, fSx2, fSy2, nSizeX2, nSizeY2);
         btnMenu.draw(batch);
         btnQuit.draw(batch);
         batch.end();
