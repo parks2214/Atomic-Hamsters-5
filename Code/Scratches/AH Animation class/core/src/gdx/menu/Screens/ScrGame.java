@@ -9,10 +9,7 @@ import com.badlogic.gdx.graphics.g2d.*;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import gdx.menu.GamMenu;
-import gdx.menu.images.Button;
-import gdx.menu.images.Pellet;
-import gdx.menu.images.PelletMaker;
-import gdx.menu.images.Wall;
+import gdx.menu.images.*;
 import com.badlogic.gdx.math.Intersector;
 import com.badlogic.gdx.math.Rectangle;
 
@@ -41,6 +38,7 @@ public class ScrGame implements Screen, InputProcessor {
     PelletMaker pMaker;
     int nTimer=0;
     Rectangle rectMouse, rectMouseNew, rectMouse2, rectMouseNew2;
+    AniSprite AniSprite;
     public ScrGame(GamMenu _gamMenu) {
         gamMenu = _gamMenu;
     }
@@ -91,35 +89,8 @@ public class ScrGame implements Screen, InputProcessor {
         nPoints = 0;
         nPoints2 = 0;
         nInd = 1;
-        //Animation Stuff for Case 1
-        araniMouse = new Animation[4];
-        araniMouse2 = new Animation[4];
-        fW = txSheet.getWidth() / 4;
-        fH = txSheet.getHeight() / 4;
-        fW2 = txSheet2.getWidth() /4;
-        fH2 = txSheet2.getHeight() /4;
-        for (int i = 0; i < 4; i++) {
-            Sprite[] arSprMouse = new Sprite[4];
-            Sprite[] arSprMouse2 = new Sprite[4];
-            for (int j = 0; j < 4; j++) {
-                fSx = j * fW;
-                fSy = i * fH;
-                fSy2 = i * fH2;
-                fSx2 = j * fW2;
-                sprMouse = new Sprite(txSheet, fSx, fSy, fW, fH);
-                sprMouse.setFlip(false, true);
-                arSprMouse[j] = new Sprite(sprMouse);
-                sprMouse2 = new Sprite(txSheet2, fSx2, fSy2, fW2, fH2);
-                sprMouse2.setFlip(false, true);
-                arSprMouse2[j] = new Sprite(sprMouse2);
-            }
-            araniMouse[i] = new Animation(0.8f, arSprMouse);
-            araniMouse2[i] = new Animation(0.8f, arSprMouse2);
-        }
-        sprMouse.setPosition(200, 200);
-        sprMouse2.setPosition(300, 200);
+        AniSprite = new AniSprite(15, 15, 15, 15, txSheet);
         Gdx.input.setInputProcessor(this);
-
         pMaker = new PelletMaker(25, 25,"Hamster Pellet.png");
     }
 
@@ -127,7 +98,7 @@ public class ScrGame implements Screen, InputProcessor {
     public void render(float delta) {
         Gdx.gl.glClearColor(1, 1, 1, 1); //White background.
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        float fSx = sprMouse.getX();
+        /*float fSx = sprMouse.getX();
         float fSy = sprMouse.getY();
         float fSx2 = sprMouse2.getX();
         float fSy2 = sprMouse2.getY();
@@ -308,7 +279,7 @@ public class ScrGame implements Screen, InputProcessor {
                 pMaker.removePellet(p);
                 nTimer=0;
             }
-        }
+        }*/
 
         batch.begin();
         batch.setProjectionMatrix(oc.combined);
@@ -316,11 +287,12 @@ public class ScrGame implements Screen, InputProcessor {
             arWall[i].draw(batch);
         }
         sprMap.draw(batch);
-        pMaker.draw(batch);
-        spTemp.setPosition(fSx, fSy);
-        spTemp2.setPosition(fSx2, fSy2);
-        batch.draw(trTemp, fSx, fSy, nSizeX, nSizeY);
-        batch.draw(trTemp2, fSx2, fSy2, nSizeX2, nSizeY2);
+        //pMaker.draw(batch);
+        //spTemp.setPosition(fSx, fSy);
+        //spTemp2.setPosition(fSx2, fSy2);
+        //batch.draw(trTemp, fSx, fSy, nSizeX, nSizeY);
+        //batch.draw(trTemp2, fSx2, fSy2, nSizeX2, nSizeY2);
+        AniSprite.draw(batch);
         btnMenu.draw(batch);
         btnQuit.draw(batch);
         batch.end();
