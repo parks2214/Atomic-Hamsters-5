@@ -12,6 +12,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import gdx.menu.GamMenu;
+import gdx.menu.images.AniSprite;
 import gdx.menu.images.Button;
 import gdx.menu.images.Wall;
 
@@ -30,6 +31,7 @@ public class ScrAniHit implements Screen, InputProcessor {
     Wall[] arWall = new Wall[4];
     boolean arbDirection[] = new boolean[4];
     float fSpeed = 1;
+    AniSprite aniSprite, aniSprite2;
 
     public ScrAniHit(GamMenu _gamMenu) {
         gamMenu = _gamMenu;
@@ -56,31 +58,7 @@ public class ScrAniHit implements Screen, InputProcessor {
         arWall[1] = new Wall(Gdx.graphics.getWidth(), 50, 0, Gdx.graphics.getHeight() - 50, txWall);    //Bottom Wall
         arWall[2] = new Wall(50, Gdx.graphics.getHeight() - 20, 0, 50, txWall);   //Left Wall
         arWall[3] = new Wall(50, Gdx.graphics.getHeight() - 20, Gdx.graphics.getWidth() - 50, 50, txWall);   //Right Wall
-        //Direction sets
-        arbDirection[0] = false;
-        arbDirection[1] = false;
-        arbDirection[2] = false;
-        arbDirection[3] = false;
-        //Animation Stuff
-        nFrame = 0;
-        nPos = 0;
-        araniMouse = new Animation[4];
-        fW = txSheet.getWidth() / 4;
-        fH = txSheet.getHeight() / 4;
-        for (int i = 0; i < 4; i++) {
-            Sprite[] arSprMouse = new Sprite[4];
-            for (int j = 0; j < 4; j++) {
-                fSx = j * fW;
-                fSy = i * fH;
-                sprMouse = new Sprite(txSheet, fSx, fSy, fW, fH);
-                sprMouse.setFlip(false, true);
-                arSprMouse[j] = new Sprite(sprMouse);
-            }
-            araniMouse[i] = new Animation(0.8f, arSprMouse);
 
-        }
-        sprAni = new Sprite(txNamAH, 0, 0, fW, fH);
-        sprAni.setPosition(200, 200);
         Gdx.input.setInputProcessor(this);
     }
 
@@ -88,62 +66,7 @@ public class ScrAniHit implements Screen, InputProcessor {
     public void render(float delta) {
         Gdx.gl.glClearColor(1, 1, 1, 1); //White background.
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        float fSx = sprAni.getX();
-        float fSy = sprAni.getY();
-        //Animation Stuff
 
-        if (nFrame > 7) {
-            nFrame = 0;
-        }
-        trTemp = (TextureRegion) araniMouse[nPos].getKeyFrame(nFrame, false);
-        if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
-            arbDirection[0] = true;
-            arbDirection[1] = false;
-            arbDirection[2] = false;
-            arbDirection[3] = false;
-        } else if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
-            arbDirection[0] = false;
-            arbDirection[1] = true;
-            arbDirection[2] = false;
-            arbDirection[3] = false;
-        } else if (Gdx.input.isKeyPressed(Input.Keys.UP)) {
-            arbDirection[0] = false;
-            arbDirection[1] = false;
-            arbDirection[2] = true;
-            arbDirection[3] = false;
-
-        } else if (Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
-            arbDirection[0] = false;
-            arbDirection[1] = false;
-            arbDirection[2] = false;
-            arbDirection[3] = true;
-        }
-
-        //Direction instructions
-        if (arbDirection[0] == true) {
-            sprAni.setX(sprAni.getX() - fSpeed);
-            nX = nX -= fSpeed;
-            nPos = 1;
-            nFrame++;
-        }
-        if (arbDirection[1] == true) {
-            sprAni.setX(sprAni.getX() + fSpeed);
-            nX = nX += fSpeed;
-            nPos = 2;
-            nFrame++;
-        }
-        if (arbDirection[2] == true) {
-            sprAni.setY(sprAni.getY() - fSpeed);
-            nY = nY -= fSpeed;
-            nPos = 3;
-            nFrame++;
-        }
-        if (arbDirection[3] == true) {
-            sprAni.setY(sprAni.getY() + fSpeed);
-            nY = nY += fSpeed;
-            nPos = 0;
-            nFrame++;
-        }
         for (int i = 0; i < arWall.length; i++) {
             if (isHitS(sprAni, arWall[i])) {
                 sprAni.setPosition(fSx, fSy);

@@ -154,7 +154,7 @@ public class ScrGame2 implements Screen, InputProcessor {
         }
         trTemp = (TextureRegion) araniMouse[nPos].getKeyFrame(nFrame, false);
         trTemp2 =  (TextureRegion) araniMouse2[nPos2].getKeyFrame(nFrame, false);
-        ///Pellet for hamster 1
+        //Pellet for hamster 1
         if (spTemp == null) {
             spTemp = new Sprite(trTemp);
             spTemp.setFlip(false,true);

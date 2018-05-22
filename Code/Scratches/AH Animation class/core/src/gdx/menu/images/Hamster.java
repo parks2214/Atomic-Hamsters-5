@@ -11,13 +11,16 @@ import gdx.menu.Screens.ScrAnimalChoice2;
 
 public class Hamster extends Sprite {
 
-    int nDx, nDy, nPos, nPos2, nGlow, nOrigX, nOrigY, nFrame = 0, nDir, nDir2;
+    int nPos, nPos2, nGlow, nOrigX, nOrigY, nFrame = 0, nDir, nDir2, nY2 = 100, nX2 = 100;
     public Animation arAni[], arAni2[], araniMouse[], araniMouse2[];
     AniSprite aniSprite, aniSprite2;
     public Sprite sprTemp;
     int nChoice, nChoice2;
     Texture txSheet, txSheet2;
     TextureRegion trTemp, trTemp2;
+    int DX[] = {1, 0, -1, 0};
+    int DY[] = {0, -1, 0, 1};
+    float fSpeed2 = 0;
 
     public Hamster(int nX, int nY, int nW, int nH) {
         super(new Texture(Gdx.files.internal("NormHamAni.png")));
@@ -46,8 +49,6 @@ public class Hamster extends Sprite {
 
     public void reset() {
         nDir = 0;
-        nDx = 0;
-        nDy = 0;
         nPos = 0;
         nGlow = 0;
         nOrigX = 0;
@@ -66,37 +67,26 @@ public class Hamster extends Sprite {
         sprTemp.setFlip(false, true);
     }
 
-    public void tryMove(int nDir, SprMap map) {
-        for (int i = 0; i < arWall.length; i++) {
-            if (isHitS(sprMouse, arWall[i])) {
-                sprMouse.setPosition(fSx, fSy);
-            }
-            if (isHitS(sprMouse2, arWall[i])) {
-                sprMouse2.setPosition(fSx2, fSy2);
-            }
-        }
-    }
-
-    public void move(int nNewDir, SprMap map) {
-        if (DY[nDir2] == 0) {
-            sprMouse2.setY(sprMouse2.getY() + DY[nDir2]);
+    public void move(int nNewDir) {
+        if (DY[nDir] == 0) {
+            //sprMouse2.setY(sprMouse2.getY() + DY[nDir2]);
             nY2 = nY2 += DY[nDir2];
-        } else if (DY[nDir2] < 0) {
-            sprMouse2.setY(sprMouse2.getY() + DY[nDir2] - fSpeed2);
+        } else if (DY[nDir] < 0) {
+            //sprMouse2.setY(sprMouse2.getY() + DY[nDir2] - fSpeed2);
             nY2 = nY2 += DY[nDir2] - fSpeed2;
         } else {
-            sprMouse2.setY(sprMouse2.getY() + DY[nDir2] + fSpeed2);
+            //sprMouse2.setY(sprMouse2.getY() + DY[nDir2] + fSpeed2);
             nY2 = nY2 += DY[nDir2] + fSpeed2;
 
         }
         if (DX[nDir2] == 0) {
-            sprMouse2.setX(sprMouse2.getX() + DX[nDir2]);
+            //sprMouse2.setX(sprMouse2.getX() + DX[nDir2]);
             nX2 = nX2 += DX[nDir2];
         } else if (DX[nDir2] < 0) {
-            sprMouse2.setX(sprMouse2.getX() + DX[nDir2] - fSpeed2);
+            //sprMouse2.setX(sprMouse2.getX() + DX[nDir2] - fSpeed2);
             nX2 = nX2 += DX[nDir2] - fSpeed2;
         } else {
-            sprMouse2.setX(sprMouse2.getX() + DX[nDir2] + fSpeed2);
+            //sprMouse2.setX(sprMouse2.getX() + DX[nDir2] + fSpeed2);
             nX2 = nX2 += DX[nDir2] + fSpeed2;
 
         }

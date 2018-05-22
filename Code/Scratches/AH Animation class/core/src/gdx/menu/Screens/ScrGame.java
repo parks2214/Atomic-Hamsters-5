@@ -38,7 +38,8 @@ public class ScrGame implements Screen, InputProcessor {
     PelletMaker pMaker;
     int nTimer=0;
     Rectangle rectMouse, rectMouseNew, rectMouse2, rectMouseNew2;
-    AniSprite AniSprite;
+    AniSprite aniSprite, aniSprite2;
+    Hamster2 hamster2;
     public ScrGame(GamMenu _gamMenu) {
         gamMenu = _gamMenu;
     }
@@ -56,14 +57,21 @@ public class ScrGame implements Screen, InputProcessor {
         nChoice2 = ScrAnimalChoice2.nChoice2;
         if (nChoice == 1) {
             txSheet = new Texture("sprmouse.png");
+            aniSprite = new AniSprite(txSheet);
         } else if (nChoice == 2) {
             txSheet = new Texture("sprmouse2.png");
+            aniSprite = new AniSprite(txSheet);
         }
         if (nChoice2 == 1) {
             txSheet2 = new Texture ("sprmouse.png");
+            aniSprite2 = new AniSprite(txSheet2);
         } else if (nChoice2 == 2) {
             txSheet2 = new Texture("sprmouse2.png");
+            aniSprite2 = new AniSprite(txSheet2);
         }
+        aniSprite.animate();
+        aniSprite2.animate();
+        hamster2 = new Hamster2(200, 200);
         txTextbox1 = new Texture("Textbox.png");
         txTextbox2 = new Texture("Textbox2.png");
         arsprTextbox[0] = new Sprite(txTextbox1);
@@ -97,121 +105,6 @@ public class ScrGame implements Screen, InputProcessor {
     public void render(float delta) {
         Gdx.gl.glClearColor(1, 1, 1, 1); //White background.
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        float fSx = sprMouse.getX();
-        float fSy = sprMouse.getY();
-        float fSx2 = sprMouse2.getX();
-        float fSy2 = sprMouse2.getY();
-        //Timer Stuff
-        nTimer++;
-        //Animation Stuff
-
-        if (nFrame > 7) {
-            nFrame = 0;
-        }
-        trTemp = (TextureRegion) araniMouse[nPos].getKeyFrame(nFrame, false);
-        trTemp2 = (TextureRegion) araniMouse2[nPos2].getKeyFrame(nFrame, false);
-        //Pellet for hamster 1
-        if (spTemp == null) {
-            spTemp = new Sprite(trTemp);
-            spTemp.setFlip(false,true);
-        } else {
-            spTemp.setTexture(trTemp.getTexture());
-        }
-        //Pellet for hamster 2
-        if (spTemp2 == null) {
-            spTemp2 = new Sprite(trTemp2);
-            spTemp2.setFlip(false,true);
-        } else {
-            spTemp2.setTexture(trTemp2.getTexture());
-        }
-
-        //Input for hamster 1
-        if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
-            nDir = 2;
-        } else if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
-            nDir = 0;
-        } else if (Gdx.input.isKeyPressed(Input.Keys.UP)) {
-            nDir = 1;
-        } else if (Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
-            nDir = 3;
-        }
-        //Input for hamster 2
-        if (Gdx.input.isKeyPressed(Input.Keys.A)) {
-            nDir2 = 2;
-        } else if (Gdx.input.isKeyPressed(Input.Keys.D)) {
-            nDir2 = 0;
-        } else if (Gdx.input.isKeyPressed(Input.Keys.W)) {
-            nDir2 = 1;
-        } else if (Gdx.input.isKeyPressed(Input.Keys.S)) {
-            nDir2 = 3;
-        }
-
-        //Direction instruction for mouse 1
-        if (DY[nDir] == 0) {
-            sprMouse.setY(sprMouse.getY() + DY[nDir]);
-            nY = nY += DY[nDir];
-        } else if (DY[nDir] < 0) {
-            sprMouse.setY(sprMouse.getY() + DY[nDir] - fSpeed);
-            nY = nY += DY[nDir] - fSpeed;
-        } else {
-            sprMouse.setY(sprMouse.getY() + DY[nDir] + fSpeed);
-            nY = nY += DY[nDir] + fSpeed;
-
-        }
-        if (DX[nDir] == 0) {
-            sprMouse.setX(sprMouse.getX() + DX[nDir]);
-            nX = nX += DX[nDir];
-        } else if (DX[nDir] < 0) {
-            sprMouse.setX(sprMouse.getX() + DX[nDir] - fSpeed);
-            nX = nX += DX[nDir] - fSpeed;
-        } else {
-            sprMouse.setX(sprMouse.getX() + DX[nDir] + fSpeed);
-            nX = nX += DX[nDir] + fSpeed;
-
-        }
-        //Direction instruction for mouse 2
-        if (DY[nDir2] == 0) {
-            sprMouse2.setY(sprMouse2.getY() + DY[nDir2]);
-            nY2 = nY2 += DY[nDir2];
-        } else if (DY[nDir2] < 0) {
-            sprMouse2.setY(sprMouse2.getY() + DY[nDir2] - fSpeed2);
-            nY2 = nY2 += DY[nDir2] - fSpeed2;
-        } else {
-            sprMouse2.setY(sprMouse2.getY() + DY[nDir2] + fSpeed2);
-            nY2 = nY2 += DY[nDir2] + fSpeed2;
-
-        }
-        if (DX[nDir2] == 0) {
-            sprMouse2.setX(sprMouse2.getX() + DX[nDir2]);
-            nX2 = nX2 += DX[nDir2];
-        } else if (DX[nDir2] < 0) {
-            sprMouse2.setX(sprMouse2.getX() + DX[nDir2] - fSpeed2);
-            nX2 = nX2 += DX[nDir2] - fSpeed2;
-        } else {
-            sprMouse2.setX(sprMouse2.getX() + DX[nDir2] + fSpeed2);
-            nX2 = nX2 += DX[nDir2] + fSpeed2;
-
-        }
-
-        nFrame++;
-        if (nDir == 0) {
-            nPos = 2;
-        } else if (nDir == 1) {
-            nPos = 3;
-        } else if (nDir == 2) {
-            nPos = 1;
-        } else if (nDir == 3) {
-            nPos = 0;
-        }
-        if (nDir2 == 0) {
-            nPos2 = 2;
-        } else if (nDir2 == 1) {
-            nPos2 = 3;
-        } else if (nDir2 == 2) {
-            nPos2 = 1;
-        } else if (nDir2 == 3) {
-            nPos2 = 0;
-        }
 
         for (int i = 0; i < arWall.length; i++) {
             if (isHitS(sprMouse, arWall[i])) {

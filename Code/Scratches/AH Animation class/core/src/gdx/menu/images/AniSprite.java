@@ -5,14 +5,14 @@ import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 
 public class AniSprite {
-    private Sprite sprMouse;
+    static Sprite sprMouse;
     private Texture txSheet;
-    private Animation araniAnimation[];
+    private Animation araniMouse[];
     private int fW, fH, fSx, fSy;
 
     public AniSprite(Texture txSheet) {
         this.txSheet = txSheet;
-        araniAnimation = new Animation[4];
+        araniMouse = new Animation[4];
     }
     public Animation[] animate () {
         fW = txSheet.getWidth() / 4;
@@ -26,10 +26,10 @@ public class AniSprite {
                 sprMouse.setFlip(false, true);
                 arSprMouse[j] = new Sprite(sprMouse);
             }
-            araniAnimation[i] = new Animation(0.8f, arSprMouse);
+            araniMouse[i] = new Animation(0.8f, arSprMouse);
         }
         sprMouse.setPosition(200, 200);
-        return araniAnimation;
+        return araniMouse;
     }
 }
 
