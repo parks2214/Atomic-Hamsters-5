@@ -5,7 +5,7 @@ import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 
 public class AniSprite {
-    static Sprite sprMouse;
+    private Sprite sprMouse;
     private Texture txSheet;
     private Animation araniMouse[];
     private int fW, fH, fSx, fSy;
@@ -28,7 +28,6 @@ public class AniSprite {
             }
             araniMouse[i] = new Animation(0.8f, arSprMouse);
         }
-        sprMouse.setPosition(200, 200);
         return araniMouse;
     }
 }
