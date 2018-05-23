@@ -105,17 +105,32 @@ public class ScrGame implements Screen, InputProcessor {
     public void render(float delta) {
         Gdx.gl.glClearColor(1, 1, 1, 1); //White background.
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-
-        for (int i = 0; i < arWall.length; i++) {
+        if (nFrame > 7) {
+            nFrame = 0;
+        }
+        nFrame++;
+        //Input for hamster 1
+        if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
+            nDir = 2;
+        } else if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
+            nDir = 0;
+        } else if (Gdx.input.isKeyPressed(Input.Keys.UP)) {
+            nDir = 1;
+        } else if (Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
+            nDir = 3;
+        }
+        hamster2.move(nDir);
+        hamster2.animation(nFrame);
+        /*for (int i = 0; i < arWall.length; i++) {
             if (isHitS(sprMouse, arWall[i])) {
                 sprMouse.setPosition(fSx, fSy);
             }
             if (isHitS(sprMouse2, arWall[i])) {
                 sprMouse2.setPosition(fSx2, fSy2);
             }
-        }
+        }*/
         //Hit detection between mice
-        Rectangle rMouse1 = new Rectangle(sprMouse.getX(), sprMouse.getY(), sprMouse.getWidth(), sprMouse.getHeight());
+       /* Rectangle rMouse1 = new Rectangle(sprMouse.getX(), sprMouse.getY(), sprMouse.getWidth(), sprMouse.getHeight());
         Rectangle rMouse2 = new Rectangle(sprMouse2.getX(), sprMouse2.getY(), sprMouse2.getWidth(), sprMouse2.getHeight());
         if (Intersector.overlaps(rMouse1, rMouse2)) {
             if (nPoints > nPoints2) {
@@ -135,8 +150,8 @@ public class ScrGame implements Screen, InputProcessor {
             gamMenu.updateState(6);
             nPoints = 0;
             nPoints2 = 0;
-        }
-        for (int i = pMaker.alPellets.size() - 1; i >= 0; i--) {
+        }*/
+        /*for (int i = pMaker.alPellets.size() - 1; i >= 0; i--) {
             Pellet p = pMaker.alPellets.get(i);
             if (isHitS(p, spTemp)) {
                 fSpeed += 0.5f;
@@ -171,7 +186,7 @@ public class ScrGame implements Screen, InputProcessor {
                 pMaker.removePellet(p);
                 nTimer=0;
             }
-        }
+        }*/
 
         batch.begin();
         batch.setProjectionMatrix(oc.combined);
@@ -180,8 +195,9 @@ public class ScrGame implements Screen, InputProcessor {
         }
         sprMap.draw(batch);
         pMaker.draw(batch);
-        spTemp.setPosition(fSx, fSy);
-        spTemp2.setPosition(fSx2, fSy2);
+        //spTemp.setPosition(fSx, fSy);
+        //spTemp2.setPosition(fSx2, fSy2);
+        hamster2.spTemp.draw(batch);
         batch.draw(trTemp, fSx, fSy, nSizeX, nSizeY);
         batch.draw(trTemp2, fSx2, fSy2, nSizeX2, nSizeY2);
         btnMenu.draw(batch);
@@ -277,12 +293,12 @@ public class ScrGame implements Screen, InputProcessor {
         }
     }
 
-    public boolean isHitS(Sprite spr1, Sprite spr2) {
+    /*public boolean isHitS(Sprite spr1, Sprite spr2) {
         rectMouse = spr1.getBoundingRectangle();
         rectMouseNew = new Rectangle(rectMouse.getX(), (rectMouse.getY() + rectMouse.getHeight() - 45), rectMouse.getWidth(), rectMouse.getHeight() - 10);
         rectMouse2 = spr2.getBoundingRectangle();
         rectMouseNew2 = new Rectangle(rectMouse2.getX(), rectMouse2.getY() - 8, rectMouse2.getWidth(), rectMouse2.getHeight() - 8);
         return rectMouseNew.overlaps(rectMouseNew2);
-    }
+    }*/
 }
 
