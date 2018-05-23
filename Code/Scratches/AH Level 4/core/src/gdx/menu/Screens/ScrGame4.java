@@ -24,7 +24,7 @@ public class ScrGame4 implements Screen, InputProcessor {
     OrthographicCamera oc;
     Button btnMenu, btnQuit;
     TextureRegion trTemp, trTemp2;
-    Texture txSheet, txMap, txTextbox1, txTextbox2, txSheet2, txBar, txWall, txObstacle;
+    Texture txSheet, txMap, txSheet2, txBar, txWall, txObstacle;
     Sprite sprMouse, sprMouse2, sprMap, spTemp, spTemp2;
     Sprite arsprTextbox[] = new Sprite[2];
     int nFrame, nPos, nPos2, nX = 100, nY = 100, nX2 = 100, nY2 = 100;
@@ -78,20 +78,13 @@ public class ScrGame4 implements Screen, InputProcessor {
         } else if (nChoice2 == 2) {
             txSheet2 = new Texture("sprmouse2.png");
         }
-        txTextbox1 = new Texture("Textbox.png");
-        txTextbox2 = new Texture("Textbox2.png");
-        arsprTextbox[0] = new Sprite(txTextbox1);
-        arsprTextbox[1] = new Sprite(txTextbox2);
-        for (int i = 0; i < arsprTextbox.length; i++) {
-            arsprTextbox[i].setFlip(false, true);
-            arsprTextbox[i].setSize(300, 125);
-            arsprTextbox[i].setPosition(Gdx.graphics.getWidth() / 2 - arsprTextbox[i].getWidth() / 2, 0);
-        }
+        //Background
         txMap = new Texture("neptune.jpg");
         sprMap = new Sprite(txMap);
         sprMap.setScale(0.7f, 0.7f);
         sprMap.setPosition(Gdx.graphics.getWidth() / 2 - sprMap.getWidth() / 2, Gdx.graphics.getHeight() / 2 - sprMap.getHeight() / 2);
         sprMap.setFlip(false, true);
+        //Obstacle
         txWall = new Texture ("Wall2.jpg");
         txObstacle = new Texture ("Rocksan.png");
         arWall[0] = new Wall(Gdx.graphics.getWidth(), 50, 0, 0, txWall);   //Top Wall
@@ -100,6 +93,7 @@ public class ScrGame4 implements Screen, InputProcessor {
         arWall[3] = new Wall(50, Gdx.graphics.getHeight() - 20, Gdx.graphics.getWidth() - 50, 50, txWall);    //Right Wall
         arObstacle[0] = new Wall(65, 50, (51 + (int)(Math.random() * ((524 - 51) + 1))), (51 + (int)(Math.random() * ((379 - 51) + 1))), txObstacle);   //Horizontal obstacle
         arObstacle[1] = new Wall(50, 65, (51 + (int)(Math.random() * ((539 - 51) + 1))), (51 + (int)(Math.random() * ((364 - 51) + 1))), txObstacle);    //Vertical obstacle
+
         n4Points = 0;
         n4Points2 = 0;
         ScrGame.nInd = 4;

@@ -28,7 +28,7 @@ public class ScrGame3 implements Screen, InputProcessor {
     OrthographicCamera oc;
     Button btnMenu, btnQuit;
     TextureRegion trTemp, trTemp2;
-    Texture txSheet, txMap, txTextbox1, txTextbox2, txSheet2, txBar, txWall, txObstacle;
+    Texture txSheet, txMap, txSheet2, txBar, txWall, txObstacle;
     Sprite sprMouse, sprMouse2, sprMap, spTemp, spTemp2;
     Sprite arsprTextbox[] = new Sprite[2];
     int nFrame, nPos, nPos2, nX = 100, nY = 100, nX2 = 100, nY2 = 100;
@@ -81,15 +81,6 @@ public class ScrGame3 implements Screen, InputProcessor {
             txSheet2 = new Texture ("sprmouse.png");
         } else if (nChoice2 == 2) {
             txSheet2 = new Texture("sprmouse2.png");
-        }
-        txTextbox1 = new Texture("Textbox.png");
-        txTextbox2 = new Texture("Textbox2.png");
-        arsprTextbox[0] = new Sprite(txTextbox1);
-        arsprTextbox[1] = new Sprite(txTextbox2);
-        for (int i = 0; i < arsprTextbox.length; i++) {
-            arsprTextbox[i].setFlip(false, true);
-            arsprTextbox[i].setSize(300, 125);
-            arsprTextbox[i].setPosition(Gdx.graphics.getWidth() / 2 - arsprTextbox[i].getWidth() / 2, 0);
         }
         txMap = new Texture("mars.jpg");
         sprMap = new Sprite(txMap);
