@@ -30,10 +30,9 @@ public class ScrGame2 implements Screen, InputProcessor {
     TextureRegion trTemp, trTemp2;
     Texture txSheet, txMap, txSheet2, txBar, txWall, txCornerMouse, txCornerMouse2;
     Sprite sprMouse, sprMouse2, sprMap, spTemp, spTemp2, sprCornerMouse, sprCornerMouse2;
-    Sprite arsprTextbox[] = new Sprite[2];
     int nFrame, nPos, nPos2, nX = 100, nY = 100, nX2 = 100, nY2 = 100;
     Animation araniMouse[], araniMouse2[];
-    int fSx, fSy, fSx2, fSy2, fW, fH, fW2, fH2, nDir = 0, nDir2 = 0, nSizeX = 50, nSizeY = 50, nSizeX2 = 50, nSizeY2 = 50;
+    int fSx, fSy, fSx2, fSy2, fW, fH, fW2, fH2, nDir = 0, nDir2 = 2, nSizeX = 50, nSizeY = 50, nSizeX2 = 50, nSizeY2 = 50;
     Wall[] arWall = new Wall[4];
     int DX[] = {1, 0, -1, 0};
     int DY[] = {0, -1, 0, 1};
@@ -43,7 +42,7 @@ public class ScrGame2 implements Screen, InputProcessor {
     Rectangle rectMouse, rectMouseNew, rectMouse2, rectMouseNew2;
     int nChoice, nChoice2;
     PelletMaker pMaker, pMaker2;
-    int nTimer=0,nCounter=0;
+    int nTimer=0,nBadTimer=0;
     float fSizeBar1 = 1, fSizeBar2 = 1, fSpeedBar1 = 1, fSpeedBar2 = 1;
     BitmapFont font, font2;
 
@@ -136,8 +135,8 @@ public class ScrGame2 implements Screen, InputProcessor {
             araniMouse2[i] = new Animation(0.8f, arSprMouse2);
 
         }
-        sprMouse.setPosition(200, 200);
-        sprMouse2.setPosition(300, 200);
+        sprMouse.setPosition(50, 50);
+        sprMouse2.setPosition(Gdx.graphics.getWidth()-100,Gdx.graphics.getHeight()-100);
         Gdx.input.setInputProcessor(this);
 
         pMaker = new PelletMaker(50, 50, "Strawberry.png");
@@ -154,10 +153,7 @@ public class ScrGame2 implements Screen, InputProcessor {
         float fSy2 = sprMouse2.getY();
         //Timer Stuff
         nTimer++;
-        if (nCounter == 2) {
-            nTimer=0;
-            nCounter=0;
-        }
+        nBadTimer++;
         //Animation Stuff
 
         if (nFrame > 7) {
@@ -281,15 +277,15 @@ public class ScrGame2 implements Screen, InputProcessor {
             if (isHitS(p, spTemp)) {
                 fSpeed += 0.5f;
                 nTimer=240;
-                System.out.println(fSpeed);
+               // System.out.println(fSpeed);
                 n2Points += 1;
                 fSpeedBar1 += 0.1;
                 fSizeBar1 += 0.1;
-                System.out.println("Points for first: " + n2Points);
+               // System.out.println("Points for first: " + n2Points);
                 if (nSizeX < 100 && nSizeY < 100) {
                     nSizeX += 3;
                     nSizeY += 3;
-                    System.out.println(nSizeX + "   " + nSizeY);
+                   // System.out.println(nSizeX + "   " + nSizeY);
                 }
                 // mouse catche pellet
                 pMaker.removePellet(p);
@@ -297,15 +293,15 @@ public class ScrGame2 implements Screen, InputProcessor {
             if (isHitS(p, spTemp2)) {
                 fSpeed2 += 0.5f;
                 nTimer=240;
-                System.out.println(fSpeed2);
+               // System.out.println(fSpeed2);
                 n2Points2 += 1;
                 fSpeedBar2 += 0.1;
                 fSizeBar2 += 0.1;
-                System.out.println("Points for first: " + n2Points2);
+                //System.out.println("Points for first: " + n2Points2);
                 if (nSizeX2 < 100 && nSizeY2 < 100) {
                     nSizeX2 += 3;
                     nSizeY2 += 3;
-                    System.out.println(nSizeX2 + "   " + nSizeY2);
+                   // System.out.println(nSizeX2 + "   " + nSizeY2);
                 }
                 // mouse catche pellet
                 pMaker.removePellet(p);
@@ -314,7 +310,7 @@ public class ScrGame2 implements Screen, InputProcessor {
             if (nTimer>=300) {
                 System.out.println("The clock struck 5 seconds");
                 pMaker.removePellet(p);
-                nCounter++;
+                nTimer=0;
 
             }
         }
@@ -322,24 +318,25 @@ public class ScrGame2 implements Screen, InputProcessor {
         for (int i = pMaker2.alPellets.size() - 1; i >= 0; i--) {
             Pellet p2 = pMaker2.alPellets.get(i);
             if (isHitS(p2, spTemp)) {
-                nTimer=60;
+                nBadTimer=60;
                 fSpeed -= 0.5f;
-                System.out.println(fSpeed);
+                //System.out.println(fSpeed);
                 fSpeedBar1 -= 0.1;
                 // mouse catche pellet
                 pMaker2.removePellet(p2);
             }
             if (isHitS(p2, spTemp2)) {
                 fSpeed2 -= 0.5f;
-                nTimer=60;
-                System.out.println(fSpeed2);
+                nBadTimer=60;
+                //System.out.println(fSpeed2);
                 fSpeedBar2 -= 0.1;
                 // mouse catche pellet
                 pMaker2.removePellet(p2);
             }
-            if (nTimer>=120) {
-                pMaker.removePellet(p2);
-                nCounter++;
+            if (nBadTimer>=120) {
+                System.out.println("Poison stuff");
+                pMaker2.removePellet(p2); //Doesn't remove poison, adds a strawberry instead
+                nBadTimer=0;
             }
         }
         //Hit detection between mice
@@ -363,7 +360,7 @@ public class ScrGame2 implements Screen, InputProcessor {
                     nWin2 = 0;
                 }
             }
-            System.out.println(nWin2);
+            //System.out.println(nWin2);
             fSpeed = 0;
             fSpeed2 = 0;
             nSizeX = 50;
@@ -374,7 +371,7 @@ public class ScrGame2 implements Screen, InputProcessor {
             fSpeedBar1 = 1;
             fSizeBar2 = 1;
             fSpeedBar2 = 1;
-            System.out.println("Hit");
+           // System.out.println("Hit");
             gamMenu.updateState(6);
             n2Points = 0;
             n2Points2 = 0;
@@ -392,8 +389,6 @@ public class ScrGame2 implements Screen, InputProcessor {
         batch.draw(txBar, Gdx.graphics.getWidth() - 590, Gdx.graphics.getHeight() - 25, 50 * fSizeBar1, 20);
         batch.draw(txBar, Gdx.graphics.getWidth() - 220, Gdx.graphics.getHeight() - 50, 50 * fSpeedBar2, 20);
         batch.draw(txBar, Gdx.graphics.getWidth() - 220, Gdx.graphics.getHeight() - 25, 50 * fSizeBar2, 20);
-        font.draw(batch, "1", Gdx.graphics.getWidth() - 625, Gdx.graphics.getHeight() - 45);
-        font.draw(batch, "2", Gdx.graphics.getWidth() - 35, Gdx.graphics.getHeight() - 45);
         font2.draw(batch, "Speed", Gdx.graphics.getWidth() - 590, Gdx.graphics.getHeight() - 45);
         font2.draw(batch, "Size", Gdx.graphics.getWidth() - 590, Gdx.graphics.getHeight() - 20);
         font2.draw(batch, "Speed", Gdx.graphics.getWidth() - 220, Gdx.graphics.getHeight() - 45);

@@ -25,10 +25,10 @@ public class ScrGame implements Screen, InputProcessor {
     TextureRegion trTemp, trTemp2;
     Texture txSheet,txSheet2, txMap, txTextbox1, txTextbox2, txWall;
     Sprite sprMouse, sprMouse2, sprMap;
-    Sprite arsprTextbox[] = new Sprite[2];
+
     int nFrame, nPos, nPos2, nX = 100, nY = 100, nX2 = 100, nY2 = 100, nTrig = 0, nTrig2 = 0;
     Animation araniMouse[], araniMouse2[];
-    int fSx, fSy, fSx2, fSy2, fW, fH,fW2,fH2, nDir = 0, nDir2 = 0, nSizeX = 50, nSizeY = 50, nSizeX2 = 50, nSizeY2 = 50;
+    int fSx, fSy, fSx2, fSy2, fW, fH,fW2,fH2, nDir = 0, nDir2 = 2, nSizeX = 50, nSizeY = 50, nSizeX2 = 50, nSizeY2 = 50;
     Wall[] arWall = new Wall[4];
     int DX[] = {1, 0, -1, 0};
     int DY[] = {0, -1, 0, 1};
@@ -68,13 +68,6 @@ public class ScrGame implements Screen, InputProcessor {
         }
         txTextbox1 = new Texture("Textbox.png");
         txTextbox2 = new Texture("Textbox2.png");
-        arsprTextbox[0] = new Sprite(txTextbox1);
-        arsprTextbox[1] = new Sprite(txTextbox2);
-        for (int i = 0; i < arsprTextbox.length; i++) {
-            arsprTextbox[i].setFlip(false, true);
-            arsprTextbox[i].setSize(300, 125);
-            arsprTextbox[i].setPosition(Gdx.graphics.getWidth() / 2 - arsprTextbox[i].getWidth() / 2, 0);
-        }
         txMap = new Texture("jupiter.jpg");
         sprMap = new Sprite(txMap);
         sprMap.setScale(1, 1.5f);
@@ -116,8 +109,8 @@ public class ScrGame implements Screen, InputProcessor {
             araniMouse[i] = new Animation(0.8f, arSprMouse);
             araniMouse2[i] = new Animation(0.8f, arSprMouse2);
         }
-        sprMouse.setPosition(200, 200);
-        sprMouse2.setPosition(300, 200);
+        sprMouse.setPosition(50, 50);
+        sprMouse2.setPosition(Gdx.graphics.getWidth()-100,Gdx.graphics.getHeight()-100);
         Gdx.input.setInputProcessor(this);
 
         pMaker = new PelletMaker(25, 25,"Hamster Pellet.png");
