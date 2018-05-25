@@ -5,7 +5,7 @@ import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 
 public class AniSprite {
-    private Sprite sprMouse;
+    public static Sprite sprMouse;
     private Texture txSheet;
     private Animation araniMouse[];
     private int fW, fH, fSx, fSy;

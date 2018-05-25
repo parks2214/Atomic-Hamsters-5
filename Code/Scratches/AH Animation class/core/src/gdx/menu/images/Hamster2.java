@@ -15,12 +15,13 @@ public class Hamster2 extends Sprite {
     int nFrame = 0, nPos = 0, nX = 100, nY = 100, nDx, nDy, nDir = 0, nOrigX, nOrigY;
     Animation araniMouse[];
     Texture txSheet;
-    Rectangle rectMouse, rectMouseNew;
+    Sprite sprMouse;
 
     public Hamster2(int nX, int nY) {
         super(new Texture(Gdx.files.internal("sprmouse.png")));
         txSheet = new Texture("sprmouse.png");
         AniSprite aniSprite = new AniSprite(txSheet);
+        sprMouse = aniSprite.sprMouse;
         araniMouse = aniSprite.animate();
         setSize(50, 50);
         setPosition(nX, nY);
@@ -77,7 +78,16 @@ public class Hamster2 extends Sprite {
         setSize(getWidth() + nSizeX, getHeight() + nSizeY);
     }
 
-    public boolean isHitS(Sprite spr) {
-        return spTemp.getBoundingRectangle().overlaps(spr.getBoundingRectangle());
+    public boolean isHitS(Sprite spr, int nTrig) {
+        if (nTrig == 0) {
+            return sprMouse.getBoundingRectangle().overlaps(spr.getBoundingRectangle());
+        } else if (nTrig == 1) {
+            return spTemp.getBoundingRectangle().overlaps(spr.getBoundingRectangle());
+        }
+        return false;
+    }
+
+    public void setPosition() {
+        sprMouse.setPosition(sprMouse.getX(), sprMouse.getY());
     }
 }

@@ -25,7 +25,7 @@ public class ScrGame implements Screen, InputProcessor {
     Sprite arsprTextbox[] = new Sprite[2];
     int nFrame, nPos, nPos2, nX = 100, nY = 100, nX2 = 100, nY2 = 100, nTrig = 0, nTrig2 = 0;
     Animation araniMouse[], araniMouse2[];
-    int fSx, fSy, fSx2, fSy2, fW, fH,fW2,fH2, nDir = 0, nDir2 = 0, nSizeX = 50, nSizeY = 50, nSizeX2 = 50, nSizeY2 = 50;
+    int fSx, fSy, fSx2, fSy2, fW, fH,fW2,fH2, nDir = 0, nDir2 = 0, nSizeX = 0, nSizeY = 0, nSizeX2 = 50, nSizeY2 = 50;
     Wall[] arWall = new Wall[4];
     int DX[] = {1, 0, -1, 0};
     int DY[] = {0, -1, 0, 1};
@@ -122,11 +122,8 @@ public class ScrGame implements Screen, InputProcessor {
         hamster2.move(nDir, fSpeed, nSizeX, nSizeY);
         hamster2.animation(nFrame);
         for (int i = 0; i < arWall.length; i++) {
-            if (hamster2.isHitS(arWall[i])) {
-                sprMouse.setPosition(fSx, fSy);
-            }
-            if (hamster2.isHitS(arWall[i])) {
-                sprMouse2.setPosition(fSx2, fSy2);
+            if (hamster2.isHitS(arWall[i], 0)) {
+                hamster2.setPosition();
             }
         }
         //Hit detection between mice
@@ -153,18 +150,18 @@ public class ScrGame implements Screen, InputProcessor {
         }*/
         for (int i = pMaker.alPellets.size() - 1; i >= 0; i--) {
             Pellet p = pMaker.alPellets.get(i);
-            if (hamster2.isHitS(p)) {
+            if (hamster2.isHitS(p, 1)) {
                 fSpeed += 0.5f;
                 nTimer=240;
                 System.out.println(fSpeed);
                 nTrig = 1;
                 nPoints += 1;
                 System.out.println("Points for first: " + nPoints);
-                if (nSizeX < 100 && nSizeY < 100) {
+                /*if (nSizeX < 100 && nSizeY < 100) {
                     nSizeX += 3;
                     nSizeY += 3;
                     System.out.println(nSizeX + "   " + nSizeY);
-                }
+                }*/
                 // mouse catche pellet
                 pMaker.removePellet(p);
             }/*if (hamster2.isHitS(p, spTemp2)) {
