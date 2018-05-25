@@ -11,116 +11,73 @@ import gdx.menu.Screens.ScrAnimalChoice2;
 import gdx.menu.Screens.ScrGame2;
 
 public class Hamster2 extends Sprite {
-    float fSx, fSy, fSpeed = 0;
-    Sprite sprMouse, spr;
     public Sprite spTemp;
-    int nFrame = 0, nPos = 0, nX = 100, nY = 100;
-    //TextureRegion trTemp;
+    int nFrame = 0, nPos = 0, nX = 100, nY = 100, nDx, nDy, nDir = 0, nOrigX, nOrigY;
     Animation araniMouse[];
-    int DX[] = {1, 0, -1, 0};
-    int DY[] = {0, -1, 0, 1};
     Texture txSheet;
+    Rectangle rectMouse, rectMouseNew;
 
-    public Hamster2 (int nX, int nY) {
+    public Hamster2(int nX, int nY) {
         super(new Texture(Gdx.files.internal("sprmouse.png")));
         txSheet = new Texture("sprmouse.png");
         AniSprite aniSprite = new AniSprite(txSheet);
         araniMouse = aniSprite.animate();
         setSize(50, 50);
-        setPosition(200, 200);
+        setPosition(nX, nY);
+        nOrigX = nX;
+        nOrigY = nY;
         if (nFrame > 7) {
             nFrame = 0;
         }
     }
 
+    public void reset() {
+        nDir = 0;
+        nDx = 0;
+        nDy = 0;
+        nPos = 0;
+        setPosition(nOrigX, nOrigY);
+    }
+
     public void animation(int nFrame) {
-        spr = (Sprite) araniMouse[nPos].getKeyFrame(nFrame, false);
+        spTemp = (Sprite) araniMouse[nPos].getKeyFrame(nFrame, false);
 
         if (spTemp == null) {
-            spTemp = new Sprite(spr);
-            spTemp.setFlip(false,true);
+            spTemp = new Sprite(spTemp);
+            spTemp.setFlip(false, true);
         } else {
-            spTemp.setTexture(spr.getTexture());
+            spTemp.setTexture(spTemp.getTexture());
         }
         spTemp.setPosition(getX(), getY());
         spTemp.setSize(getWidth(), getHeight());
         spTemp.setFlip(false, true);
     }
 
-    public void move(int nDir) {
+    public void move(int nDir, float fSpeed, int nSizeX, int nSizeY) {
         //Direction instruction for mouse 1
-        if (DY[nDir] == 0) {
-            spTemp.setY(spTemp.getY() + DY[nDir]);
-            nY = nY += DY[nDir];
-        } else if (DY[nDir] < 0){
-            spTemp.setY(spTemp.getY() + DY[nDir] - fSpeed);
-            nY = nY += DY[nDir] - fSpeed;
-        }
-        else {
-            spTemp.setY(spTemp.getY() + DY[nDir] + fSpeed);
-            nY = nY += DY[nDir] + fSpeed;
-
-        }
-        if (DX[nDir] == 0) {
-            spTemp.setX(spTemp.getX() + DX[nDir]);
-            nX = nX += DX[nDir];
-        } else if (DX[nDir] < 0){
-            spTemp.setX(spTemp.getX() + DX[nDir] - fSpeed);
-            nX = nX += DX[nDir] - fSpeed;
-        }
-        else {
-            spTemp.setX(spTemp.getX() + DX[nDir] + fSpeed);
-            nX = nX += DX[nDir] + fSpeed;
-
-        }
         if (nDir == 0) {
+            nDy = 0;
+            nDx = 1 + (int) fSpeed;
             nPos = 2;
         } else if (nDir == 1) {
+            nDx = 0;
+            nDy = -1 - (int) fSpeed;
             nPos = 3;
         } else if (nDir == 2) {
+            nDy = 0;
+            nDx = -1 - (int) fSpeed;
             nPos = 1;
         } else if (nDir == 3) {
+            nDx = 0;
+            nDy = 1 + (int) fSpeed;
             nPos = 0;
         }
+        setX(getX() + nDx);
+        setY(getY() + nDy);
+        setSize(getWidth() + nSizeX, getHeight() + nSizeY);
+    }
+
+    public boolean isHitS(Sprite spr) {
+        return spTemp.getBoundingRectangle().overlaps(spr.getBoundingRectangle());
     }
 }
-
-//  nFrame = 0;
-//nPos = 0;
-//nPos2 = 0;
-//araniMouse = new Animation[4];
-//araniMouse2 = new Animation[4];
-//fW = txSheet.getWidth() / 4;
-//fH = txSheet.getHeight() / 4;
-//fW2 = txSheet2.getWidth() /4;
-//fH2 = txSheet2.getHeight() /4;
-//for (int i = 0; i < 4; i++) {
-//Sprite[] arSprMouse = new Sprite[4];
-//Sprite[] arSprMouse2 = new Sprite[4];
-//fSx = j * fW;
-//fSy = i * fH;
-//fSy2 = i * fH2;
-//fSx2 = j * fW2;
-//sprMouse = new Sprite(txSheet, fSx, fSy, fW, fH);
-//sprMouse.setFlip(false, true);
-//arSprMouse[j] = new Sprite(sprMouse);
-//sprMouse2 = new Sprite(txSheet2, fSx2, fSy2, fW2, fH2);
-//sprMouse2.setFlip(false, true);
-//arSprMouse2[j] = new Sprite(sprMouse2);
-//araniMouse[i] = new Animation(0.8f, arSprMouse);
-//araniMouse2[i] = new Animation(0.8f, arSprMouse2);
-//sprMouse.setPosition(200, 200);
-//sprMouse2.setPosition(300, 200);
-//float fSx = sprMouse.getX();
-//    float fSy = sprMouse.getY();
-//    float fSx2 = sprMouse2.getX();
-//    float fSy2 = sprMouse2.getY();
-// if (nFrame > 7) {
-//            nFrame = 0;
-//        }
-//        trTemp = (TextureRegion) araniMouse[nPos].getKeyFrame(nFrame, false);
-//        trTemp2 = (TextureRegion) araniMouse2[nPos2].getKeyFrame(nFrame, false);
-// spTemp.setPosition(fSx, fSy);
-//        spTemp2.setPosition(fSx2, fSy2);
-//        batch.draw(trTemp, fSx, fSy, nSizeX, nSizeY);
-//        batch.draw(trTemp2, fSx2, fSy2, nSizeX2, nSizeY2);

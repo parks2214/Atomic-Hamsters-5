@@ -119,16 +119,16 @@ public class ScrGame implements Screen, InputProcessor {
         } else if (Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
             nDir = 3;
         }
-        hamster2.move(nDir);
+        hamster2.move(nDir, fSpeed, nSizeX, nSizeY);
         hamster2.animation(nFrame);
-        /*for (int i = 0; i < arWall.length; i++) {
-            if (isHitS(sprMouse, arWall[i])) {
+        for (int i = 0; i < arWall.length; i++) {
+            if (hamster2.isHitS(arWall[i])) {
                 sprMouse.setPosition(fSx, fSy);
             }
-            if (isHitS(sprMouse2, arWall[i])) {
+            if (hamster2.isHitS(arWall[i])) {
                 sprMouse2.setPosition(fSx2, fSy2);
             }
-        }*/
+        }
         //Hit detection between mice
        /* Rectangle rMouse1 = new Rectangle(sprMouse.getX(), sprMouse.getY(), sprMouse.getWidth(), sprMouse.getHeight());
         Rectangle rMouse2 = new Rectangle(sprMouse2.getX(), sprMouse2.getY(), sprMouse2.getWidth(), sprMouse2.getHeight());
@@ -151,9 +151,9 @@ public class ScrGame implements Screen, InputProcessor {
             nPoints = 0;
             nPoints2 = 0;
         }*/
-        /*for (int i = pMaker.alPellets.size() - 1; i >= 0; i--) {
+        for (int i = pMaker.alPellets.size() - 1; i >= 0; i--) {
             Pellet p = pMaker.alPellets.get(i);
-            if (isHitS(p, spTemp)) {
+            if (hamster2.isHitS(p)) {
                 fSpeed += 0.5f;
                 nTimer=240;
                 System.out.println(fSpeed);
@@ -167,7 +167,7 @@ public class ScrGame implements Screen, InputProcessor {
                 }
                 // mouse catche pellet
                 pMaker.removePellet(p);
-            }if (isHitS(p, spTemp2)) {
+            }/*if (hamster2.isHitS(p, spTemp2)) {
                 nTimer=240;
                 fSpeed2 += 0.5f;
                 System.out.println(fSpeed2);
@@ -185,8 +185,8 @@ public class ScrGame implements Screen, InputProcessor {
                 System.out.println("The clock struck 5 seconds");
                 pMaker.removePellet(p);
                 nTimer=0;
-            }
-        }*/
+            }*/
+        }
 
         batch.begin();
         batch.setProjectionMatrix(oc.combined);
@@ -198,8 +198,8 @@ public class ScrGame implements Screen, InputProcessor {
         //spTemp.setPosition(fSx, fSy);
         //spTemp2.setPosition(fSx2, fSy2);
         hamster2.spTemp.draw(batch);
-        batch.draw(trTemp, fSx, fSy, nSizeX, nSizeY);
-        batch.draw(trTemp2, fSx2, fSy2, nSizeX2, nSizeY2);
+        //batch.draw(trTemp, fSx, fSy, nSizeX, nSizeY);
+        //batch.draw(trTemp2, fSx2, fSy2, nSizeX2, nSizeY2);
         btnMenu.draw(batch);
         btnQuit.draw(batch);
         batch.end();
@@ -248,6 +248,7 @@ public class ScrGame implements Screen, InputProcessor {
             if (isHitB(screenX, screenY, btnMenu)) {
                 gamMenu.updateState(0);
                 System.out.println("Hit Menu");
+                hamster2.reset();
                 nPoints = 0;
                 nPoints2 = 0;
                 nWin = 0;
