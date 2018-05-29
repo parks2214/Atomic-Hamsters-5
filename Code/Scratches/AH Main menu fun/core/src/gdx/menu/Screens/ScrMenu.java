@@ -14,17 +14,21 @@ import com.badlogic.gdx.utils.Scaling;
 import gdx.menu.GamMenu;
 import gdx.menu.images.AniSprite;
 import gdx.menu.images.Button;
+import gdx.menu.images.Hamster;
 
 public class ScrMenu implements Screen, InputProcessor {
 
     Button btnPlay, btnAni, btnSign, btnQuit, btnRules, btnGame;
     GamMenu gamMenu;
-    Texture txNamM, txBackground;
+    Texture txSheet, txBackground;
     OrthographicCamera oc;
     SpriteBatch batch;
-    Sprite sprNamM,sprBackground;
-    AniSprite AniSprite1;
-
+    Sprite sprBackground;
+    AniSprite aniSprite1;
+    Hamster Ham1;
+    int nFrame,nPos;
+    int nDir = 0, nSizeX = 50, nSizeY = 50,nCount=0;
+    float fSpeed = 0;
 
     public ScrMenu(GamMenu _gamMenu) {  //Referencing the main class.
         gamMenu = _gamMenu;
@@ -35,6 +39,8 @@ public class ScrMenu implements Screen, InputProcessor {
         oc = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.setToOrtho(true, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.update();
+
+        //Buttons
         batch = new SpriteBatch();
         btnPlay = new Button(100, 50, 0, Gdx.graphics.getHeight() - 50, "Tail Button.png");
         btnAni = new Button(100, 50, Gdx.graphics.getWidth() - 100, Gdx.graphics.getHeight() - 50, "Animation.jpg");
@@ -42,33 +48,56 @@ public class ScrMenu implements Screen, InputProcessor {
         btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Quit.jpg");
         btnRules = new Button(100, 50, Gdx.graphics.getWidth()/2 - 50, 0, "Rules.png");
         btnGame = new Button(100, 50, 0, 0, "Game.png");
+        //Background
         txBackground = new Texture ("EarthBG.jpg");
         sprBackground = new Sprite (txBackground);
         sprBackground.setFlip(false, true);
         sprBackground.setScale(4.05f,2.75f);
-        txNamM = new Texture("M.jpg");
-        sprNamM = new Sprite(txNamM);
-        sprNamM.setFlip(false, true);
-        sprNamM.setSize(60, 80);
-        sprNamM.setPosition(Gdx.graphics.getWidth() / 2 - 30, Gdx.graphics.getHeight() / 2 - 40);
+        //Hamster stuff
+        txSheet = new Texture("sprmouse.png");
+        aniSprite1 = new AniSprite(txSheet);
+        aniSprite1.animate();
+        Ham1 = new Hamster(150, 325, txSheet);
+        nFrame = 0;
+        nPos = 0;
         Gdx.input.setInputProcessor(this);
     }
 
     @Override
     public void render(float delta) {
+        //Camera Stuff
         Gdx.gl.glClearColor(0,0,0,0); //black background
-
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+        //Animation stuff
+        if (nFrame > 7) {
+            nFrame = 0;
+        }
+        if (nCount>=300) {
+            nDir++;
+            nCount=0;
+        }
+        if (nCount==200 && nDir==1 || nCount == 200 && nDir==3) {
+            nDir++;
+            nCount=0;
+        }
+        if (nDir==4) {
+            nDir=0;
+        }
+        nCount++;
+        nFrame++;
+        Ham1.move(nDir, fSpeed, nSizeX, nSizeY);
+        Ham1.animation(nFrame);
+        //Drawing stuff
         batch.begin();
         batch.setProjectionMatrix(oc.combined);
         sprBackground.draw(batch);
-        sprNamM.draw(batch);
         btnPlay.draw(batch);
         btnAni.draw(batch);
         btnSign.draw(batch);
         btnQuit.draw(batch);
         btnRules.draw(batch);
         btnGame.draw(batch);
+        Ham1.spTemp.draw(batch);
         batch.end();
     }
 
@@ -97,7 +126,6 @@ public class ScrMenu implements Screen, InputProcessor {
     @Override
     public void dispose() {
         batch.dispose();
-        txNamM.dispose();
     }
 
     @Override
