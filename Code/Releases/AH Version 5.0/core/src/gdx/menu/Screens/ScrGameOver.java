@@ -16,14 +16,14 @@ import gdx.menu.images.Button;
 
 public class ScrGameOver implements Screen, InputProcessor {
 
-    Button btnGame, btnMenu, btnLvl2, btnLvl3;
+    Button btnGame, btnMenu, btnLvl2, btnLvl3, btnLvl4;
     GamMenu gamMenu;
     Texture txBackground;
     OrthographicCamera oc;
     SpriteBatch batch = new SpriteBatch();
     Sprite sprBackground;
     BitmapFont font;
-    int nPoints, nPoints2, n2Points, n2Points2, n3Points, n3Points2;
+    int nPoints, nPoints2, n2Points, n2Points2, n3Points, n3Points2, n4Points, n4Points2;
     int nWin, nWin2, nWin3;
     int nInd;
 
@@ -43,7 +43,8 @@ public class ScrGameOver implements Screen, InputProcessor {
         btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2, Gdx.graphics.getHeight() - 50, "Menu.jpg");
         btnGame = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Game.png");
         btnLvl2 = new Button(100, 50, Gdx.graphics.getWidth() - 250, 0, "Level 2 button.png");
-        btnLvl3 = new Button(100, 50, Gdx.graphics.getWidth() - 400, 0, "Level 2 button.png");
+        btnLvl3 = new Button(100, 50, Gdx.graphics.getWidth() - 400, 0, "Level 3 button.png");
+        btnLvl4 = new Button(100, 50, Gdx.graphics.getWidth() - 550, 0, "Level 4 button.png");
         txBackground = new Texture("explosion.png");
         sprBackground = new Sprite(txBackground);
         sprBackground.setScale(0.9f, 0.7f);
@@ -55,6 +56,8 @@ public class ScrGameOver implements Screen, InputProcessor {
         n2Points2 = ScrGame2.n2Points2;
         n3Points = ScrGame3.n3Points;
         n3Points2 = ScrGame3.n3Points2;
+        n4Points = ScrGame4.n4Points;
+        n4Points2 = ScrGame4.n4Points2;
         nWin = ScrGame.nWin;
         nWin2 = ScrGame2.nWin2;
         nWin3 = ScrGame3. nWin3;
@@ -79,6 +82,9 @@ public class ScrGameOver implements Screen, InputProcessor {
         } else if (nInd == 3) {
             font.draw(batch, "Second Player's Points: " + n3Points2, 20, 80);
             font.draw(batch, "First Player's Points: " + n3Points, 20, 60);
+        } else if (nInd == 4) {
+            font.draw(batch, "Second Player's Points: " + n4Points2, 20, 80);
+            font.draw(batch, "First Player's Points: " + n4Points, 20, 60);
         }
         if (nWin2 == 1 || nWin == 1 || nWin3 == 1) {
             font.draw(batch, "WINNER: Player 1", 490, 70);
@@ -90,6 +96,7 @@ public class ScrGameOver implements Screen, InputProcessor {
         //if (nPoints > 9 || nPoints2 > 9) {
         btnLvl2.draw(batch);
         btnLvl3.draw(batch);
+        btnLvl4.draw(batch);
         //} else {
         btnGame.draw(batch);
         //}
@@ -155,6 +162,9 @@ public class ScrGameOver implements Screen, InputProcessor {
             } else if (isHit(screenX, screenY, btnLvl3)) {
                 System.out.println("Game3");
                 gamMenu.updateState(11);
+            } else if (isHit(screenX, screenY, btnLvl4)) {
+                System.out.println("Game4");
+                gamMenu.updateState(12);
             }
         }
 
