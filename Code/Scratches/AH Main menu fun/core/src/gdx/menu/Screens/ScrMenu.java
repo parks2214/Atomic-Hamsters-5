@@ -27,7 +27,7 @@ public class ScrMenu implements Screen, InputProcessor {
     AniSprite aniSprite1;
     Hamster Ham1;
     int nFrame,nPos;
-    int nDir = 0, nSizeX = 50, nSizeY = 50;
+    int nDir = 0, nSizeX = 50, nSizeY = 50,nCount=0;
     float fSpeed = 0;
 
     public ScrMenu(GamMenu _gamMenu) {  //Referencing the main class.
@@ -57,7 +57,7 @@ public class ScrMenu implements Screen, InputProcessor {
         txSheet = new Texture("sprmouse.png");
         aniSprite1 = new AniSprite(txSheet);
         aniSprite1.animate();
-        Ham1 = new Hamster(200, 200, txSheet);
+        Ham1 = new Hamster(150, 325, txSheet);
         nFrame = 0;
         nPos = 0;
         Gdx.input.setInputProcessor(this);
@@ -72,7 +72,21 @@ public class ScrMenu implements Screen, InputProcessor {
         if (nFrame > 7) {
             nFrame = 0;
         }
+        if (nCount>=300) {
+            nDir++;
+            nCount=0;
+        }
+        if (nCount==200 && nDir==1 || nCount == 200 && nDir==3) {
+            nDir++;
+            nCount=0;
+        }
+        if (nDir==4) {
+            nDir=0;
+        }
+        nCount++;
         nFrame++;
+        Ham1.move(nDir, fSpeed, nSizeX, nSizeY);
+        Ham1.animation(nFrame);
         //Drawing stuff
         batch.begin();
         batch.setProjectionMatrix(oc.combined);
@@ -83,6 +97,7 @@ public class ScrMenu implements Screen, InputProcessor {
         btnQuit.draw(batch);
         btnRules.draw(batch);
         btnGame.draw(batch);
+        Ham1.spTemp.draw(batch);
         batch.end();
     }
 
