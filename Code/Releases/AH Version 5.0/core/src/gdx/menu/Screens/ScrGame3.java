@@ -24,21 +24,17 @@ public class ScrGame3 implements Screen, InputProcessor {
     GamMenu gamMenu;
     OrthographicCamera oc;
     Button btnMenu, btnQuit;
-    TextureRegion trTemp, trTemp2;
+
     Texture txSheet, txMap, txTextbox1, txTextbox2, txSheet2, txBar, txWall, txObstacle;
-    Sprite sprMouse, sprMouse2, sprMap, spTemp, spTemp2;
+    Sprite sprMap;
     Sprite arsprTextbox[] = new Sprite[2];
-    int nFrame, nPos, nPos2, nX = 100, nY = 100, nX2 = 100, nY2 = 100;
-    Animation araniMouse[], araniMouse2[];
-    int fSx, fSy, fSx2, fSy2, fW, fH, fW2, fH2, nDir = 0, nDir2 = 0, nSizeX = 50, nSizeY = 50, nSizeX2 = 50, nSizeY2 = 50;
+    int nFrame, nPos, nPos2;
+    int nDir = 0, nDir2 = 0, nSizeX = 50, nSizeY = 50, nSizeX2 = 50, nSizeY2 = 50;
     Wall[] arWall = new Wall[4];
     Wall[] arObstacle = new Wall[2];
-    int DX[] = {1, 0, -1, 0};
-    int DY[] = {0, -1, 0, 1};
     float fSpeed = 0, fSpeed2 = 0;
     static int n3Points = 0, n3Points2 = 0;
     static int nWin3;
-    Rectangle rectMouse, rectMouseNew, rectMouse2, rectMouseNew2;
     int nChoice, nChoice2;
     PelletMaker pMaker, pMaker2;
     float fSizeBar1 = 1, fSizeBar2 = 1, fSpeedBar1 = 1, fSpeedBar2 = 1;
