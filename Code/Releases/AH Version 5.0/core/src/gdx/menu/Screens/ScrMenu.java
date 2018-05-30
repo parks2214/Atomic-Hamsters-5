@@ -49,10 +49,11 @@ public class ScrMenu implements Screen, InputProcessor {
         btnRules = new Button(100, 50, Gdx.graphics.getWidth()/2 - 50, 0, "Rules.png");
         btnGame = new Button(100, 50, 0, 0, "Game.png");
         //Background
-        txBackground = new Texture ("EarthBG.jpg");
+        txBackground = new Texture ("earth2.jpg");
         sprBackground = new Sprite (txBackground);
         sprBackground.setFlip(false, true);
-        sprBackground.setScale(4.05f,2.75f);
+        sprBackground.setPosition(Gdx.graphics.getWidth() / 2 - sprBackground.getWidth() / 2, Gdx.graphics.getHeight() / 2 - sprBackground.getHeight() / 2);
+        sprBackground.setScale(0.7f,0.8f);
         //Hamster stuff
         txSheet = new Texture("sprmouse.png");
         aniSprite1 = new AniSprite(txSheet);

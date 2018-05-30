@@ -22,11 +22,11 @@ public class ScrGame2 implements Screen, InputProcessor {
     GamMenu gamMenu;
     OrthographicCamera oc;
     Button btnMenu, btnQuit;
-    Texture txSheet, txMap, txTextbox1, txTextbox2, txSheet2, txBar, txWall;
-    Sprite sprMap;
+    Texture txSheet, txMap, txTextbox1, txTextbox2, txSheet2, txBar, txWall, txCornerMouse, txCornerMouse2;
+    Sprite sprMap, sprCornerMouse, sprCornerMouse2;
     Sprite arsprTextbox[] = new Sprite[2];
     int nFrame;
-    int nDir = 0, nDir2 = 0, nSizeX = 50, nSizeY = 50, nSizeX2 = 50, nSizeY2 = 50;
+    int nDir = 0, nDir2 = 2, nSizeX = 50, nSizeY = 50, nSizeX2 = 50, nSizeY2 = 50;
     Wall[] arWall = new Wall[4];
     float fSpeed = 0, fSpeed2 = 0;
     static int n2Points = 0, n2Points2 = 0;
@@ -65,21 +65,25 @@ public class ScrGame2 implements Screen, InputProcessor {
         if (nChoice == 1) {
             txSheet = new Texture("sprmouse.png");
             aniSprite = new AniSprite(txSheet);
+            txCornerMouse = new Texture("btnMouse.png");
         } else if (nChoice == 2) {
             txSheet = new Texture("sprmouse2.png");
             aniSprite = new AniSprite(txSheet);
+            txCornerMouse = new Texture("btnMouse2.png");
         }
         if (nChoice2 == 1) {
             txSheet2 = new Texture ("sprmouse.png");
             aniSprite2 = new AniSprite(txSheet2);
+            txCornerMouse2 = new Texture("btnMouse.png");
         } else if (nChoice2 == 2) {
             txSheet2 = new Texture("sprmouse2.png");
             aniSprite2 = new AniSprite(txSheet2);
+            txCornerMouse2 = new Texture("btnMouse2.png");
         }
         aniSprite.animate();
         aniSprite2.animate();
-        hamster = new Hamster(200, 200, txSheet);
-        hamster2 = new Hamster(300, 200, txSheet2);
+        hamster = new Hamster(100, 100, txSheet);
+        hamster2 = new Hamster(490, 330, txSheet2);
         txTextbox1 = new Texture("Textbox.png");
         txTextbox2 = new Texture("Textbox2.png");
         arsprTextbox[0] = new Sprite(txTextbox1);
@@ -102,6 +106,13 @@ public class ScrGame2 implements Screen, InputProcessor {
         n2Points = 0;
         n2Points2 = 0;
         ScrGame.nInd = 2;
+        //Corner Image stuff
+        sprCornerMouse = new Sprite(txCornerMouse);
+        sprCornerMouse2 = new Sprite(txCornerMouse2);
+        sprCornerMouse.setFlip(false, true);
+        sprCornerMouse2.setFlip(false, true);
+        sprCornerMouse.setSize(75, 100);
+        sprCornerMouse2.setSize(75, 100);
         //Animation Stuff
         nFrame = 0;
         Gdx.input.setInputProcessor(this);
@@ -271,6 +282,11 @@ public class ScrGame2 implements Screen, InputProcessor {
         font2.draw(batch, "Speed", Gdx.graphics.getWidth() - 590, Gdx.graphics.getHeight() - 20);
         font2.draw(batch, "Size", Gdx.graphics.getWidth() - 220, Gdx.graphics.getHeight() - 45);
         font2.draw(batch, "Speed", Gdx.graphics.getWidth() - 220, Gdx.graphics.getHeight() - 20);
+        //Corner Mouse stuff
+        sprCornerMouse.setPosition(-10,Gdx.graphics.getHeight()-85);
+        sprCornerMouse2.setPosition(Gdx.graphics.getWidth()-60, Gdx.graphics.getHeight()-85);
+        sprCornerMouse.draw(batch);
+        sprCornerMouse2.draw(batch);
         pMaker.draw(batch);
         pMaker2.draw(batch);
         hamster.spTemp.draw(batch);

@@ -23,7 +23,7 @@ public class ScrGame implements Screen, InputProcessor {
     Sprite sprMap;
     Sprite arsprTextbox[] = new Sprite[2];
     int nFrame;
-    int nDir = 0, nDir2 = 0, nSizeX = 50, nSizeY = 50, nSizeX2 = 50, nSizeY2 = 50;
+    int nDir = 0, nDir2 = 2, nSizeX = 50, nSizeY = 50, nSizeX2 = 50, nSizeY2 = 50;
     Wall[] arWall = new Wall[4];
     float fSpeed = 0, fSpeed2 = 0;
     static int nPoints = 0, nPoints2 = 0;
@@ -65,8 +65,8 @@ public class ScrGame implements Screen, InputProcessor {
         }
         aniSprite.animate();
         aniSprite2.animate();
-        hamster = new Hamster(200, 200, txSheet);
-        hamster2 = new Hamster(300, 200, txSheet2);
+        hamster = new Hamster(100, 100, txSheet);
+        hamster2 = new Hamster(490, 330, txSheet2);
         txTextbox1 = new Texture("Textbox.png");
         txTextbox2 = new Texture("Textbox2.png");
         arsprTextbox[0] = new Sprite(txTextbox1);
@@ -296,4 +296,3 @@ public class ScrGame implements Screen, InputProcessor {
         }
     }
 }
-

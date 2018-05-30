@@ -20,10 +20,9 @@ public class ScrGame4 implements Screen, InputProcessor {
     GamMenu gamMenu;
     OrthographicCamera oc;
     Button btnMenu, btnQuit;
-    TextureRegion trTemp, trTemp2;
     Texture txSheet, txMap, txSheet2, txBar, txWall, txObstacle, txCornerMouse, txCornerMouse2;
-    Sprite sprMouse, sprMouse2, sprMap, spTemp, spTemp2, sprCornerMouse, sprCornerMouse2;
-    int nFrame, nPos, nPos2, nX = 100, nY = 100, nX2 = 100, nY2 = 100;
+    Sprite sprMouse, sprMouse2, sprMap, sprCornerMouse, sprCornerMouse2;
+    int nFrame, nPos, nPos2;
     Animation araniMouse[], araniMouse2[];
     int fSx, fSy, fSx2, fSy2, fW, fH, fW2, fH2, nDir = 0, nDir2 = 2, nSizeX = 50, nSizeY = 50, nSizeX2 = 50, nSizeY2 = 50;
     Wall[] arWall = new Wall[4];
@@ -33,7 +32,6 @@ public class ScrGame4 implements Screen, InputProcessor {
     float fSpeed = 0, fSpeed2 = 0;
     static int n4Points = 0, n4Points2 = 0;
     static int nWin4;
-    Rectangle rectMouse, rectMouseNew, rectMouse2, rectMouseNew2;
     int nChoice, nChoice2;
     int nTimer=0,nBadTimer=0;
     PelletMaker pMaker, pMaker2;
@@ -87,8 +85,8 @@ public class ScrGame4 implements Screen, InputProcessor {
         }
         aniSprite.animate();
         aniSprite2.animate();
-        hamster = new Hamster(200, 200, txSheet);
-        hamster2 = new Hamster(300, 200, txSheet2);
+        hamster = new Hamster(100, 100, txSheet);
+        hamster2 = new Hamster(490, 330, txSheet2);
         //Background
         txMap = new Texture("neptune.jpg");
         sprMap = new Sprite(txMap);
