@@ -120,6 +120,7 @@ public class ScrGame3 implements Screen, InputProcessor {
         sprCornerMouse.setFlip(false, true);
         sprCornerMouse2.setFlip(false, true);
         sprCornerMouse.setSize(75, 100);
+        sprCornerMouse2.setSize(75, 100);
         //Animation Stuff
         nFrame = 0;
         nPos = 0;
@@ -261,6 +262,8 @@ public class ScrGame3 implements Screen, InputProcessor {
             gamMenu.updateState(6);
             n3Points = 0;
             n3Points2 = 0;
+            nDir = 0;
+            nDir2 = 2;
         }
 
         batch.begin();
@@ -348,6 +351,8 @@ public class ScrGame3 implements Screen, InputProcessor {
                 nSizeY = 50;
                 nSizeX2 = 50;
                 nSizeY2 = 50;
+                nDir = 0;
+                nDir2 = 2;
                 hamster.reset();
                 hamster2.reset();
             } else if (isHitB(screenX, screenY, btnQuit)) {

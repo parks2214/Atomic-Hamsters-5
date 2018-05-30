@@ -162,28 +162,6 @@ public class ScrGame2 implements Screen, InputProcessor {
                 hamster.outOfBounds();
             }
         }
-        //Hit detection between mice
-        if (Intersector.overlaps(hamster.getThisRect(nSizeY), hamster2.getThisRect(nSizeY2))) {
-            if (n2Points > n2Points2) {
-                nWin2 = 1;
-            } else if (n2Points2 > n2Points) {
-                nWin2 = 2;
-            } else {
-                nWin2 = 0;
-            }
-            fSpeed = 0;
-            fSpeed2 = 0;
-            nSizeX = 50;
-            nSizeX2 = 50;
-            nSizeY = 50;
-            nSizeY2 = 50;
-            hamster.reset();
-            hamster2.reset();
-            System.out.println("Hit");
-            gamMenu.updateState(6);
-            n2Points = 0;
-            n2Points2 = 0;
-        }
         //pellet stuff
         for (int i = pMaker.alPellets.size() - 1; i >= 0; i--) {
             Pellet p = pMaker.alPellets.get(i);
@@ -264,6 +242,8 @@ public class ScrGame2 implements Screen, InputProcessor {
             gamMenu.updateState(6);
             n2Points = 0;
             n2Points2 = 0;
+            nDir = 0;
+            nDir2 = 2;
         }
 
         batch.begin();
@@ -350,6 +330,8 @@ public class ScrGame2 implements Screen, InputProcessor {
                 nSizeY = 50;
                 nSizeX2 = 50;
                 nSizeY2 = 50;
+                nDir = 0;
+                nDir2 = 2;
             } else if (isHitB(screenX, screenY, btnQuit)) {
                 System.out.println("Quit");
                 System.exit(0);

@@ -308,6 +308,8 @@ public class ScrGame4 implements Screen, InputProcessor {
             gamMenu.updateState(6);
             n4Points = 0;
             n4Points2 = 0;
+            nDir = 0;
+            nDir2 = 2;
         }
 
         batch.begin();
@@ -401,6 +403,8 @@ public class ScrGame4 implements Screen, InputProcessor {
                 fSpeedBar1 = 1;
                 fSizeBar2 = 1;
                 fSpeedBar2 = 1;
+                nDir = 0;
+                nDir2 = 2;
             } else if (isHitB(screenX, screenY, btnQuit)) {
                 System.out.println("Quit");
                 System.exit(0);

@@ -155,6 +155,8 @@ public class ScrGame implements Screen, InputProcessor {
             gamMenu.updateState(6);
             nPoints = 0;
             nPoints2 = 0;
+            nDir = 0;
+            nDir2 = 2;
         }
         for (int i = pMaker.alPellets.size() - 1; i >= 0; i--) {
             Pellet p = pMaker.alPellets.get(i);
@@ -260,6 +262,8 @@ public class ScrGame implements Screen, InputProcessor {
                 nSizeY = 50;
                 nSizeX2 = 50;
                 nSizeY2 = 50;
+                nDir = 0;
+                nDir2 = 2;
             } else if (isHitB(screenX, screenY, btnQuit)) {
                 System.out.println("Quit");
                 System.exit(0);
