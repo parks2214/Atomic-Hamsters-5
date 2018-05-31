@@ -40,8 +40,6 @@ public class ScrGame4 implements Screen, InputProcessor {
     BitmapFont font, font2;
     AniSprite aniSprite, aniSprite2;
     Hamster hamster, hamster2;
-    static final int WORLD_WIDTH = 100;
-    static final int WORLD_HEIGHT = 100;
     //640, 480
 
     public ScrGame4(GamMenu _gamMenu) {
@@ -51,18 +49,10 @@ public class ScrGame4 implements Screen, InputProcessor {
     @Override
     public void show() {
         batch = new SpriteBatch();
-        txMap = new Texture("neptune.jpg");
-        sprMap = new Sprite(txMap);
-        sprMap.setScale(0.7f, 0.7f);
-        sprMap.setPosition(Gdx.graphics.getWidth() / 2 - sprMap.getWidth() / 2, Gdx.graphics.getHeight() / 2 - sprMap.getHeight() / 2);
-        sprMap.setFlip(false, true);
-        sprMap.setSize(WORLD_WIDTH, WORLD_HEIGHT);
         oc = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
-        float w = Gdx.graphics.getWidth();
-        float h = Gdx.graphics.getHeight();
-        oc = new OrthographicCamera(30, 30 * (h / w));
-        oc.position.set(oc.viewportWidth / 2f, oc.viewportHeight / 2f, 0);
+        oc.setToOrtho(true, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.update();
+        txMap = new Texture("neptune.jpg");
         btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Menu.jpg");
         btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Quit.jpg");
         txBar = new Texture ("The bar.png");
@@ -100,7 +90,10 @@ public class ScrGame4 implements Screen, InputProcessor {
         hamster = new Hamster(100, 100, txSheet);
         hamster2 = new Hamster(490, 330, txSheet2);
         //Background
-
+        sprMap = new Sprite(txMap);
+        sprMap.setScale(1f, 1f);
+        sprMap.setPosition(Gdx.graphics.getWidth() / 2 - sprMap.getWidth() / 2, Gdx.graphics.getHeight() / 2 - sprMap.getHeight() / 2);
+        sprMap.setFlip(false, true);
         //Obstacle
         txWall = new Texture ("Wall2.jpg");
         txObstacle = new Texture ("Rocksan.png");
@@ -174,7 +167,6 @@ public class ScrGame4 implements Screen, InputProcessor {
         //Input for hamster 1
         if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
             nDir = 2;
-            oc.translate(1, 0);
         } else if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
             nDir = 0;
         } else if (Gdx.input.isKeyPressed(Input.Keys.UP)) {
@@ -182,7 +174,6 @@ public class ScrGame4 implements Screen, InputProcessor {
         } else if (Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
             nDir = 3;
         }
-        oc.update();
         //Input for hamster 2
         if (Gdx.input.isKeyPressed(Input.Keys.A)) {
             nDir2 = 2;
@@ -321,14 +312,11 @@ public class ScrGame4 implements Screen, InputProcessor {
             nDir = 0;
             nDir2 = 2;
         }
+        oc.position.set(MathUtils.round(hamster.spTemp.getX() + (hamster.spTemp.getWidth() / 2)), MathUtils.round(hamster.spTemp.getY() + (hamster.spTemp.getHeight() / 2)), 0);
+        //oc.position.x = MathUtils.clamp(oc.position.x, 640, 15744);
+        //oc.position.y = MathUtils.clamp(oc.position.y, 360, 16024);
 
-        oc.zoom = MathUtils.clamp(oc.zoom, 0.1f, 100/oc.viewportWidth);
-
-        float effectiveViewportWidth = oc.viewportWidth * oc.zoom;
-        float effectiveViewportHeight = oc.viewportHeight * oc.zoom;
-
-        oc.position.x = MathUtils.clamp(oc.position.x, effectiveViewportWidth / 2f, 100 - effectiveViewportWidth / 2f);
-        oc.position.y = MathUtils.clamp(oc.position.y, effectiveViewportHeight / 2f, 100 - effectiveViewportHeight / 2f);
+        oc.update();
         batch.begin();
         batch.setProjectionMatrix(oc.combined);
         for (int i = 0; i < arWall.length; i++) {
