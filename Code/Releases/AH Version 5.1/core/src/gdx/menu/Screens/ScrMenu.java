@@ -12,9 +12,8 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Scaling;
 import gdx.menu.GamMenu;
-import gdx.menu.images.AniSprite;
 import gdx.menu.images.Button;
-import gdx.menu.images.Hamster;
+import gdx.menu.images.AniSprite;
 
 public class ScrMenu implements Screen, InputProcessor {
 
@@ -25,7 +24,7 @@ public class ScrMenu implements Screen, InputProcessor {
     SpriteBatch batch;
     Sprite sprBackground;
     AniSprite aniSprite1;
-    Hamster Ham1;
+    AniSprite Ham1;
     int nFrame,nPos;
     int nDir = 0, nSizeX = 50, nSizeY = 50,nCount=0;
     float fSpeed = 0;
@@ -54,11 +53,9 @@ public class ScrMenu implements Screen, InputProcessor {
         sprBackground.setFlip(false, true);
         sprBackground.setPosition(Gdx.graphics.getWidth() / 2 - sprBackground.getWidth() / 2, Gdx.graphics.getHeight() / 2 - sprBackground.getHeight() / 2);
         sprBackground.setScale(0.7f,0.8f);
-        //Hamster stuff
+        //AniSprite stuff
         txSheet = new Texture("sprmouse.png");
-        aniSprite1 = new AniSprite(txSheet);
-        aniSprite1.animate();
-        Ham1 = new Hamster(150, 325, txSheet);
+        Ham1 = new AniSprite(150, 325, txSheet);
         nFrame = 0;
         nPos = 0;
         Gdx.input.setInputProcessor(this);
