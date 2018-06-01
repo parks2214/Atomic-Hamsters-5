@@ -28,8 +28,6 @@ public class ScrGame4 implements Screen, InputProcessor {
     int fSx, fSy, fSx2, fSy2, fW, fH, fW2, fH2, nDir = 0, nDir2 = 2, nSizeX = 50, nSizeY = 50, nSizeX2 = 50, nSizeY2 = 50;
     Wall[] arWall = new Wall[4];
     Wall[] arObstacle = new Wall[2];
-    int DX[] = {1, 0, -1, 0};
-    int DY[] = {0, -1, 0, 1};
     float fSpeed = 0, fSpeed2 = 0;
     static int n4Points = 0, n4Points2 = 0;
     static int nWin4;
@@ -91,7 +89,7 @@ public class ScrGame4 implements Screen, InputProcessor {
         hamster2 = new Hamster(490, 330, txSheet2);
         //Background
         sprMap = new Sprite(txMap);
-        sprMap.setScale(1f, 1f);
+        sprMap.setScale(0.6f, 0.6f);
         sprMap.setPosition(Gdx.graphics.getWidth() / 2 - sprMap.getWidth() / 2, Gdx.graphics.getHeight() / 2 - sprMap.getHeight() / 2);
         sprMap.setFlip(false, true);
         //Obstacle
@@ -188,11 +186,18 @@ public class ScrGame4 implements Screen, InputProcessor {
         hamster.move(nDir, fSpeed, nSizeX, nSizeY);
         hamster.animation(nFrame);
         hamster2.animation(nFrame);
+        batch.begin();
+        batch.setProjectionMatrix(oc.combined);
         for (int i = 0; i < arWall.length; i++) {
             if (hamster2.isHitS(arWall[i], nSizeY2)) {
+                /*oc.position.set(MathUtils.round(hamster.spTemp.getX() + (hamster.spTemp.getWidth()) -
+                        (Gdx.graphics.getWidth() / 2) + 50), MathUtils.round(Gdx.graphics.getHeight() / 2), 0);*/
                 hamster2.outOfBounds();
             }
             if (hamster.isHitS(arWall[i], nSizeY)) {
+                if (i == 2) {
+                    oc.position.set(MathUtils.round(hamster.spTemp.getX() + (hamster.spTemp.getWidth()) - (Gdx.graphics.getWidth() / 2)), MathUtils.round(Gdx.graphics.getHeight() / 2), 0);
+                }
                 hamster.outOfBounds();
             }
         }
@@ -312,20 +317,19 @@ public class ScrGame4 implements Screen, InputProcessor {
             nDir = 0;
             nDir2 = 2;
         }
-        oc.position.set(MathUtils.round(hamster.spTemp.getX() + (hamster.spTemp.getWidth() / 2)), MathUtils.round(hamster.spTemp.getY() + (hamster.spTemp.getHeight() / 2)), 0);
+        //oc.position.set(MathUtils.round(hamster.spTemp.getX() + (hamster.spTemp.getWidth()) - (Gdx.graphics.getWidth() / 2)), MathUtils.round(Gdx.graphics.getHeight() / 2), 0);
         //oc.position.x = MathUtils.clamp(oc.position.x, 640, 15744);
         //oc.position.y = MathUtils.clamp(oc.position.y, 360, 16024);
-
-        oc.update();
-        batch.begin();
-        batch.setProjectionMatrix(oc.combined);
+        //oc.update();
         for (int i = 0; i < arWall.length; i++) {
             arWall[i].draw(batch);
-        }
+            }
         sprMap.draw(batch);
         for (int i = 0; i < arObstacle.length; i++) {
             arObstacle[i].draw(batch);
         }
+        //oc.position.x = MathUtils.clamp(sprMap.getX() + Gdx.graphics.getWidth(), oc.position.x, sprMap.getX());
+        oc.update();
         //Size and Speed Bar
         batch.draw(txBar, Gdx.graphics.getWidth() - 590, Gdx.graphics.getHeight() - 50, 50 * fSpeedBar1, 20);
         batch.draw(txBar, Gdx.graphics.getWidth() - 590, Gdx.graphics.getHeight() - 25, 50 * fSizeBar1, 20);
