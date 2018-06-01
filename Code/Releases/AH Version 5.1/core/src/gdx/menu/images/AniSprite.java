@@ -5,18 +5,18 @@ import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.math.Rectangle;
 
-public class Hamster extends Sprite {
+public class AniSprite extends Sprite {
     public Sprite spTemp;
     int nFrame = 0, nPos = 0, nDir = 0, nOrigX, nOrigY;
     Animation araniSprite[];
-    Texture txSheet;
+    Texture txSheet,txSheet2;
     float fDx, fDy;
     Rectangle rMouse, rMouseNew;
     Sprite sprMouse;
 
-    public Hamster(int nX, int nY, Texture texture) {
+    public AniSprite(int nX, int nY, Texture texture) {
         txSheet = texture;
-        araniSprite = Animate();
+        araniSprite = Animate(txSheet);
         setSize(50, 50);
         setPosition(nX, nY);
         nOrigX = nX;
@@ -83,19 +83,19 @@ public class Hamster extends Sprite {
         return rMouseNew;
     }
 
-    public Animation[] Animate( ){
+    public Animation[] Animate(Texture txSheet2 ){
         Animation araniMouse[];
         int nW, nH;
         int nSx, nSy;
         araniMouse = new Animation[4];
-        nW = txSheet.getWidth() / 4;
-        nH = txSheet.getHeight() / 4;
+        nW = txSheet2.getWidth() / 4;
+        nH = txSheet2.getHeight() / 4;
         for (int i = 0; i < 4; i++) {
             Sprite[] arSprMouse = new Sprite[4];
             for (int j = 0; j < 4; j++) {
                 nSx = j * nW;
                 nSy = i * nH;
-                sprMouse = new Sprite(txSheet, nSx, nSy, nW, nH);
+                sprMouse = new Sprite(txSheet2, nSx, nSy, nW, nH);
                 sprMouse.setFlip(false, true);
                 arSprMouse[j] = new Sprite(sprMouse);
             }
