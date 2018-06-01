@@ -78,7 +78,7 @@ public class ScrGame implements Screen, InputProcessor {
         }
         txMap = new Texture("jupiter.jpg");
         sprMap = new Sprite(txMap);
-        sprMap.setScale(1, 1.5f);
+        sprMap.setScale(0.9f, 1.2f);
         sprMap.setPosition(Gdx.graphics.getWidth() / 2 - sprMap.getWidth() / 2, Gdx.graphics.getHeight() / 2 - sprMap.getHeight() / 2);
         sprMap.setFlip(false, true);
         txWall = new Texture ("Wall2.jpg");
