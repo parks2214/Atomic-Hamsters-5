@@ -1,85 +1,91 @@
 package gdx.menu.Screens;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.g2d.Animation;
+import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.Input;
-
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.graphics.g2d.Sprite;
 import gdx.menu.GamMenu;
+import gdx.menu.images.AniSprite;
 import gdx.menu.images.Button;
 import gdx.menu.images.Wall;
 
-public class ScrTail implements Screen, InputProcessor {
+public class ScrAniHit implements Screen, InputProcessor {
 
-    Button btnMenu, btnQuit;
+    SpriteBatch batch;
     GamMenu gamMenu;
     OrthographicCamera oc;
-    SpriteBatch batch;
-    Texture txMHead, txMTail,txBar;
-    Sprite sprMouse, sprAni, sprMhead,sprMtail;
-    int  nX2, nY2, nX = 50, nY = 50,nY3=60,nX3=60, nDx, nDy;
+    Button btnMenu,btnQuit;
+    TextureRegion trTemp;
+    Texture txSheet, txNamAH, txNamGame, txWall;
+    Sprite sprNamAH, sprDude, sprAni, sprMouse;   //sprAni is a ghost, a sprite used for hit detection
+    int nFrame, nPos, nX = 100, nY = 100;   //nX and nY coordinates for sprAni  hv
+    Animation araniDude[], araniMouse[];
+    int fW, fH, fSx, fSy;
+    Wall[] arWall = new Wall[4];
+    boolean arbDirection[] = new boolean[4];
+    float fSpeed = 1;
+    AniSprite aniSprite, aniSprite2;
 
-
-    public ScrTail(GamMenu _gamMenu) {  //Referencing the main class.
+    public ScrAniHit(GamMenu _gamMenu) {
         gamMenu = _gamMenu;
     }
 
     @Override
     public void show() {
+        batch = new SpriteBatch();
         oc = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.setToOrtho(true, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.update();
-        batch = new SpriteBatch();
-        txMTail = new Texture("Hamstertail.png");
-        txBar = new Texture ("The bar.png");
-        sprMtail = new Sprite (txMTail);
-        sprMtail.setSize (20,40);
-        sprMtail.setFlip(false,true);
-        sprMtail.setPosition(nX,nY);
-        txMHead = new Texture("hamsterhead.png");
-        sprMhead = new Sprite(txMHead);
-        sprMhead.setSize(60, 80);
-        sprMhead.setFlip(false, true);
-        sprMhead.setPosition(nX, nY);
+        //Buttons
         btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Menu.jpg");
         btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Quit.jpg");
+        txSheet = new Texture("sprmouse.png");
+
+        txNamAH = new Texture("A.jpg");
+        sprNamAH = new Sprite(txNamAH); //Screen Name sprite
+        sprNamAH.setFlip(false, true);
+        sprNamAH.setSize(60, 80);
+        sprNamAH.setPosition(Gdx.graphics.getWidth() / 2 - 30, Gdx.graphics.getHeight() / 2 - 40);
+        txWall = new Texture ("Wall2.jpg");
+        arWall[0] = new Wall(Gdx.graphics.getWidth(), 50, 0, 0, txWall);   //Top Wall
+        arWall[1] = new Wall(Gdx.graphics.getWidth(), 50, 0, Gdx.graphics.getHeight() - 50, txWall);    //Bottom Wall
+        arWall[2] = new Wall(50, Gdx.graphics.getHeight() - 20, 0, 50, txWall);   //Left Wall
+        arWall[3] = new Wall(50, Gdx.graphics.getHeight() - 20, Gdx.graphics.getWidth() - 50, 50, txWall);   //Right Wall
+
         Gdx.input.setInputProcessor(this);
     }
 
     @Override
     public void render(float delta) {
-        Gdx.gl.glClearColor(0, 0, 0, 0);//Black background
+        Gdx.gl.glClearColor(1, 1, 1, 1); //White background.
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        nX = nX+nDx;
-        nY = nY+nDy;
-        if (nDy!=0) {
-            nY2= nY+nDy-nY3;
-        } else {
-            nY2= nY;
+
+        for (int i = 0; i < arWall.length; i++) {
+            if (isHitS(sprAni, arWall[i])) {
+                sprAni.setPosition(fSx, fSy);
+            }
         }
-        if (nDx!=0) {
-            nX2= nX+nDx-nX3;
-        } else {
-            nX2=nX;
+        if (isHitS(sprAni, sprNamAH)) {
+            sprAni.setPosition(fSx, fSy);
         }
-        sprMhead.setX(nX);
-        sprMhead.setY(nY);
-        sprMtail.setX(nX2);
-        sprMtail.setY(nY2);
+
         batch.begin();
         batch.setProjectionMatrix(oc.combined);
+        sprNamAH.draw(batch);
+        batch.draw(trTemp, fSx, fSy);
+        for (int i = 0; i < arWall.length; i++) {
+            arWall[i].draw(batch);
+        }
         btnMenu.draw(batch);
         btnQuit.draw(batch);
-        batch.draw(txBar,nX2,nY2);
-        sprMhead.draw(batch);
-        sprMtail.draw(batch);
         batch.end();
-
     }
 
     @Override
@@ -101,23 +107,12 @@ public class ScrTail implements Screen, InputProcessor {
     @Override
     public void dispose() {
         batch.dispose();
+        txNamAH.dispose();
+        txSheet.dispose();
     }
 
     @Override
     public boolean keyDown(int keycode) {
-        if (keycode == Input.Keys.A) {
-            nDx=-1;
-            nDy=0;
-        } else if (keycode == Input.Keys.D) {
-            nDx=1;
-            nDy=0;
-        } else if (keycode == Input.Keys.W) {
-            nDy=-1;
-            nDx=0;
-        } else if (keycode == Input.Keys.S) {
-            nDy=1;
-            nDx=0;
-        }
         return false;
     }
 
@@ -134,7 +129,6 @@ public class ScrTail implements Screen, InputProcessor {
     @Override
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
         if (button == Input.Buttons.LEFT) {
-            //System.out.println(screenX +" " + screenY);
             if (isHitB(screenX, screenY, btnMenu)) {
                 gamMenu.updateState(0);
                 System.out.println("Hit Menu");
@@ -178,3 +172,4 @@ public class ScrTail implements Screen, InputProcessor {
         return spr1.getBoundingRectangle().overlaps(spr2.getBoundingRectangle());
     }
 }
+
