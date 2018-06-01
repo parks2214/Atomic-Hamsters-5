@@ -1,85 +1,65 @@
 package gdx.menu.Screens;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.Input;
-
 import gdx.menu.GamMenu;
 import gdx.menu.images.Button;
-import gdx.menu.images.Wall;
 
-public class ScrTail implements Screen, InputProcessor {
+public class ScrRules implements Screen, InputProcessor {
 
-    Button btnMenu, btnQuit;
+    Button btnQuit, btnMenu;
     GamMenu gamMenu;
     OrthographicCamera oc;
-    SpriteBatch batch;
-    Texture txMHead, txMTail,txBar;
-    Sprite sprMouse, sprAni, sprMhead,sprMtail;
-    int  nX2, nY2, nX = 50, nY = 50,nY3=60,nX3=60, nDx, nDy;
+    SpriteBatch batch = new SpriteBatch();
+    BitmapFont font;
 
-
-    public ScrTail(GamMenu _gamMenu) {  //Referencing the main class.
+    public ScrRules(GamMenu _gamMenu) {
         gamMenu = _gamMenu;
     }
 
     @Override
     public void show() {
+        batch = new SpriteBatch();
         oc = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.setToOrtho(true, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.update();
-        batch = new SpriteBatch();
-        txMTail = new Texture("Hamstertail.png");
-        txBar = new Texture ("The bar.png");
-        sprMtail = new Sprite (txMTail);
-        sprMtail.setSize (20,40);
-        sprMtail.setFlip(false,true);
-        sprMtail.setPosition(nX,nY);
-        txMHead = new Texture("hamsterhead.png");
-        sprMhead = new Sprite(txMHead);
-        sprMhead.setSize(60, 80);
-        sprMhead.setFlip(false, true);
-        sprMhead.setPosition(nX, nY);
+        font = new BitmapFont(true);//this flips the font (https://stackoverflow.com/questions/8508749/draw-a-bitmapfont-rotated-in-libgdx)
+        font.setColor(Color.BLACK);
+        font.getData().setScale(1.2f);
+        font.getRegion().getTexture().setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+
+        Gdx.input.setInputProcessor(this);
+        //Buttons
         btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Menu.jpg");
         btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Quit.jpg");
-        Gdx.input.setInputProcessor(this);
     }
 
     @Override
     public void render(float delta) {
-        Gdx.gl.glClearColor(0, 0, 0, 0);//Black background
+        Gdx.gl.glClearColor(1, 1, 1, 1); //White background.
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        nX = nX+nDx;
-        nY = nY+nDy;
-        if (nDy!=0) {
-            nY2= nY+nDy-nY3;
-        } else {
-            nY2= nY;
-        }
-        if (nDx!=0) {
-            nX2= nX+nDx-nX3;
-        } else {
-            nX2=nX;
-        }
-        sprMhead.setX(nX);
-        sprMhead.setY(nY);
-        sprMtail.setX(nX2);
-        sprMtail.setY(nY2);
         batch.begin();
         batch.setProjectionMatrix(oc.combined);
         btnMenu.draw(batch);
         btnQuit.draw(batch);
-        batch.draw(txBar,nX2,nY2);
-        sprMhead.draw(batch);
-        sprMtail.draw(batch);
+        font.draw(batch, "The Rules are simple. Eat the most pellets without running into each other.", 10, 70);
+        font.draw(batch,"Collecting pellets adds speed and zize to your aniSprite.",10,140);
+        font.draw(batch,"For Level 1, the aniSprite who collects the most pellets before the two hamsters hit",10,210);
+        font.draw(batch,"each other wins.",10, 230);
+        font.draw(batch, "If either of the hamsters has at least 10 points by the end of Level 1, you can move on to Level 2", 10, 300);
+        font.draw(batch, "on to Level 2", 10, 320);
+        font.draw(batch,"For Level 2, if the two hamsters hit head on, the larger one wins. If the hamsters hit",10,390);
+        font.draw(batch,"any other way, the faster one wins.",10, 410);
         batch.end();
-
     }
 
     @Override
@@ -101,23 +81,11 @@ public class ScrTail implements Screen, InputProcessor {
     @Override
     public void dispose() {
         batch.dispose();
+        font.dispose();
     }
 
     @Override
     public boolean keyDown(int keycode) {
-        if (keycode == Input.Keys.A) {
-            nDx=-1;
-            nDy=0;
-        } else if (keycode == Input.Keys.D) {
-            nDx=1;
-            nDy=0;
-        } else if (keycode == Input.Keys.W) {
-            nDy=-1;
-            nDx=0;
-        } else if (keycode == Input.Keys.S) {
-            nDy=1;
-            nDx=0;
-        }
         return false;
     }
 
@@ -134,7 +102,6 @@ public class ScrTail implements Screen, InputProcessor {
     @Override
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
         if (button == Input.Buttons.LEFT) {
-            //System.out.println(screenX +" " + screenY);
             if (isHitB(screenX, screenY, btnMenu)) {
                 gamMenu.updateState(0);
                 System.out.println("Hit Menu");
@@ -178,3 +145,4 @@ public class ScrTail implements Screen, InputProcessor {
         return spr1.getBoundingRectangle().overlaps(spr2.getBoundingRectangle());
     }
 }
+
