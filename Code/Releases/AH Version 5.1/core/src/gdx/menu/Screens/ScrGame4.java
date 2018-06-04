@@ -19,24 +19,24 @@ public class ScrGame4 implements Screen, InputProcessor {
     GamMenu gamMenu;
     OrthographicCamera oc;
     Button btnMenu, btnQuit;
-    Texture txSheet, txMap, txSheet2, txBar, txWall, txObstacle, txCornerMouse, txCornerMouse2;
-    Sprite sprMouse, sprMouse2, sprMap, sprCornerMouse, sprCornerMouse2;
+    Texture txSheet1, txMap, txSheet2, txBar, txWall, txObstacle, txCornerHamster1, txCornerHamster2;
+    Sprite sprHamster1, sprHamster2, sprMap, sprCornerHamster1, sprCornerHamster2;
     int nFrame, nPos, nPos2;
-    Animation araniMouse[], araniMouse2[];
-    int fSx, fSy, fSx2, fSy2, fW, fH, fW2, fH2, nDir = 0, nDir2 = 2, nSizeX = 50, nSizeY = 50, nSizeX2 = 50, nSizeY2 = 50;
+    Animation araniHamster1[], araniHamster2[];
+    int fSx1, fSy1, fSx2, fSy2, fW1, fH1, fW2, fH2, nDir1 = 0, nDir2 = 2, nSizeX1 = 50, nSizeY1 = 50, nSizeX2 = 50, nSizeY2 = 50;
     Wall[] arWall = new Wall[4];
     Wall[] arObstacle = new Wall[2];
     int DX[] = {1, 0, -1, 0};
     int DY[] = {0, -1, 0, 1};
-    float fSpeed = 0, fSpeed2 = 0;
+    float fSpeed1 = 0, fSpeed2 = 0;
     static int n4Points = 0, n4Points2 = 0;
     static int nWin4;
-    int nChoice, nChoice2;
+    int nChoice1, nChoice2;
     int nTimer=0,nBadTimer=0;
-    PelletMaker pMaker, pMaker2;
+    PelletMaker pMaker1, pMaker2;
     float fSizeBar1 = 1, fSizeBar2 = 1, fSpeedBar1 = 1, fSpeedBar2 = 1;
     BitmapFont font, font2;
-    AniSprite aniSprite, aniSprite2;
+    AniSprite aniSprite1, aniSprite2;
     //640, 480
 
     public ScrGame4(GamMenu _gamMenu) {
@@ -61,23 +61,23 @@ public class ScrGame4 implements Screen, InputProcessor {
         font2.getData().setScale(1.1f);
         font2.getRegion().getTexture().setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
         // Choice between which sprite they take
-        nChoice = ScrAnimalChoice.nChoice;
+        nChoice1 = ScrAnimalChoice.nChoice;
         nChoice2 = ScrAnimalChoice2.nChoice2;
-        if (nChoice == 1) {
-            txSheet = new Texture("sprmouse.png");
-            txCornerMouse = new Texture("btnMouse.png");
-        } else if (nChoice == 2) {
-            txSheet = new Texture("sprmouse2.png");
-            txCornerMouse = new Texture("btnMouse2.png");
+        if (nChoice1 == 1) {
+            txSheet1 = new Texture("sprmouse.png");
+            txCornerHamster1 = new Texture("btnMouse.png");
+        } else if (nChoice1 == 2) {
+            txSheet1 = new Texture("sprmouse2.png");
+            txCornerHamster1 = new Texture("btnMouse2.png");
         }
         if (nChoice2 == 1) {
             txSheet2 = new Texture("sprmouse.png");
-            txCornerMouse2 = new Texture("btnMouse.png");
+            txCornerHamster2 = new Texture("btnMouse.png");
         } else if (nChoice2 == 2) {
             txSheet2 = new Texture("sprmouse2.png");
-            txCornerMouse2 = new Texture("btnMouse2.png");
+            txCornerHamster2 = new Texture("btnMouse2.png");
         }
-        aniSprite = new AniSprite(100, 100, txSheet);
+        aniSprite1 = new AniSprite(100, 100, txSheet1);
         aniSprite2 = new AniSprite(490, 330, txSheet2);
         //Background
         txMap = new Texture("neptune.jpg");
@@ -99,46 +99,46 @@ public class ScrGame4 implements Screen, InputProcessor {
         n4Points2 = 0;
         ScrGame.nInd = 4;
         //Corner Image stuff
-        sprCornerMouse = new Sprite(txCornerMouse);
-        sprCornerMouse2 = new Sprite(txCornerMouse2);
-        sprCornerMouse.setFlip(false, true);
-        sprCornerMouse2.setFlip(false, true);
-        sprCornerMouse.setSize(75, 100);
-        sprCornerMouse2.setSize(75, 100);
+        sprCornerHamster1 = new Sprite(txCornerHamster1);
+        sprCornerHamster2 = new Sprite(txCornerHamster2);
+        sprCornerHamster1.setFlip(false, true);
+        sprCornerHamster2.setFlip(false, true);
+        sprCornerHamster1.setSize(75, 100);
+        sprCornerHamster2.setSize(75, 100);
         //Animation Stuff
         nFrame = 0;
         nPos = 0; //dennis was here
         nPos2 = 0;
-        araniMouse = new Animation[4];
-        araniMouse2 = new Animation[4];
-        fW = txSheet.getWidth() / 4;
-        fH = txSheet.getHeight() / 4;
+        araniHamster1 = new Animation[4];
+        araniHamster2 = new Animation[4];
+        fW1 = txSheet1.getWidth() / 4;
+        fH1 = txSheet1.getHeight() / 4;
         fW2 = txSheet2.getWidth() /4;
         fH2 = txSheet2.getHeight() /4;
         for (int i = 0; i < 4; i++) {
             Sprite[] arSprMouse = new Sprite[4];
             Sprite[] arSprMouse2 = new Sprite[4];
             for (int j = 0; j < 4; j++) {
-                fSx = j * fW;
-                fSy = i * fH;
+                fSx1 = j * fW1;
+                fSy1 = i * fH1;
                 fSy2 = i * fH2;
                 fSx2 = j * fW2;
-                sprMouse = new Sprite(txSheet, fSx, fSy, fW, fH);
-                sprMouse.setFlip(false, true);
-                arSprMouse[j] = new Sprite(sprMouse);
-                sprMouse2 = new Sprite(txSheet2, fSx2, fSy2, fW2, fH2);
-                sprMouse2.setFlip(false, true);
-                arSprMouse2[j] = new Sprite(sprMouse2);
+                sprHamster1 = new Sprite(txSheet1, fSx1, fSy1, fW1, fH1);
+                sprHamster1.setFlip(false, true);
+                arSprMouse[j] = new Sprite(sprHamster1);
+                sprHamster2 = new Sprite(txSheet2, fSx2, fSy2, fW2, fH2);
+                sprHamster2.setFlip(false, true);
+                arSprMouse2[j] = new Sprite(sprHamster2);
             }
-            araniMouse[i] = new Animation(0.8f, arSprMouse);
-            araniMouse2[i] = new Animation(0.8f, arSprMouse2);
+            araniHamster1[i] = new Animation(0.8f, arSprMouse);
+            araniHamster2[i] = new Animation(0.8f, arSprMouse2);
 
         }
-        sprMouse.setPosition(50, 50);
-        sprMouse2.setPosition(Gdx.graphics.getWidth()-100,Gdx.graphics.getHeight()-100);
+        sprHamster1.setPosition(50, 50);
+        sprHamster2.setPosition(Gdx.graphics.getWidth()-100,Gdx.graphics.getHeight()-100);
         Gdx.input.setInputProcessor(this);
 
-        pMaker = new PelletMaker(50, 50, "Apple.png");
+        pMaker1 = new PelletMaker(50, 50, "Apple.png");
         pMaker2 = new PelletMaker(30, 30, "Apple Worm.png");
     }
 
@@ -150,20 +150,19 @@ public class ScrGame4 implements Screen, InputProcessor {
         nTimer++;
         nBadTimer++;
         //Animation Stuff
-
         if (nFrame > 7) {
             nFrame = 0;
         }
         nFrame++;
         //Input for aniSprite 1
         if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
-            nDir = 2;
+            nDir1 = 2;
         } else if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
-            nDir = 0;
+            nDir1 = 0;
         } else if (Gdx.input.isKeyPressed(Input.Keys.UP)) {
-            nDir = 1;
+            nDir1 = 1;
         } else if (Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
-            nDir = 3;
+            nDir1 = 3;
         }
         //Input for aniSprite 2
         if (Gdx.input.isKeyPressed(Input.Keys.A)) {
@@ -176,43 +175,43 @@ public class ScrGame4 implements Screen, InputProcessor {
             nDir2 = 3;
         }
         aniSprite2.move(nDir2, fSpeed2, nSizeX2, nSizeY2);
-        aniSprite.move(nDir, fSpeed, nSizeX, nSizeY);
-        aniSprite.animation(nFrame);
+        aniSprite1.move(nDir1, fSpeed1, nSizeX1, nSizeY1);
+        aniSprite1.animation(nFrame);
         aniSprite2.animation(nFrame);
         for (int i = 0; i < arWall.length; i++) {
             if (aniSprite2.isHitS(arWall[i], nSizeY2)) {
                 aniSprite2.outOfBounds();
             }
-            if (aniSprite.isHitS(arWall[i], nSizeY)) {
-                aniSprite.outOfBounds();
+            if (aniSprite1.isHitS(arWall[i], nSizeY1)) {
+                aniSprite1.outOfBounds();
             }
         }
         for (int i = 0; i < arObstacle.length; i++) {
             if (aniSprite2.isHitS(arObstacle[i], nSizeY2)) {
                 aniSprite2.outOfBounds();
             }
-            if (aniSprite.isHitS(arObstacle[i], nSizeY)) {
-                aniSprite.outOfBounds();
+            if (aniSprite1.isHitS(arObstacle[i], nSizeY1)) {
+                aniSprite1.outOfBounds();
             }
         }
         //pellet stuff
-        for (int i = pMaker.alPellets.size() - 1; i >= 0; i--) {
-            Pellet p = pMaker.alPellets.get(i);
-            if (aniSprite.isHitS(p, nSizeY)) {
-                fSpeed += 0.5f;
+        for (int i = pMaker1.alPellets.size() - 1; i >= 0; i--) {
+            Pellet p = pMaker1.alPellets.get(i);
+            if (aniSprite1.isHitS(p, nSizeY1)) {
+                fSpeed1 += 0.5f;
                 nTimer=240;
                 // System.out.println(fSpeed);
                 n4Points += 1;
                 fSpeedBar1 += 0.1;
                 fSizeBar1 += 0.1;
                 // System.out.println("Points for first: " + n2Points);
-                if (nSizeX < 100 && nSizeY < 100) {
-                    nSizeX += 3;
-                    nSizeY += 3;
+                if (nSizeX1 < 100 && nSizeY1 < 100) {
+                    nSizeX1 += 3;
+                    nSizeY1 += 3;
                     // System.out.println(nSizeX + "   " + nSizeY);
                 }
                 // mouse catche pellet
-                pMaker.removePellet(p);
+                pMaker1.removePellet(p);
             }
             if (aniSprite2.isHitS(p, nSizeY2)) {
                 fSpeed2 += 0.5f;
@@ -228,12 +227,12 @@ public class ScrGame4 implements Screen, InputProcessor {
                     // System.out.println(nSizeX2 + "   " + nSizeY2);
                 }
                 // mouse catche pellet
-                pMaker.removePellet(p);
+                pMaker1.removePellet(p);
             }
 
             if (nTimer>=300) {
                 System.out.println("The clock struck 5 seconds");
-                pMaker.removePellet(p);
+                pMaker1.removePellet(p);
                 nTimer=0;
 
             }
@@ -241,10 +240,10 @@ public class ScrGame4 implements Screen, InputProcessor {
         //poison stuff
         for (int i = pMaker2.alPellets.size() - 1; i >= 0; i--) {
             Pellet p2 = pMaker2.alPellets.get(i);
-            if (aniSprite.isHitS(p2, nSizeY)) {
+            if (aniSprite1.isHitS(p2, nSizeY1)) {
                 nBadTimer=60;
-                nSizeX -= 3;
-                nSizeY -= 3;
+                nSizeX1 -= 3;
+                nSizeY1-= 3;
                 //System.out.println(fSpeed);
                 fSizeBar1 -= 0.1;
                 // mouse catche pellet
@@ -266,29 +265,29 @@ public class ScrGame4 implements Screen, InputProcessor {
             }
         }
         //Hit detection between mice
-        if (Intersector.overlaps(aniSprite.getThisRect(nSizeY), aniSprite2.getThisRect(nSizeY2))) {
-            if ((nDir == 0 && nDir2 == 2) || (nDir == 2 && nDir2 == 2)) {
-                if (nSizeX > nSizeX2) {
+        if (Intersector.overlaps(aniSprite1.getThisRect(nSizeY1), aniSprite2.getThisRect(nSizeY2))) {
+            if ((nDir1 == 0 && nDir2 == 2) || (nDir1 == 2 && nDir2 == 2)) {
+                if (nSizeX1 > nSizeX2) {
                     nWin4 = 1;
-                } else if (nSizeX2 > nSizeX) {
+                } else if (nSizeX2 > nSizeX1) {
                     nWin4 = 2;
                 } else {
                     nWin4 = 0;
                 }
             } else {
-                if (fSpeed > fSpeed2) {
+                if (fSpeed1 > fSpeed2) {
                     nWin4 = 1;
-                } else if (fSpeed2 > fSpeed) {
+                } else if (fSpeed2 > fSpeed1) {
                     nWin4 = 2;
                 } else {
                     nWin4 = 0;
                 }
             }
             System.out.println(nWin4);
-            fSpeed = 0;
+            fSpeed1 = 0;
             fSpeed2 = 0;
-            nSizeX = 50;
-            nSizeY = 50;
+            nSizeX1 = 50;
+            nSizeY1= 50;
             nSizeX2 = 50;
             nSizeY2 = 50;
             fSizeBar1 = 1;
@@ -299,7 +298,7 @@ public class ScrGame4 implements Screen, InputProcessor {
             gamMenu.updateState(6);
             n4Points = 0;
             n4Points2 = 0;
-            nDir = 0;
+            nDir1 = 0;
             nDir2 = 2;
         }
 
@@ -322,15 +321,15 @@ public class ScrGame4 implements Screen, InputProcessor {
         font2.draw(batch, "Speed", Gdx.graphics.getWidth() - 220, Gdx.graphics.getHeight() - 45);
         font2.draw(batch, "Size", Gdx.graphics.getWidth() - 220, Gdx.graphics.getHeight() - 20);
         //Corner Mouse stuff
-        sprCornerMouse.setPosition(-10,Gdx.graphics.getHeight()-85);
-        sprCornerMouse2.setPosition(Gdx.graphics.getWidth()-60, Gdx.graphics.getHeight()-85);
-        sprCornerMouse.draw(batch);
-        sprCornerMouse2.draw(batch);
+        sprCornerHamster1.setPosition(-10,Gdx.graphics.getHeight()-85);
+        sprCornerHamster2.setPosition(Gdx.graphics.getWidth()-60, Gdx.graphics.getHeight()-85);
+        sprCornerHamster1.draw(batch);
+        sprCornerHamster2.draw(batch);
         //Pellet Stuff
-        pMaker.draw(batch);
+        pMaker1.draw(batch);
         pMaker2.draw(batch);
         //Animation Stuff
-        aniSprite.spTemp.draw(batch);
+        aniSprite1.spTemp.draw(batch);
         aniSprite2.spTemp.draw(batch);
         //Buttons
         btnMenu.draw(batch);
@@ -357,7 +356,7 @@ public class ScrGame4 implements Screen, InputProcessor {
     @Override
     public void dispose() {
         batch.dispose();
-        txSheet.dispose();
+        txSheet1.dispose();
     }
 
     @Override
@@ -384,17 +383,17 @@ public class ScrGame4 implements Screen, InputProcessor {
                 n4Points = 0;
                 n4Points2 = 0;
                 nWin4 = 0;
-                fSpeed = 0;
+                fSpeed1= 0;
                 fSpeed2 = 0;
-                nSizeX = 50;
-                nSizeY = 50;
+                nSizeX1= 50;
+                nSizeY1 = 50;
                 nSizeX2 = 50;
                 nSizeY2 = 50;
                 fSizeBar1 = 1;
                 fSpeedBar1 = 1;
                 fSizeBar2 = 1;
                 fSpeedBar2 = 1;
-                nDir = 0;
+                nDir1 = 0;
                 nDir2 = 2;
             } else if (isHitB(screenX, screenY, btnQuit)) {
                 System.out.println("Quit");
