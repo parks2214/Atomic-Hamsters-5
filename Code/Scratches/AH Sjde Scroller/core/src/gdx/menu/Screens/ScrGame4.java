@@ -28,18 +28,17 @@ public class ScrGame4 implements Screen, InputProcessor {
     int fSx, fSy, fSx2, fSy2, fW, fH, fW2, fH2, nDir = 0, nDir2 = 2, nSizeX = 50, nSizeY = 50, nSizeX2 = 50, nSizeY2 = 50;
     Wall[] arWall = new Wall[4];
     Wall[] arObstacle = new Wall[2];
-    int DX[] = {1, 0, -1, 0};
-    int DY[] = {0, -1, 0, 1};
     float fSpeed = 0, fSpeed2 = 0;
     static int n4Points = 0, n4Points2 = 0;
     static int nWin4;
     int nChoice, nChoice2;
-    int nTimer=0,nBadTimer=0;
+    int nTimer = 0, nBadTimer = 0;
     PelletMaker pMaker, pMaker2;
     float fSizeBar1 = 1, fSizeBar2 = 1, fSpeedBar1 = 1, fSpeedBar2 = 1;
     BitmapFont font, font2;
     AniSprite aniSprite, aniSprite2;
     Hamster hamster, hamster2;
+    Sprite sprite;
     //640, 480
 
     public ScrGame4(GamMenu _gamMenu) {
@@ -55,7 +54,7 @@ public class ScrGame4 implements Screen, InputProcessor {
         txMap = new Texture("neptune.jpg");
         btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Menu.jpg");
         btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Quit.jpg");
-        txBar = new Texture ("The bar.png");
+        txBar = new Texture("The bar.png");
         font = new BitmapFont(true);//this flips the font (https://stackoverflow.com/questions/8508749/draw-a-bitmapfont-rotated-in-libgdx)
         font.setColor(Color.WHITE);
         font.getData().setScale(3f);
@@ -91,18 +90,18 @@ public class ScrGame4 implements Screen, InputProcessor {
         hamster2 = new Hamster(490, 330, txSheet2);
         //Background
         sprMap = new Sprite(txMap);
-        sprMap.setScale(1f, 1f);
+        sprMap.setScale(0.6f, 0.6f);
         sprMap.setPosition(Gdx.graphics.getWidth() / 2 - sprMap.getWidth() / 2, Gdx.graphics.getHeight() / 2 - sprMap.getHeight() / 2);
         sprMap.setFlip(false, true);
         //Obstacle
-        txWall = new Texture ("Wall2.jpg");
-        txObstacle = new Texture ("Rocksan.png");
+        txWall = new Texture("Wall2.jpg");
+        txObstacle = new Texture("Rocksan.png");
         arWall[0] = new Wall(Gdx.graphics.getWidth(), 50, 0, 0, txWall);   //Top Wall
         arWall[1] = new Wall(Gdx.graphics.getWidth(), 50, 0, Gdx.graphics.getHeight() - 50, txWall);    //Bottom Wall
         arWall[2] = new Wall(50, Gdx.graphics.getHeight() - 20, 0, 50, txWall);   //Left Wall
         arWall[3] = new Wall(50, Gdx.graphics.getHeight() - 20, Gdx.graphics.getWidth() - 50, 50, txWall);    //Right Wall
-        arObstacle[0] = new Wall(65, 50, (51 + (int)(Math.random() * ((524 - 51) + 1))), (51 + (int)(Math.random() * ((379 - 51) + 1))), txObstacle);   //Horizontal obstacle
-        arObstacle[1] = new Wall(50, 65, (51 + (int)(Math.random() * ((539 - 51) + 1))), (51 + (int)(Math.random() * ((364 - 51) + 1))), txObstacle);    //Vertical obstacle
+        arObstacle[0] = new Wall(65, 50, (51 + (int) (Math.random() * ((524 - 51) + 1))), (51 + (int) (Math.random() * ((379 - 51) + 1))), txObstacle);   //Horizontal obstacle
+        arObstacle[1] = new Wall(50, 65, (51 + (int) (Math.random() * ((539 - 51) + 1))), (51 + (int) (Math.random() * ((364 - 51) + 1))), txObstacle);    //Vertical obstacle
 
         n4Points = 0;
         n4Points2 = 0;
@@ -122,8 +121,8 @@ public class ScrGame4 implements Screen, InputProcessor {
         araniMouse2 = new Animation[4];
         fW = txSheet.getWidth() / 4;
         fH = txSheet.getHeight() / 4;
-        fW2 = txSheet2.getWidth() /4;
-        fH2 = txSheet2.getHeight() /4;
+        fW2 = txSheet2.getWidth() / 4;
+        fH2 = txSheet2.getHeight() / 4;
         for (int i = 0; i < 4; i++) {
             Sprite[] arSprMouse = new Sprite[4];
             Sprite[] arSprMouse2 = new Sprite[4];
@@ -144,7 +143,7 @@ public class ScrGame4 implements Screen, InputProcessor {
 
         }
         sprMouse.setPosition(50, 50);
-        sprMouse2.setPosition(Gdx.graphics.getWidth()-100,Gdx.graphics.getHeight()-100);
+        sprMouse2.setPosition(Gdx.graphics.getWidth() - 100, Gdx.graphics.getHeight() - 100);
         Gdx.input.setInputProcessor(this);
 
         pMaker = new PelletMaker(50, 50, "Apple.png");
@@ -188,14 +187,32 @@ public class ScrGame4 implements Screen, InputProcessor {
         hamster.move(nDir, fSpeed, nSizeX, nSizeY);
         hamster.animation(nFrame);
         hamster2.animation(nFrame);
+        batch.begin();
+        batch.setProjectionMatrix(oc.combined);
         for (int i = 0; i < arWall.length; i++) {
             if (hamster2.isHitS(arWall[i], nSizeY2)) {
+                if (i == 2 && fSpeed2 >= fSpeed && oc.position.x > 60 && oc.position.x < 610) {
+                    subtractWall();
+                    oc.position.set(MathUtils.round(hamster2.spTemp.getX() + 270), MathUtils.round(Gdx.graphics.getHeight() / 2), 0);
+                } else if (i == 3 && fSpeed2 >= fSpeed && oc.position.x > 60 && oc.position.x < 610) {
+                    addWall();
+                    oc.position.set(MathUtils.round(hamster2.spTemp.getX() - 220), MathUtils.round(Gdx.graphics.getHeight() / 2), 0);
+                }
                 hamster2.outOfBounds();
             }
             if (hamster.isHitS(arWall[i], nSizeY)) {
+                if (i == 2 && fSpeed >= fSpeed2 && oc.position.x > 60 && oc.position.x < 610) {
+                    subtractWall();
+                    oc.position.set(MathUtils.round(hamster.spTemp.getX() + 270), MathUtils.round(Gdx.graphics.getHeight() / 2), 0);
+                } else if (i == 3 && fSpeed >= fSpeed2 && oc.position.x > 60 && oc.position.x < 610) {
+                    addWall();
+                    oc.position.set(MathUtils.round(hamster.spTemp.getX() - 220), MathUtils.round(Gdx.graphics.getHeight() / 2), 0);
+                }
                 hamster.outOfBounds();
             }
         }
+        oc.position.x = MathUtils.clamp(oc.position.x, 60, 610);
+        System.out.println(oc.position.x);
         for (int i = 0; i < arObstacle.length; i++) {
             if (hamster2.isHitS(arObstacle[i], nSizeY2)) {
                 hamster2.outOfBounds();
@@ -209,7 +226,7 @@ public class ScrGame4 implements Screen, InputProcessor {
             Pellet p = pMaker.alPellets.get(i);
             if (hamster.isHitS(p, nSizeY)) {
                 fSpeed += 0.5f;
-                nTimer=240;
+                nTimer = 240;
                 // System.out.println(fSpeed);
                 n4Points += 1;
                 fSpeedBar1 += 0.1;
@@ -225,7 +242,7 @@ public class ScrGame4 implements Screen, InputProcessor {
             }
             if (hamster2.isHitS(p, nSizeY2)) {
                 fSpeed2 += 0.5f;
-                nTimer=240;
+                nTimer = 240;
                 // System.out.println(fSpeed2);
                 n4Points2 += 1;
                 fSpeedBar2 += 0.1;
@@ -240,10 +257,10 @@ public class ScrGame4 implements Screen, InputProcessor {
                 pMaker.removePellet(p);
             }
 
-            if (nTimer>=300) {
+            if (nTimer >= 300) {
                 System.out.println("The clock struck 5 seconds");
                 pMaker.removePellet(p);
-                nTimer=0;
+                nTimer = 0;
 
             }
         }
@@ -251,7 +268,7 @@ public class ScrGame4 implements Screen, InputProcessor {
         for (int i = pMaker2.alPellets.size() - 1; i >= 0; i--) {
             Pellet p2 = pMaker2.alPellets.get(i);
             if (hamster.isHitS(p2, nSizeY)) {
-                nBadTimer=60;
+                nBadTimer = 60;
                 nSizeX -= 3;
                 nSizeY -= 3;
                 //System.out.println(fSpeed);
@@ -261,7 +278,7 @@ public class ScrGame4 implements Screen, InputProcessor {
             }
             if (hamster2.isHitS(p2, nSizeY2)) {
                 fSpeed2 -= 0.5f;
-                nBadTimer=60;
+                nBadTimer = 60;
                 nSizeX2 -= 3;
                 nSizeY2 -= 3;
                 //System.out.println(fSpeed2);
@@ -269,10 +286,10 @@ public class ScrGame4 implements Screen, InputProcessor {
                 // mouse catche pellet
                 pMaker2.removePellet(p2);
             }
-            if (nBadTimer>=120) {
+            if (nBadTimer >= 120) {
                 System.out.println("Poison stuff");
                 pMaker2.removePellet(p2); //Doesn't remove poison, adds a strawberry instead
-                nBadTimer=0;
+                nBadTimer = 0;
             }
         }
         //Hit detection between mice
@@ -312,13 +329,6 @@ public class ScrGame4 implements Screen, InputProcessor {
             nDir = 0;
             nDir2 = 2;
         }
-        oc.position.set(MathUtils.round(hamster.spTemp.getX() + (hamster.spTemp.getWidth() / 2)), MathUtils.round(hamster.spTemp.getY() + (hamster.spTemp.getHeight() / 2)), 0);
-        //oc.position.x = MathUtils.clamp(oc.position.x, 640, 15744);
-        //oc.position.y = MathUtils.clamp(oc.position.y, 360, 16024);
-
-        oc.update();
-        batch.begin();
-        batch.setProjectionMatrix(oc.combined);
         for (int i = 0; i < arWall.length; i++) {
             arWall[i].draw(batch);
         }
@@ -326,6 +336,7 @@ public class ScrGame4 implements Screen, InputProcessor {
         for (int i = 0; i < arObstacle.length; i++) {
             arObstacle[i].draw(batch);
         }
+        oc.update();
         //Size and Speed Bar
         batch.draw(txBar, Gdx.graphics.getWidth() - 590, Gdx.graphics.getHeight() - 50, 50 * fSpeedBar1, 20);
         batch.draw(txBar, Gdx.graphics.getWidth() - 590, Gdx.graphics.getHeight() - 25, 50 * fSizeBar1, 20);
@@ -336,8 +347,8 @@ public class ScrGame4 implements Screen, InputProcessor {
         font2.draw(batch, "Speed", Gdx.graphics.getWidth() - 220, Gdx.graphics.getHeight() - 45);
         font2.draw(batch, "Size", Gdx.graphics.getWidth() - 220, Gdx.graphics.getHeight() - 20);
         //Corner Mouse stuff
-        sprCornerMouse.setPosition(-10,Gdx.graphics.getHeight()-85);
-        sprCornerMouse2.setPosition(Gdx.graphics.getWidth()-60, Gdx.graphics.getHeight()-85);
+        sprCornerMouse.setPosition(-10, Gdx.graphics.getHeight() - 85);
+        sprCornerMouse2.setPosition(Gdx.graphics.getWidth() - 60, Gdx.graphics.getHeight() - 85);
         sprCornerMouse.draw(batch);
         sprCornerMouse2.draw(batch);
         //Pellet Stuff
@@ -444,5 +455,19 @@ public class ScrGame4 implements Screen, InputProcessor {
         } else {
             return false;
         }
+    }
+
+    public void addWall() {
+        arWall[3].setX(arWall[3].getX() + fSpeed + 1);
+        arWall[0].setX(arWall[0].getX() + fSpeed + 1);
+        arWall[1].setX(arWall[1].getX() + fSpeed + 1);
+        arWall[2].setX(arWall[2].getX() + fSpeed + 1);
+    }
+
+    public void subtractWall() {
+        arWall[2].setX(arWall[2].getX() - fSpeed - 1);
+        arWall[0].setX(arWall[0].getX() - fSpeed - 1);
+        arWall[1].setX(arWall[1].getX() - fSpeed - 1);
+        arWall[3].setX(arWall[3].getX() - fSpeed - 1);
     }
 }

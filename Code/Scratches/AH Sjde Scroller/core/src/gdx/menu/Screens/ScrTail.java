@@ -20,7 +20,7 @@ public class ScrTail implements Screen, InputProcessor {
     GamMenu gamMenu;
     OrthographicCamera oc;
     SpriteBatch batch;
-    Texture txMHead, txMTail;
+    Texture txMHead, txMTail,txBar;
     Sprite sprMouse, sprAni, sprMhead,sprMtail;
     int  nX2, nY2, nX = 50, nY = 50,nY3=60,nX3=60, nDx, nDy;
 
@@ -36,6 +36,7 @@ public class ScrTail implements Screen, InputProcessor {
         oc.update();
         batch = new SpriteBatch();
         txMTail = new Texture("Hamstertail.png");
+        txBar = new Texture ("The bar.png");
         sprMtail = new Sprite (txMTail);
         sprMtail.setSize (20,40);
         sprMtail.setFlip(false,true);
@@ -52,7 +53,7 @@ public class ScrTail implements Screen, InputProcessor {
 
     @Override
     public void render(float delta) {
-        Gdx.gl.glClearColor(1, 1, 1, 1);//White background
+        Gdx.gl.glClearColor(0, 0, 0, 0);//Black background
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         nX = nX+nDx;
         nY = nY+nDy;
@@ -74,6 +75,7 @@ public class ScrTail implements Screen, InputProcessor {
         batch.setProjectionMatrix(oc.combined);
         btnMenu.draw(batch);
         btnQuit.draw(batch);
+        batch.draw(txBar,nX2,nY2);
         sprMhead.draw(batch);
         sprMtail.draw(batch);
         batch.end();

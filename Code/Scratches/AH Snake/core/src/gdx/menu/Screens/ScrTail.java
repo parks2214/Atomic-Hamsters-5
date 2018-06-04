@@ -22,7 +22,7 @@ public class ScrTail implements Screen, InputProcessor {
     SpriteBatch batch;
     Texture txMHead, txMTail,txBar;
     Sprite sprMouse, sprAni, sprMhead,sprMtail;
-    int  nX2, nY2, nX = 50, nY = 50,nY2=55,nX2=55,nY3=60,nX3=60, nDx, nDy;
+    int  nX2, nY2, nX = 50, nY = 50,nY3=60,nX3=60, nDx, nDy;
 
 
     public ScrTail(GamMenu _gamMenu) {  //Referencing the main class.
