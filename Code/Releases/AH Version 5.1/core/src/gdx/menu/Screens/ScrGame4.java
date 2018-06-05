@@ -174,8 +174,8 @@ public class ScrGame4 implements Screen, InputProcessor {
         } else if (Gdx.input.isKeyPressed(Input.Keys.S)) {
             nDir2 = 3;
         }
-        aniSprite2.move(nDir2, fSpeed2, nSizeX2, nSizeY2);
-        aniSprite1.move(nDir1, fSpeed1, nSizeX1, nSizeY1);
+        aniSprite2.move(nDir2, nSizeX2, nSizeY2);
+        aniSprite1.move(nDir1, nSizeX1, nSizeY1);
         aniSprite1.animation(nFrame);
         aniSprite2.animation(nFrame);
         for (int i = 0; i < arWall.length; i++) {

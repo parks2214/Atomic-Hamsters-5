@@ -83,7 +83,7 @@ public class ScrMenu implements Screen, InputProcessor {
         }
         nCount++;
         nFrame++;
-        Ham1.move(nDir, fSpeed, nSizeX, nSizeY);
+        Ham1.move(nDir, nSizeX, nSizeY);
         Ham1.animation(nFrame);
         //Drawing stuff
         batch.begin();

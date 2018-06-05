@@ -49,7 +49,7 @@ public class ScrGame4 implements Screen, InputProcessor {
         batch = new SpriteBatch();
         oc = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.setToOrtho(true, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
-        oc.update();
+//        oc.update();
         txMap = new Texture("neptune.jpg");
         btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Menu.jpg");
         btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Quit.jpg");
@@ -204,8 +204,10 @@ public class ScrGame4 implements Screen, InputProcessor {
                 aniSprite.outOfBounds();
             }
         }
-        System.out.println(oc.position.x);
-        oc.position.x = MathUtils.clamp(oc.position.x, 80, 590);
+        //60, 610
+        oc.position.x = MathUtils.clamp(oc.position.x, 120, 500);
+        System.out.println(aniSprite2.getX());
+
         for (int i = 0; i < arObstacle.length; i++) {
             if (aniSprite2.isHitS(arObstacle[i], nSizeY2)) {
                 aniSprite2.outOfBounds();
@@ -329,7 +331,7 @@ public class ScrGame4 implements Screen, InputProcessor {
         for (int i = 0; i < arObstacle.length; i++) {
             arObstacle[i].draw(batch);
         }
-        oc.update();
+//        oc.update();
         //Size and Speed Bar
         batch.draw(txBar, Gdx.graphics.getWidth() - 590, Gdx.graphics.getHeight() - 50, 50 * fSpeedBar1, 20);
         batch.draw(txBar, Gdx.graphics.getWidth() - 590, Gdx.graphics.getHeight() - 25, 50 * fSizeBar1, 20);
@@ -451,20 +453,16 @@ public class ScrGame4 implements Screen, InputProcessor {
     }
 
     public void addWall() {
-        if (oc.position.x < 600) {
-            arWall[3].setX(arWall[3].getX() + fSpeed + 1);
-            arWall[0].setX(arWall[0].getX() + fSpeed + 1);
-            arWall[1].setX(arWall[1].getX() + fSpeed + 1);
-            arWall[2].setX(arWall[2].getX() + fSpeed + 1);
-        }
+        arWall[3].setX(arWall[3].getX() + fSpeed + 1);
+        arWall[0].setX(arWall[0].getX() + fSpeed + 1);
+        arWall[1].setX(arWall[1].getX() + fSpeed + 1);
+        arWall[2].setX(arWall[2].getX() + fSpeed + 1);
     }
 
     public void subtractWall() {
-        if (oc.position.x > 70) {
-            arWall[2].setX(arWall[2].getX() - fSpeed - 1);
-            arWall[0].setX(arWall[0].getX() - fSpeed - 1);
-            arWall[1].setX(arWall[1].getX() - fSpeed - 1);
-            arWall[3].setX(arWall[3].getX() - fSpeed - 1);
-        }
+        arWall[2].setX(arWall[2].getX() - fSpeed - 1);
+        arWall[0].setX(arWall[0].getX() - fSpeed - 1);
+        arWall[1].setX(arWall[1].getX() - fSpeed - 1);
+        arWall[3].setX(arWall[3].getX() - fSpeed - 1);
     }
 }

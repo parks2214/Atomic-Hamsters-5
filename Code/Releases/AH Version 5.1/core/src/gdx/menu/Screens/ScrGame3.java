@@ -144,30 +144,30 @@ public class ScrGame3 implements Screen, InputProcessor {
         } else if (Gdx.input.isKeyPressed(Input.Keys.S)) {
             nDir2 = 3;
         }
-        aniSprite2.move(nDir2, fSpeed2, nSizeX2, nSizeY2);
-        aniSprite1.move(nDir1, fSpeed1, nSizeX1, nSizeY1);
+        aniSprite2.move(nDir2);
+        aniSprite1.move(nDir1);
         aniSprite1.animation(nFrame);
         aniSprite2.animation(nFrame);
         for (int i = 0; i < arWall.length; i++) {
-            if (aniSprite2.isHitS(arWall[i], nSizeY2)) {
+            if (aniSprite2.isHitS(arWall[i])) {
                 aniSprite2.outOfBounds();
             }
-            if (aniSprite1.isHitS(arWall[i], nSizeY1)) {
+            if (aniSprite1.isHitS(arWall[i])) {
                 aniSprite1.outOfBounds();
             }
         }
         for (int i = 0; i < arObstacle.length; i++) {
-            if (aniSprite2.isHitS(arObstacle[i], nSizeY2)) {
+            if (aniSprite2.isHitS(arObstacle[i])) {
                 aniSprite2.outOfBounds();
             }
-            if (aniSprite1.isHitS(arObstacle[i], nSizeY1)) {
+            if (aniSprite1.isHitS(arObstacle[i])) {
                 aniSprite1.outOfBounds();
             }
         }
         //pellet stuff
         for (int i = pMaker1.alPellets.size() - 1; i >= 0; i--) {
             Pellet p = pMaker1.alPellets.get(i);
-            if (aniSprite1.isHitS(p, nSizeY1)) {
+            if (aniSprite1.isHitS(p)) {
                 fSpeed1 += 0.5f;
                 System.out.println(fSpeed1);
                 n3Points += 1;

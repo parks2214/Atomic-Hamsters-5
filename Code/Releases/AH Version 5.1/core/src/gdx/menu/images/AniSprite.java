@@ -7,10 +7,10 @@ import com.badlogic.gdx.math.Rectangle;
 
 public class AniSprite extends Sprite {
     public Sprite spTemp;
-    int nFrame = 0, nPos = 0, nDir = 0, nOrigX, nOrigY;
+    int nFrame = 0, nPos = 0, nDir = 0, nOrigX, nOrigY, nSizeX = 50, nSizeY = 50;
     Animation araniSprite[];
-    Texture txSheet,txSheet2;
-    float fDx, fDy;
+    Texture txSheet;
+    float fDx, fDy, fSpeed = 0;
     Rectangle rMouse, rMouseNew;
     Sprite sprMouse;
 
@@ -31,6 +31,9 @@ public class AniSprite extends Sprite {
         fDx = 0;
         fDy = 0;
         nPos = 0;
+        fSpeed = 0;
+        nSizeX = 50;
+        nSizeY = 50;
         setPosition(nOrigX, nOrigY);
     }
 
@@ -41,7 +44,7 @@ public class AniSprite extends Sprite {
         spTemp.setFlip(false, true);
     }
 
-    public void move(int nDir, float fSpeed, int nSizeX, int nSizeY) {
+    public void move(int nDir) {
         //Direction instruction for mouse 1
         if (nDir == 0) {
             fDy = 0;
@@ -65,8 +68,8 @@ public class AniSprite extends Sprite {
         setSize(nSizeX, nSizeY);
     }
 
-    public boolean isHitS(Sprite spr, int nSizeY) {
-        getThisRect(nSizeY);
+    public boolean isHitS(Sprite spr) {
+        getThisRect();
         return rMouseNew.overlaps(spr.getBoundingRectangle());
     }
 
@@ -75,7 +78,7 @@ public class AniSprite extends Sprite {
         setY(getY() - fDy);
     }
 
-    public Rectangle getThisRect(int nSizeY) {
+    public Rectangle getThisRect() {
         rMouse = spTemp.getBoundingRectangle();
         rMouseNew = rMouse;
         rMouseNew.setY(rMouse.getY() + 20 + ((nSizeY - 50) / 3));
@@ -103,6 +106,25 @@ public class AniSprite extends Sprite {
         }
         sprMouse.setPosition(200, 200);
         return araniMouse;
+    }
+
+    public void increaseSpeed() {
+        fSpeed += 0.5f;
+    }
+
+    public void decreaseSpeed() {
+        fSpeed -= 0.5f;
+    }
+
+    public void increaseSize() {
+        if (nSizeX < 100 && nSizeY < 100) {
+            nSizeX += 3;
+            nSizeY += 3;
+        }
+    }
+
+    public float getSpeed() {
+        return fSpeed;
     }
 }
 
