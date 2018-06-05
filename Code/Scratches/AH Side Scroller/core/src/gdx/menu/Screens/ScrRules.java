@@ -52,8 +52,8 @@ public class ScrRules implements Screen, InputProcessor {
         btnMenu.draw(batch);
         btnQuit.draw(batch);
         font.draw(batch, "The Rules are simple. Eat the most pellets without running into each other.", 10, 70);
-        font.draw(batch,"Collecting pellets adds speed and zize to your hamster.",10,140);
-        font.draw(batch,"For Level 1, the hamster who collects the most pellets before the two hamsters hit",10,210);
+        font.draw(batch,"Collecting pellets adds speed and zize to your aniSprite.",10,140);
+        font.draw(batch,"For Level 1, the aniSprite who collects the most pellets before the two hamsters hit",10,210);
         font.draw(batch,"each other wins.",10, 230);
         font.draw(batch, "If either of the hamsters has at least 10 points by the end of Level 1, you can move on to Level 2", 10, 300);
         font.draw(batch, "on to Level 2", 10, 320);
