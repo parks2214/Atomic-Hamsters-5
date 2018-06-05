@@ -7,7 +7,6 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Intersector;
@@ -36,7 +35,6 @@ public class ScrGame2 implements Screen, InputProcessor {
     float fSizeBar1 = 1, fSizeBar2 = 1, fSpeedBar1 = 1, fSpeedBar2 = 1;
     BitmapFont font, font2;
     AniSprite aniSprite, aniSprite2;
-    Hamster hamster, hamster2;
 
     public ScrGame2(GamMenu _gamMenu) {
         gamMenu = _gamMenu;
@@ -62,37 +60,28 @@ public class ScrGame2 implements Screen, InputProcessor {
         // Choice between which sprite they take
         nChoice = ScrAnimalChoice.nChoice;
         nChoice2 = ScrAnimalChoice2.nChoice2;
+
         if (nChoice == 1) {
             txSheet = new Texture("sprmouse.png");
-            aniSprite = new AniSprite(txSheet);
             txCornerMouse = new Texture("btnMouse.png");
         } else if (nChoice == 2) {
             txSheet = new Texture("sprmouse2.png");
-            aniSprite = new AniSprite(txSheet);
             txCornerMouse = new Texture("btnMouse2.png");
         }
         if (nChoice2 == 1) {
             txSheet2 = new Texture ("sprmouse.png");
-            aniSprite2 = new AniSprite(txSheet2);
             txCornerMouse2 = new Texture("btnMouse.png");
         } else if (nChoice2 == 2) {
             txSheet2 = new Texture("sprmouse2.png");
-            aniSprite2 = new AniSprite(txSheet2);
             txCornerMouse2 = new Texture("btnMouse2.png");
         }
-        aniSprite.animate();
-        aniSprite2.animate();
-        hamster = new Hamster(100, 100, txSheet);
-        hamster2 = new Hamster(490, 330, txSheet2);
+        aniSprite = new AniSprite(100, 100, txSheet);
+        aniSprite2 = new AniSprite(490, 330, txSheet2);
+        aniSprite.Animate(txSheet);
         txTextbox1 = new Texture("Textbox.png");
         txTextbox2 = new Texture("Textbox2.png");
         arsprTextbox[0] = new Sprite(txTextbox1);
         arsprTextbox[1] = new Sprite(txTextbox2);
-        for (int i = 0; i < arsprTextbox.length; i++) {
-            arsprTextbox[i].setFlip(false, true);
-            arsprTextbox[i].setSize(300, 125);
-            arsprTextbox[i].setPosition(Gdx.graphics.getWidth() / 2 - arsprTextbox[i].getWidth() / 2, 0);
-        }
         txMap = new Texture("pluto.jpg");
         sprMap = new Sprite(txMap);
         sprMap.setScale(0.4f, 0.5f);
@@ -130,7 +119,7 @@ public class ScrGame2 implements Screen, InputProcessor {
             nFrame = 0;
         }
         nFrame++;
-        //Input for hamster 1
+        //Input for aniSprite 1
         if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
             nDir = 2;
         } else if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
@@ -140,7 +129,7 @@ public class ScrGame2 implements Screen, InputProcessor {
         } else if (Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
             nDir = 3;
         }
-        //Input for hamster 2
+        //Input for aniSprite 2
         if (Gdx.input.isKeyPressed(Input.Keys.A)) {
             nDir2 = 2;
         } else if (Gdx.input.isKeyPressed(Input.Keys.D)) {
@@ -150,22 +139,22 @@ public class ScrGame2 implements Screen, InputProcessor {
         } else if (Gdx.input.isKeyPressed(Input.Keys.S)) {
             nDir2 = 3;
         }
-        hamster2.move(nDir2, fSpeed2, nSizeX2, nSizeY2);
-        hamster.move(nDir, fSpeed, nSizeX, nSizeY);
-        hamster.animation(nFrame);
-        hamster2.animation(nFrame);
+        aniSprite2.move(nDir2, fSpeed2, nSizeX2, nSizeY2);
+        aniSprite.move(nDir, fSpeed, nSizeX, nSizeY);
+        aniSprite.animation(nFrame);
+        aniSprite2.animation(nFrame);
         for (int i = 0; i < arWall.length; i++) {
-            if (hamster2.isHitS(arWall[i], nSizeY2)) {
-                hamster2.outOfBounds();
+            if (aniSprite2.isHitS(arWall[i], nSizeY2)) {
+                aniSprite2.outOfBounds();
             }
-            if (hamster.isHitS(arWall[i], nSizeY)) {
-                hamster.outOfBounds();
+            if (aniSprite.isHitS(arWall[i], nSizeY)) {
+                aniSprite.outOfBounds();
             }
         }
         //pellet stuff
         for (int i = pMaker.alPellets.size() - 1; i >= 0; i--) {
             Pellet p = pMaker.alPellets.get(i);
-            if (hamster.isHitS(p, nSizeY)) {
+            if (aniSprite.isHitS(p, nSizeY)) {
                 fSpeed += 0.5f;
                 System.out.println(fSpeed);
                 n2Points += 1;
@@ -179,7 +168,7 @@ public class ScrGame2 implements Screen, InputProcessor {
                 }
                 // mouse catche pellet
                 pMaker.removePellet(p);
-            }if (hamster2.isHitS(p, nSizeY2)) {
+            }if (aniSprite2.isHitS(p, nSizeY2)) {
                 fSpeed2 += 0.5f;
                 System.out.println(fSpeed2);
                 n2Points2 += 1;
@@ -198,13 +187,13 @@ public class ScrGame2 implements Screen, InputProcessor {
         //poison stuff
         for (int i = pMaker2.alPellets.size() - 1; i >= 0; i--) {
             Pellet p2 = pMaker2.alPellets.get(i);
-            if (hamster.isHitS(p2, nSizeY)) {
+            if (aniSprite.isHitS(p2, nSizeY)) {
                 fSpeed -= 0.5f;
                 System.out.println(fSpeed);
                 fSpeedBar1 -= 0.1;
                 // mouse catche pellet
                 pMaker2.removePellet(p2);
-            }if (hamster2.isHitS(p2,nSizeY2)) {
+            }if (aniSprite2.isHitS(p2,nSizeY2)) {
                 fSpeed2 -= 0.5f;
                 System.out.println(fSpeed2);
                 fSpeedBar2 -= 0.1;
@@ -213,7 +202,7 @@ public class ScrGame2 implements Screen, InputProcessor {
             }
         }
         //Hit detection between mice
-        if (Intersector.overlaps(hamster.getThisRect(nSizeY), hamster2.getThisRect(nSizeY2))) {
+        if (Intersector.overlaps(aniSprite.getThisRect(nSizeY), aniSprite2.getThisRect(nSizeY2))) {
             if ((nDir == 0 && nDir2 == 2) || (nDir == 2 && nDir2 == 2)) {
                 if (nSizeX > nSizeX2) {
                     nWin2 = 1;
@@ -269,8 +258,8 @@ public class ScrGame2 implements Screen, InputProcessor {
         sprCornerMouse2.draw(batch);
         pMaker.draw(batch);
         pMaker2.draw(batch);
-        hamster.spTemp.draw(batch);
-        hamster2.spTemp.draw(batch);
+        aniSprite.spTemp.draw(batch);
+        aniSprite2.spTemp.draw(batch);
         btnMenu.draw(batch);
         btnQuit.draw(batch);
         batch.end();
@@ -319,8 +308,8 @@ public class ScrGame2 implements Screen, InputProcessor {
             if (isHitB(screenX, screenY, btnMenu)) {
                 gamMenu.updateState(0);
                 System.out.println("Hit Menu");
-                hamster.reset();
-                hamster2.reset();
+                aniSprite.reset();
+                aniSprite2.reset();
                 n2Points = 0;
                 n2Points2 = 0;
                 nWin2 = 0;

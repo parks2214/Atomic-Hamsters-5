@@ -12,7 +12,6 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import gdx.menu.GamMenu;
-import gdx.menu.images.AniSprite;
 import gdx.menu.images.Button;
 import gdx.menu.images.Wall;
 
@@ -31,7 +30,6 @@ public class ScrAniHit implements Screen, InputProcessor {
     Wall[] arWall = new Wall[4];
     boolean arbDirection[] = new boolean[4];
     float fSpeed = 1;
-    AniSprite aniSprite, aniSprite2;
 
     public ScrAniHit(GamMenu _gamMenu) {
         gamMenu = _gamMenu;
