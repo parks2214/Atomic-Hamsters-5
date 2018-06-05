@@ -24,7 +24,6 @@ public class ScrMenu implements Screen, InputProcessor {
     SpriteBatch batch;
     Sprite sprBackground;
     AniSprite aniSprite1;
-    AniSprite Ham1;
     int nFrame,nPos;
     int nDir = 0, nSizeX = 50, nSizeY = 50,nCount=0;
     float fSpeed = 0;
@@ -55,7 +54,7 @@ public class ScrMenu implements Screen, InputProcessor {
         sprBackground.setScale(0.7f,0.8f);
         //AniSprite stuff
         txSheet = new Texture("sprmouse.png");
-        Ham1 = new AniSprite(150, 325, txSheet);
+        aniSprite1 = new AniSprite(150, 325, txSheet);
         nFrame = 0;
         nPos = 0;
         Gdx.input.setInputProcessor(this);
@@ -83,8 +82,8 @@ public class ScrMenu implements Screen, InputProcessor {
         }
         nCount++;
         nFrame++;
-        Ham1.move(nDir, fSpeed, nSizeX, nSizeY);
-        Ham1.animation(nFrame);
+        aniSprite1.move(nDir, fSpeed, nSizeX, nSizeY);
+        aniSprite1.animation(nFrame);
         //Drawing stuff
         batch.begin();
         batch.setProjectionMatrix(oc.combined);
@@ -95,7 +94,7 @@ public class ScrMenu implements Screen, InputProcessor {
         btnQuit.draw(batch);
         btnRules.draw(batch);
         btnGame.draw(batch);
-        Ham1.spTemp.draw(batch);
+        aniSprite1.spTemp.draw(batch);
         batch.end();
     }
 

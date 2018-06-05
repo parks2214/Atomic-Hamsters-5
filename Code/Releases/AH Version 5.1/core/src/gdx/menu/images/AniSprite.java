@@ -9,7 +9,7 @@ public class AniSprite extends Sprite {
     public Sprite spTemp;
     int nFrame = 0, nPos = 0, nDir = 0, nOrigX, nOrigY;
     Animation araniSprite[];
-    Texture txSheet,txSheet2;
+    Texture txSheet;
     float fDx, fDy;
     Rectangle rMouse, rMouseNew;
     Sprite sprMouse;
