@@ -10,7 +10,11 @@ public class AniSprite extends Sprite {
     int nFrame = 0, nPos = 0, nDir = 0, nOrigX, nOrigY, nSizeX = 50, nSizeY = 50;
     Animation araniSprite[];
     Texture txSheet;
+<<<<<<< HEAD
     float fDx, fDy, fSpeed = 0;
+=======
+    float fDx, fDy;
+>>>>>>> master
     Rectangle rMouse, rMouseNew;
     Sprite sprMouse;
 
