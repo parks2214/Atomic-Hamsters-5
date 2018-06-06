@@ -23,10 +23,9 @@ public class ScrMenu implements Screen, InputProcessor {
     OrthographicCamera oc;
     SpriteBatch batch;
     Sprite sprBackground;
-    AniSprite aniSprite1;
     int nFrame,nPos;
-    int nDir = 0, nSizeX = 50, nSizeY = 50,nCount=0;
-    float fSpeed = 0;
+    int nDir = 0, nCount=0;
+    AniSprite aniMouse;
 
     public ScrMenu(GamMenu _gamMenu) {  //Referencing the main class.
         gamMenu = _gamMenu;
@@ -54,7 +53,7 @@ public class ScrMenu implements Screen, InputProcessor {
         sprBackground.setScale(0.7f,0.8f);
         //AniSprite stuff
         txSheet = new Texture("sprmouse.png");
-        aniSprite1 = new AniSprite(150, 325, txSheet);
+        aniMouse = new AniSprite(150, 325, txSheet);
         nFrame = 0;
         nPos = 0;
         Gdx.input.setInputProcessor(this);
@@ -82,13 +81,8 @@ public class ScrMenu implements Screen, InputProcessor {
         }
         nCount++;
         nFrame++;
-<<<<<<< HEAD
-        Ham1.move(nDir, nSizeX, nSizeY);
-        Ham1.animation(nFrame);
-=======
-        aniSprite1.move(nDir, fSpeed, nSizeX, nSizeY);
-        aniSprite1.animation(nFrame);
->>>>>>> master
+        aniMouse.move(nDir);
+        aniMouse.animation(nFrame);
         //Drawing stuff
         batch.begin();
         batch.setProjectionMatrix(oc.combined);
@@ -99,7 +93,7 @@ public class ScrMenu implements Screen, InputProcessor {
         btnQuit.draw(batch);
         btnRules.draw(batch);
         btnGame.draw(batch);
-        aniSprite1.spTemp.draw(batch);
+        aniMouse.spTemp.draw(batch);
         batch.end();
     }
 

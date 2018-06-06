@@ -29,7 +29,7 @@ public class ScrGame implements Screen, InputProcessor {
     static public int nInd = 0;
     PelletMaker pMaker;
     int nTimer=0;
-    AniSprite aniSprite1, aniSprite2;
+    AniSprite aniMouse1, aniMouse2;
     public ScrGame(GamMenu _gamMenu) {
         gamMenu = _gamMenu;
     }
@@ -55,8 +55,8 @@ public class ScrGame implements Screen, InputProcessor {
         } else if (nChoice2 == 2) {
             txSheet2 = new Texture("sprmouse2.png");
         }
-        aniSprite1 = new AniSprite(100, 100, txSheet1);
-        aniSprite2 = new AniSprite(490, 330, txSheet2);
+        aniMouse1 = new AniSprite(100, 100, txSheet1);
+        aniMouse2 = new AniSprite(490, 330, txSheet2);
        //Background
         txMap = new Texture("jupiter.jpg");
         sprMap = new Sprite(txMap);
@@ -106,20 +106,20 @@ public class ScrGame implements Screen, InputProcessor {
         } else if (Gdx.input.isKeyPressed(Input.Keys.S)) {
             nDir2 = 3;
         }
-        aniSprite2.move(nDir2);
-        aniSprite1.move(nDir1);
-        aniSprite1.animation(nFrame);
-        aniSprite2.animation(nFrame);
+        aniMouse2.move(nDir2);
+        aniMouse1.move(nDir1);
+        aniMouse1.animation(nFrame);
+        aniMouse2.animation(nFrame);
         for (int i = 0; i < arWall.length; i++) {
-            if (aniSprite2.isHitS(arWall[i])) {
-                aniSprite2.outOfBounds();
+            if (aniMouse2.isHitS(arWall[i])) {
+                aniMouse2.outOfBounds();
             }
-            if (aniSprite1.isHitS(arWall[i])) {
-                aniSprite1.outOfBounds();
+            if (aniMouse1.isHitS(arWall[i])) {
+                aniMouse1.outOfBounds();
             }
         }
         //Hit detection between mice
-        if (Intersector.overlaps(aniSprite1.getThisRect(), aniSprite2.getThisRect())) {
+        if (Intersector.overlaps(aniMouse1.getThisRect(), aniMouse2.getThisRect())) {
             if (nPoints > nPoints2) {
                 nWin = 1;
             } else if (nPoints2 > nPoints) {
@@ -127,8 +127,8 @@ public class ScrGame implements Screen, InputProcessor {
             } else {
                 nWin = 0;
             }
-            aniSprite1.reset();
-            aniSprite2.reset();
+            aniMouse1.reset();
+            aniMouse2.reset();
             System.out.println("Hit");
             gamMenu.updateState(6);
             nPoints = 0;
@@ -138,20 +138,20 @@ public class ScrGame implements Screen, InputProcessor {
         }
         for (int i = pMaker.alPellets.size() - 1; i >= 0; i--) {
             Pellet p = pMaker.alPellets.get(i);
-            if (aniSprite2.isHitS(p)) {
-                aniSprite2.increaseSpeed();
+            if (aniMouse2.isHitS(p)) {
+                aniMouse2.increaseSpeed();
                 nTimer=240;
                 nPoints += 1;
                 System.out.println("Points for first: " + nPoints);
-                aniSprite2.increaseSize();
+                aniMouse2.increaseSize();
                 // mouse catche pellet
                 pMaker.removePellet(p);
-            } if (aniSprite1.isHitS(p)) {
-                aniSprite1.increaseSpeed();
+            } if (aniMouse1.isHitS(p)) {
+                aniMouse1.increaseSpeed();
                 nTimer=240;
                 nPoints2 += 1;
                 System.out.println("Points for first: " + nPoints2);
-                aniSprite1.increaseSize();
+                aniMouse1.increaseSize();
                 // mouse catche pellet
                 pMaker.removePellet(p);
             }
@@ -169,8 +169,8 @@ public class ScrGame implements Screen, InputProcessor {
         }
         sprMap.draw(batch);
         pMaker.draw(batch);
-        aniSprite1.spTemp.draw(batch);
-        aniSprite2.spTemp.draw(batch);
+        aniMouse1.spTemp.draw(batch);
+        aniMouse2.spTemp.draw(batch);
         btnMenu.draw(batch);
         btnQuit.draw(batch);
         batch.end();
@@ -219,8 +219,8 @@ public class ScrGame implements Screen, InputProcessor {
             if (isHitB(screenX, screenY, btnMenu)) {
                 gamMenu.updateState(0);
                 System.out.println("Hit Menu");
-                aniSprite1.reset();
-                aniSprite2.reset();
+                aniMouse1.reset();
+                aniMouse2.reset();
                 nPoints = 0;
                 nPoints2 = 0;
                 nWin = 0;

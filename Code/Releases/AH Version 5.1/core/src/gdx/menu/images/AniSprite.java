@@ -7,16 +7,12 @@ import com.badlogic.gdx.math.Rectangle;
 
 public class AniSprite extends Sprite {
     public Sprite spTemp;
-    int nFrame = 0, nPos = 0, nDir = 0, nOrigX, nOrigY, nSizeX = 50, nSizeY = 50;
-    Animation araniSprite[];
-    Texture txSheet;
-<<<<<<< HEAD
-    float fDx, fDy, fSpeed = 0;
-=======
-    float fDx, fDy;
->>>>>>> master
-    Rectangle rMouse, rMouseNew;
-    Sprite sprMouse;
+    private int nFrame = 0, nPos = 0, nOrigX, nOrigY, nSizeX = 50, nSizeY = 50;
+    private Animation araniSprite[];
+    private Texture txSheet;
+    private float fDx, fDy, fSpeed = 0;
+    private Rectangle rMouse, rMouseNew;
+    private Sprite sprite;
 
     public AniSprite(int nX, int nY, Texture texture) {
         txSheet = texture;
@@ -31,7 +27,6 @@ public class AniSprite extends Sprite {
     }
 
     public void reset() {
-        nDir = 0;
         fDx = 0;
         fDy = 0;
         nPos = 0;
@@ -102,13 +97,13 @@ public class AniSprite extends Sprite {
             for (int j = 0; j < 4; j++) {
                 nSx = j * nW;
                 nSy = i * nH;
-                sprMouse = new Sprite(txSheet2, nSx, nSy, nW, nH);
-                sprMouse.setFlip(false, true);
-                arSprMouse[j] = new Sprite(sprMouse);
+                sprite = new Sprite(txSheet2, nSx, nSy, nW, nH);
+                sprite.setFlip(false, true);
+                arSprMouse[j] = new Sprite(sprite);
             }
             araniMouse[i] = new Animation(0.8f, arSprMouse);
         }
-        sprMouse.setPosition(200, 200);
+        sprite.setPosition(200, 200);
         return araniMouse;
     }
 
@@ -124,6 +119,13 @@ public class AniSprite extends Sprite {
         if (nSizeX < 100 && nSizeY < 100) {
             nSizeX += 3;
             nSizeY += 3;
+        }
+    }
+
+    public void decreaseSize() {
+        if (nSizeX > 1 && nSizeY > 1) {
+            nSizeX -= 3;
+            nSizeY -= 3;
         }
     }
 

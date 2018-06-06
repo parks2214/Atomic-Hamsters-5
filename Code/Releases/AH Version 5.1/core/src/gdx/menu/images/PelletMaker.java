@@ -15,9 +15,9 @@ import java.util.ArrayList;
  * @author parks2214
  */
 public class PelletMaker {
-    int nCounter=5,nActual=0;
+    private int nCounter=5,nActual=0;
     public ArrayList <Pellet> alPellets = new ArrayList<Pellet>();
-    Texture texture;
+    private Texture texture;
     public PelletMaker(int nW, int nH, String sFileName) {
         texture = (new Texture(Gdx.files.internal(sFileName)));  //For example "SignB.jpg"
     }
