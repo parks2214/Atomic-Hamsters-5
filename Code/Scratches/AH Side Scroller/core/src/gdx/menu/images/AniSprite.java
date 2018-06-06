@@ -7,12 +7,12 @@ import com.badlogic.gdx.math.Rectangle;
 
 public class AniSprite extends Sprite {
     public Sprite spTemp;
-    int nFrame = 0, nPos = 0, nDir = 0, nOrigX, nOrigY;
-    Animation araniSprite[];
-    Texture txSheet,txSheet2;
-    float fDx, fDy;
-    Rectangle rMouse, rMouseNew;
-    Sprite sprMouse;
+    private int nFrame = 0, nPos = 0, nOrigX, nOrigY, nSizeX = 50, nSizeY = 50;
+    private Animation araniSprite[];
+    private Texture txSheet;
+    private float fDx, fDy, fSpeed = 0;
+    private Rectangle rMouse, rMouseNew;
+    private Sprite sprite;
 
     public AniSprite(int nX, int nY, Texture texture) {
         txSheet = texture;
@@ -27,10 +27,12 @@ public class AniSprite extends Sprite {
     }
 
     public void reset() {
-        nDir = 0;
         fDx = 0;
         fDy = 0;
         nPos = 0;
+        fSpeed = 0;
+        nSizeX = 50;
+        nSizeY = 50;
         setPosition(nOrigX, nOrigY);
     }
 
@@ -41,7 +43,7 @@ public class AniSprite extends Sprite {
         spTemp.setFlip(false, true);
     }
 
-    public void move(int nDir, float fSpeed, int nSizeX, int nSizeY) {
+    public void move(int nDir) {
         //Direction instruction for mouse 1
         if (nDir == 0) {
             fDy = 0;
@@ -65,8 +67,8 @@ public class AniSprite extends Sprite {
         setSize(nSizeX, nSizeY);
     }
 
-    public boolean isHitS(Sprite spr, int nSizeY) {
-        getThisRect(nSizeY);
+    public boolean isHitS(Sprite spr) {
+        getThisRect();
         return rMouseNew.overlaps(spr.getBoundingRectangle());
     }
 
@@ -75,7 +77,7 @@ public class AniSprite extends Sprite {
         setY(getY() - fDy);
     }
 
-    public Rectangle getThisRect(int nSizeY) {
+    public Rectangle getThisRect() {
         rMouse = spTemp.getBoundingRectangle();
         rMouseNew = rMouse;
         rMouseNew.setY(rMouse.getY() + 20 + ((nSizeY - 50) / 3));
@@ -95,14 +97,40 @@ public class AniSprite extends Sprite {
             for (int j = 0; j < 4; j++) {
                 nSx = j * nW;
                 nSy = i * nH;
-                sprMouse = new Sprite(txSheet2, nSx, nSy, nW, nH);
-                sprMouse.setFlip(false, true);
-                arSprMouse[j] = new Sprite(sprMouse);
+                sprite = new Sprite(txSheet2, nSx, nSy, nW, nH);
+                sprite.setFlip(false, true);
+                arSprMouse[j] = new Sprite(sprite);
             }
             araniMouse[i] = new Animation(0.8f, arSprMouse);
         }
-        sprMouse.setPosition(200, 200);
+        sprite.setPosition(200, 200);
         return araniMouse;
+    }
+
+    public void increaseSpeed() {
+        fSpeed += 0.5f;
+    }
+
+    public void decreaseSpeed() {
+        fSpeed -= 0.5f;
+    }
+
+    public void increaseSize() {
+        if (nSizeX < 100 && nSizeY < 100) {
+            nSizeX += 3;
+            nSizeY += 3;
+        }
+    }
+
+    public void decreaseSize() {
+        if (nSizeX > 1 && nSizeY > 1) {
+            nSizeX -= 3;
+            nSizeY -= 3;
+        }
+    }
+
+    public float getSpeed() {
+        return fSpeed;
     }
 }
 
