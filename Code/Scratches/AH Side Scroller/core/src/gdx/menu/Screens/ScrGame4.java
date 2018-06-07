@@ -180,29 +180,30 @@ public class ScrGame4 implements Screen, InputProcessor {
         batch.setProjectionMatrix(oc.combined);
         for (int i = 0; i < arWall.length; i++) {
             if (aniMouse2.isHitS(arWall[i])) {
-                if (i == 2 && aniMouse2.getSpeed() >= aniMouse1.getSpeed()) {
+                aniMouse2.outOfBounds();
+                if (i == 2 && aniMouse2.getSpeed() > aniMouse1.getSpeed() && oc.position.x >= -27) {
                     subtractWall(aniMouse2.getSpeed());
                     oc.position.set(MathUtils.round(aniMouse2.spTemp.getX() + 270), MathUtils.round(Gdx.graphics.getHeight() / 2), 0);
-                } else if (i == 3 && aniMouse2.getSpeed() >= aniMouse1.getSpeed()) {
+                } else if (i == 3 && aniMouse2.getSpeed() > aniMouse1.getSpeed() && oc.position.x <= 587) {
                     addWall(aniMouse2.getSpeed());
-                    oc.position.set(MathUtils.round(aniMouse2.spTemp.getX() - 220), MathUtils.round(Gdx.graphics.getHeight() / 2), 0);
+                    oc.position.set(MathUtils.round(aniMouse2.spTemp.getX() - 215), MathUtils.round(Gdx.graphics.getHeight() / 2), 0);
                 }
-                aniMouse2.outOfBounds();
+                System.out.println("Hamster2 hit");
             }
             if (aniMouse1.isHitS(arWall[i])) {
-                if (i == 2 && aniMouse1.getSpeed() >= aniMouse2.getSpeed()) {
+                aniMouse1.outOfBounds();
+                if (i == 2 && aniMouse1.getSpeed() > aniMouse2.getSpeed() && oc.position.x >= -27) {
                     subtractWall(aniMouse1.getSpeed());
                     oc.position.set(MathUtils.round(aniMouse1.spTemp.getX() + 270), MathUtils.round(Gdx.graphics.getHeight() / 2), 0);
-                } else if (i == 3 && aniMouse1.getSpeed() >= aniMouse2.getSpeed()) {
+                } else if (i == 3 && aniMouse1.getSpeed() > aniMouse2.getSpeed() && oc.position.x <= 587) {
                     addWall(aniMouse1.getSpeed());
-                    oc.position.set(MathUtils.round(aniMouse1.spTemp.getX() - 220), MathUtils.round(Gdx.graphics.getHeight() / 2), 0);
+                    oc.position.set(MathUtils.round(aniMouse1.spTemp.getX() - 215), MathUtils.round(Gdx.graphics.getHeight() / 2), 0);
                 }
-                aniMouse1.outOfBounds();
+                System.out.println("Hamster1 hit");
             }
         }
-        System.out.println(oc.position.x);
+        //System.out.println(oc.position.x);
         oc.position.x = MathUtils.clamp(oc.position.x, -30, 640);
-
 
         for (int i = 0; i < arWall.length; i++) {
             if (aniMouse2.isHitS(arWall[i])) {
@@ -317,7 +318,7 @@ public class ScrGame4 implements Screen, InputProcessor {
         for (int i = 0; i < arWall.length; i++) {
             arWall[i].draw(batch);
         }
-        sprMap.draw(batch);
+        //sprMap.draw(batch);
         for (int i = 0; i < arObstacle.length; i++) {
             arObstacle[i].draw(batch);
         }
@@ -451,5 +452,4 @@ public class ScrGame4 implements Screen, InputProcessor {
         arWall[1].setX(arWall[1].getX() - fSpeed - 1);
         arWall[3].setX(arWall[3].getX() - fSpeed - 1);
     }
-
 }
