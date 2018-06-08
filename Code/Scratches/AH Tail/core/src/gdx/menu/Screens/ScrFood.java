@@ -24,7 +24,7 @@ public class ScrFood implements Screen, InputProcessor {
     SpriteBatch batch;
     Sprite sprNamSign, sprHamP, sprBox1, sprBox2, sprMouse, sprAni;
     int nTrig = 0; //Trigger variable for sign
-    int nFrame, nPos, nW, nH, nSx, nSy, nX = 100, nY = 100, nSizeX = 50, nSizeY = 50;
+    int nFrame, nPos, nW, nH, nSx, nSy, nX = 110, nY = 100, nSizeX = 50, nSizeY = 50;
     float fSpeed = 1;
     Animation araniMouse[];
     TextureRegion trTemp;
@@ -79,7 +79,7 @@ public class ScrFood implements Screen, InputProcessor {
                 nSx = j * nW;
                 nSy = i * nH;
                 sprMouse = new Sprite(txSheet, nSx, nSy, nW, nH);
-                sprMouse.setFlip(false, true);
+                sprMouse.setFlip(true, false);
                 arSprMouse[j] = new Sprite(sprMouse);
             }
             araniMouse[i] = new Animation(0.8f, arSprMouse);
@@ -103,7 +103,7 @@ public class ScrFood implements Screen, InputProcessor {
         trTemp = (TextureRegion) araniMouse[nPos].getKeyFrame(nFrame, false);
         if (isHitS(sprAni, sprHamP) && nTrig == 0) {
             System.out.println("He hecking ate it");
-            fSpeed += 0.5f;
+            fSpeed += 9.5f;
             System.out.println(fSpeed);
             nTrig = 1;
             if (nSizeX < 100 && nSizeY < 100) {
@@ -121,12 +121,12 @@ public class ScrFood implements Screen, InputProcessor {
         }
         if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
             arbDirection[0] = true;
-            arbDirection[1] = false;
+            arbDirection[1] = true;
             arbDirection[2] = false;
             arbDirection[3] = false;
         } else if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
             arbDirection[0] = false;
-            arbDirection[1] = true;
+            arbDirection[1] = false;
             arbDirection[2] = false;
             arbDirection[3] = false;
         } else if (Gdx.input.isKeyPressed(Input.Keys.UP)) {
@@ -135,13 +135,32 @@ public class ScrFood implements Screen, InputProcessor {
             arbDirection[2] = true;
             arbDirection[3] = false;
         } else if (Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
-            arbDirection[0] = false;
+            arbDirection[0] = true;
             arbDirection[1] = false;
             arbDirection[2] = false;
             arbDirection[3] = true;
         }
 
         //Direction instructions
+        DirInstruct();
+
+
+        batch.begin();
+        batch.setProjectionMatrix(oc.combined);
+        btnMenu.draw(batch);
+        sprNamSign.draw(batch);
+        sprHamP.draw(batch);
+        btnQuit.draw(batch);
+        batch.draw(trTemp, fSx, fSy, nSizeX, nSizeY);
+        if (nTrig == 1) {
+            sprBox1.draw(batch);
+        } else if (nTrig == 3) {
+            sprBox2.draw(batch);
+        }
+        batch.end();
+    }
+
+    private void DirInstruct() {
         if (arbDirection[0] == true) {
             sprAni.setX(sprAni.getX() - fSpeed);
             nX = nX -= fSpeed;
@@ -166,21 +185,6 @@ public class ScrFood implements Screen, InputProcessor {
             nPos = 0;
             nFrame++;
         }
-
-
-        batch.begin();
-        batch.setProjectionMatrix(oc.combined);
-        btnMenu.draw(batch);
-        sprNamSign.draw(batch);
-        sprHamP.draw(batch);
-        btnQuit.draw(batch);
-        batch.draw(trTemp, fSx, fSy, nSizeX, nSizeY);
-        if (nTrig == 1) {
-            sprBox1.draw(batch);
-        } else if (nTrig == 3) {
-            sprBox2.draw(batch);
-        }
-        batch.end();
     }
 
     /*

@@ -37,10 +37,10 @@ public class ScrTail implements Screen, InputProcessor {
         txBar = new Texture ("The bar.png");
         nX1=580;
         nY1=Gdx.graphics.getHeight()/2;
-        nY2=nY1;
-        nY3=nY1;
+        //nY2=nY1;
+        //nY3=nY2;
         nY4=nY1;
-        nX2=nX1;
+        nX2=nX1-nDiff1;
         nX3=nX2;
         btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Menu.jpg");
         btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Quit.jpg");
@@ -50,31 +50,22 @@ public class ScrTail implements Screen, InputProcessor {
     @Override
     public void render(float delta) {
 
-        if (Gdx.input.isKeyPressed(Input.Keys.A)) {
-            nX1--;
-        } else if (Gdx.input.isKeyPressed(Input.Keys.D)) {
-            nX1++;
-        } else if (Gdx.input.isKeyPressed(Input.Keys.W)) {
-            nY1--;
-        } else if (Gdx.input.isKeyPressed(Input.Keys.S)) {
-            nY1++;
-        }
-
         Gdx.gl.glClearColor(0, 0, 0, 0);//Black background
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         nX2=nX1-nDiff1;
         nX3=nX2-20;
-        if (nX1==599) {
+        if (nX1>=600) {
             for (int i=0;i<=5;i++){
                 nY1--;
             }
-            nDiff1--;
+            nDiff1-=5;
            if(nDiff1<=0) {
                nDiff1=0;
                nY2=nY1-nDiff2;
+               nY3=nY2-nDiff2;
            }
-            nX1=598;
-        } else if (nY1==20) {
+            nX1=595;
+        } else if (nY1<=20) {
             for (int i=0;i<=60;i++){
                 nX1--;
             }
@@ -117,7 +108,15 @@ public class ScrTail implements Screen, InputProcessor {
 
     @Override
     public boolean keyDown(int keycode) {
-
+        if (Gdx.input.isKeyPressed(Input.Keys.A)) {
+            nX1-=5;
+        } else if (Gdx.input.isKeyPressed(Input.Keys.D)) {
+            nX1+=5;
+        } else if (Gdx.input.isKeyPressed(Input.Keys.W)) {
+            nY1-=5;
+        } else if (Gdx.input.isKeyPressed(Input.Keys.S)) {
+            nY1+=5;
+        }
         return false;
     }
 

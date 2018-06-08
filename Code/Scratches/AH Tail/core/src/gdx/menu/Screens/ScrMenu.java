@@ -38,13 +38,7 @@ public class ScrMenu implements Screen, InputProcessor {
         oc.update();
 
         //Buttons
-        batch = new SpriteBatch();
-        btnPlay = new Button(100, 50, 0, Gdx.graphics.getHeight() - 50, "Tail Button.png");
-        btnAni = new Button(100, 50, Gdx.graphics.getWidth() - 100, Gdx.graphics.getHeight() - 50, "Animation.jpg");
-        btnSign = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Food.png");
-        btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Quit.jpg");
-        btnRules = new Button(100, 50, Gdx.graphics.getWidth()/2 - 50, 0, "Rules.png");
-        btnGame = new Button(100, 50, 0, 0, "Game.png");
+        InitButton();
         //Background
         txBackground = new Texture ("earth2.jpg");
         sprBackground = new Sprite (txBackground);
@@ -59,6 +53,16 @@ public class ScrMenu implements Screen, InputProcessor {
         Gdx.input.setInputProcessor(this);
     }
 
+    private void InitButton() {
+        batch = new SpriteBatch();
+        btnPlay = new Button(100, 50, 0, Gdx.graphics.getHeight() - 50, "Tail Button.png");
+        btnAni = new Button(100, 50, Gdx.graphics.getWidth() - 100, Gdx.graphics.getHeight() - 50, "Animation.jpg");
+        btnSign = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Food.png");
+        btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Quit.jpg");
+        btnRules = new Button(100, 50, Gdx.graphics.getWidth()/2 - 50, 0, "Rules.png");
+        btnGame = new Button(100, 50, 0, 0, "Game.png");
+    }
+
     @Override
     public void render(float delta) {
         //Camera Stuff
@@ -70,14 +74,14 @@ public class ScrMenu implements Screen, InputProcessor {
         }
         if (nCount>=300) {
             nDir++;
-            nCount=0;
+            nCount=43;
         }
         if (nCount==200 && nDir==1 || nCount == 200 && nDir==3) {
             nDir++;
             nCount=0;
         }
         if (nDir==4) {
-            nDir=0;
+            nDir=3;
         }
         nCount++;
         nFrame++;
@@ -192,7 +196,7 @@ public class ScrMenu implements Screen, InputProcessor {
     }
 
     public boolean isHit(int nX, int nY, Sprite sprBtn) {
-        if (nX > sprBtn.getX() && nX < sprBtn.getX() + sprBtn.getWidth() && nY > sprBtn.getY() && nY < sprBtn.getY() + sprBtn.getHeight()) {
+        if (nX > sprBtn.getX() && nY < sprBtn.getX() + sprBtn.getWidth() && nY > sprBtn.getY() && nY < sprBtn.getY() + sprBtn.getHeight()) {
             return true;
         } else {
             return false;

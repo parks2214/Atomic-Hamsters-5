@@ -28,7 +28,7 @@ public class ScrAnimation implements Screen, InputProcessor {
     Sprite sprButtonMenu, sprButtonSign, sprNamT, sprMouse;
     SpriteBatch batch;
     int nDir = 0;
-    int DX[] = {1, 0, -1, 0};
+    int DX[] = {1, 0, 1, 0};
     int DY[] = {0, -1, 0, 1};
 
     public ScrAnimation(GamMenu _gamMenu) {
@@ -66,7 +66,7 @@ public class ScrAnimation implements Screen, InputProcessor {
                 sprMouse.setFlip(false, true);
                 arSprMouse[j] = new Sprite(sprMouse);
             }
-            araniMouse[i] = new Animation(0.8f, arSprMouse);
+            araniMouse[i] = new Animation(0.1f, arSprMouse);
 
         }
 
@@ -106,7 +106,7 @@ public class ScrAnimation implements Screen, InputProcessor {
             nPos = 3;
         } else if (nDir == 2) {
             nPos = 1;
-        } else if (nDir == 3) {
+        } else if (nDir == 1) {
             nPos = 0;
         }
 

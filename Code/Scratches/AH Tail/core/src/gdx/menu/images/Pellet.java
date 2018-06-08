@@ -3,7 +3,10 @@ package gdx.menu.images;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 
-public class Pellet extends Sprite {
+public class
+
+Pellet extends Sprite {
+
     private float fW, fH;
 
     public Pellet(float fX, float fY, Texture texture) {
