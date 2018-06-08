@@ -78,7 +78,7 @@ public class ScrGame3 implements Screen, InputProcessor {
         }
         aniMouse1 = new AniSprite(100, 100, txSheet1);
         aniMouse2 = new AniSprite(490, 330, txSheet2);
-       //Background
+        //Background
         txMap = new Texture("mars.jpg");
         sprMap = new Sprite(txMap);
         sprMap.setScale(0.7f, 0.7f);
