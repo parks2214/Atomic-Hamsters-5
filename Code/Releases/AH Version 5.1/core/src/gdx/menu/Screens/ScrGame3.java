@@ -78,7 +78,7 @@ public class ScrGame3 implements Screen, InputProcessor {
         }
         aniMouse1 = new AniSprite(100, 100, txSheet1);
         aniMouse2 = new AniSprite(490, 330, txSheet2);
-       //Background
+        //Background
         txMap = new Texture("mars.jpg");
         sprMap = new Sprite(txMap);
         sprMap.setScale(0.7f, 0.7f);
@@ -93,7 +93,7 @@ public class ScrGame3 implements Screen, InputProcessor {
         arWall[3] = new Wall(50, Gdx.graphics.getHeight() - 20, Gdx.graphics.getWidth() - 50, 50, txWall);    //Right Wall
         arObstacle[0] = new Wall(65, 50, (51 + (int)(Math.random() * ((524 - 51) + 1))), (51 + (int)(Math.random() * ((379 - 51) + 1))), txObstacle);   //Horizontal obstacle
         arObstacle[1] = new Wall(50, 65, (51 + (int)(Math.random() * ((539 - 51) + 1))), (51 + (int)(Math.random() * ((364 - 51) + 1))), txObstacle);    //Vertical obstacle
-       //Other stuff
+        //Other stuff
         n3Points = 0;
         n3Points2 = 0;
         ScrGame.nInd = 3;
@@ -111,8 +111,8 @@ public class ScrGame3 implements Screen, InputProcessor {
 
         Gdx.input.setInputProcessor(this);
 
-        pMaker1 = new PelletMaker(50, 50, "BluBery.png");
-        pMaker2 = new PelletMaker(30, 30, "Poison.png");
+        pMaker1 = new PelletMaker("BluBery.png");
+        pMaker2 = new PelletMaker ("Poison.png");
     }
 
     @Override
@@ -259,8 +259,8 @@ public class ScrGame3 implements Screen, InputProcessor {
         sprCornerHamster2.setPosition(Gdx.graphics.getWidth()-60, Gdx.graphics.getHeight()-85);
         sprCornerHamster1.draw(batch);
         sprCornerHamster2.draw(batch);
-        pMaker1.draw(batch);
-        pMaker2.draw(batch);
+        pMaker1.draw(batch, 51 + (float)(Math.random() * ((559 - 51) + 1)), 51 + (float)(Math.random() * ((399 - 51) + 1)));
+        pMaker2.draw(batch, 51 + (float)(Math.random() * ((559 - 51) + 1)), 51 + (float)(Math.random() * ((399 - 51) + 1)));
         aniMouse1.spTemp.draw(batch);
         aniMouse2.spTemp.draw(batch);
         btnMenu.draw(batch);

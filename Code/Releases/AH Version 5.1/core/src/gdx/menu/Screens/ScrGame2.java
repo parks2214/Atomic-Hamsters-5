@@ -100,8 +100,8 @@ public class ScrGame2 implements Screen, InputProcessor {
         nFrame = 0;
         Gdx.input.setInputProcessor(this);
 
-        pMaker1 = new PelletMaker(50, 50, "Strawberry.png");
-        pMaker2 = new PelletMaker(30, 30, "Poison.png");
+        pMaker1 = new PelletMaker("Strawberry.png");
+        pMaker2 = new PelletMaker("Poison.png");
     }
 
     @Override
@@ -232,8 +232,8 @@ public class ScrGame2 implements Screen, InputProcessor {
         sprCornerHamster2.setPosition(Gdx.graphics.getWidth()-60, Gdx.graphics.getHeight()-85);
         sprCornerHamster1.draw(batch);
         sprCornerHamster2.draw(batch);
-        pMaker1.draw(batch);
-        pMaker2.draw(batch);
+        pMaker1.draw(batch, 51 + (float)(Math.random() * ((559 - 51) + 1)), 51 + (float)(Math.random() * ((399 - 51) + 1)));
+        pMaker2.draw(batch, 51 + (float)(Math.random() * ((559 - 51) + 1)), 51 + (float)(Math.random() * ((399 - 51) + 1)));
         aniMouse1.spTemp.draw(batch);
         aniMouse2.spTemp.draw(batch);
         btnMenu.draw(batch);

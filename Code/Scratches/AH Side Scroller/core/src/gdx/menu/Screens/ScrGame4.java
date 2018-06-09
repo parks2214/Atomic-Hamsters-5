@@ -19,7 +19,7 @@ public class ScrGame4 implements Screen, InputProcessor {
     SpriteBatch batch;
     GamMenu gamMenu;
     OrthographicCamera oc;
-    Button btnMenu, btnQuit;
+    Button btnMenu, btnQuit, btnTestMenu, btnTestQuit;
     Texture txSheet1, txMap, txSheet2, txBar1, txBar2, txBar3, txBar4, txWall, txObstacle, txCornerHamster1, txCornerHamster2;
     Sprite sprHamster1, sprHamster2, sprMap, sprCornerHamster1, sprCornerHamster2;
     int nFrame, nPos, nPos2;
@@ -96,9 +96,9 @@ public class ScrGame4 implements Screen, InputProcessor {
         arWall[1] = new Wall(Gdx.graphics.getWidth(), 50, 0, Gdx.graphics.getHeight() - 50, txWall);    //Bottom Wall
         arWall[2] = new Wall(50, Gdx.graphics.getHeight() - 20, 0, 50, txWall);   //Left Wall
         arWall[3] = new Wall(50, Gdx.graphics.getHeight() - 20, Gdx.graphics.getWidth() - 50, 50, txWall);    //Right Wall
-        arObstacle[0] = new Wall(65, 50, (-81 + (int)(Math.random() * ((524 - -81) + 1))), (51 + (int)(Math.random() * ((379 - 51) + 1))), txObstacle);   //Horizontal obstacle
-        arObstacle[1] = new Wall(50, 65, (-81 + (int)(Math.random() * ((539 - -81) + 1))), (51 + (int)(Math.random() * ((364 - 51) + 1))), txObstacle);    //Vertical obstacle
-        arObstacle[2] = new Wall(50, 65, (-81 + (int)(Math.random() * ((539 - -81) + 1))), (51 + (int)(Math.random() * ((364 - 51) + 1))), txObstacle);
+        arObstacle[0] = new Wall(65, 50, (-299 + (int)(Math.random() * ((784 - -299) + 1))), (51 + (int)(Math.random() * ((379 - 51) + 1))), txObstacle);   //Horizontal obstacle
+        arObstacle[1] = new Wall(50, 65, (-299 + (int)(Math.random() * ((759 - -299) + 1))), (51 + (int)(Math.random() * ((364 - 51) + 1))), txObstacle);    //Vertical obstacle
+        arObstacle[2] = new Wall(50, 65, (-299 + (int)(Math.random() * ((759 - -299) + 1))), (51 + (int)(Math.random() * ((364 - 51) + 1))), txObstacle);
         System.out.println("Wall 1   " + arObstacle[0].getX());
         System.out.println("Wall 2   " + arObstacle[1].getX());
         System.out.println("Wall 3   " + arObstacle[2].getX());
@@ -148,8 +148,8 @@ public class ScrGame4 implements Screen, InputProcessor {
         sprHamster2.setPosition(Gdx.graphics.getWidth()-100,Gdx.graphics.getHeight()-100);
         Gdx.input.setInputProcessor(this);
 
-        pMaker1 = new PelletMaker(50, 50, "Apple.png");
-        pMaker2 = new PelletMaker(30, 30, "Apple Worm.png");
+        pMaker1 = new PelletMaker("Apple.png");
+        pMaker2 = new PelletMaker("Apple Worm.png");
     }
 
     @Override
@@ -347,8 +347,8 @@ public class ScrGame4 implements Screen, InputProcessor {
         sprCornerHamster1.draw(batch);
         sprCornerHamster2.draw(batch);
         //Pellet Stuff
-        pMaker1.draw(batch);
-        pMaker2.draw(batch);
+        pMaker1.draw(batch, -299 + (float)(Math.random() * ((799 - -299) + 1)), 51 + (float)(Math.random() * ((399 - 51) + 1)));
+        pMaker2.draw(batch, -299 + (float)(Math.random() * ((799 - -299) + 1)), 51 + (float)(Math.random() * ((399 - 51) + 1)));
         //Animation Stuff
         aniMouse1.spTemp.draw(batch);
         aniMouse2.spTemp.draw(batch);
@@ -398,7 +398,9 @@ public class ScrGame4 implements Screen, InputProcessor {
     @Override
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
         if (button == Input.Buttons.LEFT) {
-            if (isHitB(screenX, screenY, btnMenu)) {
+            btnTestMenu = btnMenu;
+            btnTestQuit = btnQuit;
+            if (isHitB(screenX, screenY, btnTestMenu)) {
                 gamMenu.updateState(0);
                 System.out.println("Hit Menu");
                 n4Points = 0;
@@ -412,7 +414,7 @@ public class ScrGame4 implements Screen, InputProcessor {
                 nDir2 = 2;
                 aniMouse1.reset();
                 aniMouse2.reset();
-            } else if (isHitB(screenX, screenY, btnQuit)) {
+            } else if (isHitB(screenX, screenY, btnTestQuit)) {
                 System.out.println("Quit");
                 System.exit(0);
             }

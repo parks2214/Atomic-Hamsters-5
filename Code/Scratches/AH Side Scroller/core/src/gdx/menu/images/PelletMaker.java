@@ -18,23 +18,21 @@ public class PelletMaker {
     private int nCounter=5,nActual=0;
     public ArrayList <Pellet> alPellets = new ArrayList<Pellet>();
     private Texture texture;
-    public PelletMaker(int nW, int nH, String sFileName) {
+    public PelletMaker(String sFileName) {
         texture = (new Texture(Gdx.files.internal(sFileName)));  //For example "SignB.jpg"
     }
 
-    public void draw(SpriteBatch batch) {
+    public void draw(SpriteBatch batch, float fX, float fY) {
         for (Pellet p : alPellets) {
             p.draw(batch);
         }
         if (nActual<nCounter) {
-            makePellet();
+            makePellet(fX, fY);
             nActual++;
         }
     }
 
-    public void makePellet() {
-        float fX = 51 + (float)(Math.random() * ((559 - 51) + 1)); //640
-        float fY = 51 + (float)(Math.random() * ((399 - 51) + 1)); //480
+    public void makePellet(float fX, float fY) {
         alPellets.add(new Pellet(fX, fY, texture));
     }
 

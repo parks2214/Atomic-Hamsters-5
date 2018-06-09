@@ -57,7 +57,7 @@ public class ScrGame implements Screen, InputProcessor {
         }
         aniMouse1 = new AniSprite(100, 100, txSheet1);
         aniMouse2 = new AniSprite(490, 330, txSheet2);
-       //Background
+        //Background
         txMap = new Texture("jupiter.jpg");
         sprMap = new Sprite(txMap);
         sprMap.setScale(0.9f, 1.2f);
@@ -75,7 +75,7 @@ public class ScrGame implements Screen, InputProcessor {
         nPoints2 = 0;
         nInd = 1;
         Gdx.input.setInputProcessor(this);
-        pMaker = new PelletMaker(25, 25,"Hamster Pellet.png");
+        pMaker = new PelletMaker("Hamster Pellet.png");
     }
 
     @Override
@@ -168,7 +168,7 @@ public class ScrGame implements Screen, InputProcessor {
             arWall[i].draw(batch);
         }
         sprMap.draw(batch);
-        pMaker.draw(batch);
+        pMaker.draw(batch, 51 + (float)(Math.random() * ((559 - 51) + 1)), 51 + (float)(Math.random() * ((399 - 51) + 1)));
         aniMouse1.spTemp.draw(batch);
         aniMouse2.spTemp.draw(batch);
         btnMenu.draw(batch);

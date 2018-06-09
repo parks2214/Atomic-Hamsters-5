@@ -7,7 +7,7 @@ import com.badlogic.gdx.math.Rectangle;
 
 public class AniSprite extends Sprite {
     public Sprite spTemp;
-    private int nFrame = 0, nPos = 0, nOrigX, nOrigY, nSizeX = 50, nSizeY = 50;
+    private int nFrame = 0, nPos = 0, nOrigX, nOrigY, nSizeX = 50, nSizeY = 50, nDir2;
     private Animation araniSprite[];
     private Texture txSheet;
     private float fDx, fDy, fSpeed = 0;
@@ -45,6 +45,7 @@ public class AniSprite extends Sprite {
 
     public void move(int nDir) {
         //Direction instruction for mouse 1
+        nDir2 = nDir;
         if (nDir == 0) {
             fDy = 0;
             fDx = 1 + fSpeed;
