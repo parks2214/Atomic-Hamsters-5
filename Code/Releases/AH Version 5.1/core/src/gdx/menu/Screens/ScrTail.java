@@ -21,7 +21,7 @@ public class ScrTail implements Screen, InputProcessor {
     OrthographicCamera oc;
     SpriteBatch batch;
     Texture txMHead, txMTail,txBar;
-    Sprite sprMouse, sprAni, sprMhead,sprMtail;
+    Sprite sprMhead,sprMtail;
     int  nX2, nY2, nX = 50, nY = 50,nY3=60,nX3=60, nDx, nDy;
 
 
