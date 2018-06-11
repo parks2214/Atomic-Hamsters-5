@@ -16,7 +16,7 @@ public class GamMenu extends Game {
     ScrGame2 scrGame2;
     ScrRules scrRules;
     ScrGame3 scrGame3;
-    ScrGame4 scrGame4;
+    ScrGame5 scrGame4;
     int nScreen; // 0 for menu, 1 for play, 2 for Sign, 3 for Animation, 4 for AniHit, 5 for Game, 6 for GameOver, 7 for
     // AnimalChoice, 8 for AnimalChoice2, 9 for Game2, 10 for Rules, 11 for Game3, 11 for Game4
 
@@ -67,7 +67,7 @@ public class GamMenu extends Game {
         scrGame2 = new ScrGame2(this);
         scrRules = new ScrRules(this);
         scrGame3 = new ScrGame3(this);
-        scrGame4 = new ScrGame4(this);
+        scrGame4 = new ScrGame5(this);
         updateState(0);
     }
 

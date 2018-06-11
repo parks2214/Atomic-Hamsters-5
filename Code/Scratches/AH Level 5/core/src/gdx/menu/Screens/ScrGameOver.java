@@ -56,8 +56,8 @@ public class ScrGameOver implements Screen, InputProcessor {
         n2Points2 = ScrGame2.n2Points2;
         n3Points = ScrGame3.n3Points;
         n3Points2 = ScrGame3.n3Points2;
-        n4Points = ScrGame4.n4Points;
-        n4Points2 = ScrGame4.n4Points2;
+        n4Points = ScrGame5.n4Points;
+        n4Points2 = ScrGame5.n4Points2;
         nWin = ScrGame.nWin;
         nWin2 = ScrGame2.nWin2;
         nWin3 = ScrGame3. nWin3;
