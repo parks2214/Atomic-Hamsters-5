@@ -12,7 +12,7 @@ import com.badlogic.gdx.Input;
 
 import gdx.menu.GamMenu;
 import gdx.menu.images.Button;
-import gdx.menu.images.Wall;
+import java.util.Arrays;
 
 public class ScrTail implements Screen, InputProcessor {
 
@@ -22,7 +22,9 @@ public class ScrTail implements Screen, InputProcessor {
     SpriteBatch batch;
     Texture txBar;
     //int nX1,nY1,nX2,nY2,nY3,nX3,nX4=0,nY4,nDiff1=20,nDiff2=20;
-    int nX1, nY1, nX2, nY2, nX3, nY3, nX4, nY4;
+    int nX1 = 150, nY1 = 150, nX2 = 130, nY2 = 150, nX3 = 110, nY3 = 150, nX4 = 90, nY4 = 150;
+    int[] arnX = {nX1, nX2, nX3, nX4};
+    int[] arnY = {nY1, nY2, nY3, nY4};
 
     public ScrTail(GamMenu _gamMenu) {  //Referencing the main class.
         gamMenu = _gamMenu;
@@ -61,26 +63,32 @@ public class ScrTail implements Screen, InputProcessor {
         Gdx.gl.glClearColor(0, 0, 0, 0);//Black background
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
+        Arrays.sort(arnX);
         if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
-            nX1 += -1;
-            nX2 += -1;
+            arnX[0] += -1;
+            arnX[3] = arnX[1] - 38;
+            arnY[3] = arnY[1];
+            /*nX2 += -1;
             nX3 += -1;
-            nX4 += -1;
+            nX4 += -1;*/
         } else if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
-            //nX1 += 1;
-            //nX2 += 1;
-            //nX3 += 1;
-            nX3 = nX1 + 20;
+            arnX[3] += 1;
+            arnX[0] = arnX[2] + 38;
+            arnY[0] = arnY[2];
         } else if (Gdx.input.isKeyPressed(Input.Keys.UP)) {
-            nY1 += -1;
-            nY2 += -1;
+            arnY[0] += -1;
+            arnY[3] = arnY[1] - 38;
+            arnX[3] = arnX[1];
+            /*nY2 += -1;
             nY3 += -1;
-            nY4 += -1;
+            nY4 += -1;*/
         } else if (Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
-            nY1 += 1;
-            nY2 += 1;
+            arnY[3] += 1;
+            arnY[0] = arnY[2] + 38;
+            arnX[0] = arnX[2];
+            /*nY2 += 1;
             nY3 += 1;
-            nY4 += 1;
+            nY4 += 1;*/
         }
         /*nX2=nX1-nDiff1;
         nX3=nX2-20;
@@ -105,9 +113,10 @@ public class ScrTail implements Screen, InputProcessor {
         //}*/
         batch.begin();
 
-        batch.draw(txBar, nX1, nY1,20,20);
-        batch.draw(txBar, nX2, nY2,20,20);
-        batch.draw(txBar, nX3, nY3,20,20);
+        batch.draw(txBar, arnX[0], arnY[0],20,20);
+        batch.draw(txBar, arnX[1], arnY[1],20,20);
+        batch.draw(txBar, arnX[2], arnY[2],20,20);
+        batch.draw(txBar, arnX[3], arnY[3],20,20);
         //batch.draw(txBar,nX2,nY2,20,20);
         //batch.draw(txBar,nX3,nY3,20,20);
         batch.setProjectionMatrix(oc.combined);
@@ -206,10 +215,57 @@ public class ScrTail implements Screen, InputProcessor {
         }
     }
 
-    public boolean lastSquare(int nX1, int nY1, int nX2, int nY2, int nX3, int nY3, int nX4, int nY4) {
+    /*public int firstSquare() {
         int nDif2, nDif3, nDif4;
-        nDif2 = nX1 - nX2;
-        nDif3 = nX1 - nX3;
-        nDif4 = nX1 - nX4;
+        if (nDir == 2 && nDir == 0) {
+            nDif2 = nX1 - nX2;
+            nDif3 = nX1 - nX3;
+            nDif4 = nX1 - nX4;
+            if (nDif4 < nDif3 && nDif4 < nDif2) {
+                return nX4;
+            } else if (nDif3 < nDif4 && nDif3 < nDif2) {
+                return nX3;
+            } else {
+                return nX2;
+            }
+        } else {
+            nDif2 = nY1 - nY2;
+            nDif3 = nY1 - nY3;
+            nDif4 = nY1 - nY4;
+            if (nDif4 < nDif3 && nDif4 < nDif2) {
+                return nY4;
+            } else if (nDif3 < nDif4 && nDif3 < nDif2) {
+                return nY3;
+            } else {
+                return nY2;
+            }
+        }
     }
+
+    public int lastSquare() {
+        int nDif2, nDif3, nDif4;
+        if (nDir == 2 && nDir == 0) {
+            nDif2 = nX1 - nX2;
+            nDif3 = nX1 - nX3;
+            nDif4 = nX1 - nX4;
+            if (nDif4 > nDif3 && nDif4 > nDif2) {
+                return nX4;
+            } else if (nDif3 > nDif4 && nDif3 > nDif2) {
+                return nX3;
+            } else {
+                return nX2;
+            }
+        } else {
+            nDif2 = nY1 - nY2;
+            nDif3 = nY1 - nY3;
+            nDif4 = nY1 - nY4;
+            if (nDif4 > nDif3 && nDif4 > nDif2) {
+                return nY4;
+            } else if (nDif3 > nDif4 && nDif3 > nDif2) {
+                return nY3;
+            } else {
+                return nY2;
+            }
+        }
+    }*/
 }
