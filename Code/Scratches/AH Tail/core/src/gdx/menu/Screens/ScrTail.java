@@ -21,8 +21,8 @@ public class ScrTail implements Screen, InputProcessor {
     OrthographicCamera oc;
     SpriteBatch batch;
     Texture txBar;
-    int nX1,nY1,nX2,nY2,nY3,nX3,nX4=0,nY4,nDiff1=20,nDiff2=20;
-
+    //int nX1,nY1,nX2,nY2,nY3,nX3,nX4=0,nY4,nDiff1=20,nDiff2=20;
+    int nX1, nY1, nX2, nY2, nX3, nY3, nX4, nY4;
 
     public ScrTail(GamMenu _gamMenu) {  //Referencing the main class.
         gamMenu = _gamMenu;
@@ -35,13 +35,21 @@ public class ScrTail implements Screen, InputProcessor {
         oc.update();
         batch = new SpriteBatch();
         txBar = new Texture ("The bar.png");
-        nX1=580;
+        nX1 = 150;
+        nY1 = 150;
+        nX2 = 130;
+        nY2 = 150;
+        nX3 = 110;
+        nY3 = 150;
+        nX4 = 90;
+        nY4 = 150;
+        /*nX1=580;
         nY1=Gdx.graphics.getHeight()/2;
         //nY2=nY1;
         //nY3=nY2;
         nY4=nY1;
         nX2=nX1-nDiff1;
-        nX3=nX2;
+        nX3=nX2;*/
         btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Menu.jpg");
         btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Quit.jpg");
         Gdx.input.setInputProcessor(this);
@@ -52,7 +60,29 @@ public class ScrTail implements Screen, InputProcessor {
 
         Gdx.gl.glClearColor(0, 0, 0, 0);//Black background
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        nX2=nX1-nDiff1;
+
+        if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
+            nX1 += -1;
+            nX2 += -1;
+            nX3 += -1;
+            nX4 += -1;
+        } else if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
+            //nX1 += 1;
+            //nX2 += 1;
+            //nX3 += 1;
+            nX3 = nX1 + 20;
+        } else if (Gdx.input.isKeyPressed(Input.Keys.UP)) {
+            nY1 += -1;
+            nY2 += -1;
+            nY3 += -1;
+            nY4 += -1;
+        } else if (Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
+            nY1 += 1;
+            nY2 += 1;
+            nY3 += 1;
+            nY4 += 1;
+        }
+        /*nX2=nX1-nDiff1;
         nX3=nX2-20;
         if (nX1>=600) {
             for (int i=0;i<=5;i++){
@@ -72,11 +102,14 @@ public class ScrTail implements Screen, InputProcessor {
         }
         //for (int i=0;i<=5;i++){
         //    nX1++;
-        //}
+        //}*/
         batch.begin();
-        batch.draw(txBar,nX1, nY1,20,20);
-        batch.draw(txBar,nX2,nY2,20,20);
-        batch.draw(txBar,nX3,nY3,20,20);
+
+        batch.draw(txBar, nX1, nY1,20,20);
+        batch.draw(txBar, nX2, nY2,20,20);
+        batch.draw(txBar, nX3, nY3,20,20);
+        //batch.draw(txBar,nX2,nY2,20,20);
+        //batch.draw(txBar,nX3,nY3,20,20);
         batch.setProjectionMatrix(oc.combined);
         btnMenu.draw(batch);
         btnQuit.draw(batch);
@@ -108,7 +141,7 @@ public class ScrTail implements Screen, InputProcessor {
 
     @Override
     public boolean keyDown(int keycode) {
-        if (Gdx.input.isKeyPressed(Input.Keys.A)) {
+        /*if (Gdx.input.isKeyPressed(Input.Keys.A)) {
             nX1-=5;
         } else if (Gdx.input.isKeyPressed(Input.Keys.D)) {
             nX1+=5;
@@ -116,7 +149,7 @@ public class ScrTail implements Screen, InputProcessor {
             nY1-=5;
         } else if (Gdx.input.isKeyPressed(Input.Keys.S)) {
             nY1+=5;
-        }
+        }*/
         return false;
     }
 
@@ -173,7 +206,10 @@ public class ScrTail implements Screen, InputProcessor {
         }
     }
 
-    public boolean isHitS(Sprite spr1, Sprite spr2) {
-        return spr1.getBoundingRectangle().overlaps(spr2.getBoundingRectangle());
+    public boolean lastSquare(int nX1, int nY1, int nX2, int nY2, int nX3, int nY3, int nX4, int nY4) {
+        int nDif2, nDif3, nDif4;
+        nDif2 = nX1 - nX2;
+        nDif3 = nX1 - nX3;
+        nDif4 = nX1 - nX4;
     }
 }
