@@ -33,6 +33,9 @@ public class ScrGame2 implements Screen, InputProcessor {
     float fSizeBar1 = 1, fSizeBar2 = 1, fSpeedBar1 = 1, fSpeedBar2 = 1;
     BitmapFont font1, font2;
     AniSprite aniMouse1, aniMouse2;
+    ScrGame scrGame;
+    LitJams litjam = scrGame.litjam;
+
 
     public ScrGame2(GamMenu _gamMenu) {
         gamMenu = _gamMenu;
@@ -41,12 +44,13 @@ public class ScrGame2 implements Screen, InputProcessor {
     @Override
     public void show() {
         batch = new SpriteBatch();
+        litjam.IngameSound(0);
         oc = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.setToOrtho(true, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.update();
         btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Menu.jpg");
         btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Quit.jpg");
-        txBar = new Texture ("The bar.png");
+        txBar = new Texture("The bar.png");
         font1 = new BitmapFont(true);//this flips the font (https://stackoverflow.com/questions/8508749/draw-a-bitmapfont-rotated-in-libgdx)
         font1.setColor(Color.WHITE);
         font1.getData().setScale(3f);
@@ -67,7 +71,7 @@ public class ScrGame2 implements Screen, InputProcessor {
             txCornerHamster1 = new Texture("btnMouse2.png");
         }
         if (nChoice2 == 1) {
-            txSheet2 = new Texture ("sprmouse.png");
+            txSheet2 = new Texture("sprmouse.png");
             txCornerHamster2 = new Texture("btnMouse.png");
         } else if (nChoice2 == 2) {
             txSheet2 = new Texture("sprmouse2.png");
@@ -81,7 +85,7 @@ public class ScrGame2 implements Screen, InputProcessor {
         sprMap.setScale(0.4f, 0.5f);
         sprMap.setPosition(Gdx.graphics.getWidth() / 2 - sprMap.getWidth() / 2, Gdx.graphics.getHeight() / 2 - sprMap.getHeight() / 2);
         sprMap.setFlip(false, true);
-        txWall = new Texture ("Wall2.jpg");
+        txWall = new Texture("Wall2.jpg");
         arWall[0] = new Wall(Gdx.graphics.getWidth(), 50, 0, 0, txWall);   //Top Wall
         arWall[1] = new Wall(Gdx.graphics.getWidth(), 50, 0, Gdx.graphics.getHeight() - 50, txWall);    //Bottom Wall
         arWall[2] = new Wall(50, Gdx.graphics.getHeight() - 20, 0, 50, txWall);   //Left Wall
@@ -157,7 +161,8 @@ public class ScrGame2 implements Screen, InputProcessor {
                 aniMouse1.increaseSize();
                 // mouse catche pellet
                 pMaker1.removePellet(p);
-            }if (aniMouse2.isHitS(p)) {
+            }
+            if (aniMouse2.isHitS(p)) {
                 aniMouse2.increaseSpeed();
                 n2Points2 += 1;
                 fSpeedBar2 += 0.1;
@@ -176,7 +181,8 @@ public class ScrGame2 implements Screen, InputProcessor {
                 fSpeedBar1 -= 0.1;
                 // mouse catche pellet
                 pMaker2.removePellet(p2);
-            }if (aniMouse2.isHitS(p2)) {
+            }
+            if (aniMouse2.isHitS(p2)) {
                 aniMouse2.decreaseSpeed();
                 fSpeedBar2 -= 0.1;
                 // mouse catche pellet
@@ -228,12 +234,12 @@ public class ScrGame2 implements Screen, InputProcessor {
         font2.draw(batch, "Size", Gdx.graphics.getWidth() - 220, Gdx.graphics.getHeight() - 45);
         font2.draw(batch, "Speed", Gdx.graphics.getWidth() - 220, Gdx.graphics.getHeight() - 20);
         //Corner Mouse stuff
-        sprCornerHamster1.setPosition(-10,Gdx.graphics.getHeight()-85);
-        sprCornerHamster2.setPosition(Gdx.graphics.getWidth()-60, Gdx.graphics.getHeight()-85);
+        sprCornerHamster1.setPosition(-10, Gdx.graphics.getHeight() - 85);
+        sprCornerHamster2.setPosition(Gdx.graphics.getWidth() - 60, Gdx.graphics.getHeight() - 85);
         sprCornerHamster1.draw(batch);
         sprCornerHamster2.draw(batch);
-        pMaker1.draw(batch, 51 + (float)(Math.random() * ((559 - 51) + 1)), 51 + (float)(Math.random() * ((399 - 51) + 1)));
-        pMaker2.draw(batch, 51 + (float)(Math.random() * ((559 - 51) + 1)), 51 + (float)(Math.random() * ((399 - 51) + 1)));
+        pMaker1.draw(batch, 51 + (float) (Math.random() * ((559 - 51) + 1)), 51 + (float) (Math.random() * ((399 - 51) + 1)));
+        pMaker2.draw(batch, 51 + (float) (Math.random() * ((559 - 51) + 1)), 51 + (float) (Math.random() * ((399 - 51) + 1)));
         aniMouse1.spTemp.draw(batch);
         aniMouse2.spTemp.draw(batch);
         btnMenu.draw(batch);
