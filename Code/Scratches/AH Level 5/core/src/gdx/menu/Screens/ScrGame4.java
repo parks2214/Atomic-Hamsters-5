@@ -36,6 +36,9 @@
             BitmapFont font, font2;
             AniSprite aniMouse1, aniMouse2;
             float fBarX1, fBarX2;
+            ScrGame scrGame;
+            LitJams litjam = scrGame.litjam;
+
             //640, 480
 
             public ScrGame4(GamMenu _gamMenu) {
@@ -45,6 +48,7 @@
             @Override
             public void show() {
                 batch = new SpriteBatch();
+                litjam.IngameSound(0);
                 oc = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
                 oc.setToOrtho(true, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
                 oc.update();

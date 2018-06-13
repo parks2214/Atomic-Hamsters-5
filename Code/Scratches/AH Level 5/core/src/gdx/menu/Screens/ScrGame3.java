@@ -36,6 +36,9 @@ public class ScrGame3 implements Screen, InputProcessor {
     float fSizeBar1 = 1, fSizeBar2 = 1, fSpeedBar1 = 1, fSpeedBar2 = 1;
     BitmapFont font1, font2;
     AniSprite aniMouse1, aniMouse2;
+    ScrGame scrGame;
+    LitJams litjam = scrGame.litjam;
+
     //640, 480
 
     public ScrGame3(GamMenu _gamMenu) {
@@ -45,6 +48,7 @@ public class ScrGame3 implements Screen, InputProcessor {
     @Override
     public void show() {
         batch = new SpriteBatch();
+        litjam.IngameSound(0);
         oc = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.setToOrtho(true, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.update();

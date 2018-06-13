@@ -30,6 +30,7 @@ public class ScrGame implements Screen, InputProcessor {
     PelletMaker pMaker;
     int nTimer=0;
     AniSprite aniMouse1, aniMouse2;
+    public LitJams litjam = new LitJams();
     public ScrGame(GamMenu _gamMenu) {
         gamMenu = _gamMenu;
     }
@@ -37,6 +38,7 @@ public class ScrGame implements Screen, InputProcessor {
     @Override
     public void show() {
         batch = new SpriteBatch();
+        litjam.IngameSound(0);
         oc = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.setToOrtho(true, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.update();
