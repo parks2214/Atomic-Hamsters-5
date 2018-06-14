@@ -37,8 +37,7 @@
             float fSizeBar1 = 1, fSizeBar2 = 1, fSpeedBar1 = 1, fSpeedBar2 = 1;
             BitmapFont font1, font2;
             AniSprite aniMouse1, aniMouse2;
-            ScrGame scrGame;
-            LitJams litjam = scrGame.litjam;
+            LitJams litjam = new LitJams();
             //640, 480
 
             public ScrGame5(GamMenu _gamMenu) {
@@ -48,7 +47,7 @@
             @Override
             public void show() {
                 batch = new SpriteBatch();
-                litjam.IngameSound(0);
+                litjam.IngameSound(1);
                 oc = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
                 oc.setToOrtho(true, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
                 oc.update();
@@ -209,6 +208,7 @@
                 }
                 //Hit detection between mice
                 if (Intersector.overlaps(aniMouse1.getThisRect(), aniMouse2.getThisRect())) {
+                    litjam.IngameSound(0);
                     if ((nDir1 == 0 && nDir2 == 2) || (nDir1 == 2 && nDir2 == 2)) {
                         if (aniMouse1.getScaleX() > aniMouse2.getScaleX()) {
                             nWin5 = 1;
@@ -312,6 +312,7 @@
                 if (button == Input.Buttons.LEFT) {
                     if (isHitB(screenX, screenY, btnMenu)) {
                         gamMenu.updateState(0);
+                        litjam.IngameSound(0);
                         System.out.println("Hit Menu");
                         n5Points = 0;
                         n5Points2 = 0;

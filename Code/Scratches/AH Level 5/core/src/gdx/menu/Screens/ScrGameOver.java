@@ -14,7 +14,6 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import gdx.menu.GamMenu;
 import gdx.menu.images.Button;
-import gdx.menu.images.LitJams;
 
 public class ScrGameOver implements Screen, InputProcessor {
 
@@ -28,8 +27,6 @@ public class ScrGameOver implements Screen, InputProcessor {
     int nPoints, nPoints2, n2Points, n2Points2, n3Points, n3Points2, n4Points, n4Points2,n5Points,n5Points2;
     int nWin, nWin2, nWin3,nWin4,nWin5;
     int nInd;
-    ScrGame scrGame;
-    LitJams litjam = scrGame.litjam;
 
 
 
@@ -74,7 +71,7 @@ public class ScrGameOver implements Screen, InputProcessor {
         nWin4 = ScrGame4.nWin4;
         nWin5 = ScrGame5.nWin5;
         nInd = ScrGame.nInd;
-        litjam.IngameSound(1);
+
         Gdx.input.setInputProcessor(this);
     }
 

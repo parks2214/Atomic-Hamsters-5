@@ -7,11 +7,11 @@ public class LitJams {
     Music music = Gdx.audio.newMusic(Gdx.files.internal("musak.wav"));
 
     public void IngameSound(int i) {
-        if (i == 0) {
+        if (i == 1) {
             music.setVolume(1000f);
-            music.setLooping(true);
             music.play();
-        } else if (i == 1) {
+                music.setLooping(true);
+        } else if (i == 0) {
             music.stop();
         }
     }
