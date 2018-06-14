@@ -9,7 +9,6 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.Input;
-
 import gdx.menu.GamMenu;
 import gdx.menu.images.Button;
 import java.util.Arrays;
@@ -20,12 +19,12 @@ public class ScrTail implements Screen, InputProcessor {
     GamMenu gamMenu;
     OrthographicCamera oc;
     SpriteBatch batch;
-    Texture txBar;
-    //int nX1,nY1,nX2,nY2,nY3,nX3,nX4=0,nY4,nDiff1=20,nDiff2=20;
-    int nX1 = 150, nY1 = 150, nX2 = 130, nY2 = 150, nX3 = 110, nY3 = 150, nX4 = 90, nY4 = 150;
+    Texture txBar, txMHead, txMTail;
+    int nX1 = 150, nY1 = 150, nX2 = 150, nY2 = 130, nX3 = 150, nY3 = 110;
     int[] arnX = {nX1, nX2, nX3};
     int[] arnY = {nY1, nY2, nY3};
-    int nHeadX = 150, nHeadY = 150;
+    int nHeadX = 137, nHeadY = 130, nTailX = 143, nTailY = 80;
+    Sprite sprMhead,sprMtail;
 
     public ScrTail(GamMenu _gamMenu) {  //Referencing the main class.
         gamMenu = _gamMenu;
@@ -37,20 +36,17 @@ public class ScrTail implements Screen, InputProcessor {
         oc.setToOrtho(true, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.update();
         batch = new SpriteBatch();
-        txBar = new Texture ("The bar.png");
-        nX1 = 130;
-        nY1 = 150;
-        nX2 = 110;
-        nY2 = 150;
-        nX3 = 90;
-        nY3 = 150;
-        /*nX1=580;
-        nY1=Gdx.graphics.getHeight()/2;
-        //nY2=nY1;
-        //nY3=nY2;
-        nY4=nY1;
-        nX2=nX1-nDiff1;
-        nX3=nX2;*/
+        txMTail = new Texture("Hamstertail.png");
+        sprMtail = new Sprite (txMTail);
+        sprMtail.setSize (20,40);
+        sprMtail.setFlip(false,true);
+        sprMtail.setPosition(nTailX, nTailY);
+        txMHead = new Texture("hamsterhead.png");
+        sprMhead = new Sprite(txMHead);
+        sprMhead.setSize(45, 60);
+        sprMhead.setFlip(false, true);
+        sprMhead.setPosition(nTailX, nTailY);
+        txBar = new Texture ("brownpiskel.png");
         btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Menu.jpg");
         btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Quit.jpg");
         Gdx.input.setInputProcessor(this);
@@ -65,64 +61,41 @@ public class ScrTail implements Screen, InputProcessor {
         Arrays.sort(arnX);
         Arrays.sort(arnY);
         if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
-            nHeadX += -1;
-            arnX[2] = arnX[0] - 40;
+            nHeadX += -20;
+            nTailX += -20;
+            arnX[2] = arnX[0] - 20;
             arnY[2] = arnY[0];
-            /*nX2 += -1;
-            nX3 += -1;
-            nX4 += -1;*/
         } else if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
-            nHeadX += 1;
-            arnX[0] = arnX[2] + 40;
+            nHeadX += 20;
+            nTailX += 20;
+            arnX[0] = arnX[2] + 20;
             arnY[0] = arnY[2];
         } else if (Gdx.input.isKeyPressed(Input.Keys.UP)) {
-            nHeadY += -1;
-            arnY[2] = arnY[0] - 40;
+            nHeadY += -20;
+            nTailY += -20;
+            arnY[2] = arnY[0] - 20;
             arnX[2] = arnX[0];
-            /*nY2 += -1;
-            nY3 += -1;
-            nY4 += -1;*/
         } else if (Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
-            nHeadY += 1;
-            arnY[0] = arnY[2] + 40;
+            nHeadY += 20;
+            nTailY += 20;
+            arnY[0] = arnY[2] + 20;
             arnX[0] = arnX[2];
-            /*nY2 += 1;
-            nY3 += 1;
-            nY4 += 1;*/
         }
-        /*nX2=nX1-nDiff1;
-        nX3=nX2-20;
-        if (nX1>=600) {
-            for (int i=0;i<=5;i++){
-                nY1--;
-            }
-            nDiff1-=5;
-           if(nDiff1<=0) {
-               nDiff1=0;
-               nY2=nY1-nDiff2;
-               nY3=nY2-nDiff2;
-           }
-            nX1=595;
-        } else if (nY1<=20) {
-            for (int i=0;i<=60;i++){
-                nX1--;
-            }
-        }
-        //for (int i=0;i<=5;i++){
-        //    nX1++;
-        //}*/
-        batch.begin();
 
-        batch.draw(txBar, nHeadX, nHeadY,20,20);
-        batch.draw(txBar, arnX[0], arnY[0],20,20);
-        batch.draw(txBar, arnX[1], arnY[1],20,20);
-        batch.draw(txBar, arnX[2], arnY[2],20,20);
-        //batch.draw(txBar,nX2,nY2,20,20);
-        //batch.draw(txBar,nX3,nY3,20,20);
+        sprMhead.setX(nHeadX);
+        sprMhead.setY(nHeadY);
+        sprMtail.setX(nTailX);
+        sprMtail.setY(nTailY);
+
+        batch.begin();
         batch.setProjectionMatrix(oc.combined);
         btnMenu.draw(batch);
         btnQuit.draw(batch);
-
+        sprMtail.draw(batch);
+        batch.draw(txBar, arnX[0], arnY[0],20,20);
+        batch.draw(txBar, arnX[1], arnY[1],20,20);
+        batch.draw(txBar, arnX[2], arnY[2],20,20);
+        sprMhead.draw(batch);
         batch.end();
 
     }
