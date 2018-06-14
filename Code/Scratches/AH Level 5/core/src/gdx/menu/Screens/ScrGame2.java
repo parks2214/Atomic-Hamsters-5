@@ -33,8 +33,7 @@ public class ScrGame2 implements Screen, InputProcessor {
     float fSizeBar1 = 1, fSizeBar2 = 1, fSpeedBar1 = 1, fSpeedBar2 = 1;
     BitmapFont font1, font2;
     AniSprite aniMouse1, aniMouse2;
-    ScrGame scrGame;
-    LitJams litjam = scrGame.litjam;
+    LitJams litjam = new LitJams();
 
 
     public ScrGame2(GamMenu _gamMenu) {
@@ -44,7 +43,7 @@ public class ScrGame2 implements Screen, InputProcessor {
     @Override
     public void show() {
         batch = new SpriteBatch();
-        litjam.IngameSound(0);
+        litjam.IngameSound(1);
         oc = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.setToOrtho(true, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.update();
@@ -191,6 +190,7 @@ public class ScrGame2 implements Screen, InputProcessor {
         }
         //Hit detection between mice
         if (Intersector.overlaps(aniMouse1.getThisRect(), aniMouse2.getThisRect())) {
+            litjam.IngameSound(0);
             if ((nDir1 == 0 && nDir2 == 2) || (nDir1 == 2 && nDir2 == 2)) {
                 if (aniMouse1.getScaleX() > aniMouse2.getScaleX()) {
                     nWin2 = 1;
@@ -288,6 +288,7 @@ public class ScrGame2 implements Screen, InputProcessor {
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
         if (button == Input.Buttons.LEFT) {
             if (isHitB(screenX, screenY, btnMenu)) {
+                litjam.IngameSound(0);
                 gamMenu.updateState(0);
                 System.out.println("Hit Menu");
                 aniMouse1.reset();

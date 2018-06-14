@@ -30,15 +30,13 @@ public class ScrGame implements Screen, InputProcessor {
     PelletMaker pMaker;
     int nTimer=0;
     AniSprite aniMouse1, aniMouse2;
-    public LitJams litjam = new LitJams();
-    public ScrGame(GamMenu _gamMenu) {
-        gamMenu = _gamMenu;
-    }
+    LitJams litjam = new LitJams();
+    public ScrGame(GamMenu _gamMenu) { gamMenu = _gamMenu; }
 
     @Override
     public void show() {
         batch = new SpriteBatch();
-        litjam.IngameSound(0);
+        litjam.IngameSound(1);
         oc = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.setToOrtho(true, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.update();
@@ -122,6 +120,7 @@ public class ScrGame implements Screen, InputProcessor {
         }
         //Hit detection between mice
         if (Intersector.overlaps(aniMouse1.getThisRect(), aniMouse2.getThisRect())) {
+            litjam.IngameSound(0);
             if (nPoints > nPoints2) {
                 nWin = 1;
             } else if (nPoints2 > nPoints) {
@@ -219,6 +218,7 @@ public class ScrGame implements Screen, InputProcessor {
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
         if (button == Input.Buttons.LEFT) {
             if (isHitB(screenX, screenY, btnMenu)) {
+                litjam.IngameSound(0);
                 gamMenu.updateState(0);
                 System.out.println("Hit Menu");
                 aniMouse1.reset();
@@ -229,6 +229,7 @@ public class ScrGame implements Screen, InputProcessor {
                 nDir1 = 0;
                 nDir2 = 2;
             } else if (isHitB(screenX, screenY, btnQuit)) {
+
                 System.out.println("Quit");
                 System.exit(0);
             }

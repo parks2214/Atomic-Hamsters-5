@@ -14,6 +14,7 @@ import com.badlogic.gdx.utils.Scaling;
 import gdx.menu.GamMenu;
 import gdx.menu.images.Button;
 import gdx.menu.images.AniSprite;
+import gdx.menu.images.LitJams;
 
 public class ScrMenu implements Screen, InputProcessor {
 
@@ -26,6 +27,7 @@ public class ScrMenu implements Screen, InputProcessor {
     int nFrame,nPos;
     int nDir = 0, nCount=0;
     AniSprite aniMouse;
+    LitJams litjam = new LitJams();
 
     public ScrMenu(GamMenu _gamMenu) {  //Referencing the main class.
         gamMenu = _gamMenu;
@@ -36,7 +38,7 @@ public class ScrMenu implements Screen, InputProcessor {
         oc = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.setToOrtho(true, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         oc.update();
-
+        litjam.IngameSound(1);
         //Buttons
         batch = new SpriteBatch();
         btnPlay = new Button(100, 50, 0, Gdx.graphics.getHeight() - 50, "Tail Button.png");
@@ -142,6 +144,7 @@ public class ScrMenu implements Screen, InputProcessor {
     @Override
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
         if (button == Input.Buttons.LEFT) {
+            litjam.IngameSound(0);
             if (isHit(screenX, screenY, btnPlay)) {
                 System.out.println("Hit Play");
                 gamMenu.updateState(1);
