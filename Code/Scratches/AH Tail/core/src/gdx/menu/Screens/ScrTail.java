@@ -23,8 +23,9 @@ public class ScrTail implements Screen, InputProcessor {
     Texture txBar;
     //int nX1,nY1,nX2,nY2,nY3,nX3,nX4=0,nY4,nDiff1=20,nDiff2=20;
     int nX1 = 150, nY1 = 150, nX2 = 130, nY2 = 150, nX3 = 110, nY3 = 150, nX4 = 90, nY4 = 150;
-    int[] arnX = {nX1, nX2, nX3, nX4};
-    int[] arnY = {nY1, nY2, nY3, nY4};
+    int[] arnX = {nX1, nX2, nX3};
+    int[] arnY = {nY1, nY2, nY3};
+    int nHeadX = 150, nHeadY = 150;
 
     public ScrTail(GamMenu _gamMenu) {  //Referencing the main class.
         gamMenu = _gamMenu;
@@ -37,14 +38,12 @@ public class ScrTail implements Screen, InputProcessor {
         oc.update();
         batch = new SpriteBatch();
         txBar = new Texture ("The bar.png");
-        nX1 = 150;
+        nX1 = 130;
         nY1 = 150;
-        nX2 = 130;
+        nX2 = 110;
         nY2 = 150;
-        nX3 = 110;
+        nX3 = 90;
         nY3 = 150;
-        nX4 = 90;
-        nY4 = 150;
         /*nX1=580;
         nY1=Gdx.graphics.getHeight()/2;
         //nY2=nY1;
@@ -64,27 +63,28 @@ public class ScrTail implements Screen, InputProcessor {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         Arrays.sort(arnX);
+        Arrays.sort(arnY);
         if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
-            arnX[0] += -1;
-            arnX[3] = arnX[1] - 38;
-            arnY[3] = arnY[1];
+            nHeadX += -1;
+            arnX[2] = arnX[0] - 40;
+            arnY[2] = arnY[0];
             /*nX2 += -1;
             nX3 += -1;
             nX4 += -1;*/
         } else if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
-            arnX[3] += 1;
-            arnX[0] = arnX[2] + 38;
+            nHeadX += 1;
+            arnX[0] = arnX[2] + 40;
             arnY[0] = arnY[2];
         } else if (Gdx.input.isKeyPressed(Input.Keys.UP)) {
-            arnY[0] += -1;
-            arnY[3] = arnY[1] - 38;
-            arnX[3] = arnX[1];
+            nHeadY += -1;
+            arnY[2] = arnY[0] - 40;
+            arnX[2] = arnX[0];
             /*nY2 += -1;
             nY3 += -1;
             nY4 += -1;*/
         } else if (Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
-            arnY[3] += 1;
-            arnY[0] = arnY[2] + 38;
+            nHeadY += 1;
+            arnY[0] = arnY[2] + 40;
             arnX[0] = arnX[2];
             /*nY2 += 1;
             nY3 += 1;
@@ -113,10 +113,10 @@ public class ScrTail implements Screen, InputProcessor {
         //}*/
         batch.begin();
 
+        batch.draw(txBar, nHeadX, nHeadY,20,20);
         batch.draw(txBar, arnX[0], arnY[0],20,20);
         batch.draw(txBar, arnX[1], arnY[1],20,20);
         batch.draw(txBar, arnX[2], arnY[2],20,20);
-        batch.draw(txBar, arnX[3], arnY[3],20,20);
         //batch.draw(txBar,nX2,nY2,20,20);
         //batch.draw(txBar,nX3,nY3,20,20);
         batch.setProjectionMatrix(oc.combined);
