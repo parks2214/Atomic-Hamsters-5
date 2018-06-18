@@ -21,9 +21,9 @@ public class ScrTail implements Screen, InputProcessor {
     SpriteBatch batch;
     Texture txBar, txMHead, txMTail;
     int nX1 = 150, nY1 = 150, nX2 = 150, nY2 = 130, nX3 = 150, nY3 = 110;
-    int[] arnX = {nX1, nX2, nX3};
-    int[] arnY = {nY1, nY2, nY3};
-    int nHeadX = 137, nHeadY = 130, nTailX = 143, nTailY = 80;
+    //int[] arnX = {nX1, nX2, nX3};
+    //int[] arnY = {nY1, nY2, nY3};
+    int nHeadX = 137, nHeadY = 130, nTailX = 150, nTailY = 80;
     Sprite sprMhead,sprMtail;
 
     public ScrTail(GamMenu _gamMenu) {  //Referencing the main class.
@@ -55,12 +55,12 @@ public class ScrTail implements Screen, InputProcessor {
     @Override
     public void render(float delta) {
 
-        Gdx.gl.glClearColor(0, 0, 0, 0);//Black background
+        Gdx.gl.glClearColor(1, 1, 1, 1);//Black background
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
-        Arrays.sort(arnX);
-        Arrays.sort(arnY);
-        if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
+        //Arrays.sort(arnX);
+        //Arrays.sort(arnY);
+        /*if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
             nHeadX += -20;
             nTailX += -20;
             arnX[2] = arnX[0] - 20;
@@ -80,7 +80,7 @@ public class ScrTail implements Screen, InputProcessor {
             nTailY += 20;
             arnY[0] = arnY[2] + 20;
             arnX[0] = arnX[2];
-        }
+        }*/
 
         sprMhead.setX(nHeadX);
         sprMhead.setY(nHeadY);
@@ -92,9 +92,12 @@ public class ScrTail implements Screen, InputProcessor {
         btnMenu.draw(batch);
         btnQuit.draw(batch);
         sprMtail.draw(batch);
-        batch.draw(txBar, arnX[0], arnY[0],20,20);
-        batch.draw(txBar, arnX[1], arnY[1],20,20);
-        batch.draw(txBar, arnX[2], arnY[2],20,20);
+        batch.draw(txBar, nX1, nY1,20,20);
+        batch.draw(txBar, nX2, nY2,20,20);
+        batch.draw(txBar, nX3, nY3,20,20);
+        //batch.draw(txBar, arnX[0], arnY[0],20,20);
+        //batch.draw(txBar, arnX[1], arnY[1],20,20);
+        //batch.draw(txBar, arnX[2], arnY[2],20,20);
         sprMhead.draw(batch);
         batch.end();
 
@@ -123,15 +126,55 @@ public class ScrTail implements Screen, InputProcessor {
 
     @Override
     public boolean keyDown(int keycode) {
-        /*if (Gdx.input.isKeyPressed(Input.Keys.A)) {
-            nX1-=5;
-        } else if (Gdx.input.isKeyPressed(Input.Keys.D)) {
-            nX1+=5;
-        } else if (Gdx.input.isKeyPressed(Input.Keys.W)) {
-            nY1-=5;
-        } else if (Gdx.input.isKeyPressed(Input.Keys.S)) {
-            nY1+=5;
-        }*/
+        if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
+            nTailX = nX3;
+            nTailY = nY3;
+            nX3 = nX2;
+            nY3 = nY2;
+            nX2 = nX1;
+            nY2 = nY1;
+            nX1 += -20;
+            nHeadX += -20;
+            //sprMtail.setFlip(true, false);
+            sprMtail.setRotation(90);
+            //false, true
+            /*arnX[2] = arnX[0] - 20;
+            arnY[2] = arnY[0];*/
+
+        } else if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
+            nTailX = nX3;
+            nTailY = nY3 - 10;
+            nX3 = nX2;
+            nY3 = nY2;
+            nX2 = nX1;
+            nY2 = nY1;
+            nX1 += 20;
+            nHeadX += 20;
+            /*arnX[0] = arnX[2] + 20;
+            arnY[0] = arnY[2];*/
+        } else if (Gdx.input.isKeyPressed(Input.Keys.UP)) {
+            nTailX = nX3;
+            nTailY = nY3;
+            nX3 = nX2;
+            nY3 = nY2;
+            nX2 = nX1;
+            nY2 = nY1;
+            nY1 += -20;
+            nHeadY += -20;
+            /*arnY[2] = arnY[0] - 20;
+            arnX[2] = arnX[0];*/
+        } else if (Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
+            nTailX = nX3;
+            nTailY = nY3 - 10;
+            nX3 = nX2;
+            nY3 = nY2;
+            nX2 = nX1;
+            nY2 = nY1;
+            nY1 += 20;
+            nHeadY += 20;
+            /*arnY[0] = arnY[2] + 20;
+            arnX[0] = arnX[2];*/
+        }
         return false;
     }
 
@@ -187,58 +230,8 @@ public class ScrTail implements Screen, InputProcessor {
             return false;
         }
     }
-
-    /*public int firstSquare() {
-        int nDif2, nDif3, nDif4;
-        if (nDir == 2 && nDir == 0) {
-            nDif2 = nX1 - nX2;
-            nDif3 = nX1 - nX3;
-            nDif4 = nX1 - nX4;
-            if (nDif4 < nDif3 && nDif4 < nDif2) {
-                return nX4;
-            } else if (nDif3 < nDif4 && nDif3 < nDif2) {
-                return nX3;
-            } else {
-                return nX2;
-            }
-        } else {
-            nDif2 = nY1 - nY2;
-            nDif3 = nY1 - nY3;
-            nDif4 = nY1 - nY4;
-            if (nDif4 < nDif3 && nDif4 < nDif2) {
-                return nY4;
-            } else if (nDif3 < nDif4 && nDif3 < nDif2) {
-                return nY3;
-            } else {
-                return nY2;
-            }
-        }
-    }
-
-    public int lastSquare() {
-        int nDif2, nDif3, nDif4;
-        if (nDir == 2 && nDir == 0) {
-            nDif2 = nX1 - nX2;
-            nDif3 = nX1 - nX3;
-            nDif4 = nX1 - nX4;
-            if (nDif4 > nDif3 && nDif4 > nDif2) {
-                return nX4;
-            } else if (nDif3 > nDif4 && nDif3 > nDif2) {
-                return nX3;
-            } else {
-                return nX2;
-            }
-        } else {
-            nDif2 = nY1 - nY2;
-            nDif3 = nY1 - nY3;
-            nDif4 = nY1 - nY4;
-            if (nDif4 > nDif3 && nDif4 > nDif2) {
-                return nY4;
-            } else if (nDif3 > nDif4 && nDif3 > nDif2) {
-                return nY3;
-            } else {
-                return nY2;
-            }
-        }
-    }*/
 }
+//for (int z = dots; z > 0; z--) {
+//    x[z] = x[(z - 1)];
+//    y[z] = y[(z - 1)];
+//}
