@@ -38,8 +38,6 @@ public class ScrGame4 implements Screen, InputProcessor {
     float fBarX1, fBarX2;
     LitJams litjam = new LitJams();
 
-    //640, 480
-
     public ScrGame4(GamMenu _gamMenu) {
         gamMenu = _gamMenu;
     }
@@ -241,11 +239,9 @@ public class ScrGame4 implements Screen, InputProcessor {
             if (aniMouse1.isHitS(p)) {
                 aniMouse1.increaseSpeed();
                 nTimer = 240;
-                // System.out.println(fSpeed);
                 n4Points += 1;
                 fSpeedBar1 += 0.1;
                 fSizeBar1 += 0.1;
-                // System.out.println("Points for first: " + n2Points);
                 aniMouse1.increaseSize();
                 // mouse catche pellet
                 pMaker1.removePellet(p);
@@ -253,11 +249,9 @@ public class ScrGame4 implements Screen, InputProcessor {
             if (aniMouse2.isHitS(p)) {
                 aniMouse2.increaseSpeed();
                 nTimer = 240;
-                // System.out.println(fSpeed2);
                 n4Points2 += 1;
                 fSpeedBar2 += 0.1;
                 fSizeBar2 += 0.1;
-                //System.out.println("Points for first: " + n2Points2);
                 aniMouse2.increaseSize();
                 // mouse catche pellet
                 pMaker1.removePellet(p);
@@ -276,7 +270,6 @@ public class ScrGame4 implements Screen, InputProcessor {
             if (aniMouse1.isHitS(p2)) {
                 nBadTimer = 60;
                 aniMouse1.decreaseSize();
-                //System.out.println(fSpeed);
                 fSizeBar1 -= 0.1;
                 // mouse catche pellet
                 pMaker2.removePellet(p2);
@@ -284,7 +277,6 @@ public class ScrGame4 implements Screen, InputProcessor {
             if (aniMouse2.isHitS(p2)) {
                 nBadTimer = 60;
                 aniMouse2.decreaseSize();
-                //System.out.println(fSpeed2);
                 fSizeBar2 -= 0.1;
                 // mouse catche pellet
                 pMaker2.removePellet(p2);

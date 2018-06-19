@@ -21,7 +21,6 @@ public class ScrGame3 implements Screen, InputProcessor {
     GamMenu gamMenu;
     OrthographicCamera oc;
     Button btnMenu, btnQuit;
-
     Texture txSheet1, txMap, txSheet2, txBar, txWall, txObstacle, txCornerHamster1, txCornerHamster2;
     Sprite sprMap, sprCornerHamster1, sprCornerHamster2;
     int nFrame, nPos1, nPos2;

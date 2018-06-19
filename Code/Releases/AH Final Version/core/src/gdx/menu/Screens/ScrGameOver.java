@@ -24,10 +24,9 @@ public class ScrGameOver implements Screen, InputProcessor {
     SpriteBatch batch = new SpriteBatch();
     Sprite sprBackground;
     BitmapFont font;
-    int nPoints, nPoints2, n2Points, n2Points2, n3Points, n3Points2, n4Points, n4Points2,n5Points,n5Points2;
-    int nWin, nWin2, nWin3,nWin4,nWin5;
+    int nPoints, nPoints2, n2Points, n2Points2, n3Points, n3Points2, n4Points, n4Points2, n5Points, n5Points2;
+    int nWin, nWin2, nWin3, nWin4, nWin5;
     int nInd;
-
 
 
     public ScrGameOver(GamMenu _gamMenu) {  //Referencing the main class.
@@ -43,12 +42,17 @@ public class ScrGameOver implements Screen, InputProcessor {
         font.setColor(Color.BLACK);
         font.getData().setScale(1.2f);
         font.getRegion().getTexture().setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+        nInd = ScrGame.nInd;
         btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2, Gdx.graphics.getHeight() - 50, "Menu.jpg");
-        btnGame = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Game.png");
-        btnLvl2 = new Button(100, 50, Gdx.graphics.getWidth() - 250, 0, "Level 2 button.png");
-        btnLvl3 = new Button(100, 50, Gdx.graphics.getWidth() - 400, 0, "Level 3 button.png");
-        btnLvl4 = new Button(100, 50, Gdx.graphics.getWidth() - 550, 0, "Level 4 button.png");
-        btnLvl5 = new Button(100, 50, Gdx.graphics.getWidth() - 550, Gdx.graphics.getHeight() - 50, "Level 5 button.png");
+        if (nInd == 1) {
+            btnGame = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Level 2 button.png");
+        } else if (nInd == 2) {
+            btnGame = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Level 3 button.png");
+        } else if (nInd == 3) {
+            btnGame = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Level 4 button.png");
+        } else if (nInd == 4 || nInd == 5){
+            btnGame = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Level 5 button.png");
+        }
 
         txBackground = new Texture("explosion.png");
         sprBackground = new Sprite(txBackground);
@@ -67,10 +71,9 @@ public class ScrGameOver implements Screen, InputProcessor {
         n5Points2 = ScrGame5.n5Points2;
         nWin = ScrGame.nWin;
         nWin2 = ScrGame2.nWin2;
-        nWin3 = ScrGame3. nWin3;
+        nWin3 = ScrGame3.nWin3;
         nWin4 = ScrGame4.nWin4;
         nWin5 = ScrGame5.nWin5;
-        nInd = ScrGame.nInd;
 
         Gdx.input.setInputProcessor(this);
     }
@@ -106,14 +109,7 @@ public class ScrGameOver implements Screen, InputProcessor {
         } else {
             font.draw(batch, "PLAYERS TIED!", 490, 70);
         }
-        //if (nPoints > 9 || nPoints2 > 9) {
-        btnLvl2.draw(batch);
-        btnLvl3.draw(batch);
-        btnLvl4.draw(batch);
-        btnLvl5.draw(batch);
-        //} else {
         btnGame.draw(batch);
-        //}
         batch.end();
     }
 
@@ -157,34 +153,26 @@ public class ScrGameOver implements Screen, InputProcessor {
     @Override
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
         if (button == Input.Buttons.LEFT) {
-            nInd = 0;
             if (isHit(screenX, screenY, btnGame)) {
-                System.out.println("Game");
-                //if (nPoints > 9 || nPoints2 > 9 || nPointsG2 > 9 || nPointsG > 9) {
-                //    gamMenu.updateState(9);
-                //} else {
-                gamMenu.updateState(5);
-            }
-            else if (isHit(screenX,screenY, btnLvl2)) {
-                System.out.println("Level 2");
-                gamMenu.updateState(9);
-            }
-
-            else if (isHit(screenX, screenY, btnMenu)) {
+                if (nInd == 1) {
+                    System.out.println("Game2");
+                    gamMenu.updateState(9);
+                } else if (nInd == 2) {
+                    System.out.println("Game3");
+                    gamMenu.updateState(11);
+                } else if (nInd == 3) {
+                    System.out.println("Game4");
+                    gamMenu.updateState(12);
+                } else if (nInd == 4 || nInd == 5){
+                    System.out.println("Game5");
+                    gamMenu.updateState(13);
+                }
+            } else if (isHit(screenX, screenY, btnMenu)) {
                 System.out.println("Menu");
                 gamMenu.updateState(0);
-            } else if (isHit(screenX, screenY, btnLvl3)) {
-                System.out.println("Game3");
-                gamMenu.updateState(11);
-            } else if (isHit(screenX, screenY, btnLvl4)) {
-                System.out.println("Game4");
-                gamMenu.updateState(12);
-            } else if (isHit(screenX,screenY, btnLvl5)) {
-                System.out.println("Game5");
-                gamMenu.updateState(13);
             }
+            nInd = 0;
         }
-
         return false;
     }
 
