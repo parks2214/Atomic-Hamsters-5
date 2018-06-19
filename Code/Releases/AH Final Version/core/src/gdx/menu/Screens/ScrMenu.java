@@ -18,7 +18,7 @@ import gdx.menu.images.LitJams;
 
 public class ScrMenu implements Screen, InputProcessor {
 
-    Button btnPlay, btnAni, btnSign, btnQuit, btnRules, btnGame;
+    Button btnQuit, btnRules, btnGame;
     GamMenu gamMenu;
     Texture txSheet, txBackground;
     OrthographicCamera oc;
@@ -41,9 +41,6 @@ public class ScrMenu implements Screen, InputProcessor {
         litjam.IngameSound(1);
         //Buttons
         batch = new SpriteBatch();
-        btnPlay = new Button(100, 50, 0, Gdx.graphics.getHeight() - 50, "Tail Button.png");
-        btnAni = new Button(100, 50, Gdx.graphics.getWidth() - 100, Gdx.graphics.getHeight() - 50, "Animation.jpg");
-        btnSign = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Food.png");
         btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Quit.jpg");
         btnRules = new Button(100, 50, Gdx.graphics.getWidth()/2 - 50, 0, "Rules.png");
         btnGame = new Button(100, 50, 0, 0, "Game.png");
@@ -89,9 +86,6 @@ public class ScrMenu implements Screen, InputProcessor {
         batch.begin();
         batch.setProjectionMatrix(oc.combined);
         sprBackground.draw(batch);
-        btnPlay.draw(batch);
-        btnAni.draw(batch);
-        btnSign.draw(batch);
         btnQuit.draw(batch);
         btnRules.draw(batch);
         btnGame.draw(batch);
@@ -145,19 +139,7 @@ public class ScrMenu implements Screen, InputProcessor {
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
         if (button == Input.Buttons.LEFT) {
             litjam.IngameSound(0);
-            if (isHit(screenX, screenY, btnPlay)) {
-                System.out.println("Hit Play");
-                gamMenu.updateState(1);
-                nDir=0;
-            } else if (isHit(screenX, screenY, btnAni)) {
-                System.out.println("Hit Animation");
-                gamMenu.updateState(3);
-                nDir=0;
-            } else if(isHit(screenX, screenY, btnSign)){
-                System.out.println("Hit Food");
-                gamMenu.updateState(2);
-                nDir=0;
-            } else if(isHit(screenX, screenY, btnQuit)){
+             if(isHit(screenX, screenY, btnQuit)){
                 System.out.println("Quit");
                 System.exit(0);
                 nDir=0;
