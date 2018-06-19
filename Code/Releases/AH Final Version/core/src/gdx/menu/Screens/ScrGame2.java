@@ -215,6 +215,10 @@ public class ScrGame2 implements Screen, InputProcessor {
             n2Points2 = 0;
             nDir1 = 0;
             nDir2 = 2;
+            fSpeedBar1 = 1;
+            fSpeedBar2 = 1;
+            fSizeBar1 = 1;
+            fSizeBar2 = 1;
         }
 
         batch.begin();
@@ -298,6 +302,10 @@ public class ScrGame2 implements Screen, InputProcessor {
                 nWin2 = 0;
                 nDir1 = 0;
                 nDir2 = 2;
+                fSpeedBar1 = 1;
+                fSpeedBar2 = 1;
+                fSizeBar1 = 1;
+                fSizeBar2 = 1;
             } else if (isHitB(screenX, screenY, btnQuit)) {
                 System.out.println("Quit");
                 System.exit(0);

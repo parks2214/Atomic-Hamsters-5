@@ -9,10 +9,8 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.Input;
-
 import gdx.menu.GamMenu;
 import gdx.menu.images.Button;
-import gdx.menu.images.Wall;
 
 public class ScrTail implements Screen, InputProcessor {
 
@@ -20,10 +18,12 @@ public class ScrTail implements Screen, InputProcessor {
     GamMenu gamMenu;
     OrthographicCamera oc;
     SpriteBatch batch;
-    Texture txMHead, txMTail,txBar;
-    Sprite sprMouse, sprAni, sprMhead,sprMtail;
-    int  nX2, nY2, nX = 50, nY = 50,nY3=60,nX3=60, nDx, nDy;
-
+    Texture txBar, txMHead, txMTail;
+    int nHam1X1 = 150, nHam1Y1 = 150, nHam1X2 = 150, nHam1Y2 = 130, nHam1X3 = 150, nHam1Y3 = 110;
+    int nHam1HeadX = 137, nHam1HeadY = 130, nHam1TailX = 150, nHam1TailY = 80;
+    int nHam2X1 = 150, nHam2Y1 = 150, nHam2X2 = 150, nHam2Y2 = 130, nHam2X3 = 150, nHam2Y3 = 110;
+    int nHam2HeadX = 137, nHam2HeadY = 130, nHam2TailX = 150, nHam2TailY = 80;
+    Sprite sprMhead1,sprMtail1, sprMhead2,sprMtail2;
 
     public ScrTail(GamMenu _gamMenu) {  //Referencing the main class.
         gamMenu = _gamMenu;
@@ -36,16 +36,24 @@ public class ScrTail implements Screen, InputProcessor {
         oc.update();
         batch = new SpriteBatch();
         txMTail = new Texture("Hamstertail.png");
-        txBar = new Texture ("The bar.png");
-        sprMtail = new Sprite (txMTail);
-        sprMtail.setSize (20,40);
-        sprMtail.setFlip(false,true);
-        sprMtail.setPosition(nX,nY);
+        sprMtail1 = new Sprite (txMTail);
+        sprMtail1.setSize (20,40);
+        sprMtail1.setFlip(false,true);
+        sprMtail1.setPosition(nHam1TailX, nHam1TailY);
+        sprMtail2 = new Sprite (txMTail);
+        sprMtail2.setSize (20,40);
+        sprMtail2.setFlip(false,true);
+        sprMtail2.setPosition(nHam2TailX, nHam2TailY);
         txMHead = new Texture("hamsterhead.png");
-        sprMhead = new Sprite(txMHead);
-        sprMhead.setSize(60, 80);
-        sprMhead.setFlip(false, true);
-        sprMhead.setPosition(nX, nY);
+        sprMhead1 = new Sprite(txMHead);
+        sprMhead1.setSize(45, 60);
+        sprMhead1.setFlip(false, true);
+        sprMhead1.setPosition(nHam1TailX, nHam1TailY);
+        sprMhead2 = new Sprite(txMHead);
+        sprMhead2.setSize(45, 60);
+        sprMhead2.setFlip(false, true);
+        sprMhead2.setPosition(nHam2TailX, nHam2TailY);
+        txBar = new Texture ("brownpiskel.png");
         btnMenu = new Button(100, 50, Gdx.graphics.getWidth() / 2 - 50, Gdx.graphics.getHeight() - 50, "Menu.jpg");
         btnQuit = new Button(100, 50, Gdx.graphics.getWidth() - 100, 0, "Quit.jpg");
         Gdx.input.setInputProcessor(this);
@@ -53,31 +61,112 @@ public class ScrTail implements Screen, InputProcessor {
 
     @Override
     public void render(float delta) {
-        Gdx.gl.glClearColor(0, 0, 0, 0);//Black background
+
+        Gdx.gl.glClearColor(1, 1, 1, 1);//Black background
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        nX = nX+nDx;
-        nY = nY+nDy;
-        if (nDy!=0) {
-            nY2= nY+nDy-nY3;
-        } else {
-            nY2= nY;
+
+        if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
+            nHam1TailX = nHam1X3;
+            nHam1TailY = nHam1Y3;
+            nHam1X3 = nHam1X2;
+            nHam1Y3 = nHam1Y2;
+            nHam1X2 = nHam1X1;
+            nHam1Y2 = nHam1Y1;
+            nHam1X1 += -20;
+            nHam1HeadX += -20;
+
+        } else if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
+            nHam1TailX = nHam1X3;
+            nHam1TailY = nHam1Y3 - 10;
+            nHam1X3 = nHam1X2;
+            nHam1Y3 = nHam1Y2;
+            nHam1X2 = nHam1X1;
+            nHam1Y2 = nHam1Y1;
+            nHam1X1 += 20;
+            nHam1HeadX += 20;
+        } else if (Gdx.input.isKeyPressed(Input.Keys.UP)) {
+            nHam1TailX = nHam1X3;
+            nHam1TailY = nHam1Y3;
+            nHam1X3 = nHam1X2;
+            nHam1Y3 = nHam1Y2;
+            nHam1X2 = nHam1X1;
+            nHam1Y2 = nHam1Y1;
+            nHam1Y1 += -20;
+            nHam1HeadY += -20;
+        } else if (Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
+            nHam1TailX = nHam1X3;
+            nHam1TailY = nHam1Y3 - 10;
+            nHam1X3 = nHam1X2;
+            nHam1Y3 = nHam1Y2;
+            nHam1X2 = nHam1X1;
+            nHam1Y2 = nHam1Y1;
+            nHam1Y1 += 20;
+            nHam1HeadY += 20;
         }
-        if (nDx!=0) {
-            nX2= nX+nDx-nX3;
-        } else {
-            nX2=nX;
+
+        if (Gdx.input.isKeyPressed(Input.Keys.A)) {
+            nHam2TailX = nHam2X3;
+            nHam2TailY = nHam2Y3;
+            nHam2X3 = nHam2X2;
+            nHam2Y3 = nHam2Y2;
+            nHam2X2 = nHam2X1;
+            nHam2Y2 = nHam2Y1;
+            nHam2X1 += -20;
+            nHam2HeadX += -20;
+
+        } else if (Gdx.input.isKeyPressed(Input.Keys.D)) {
+            nHam2TailX = nHam2X3;
+            nHam2TailY = nHam2Y3 - 10;
+            nHam2X3 = nHam2X2;
+            nHam2Y3 = nHam2Y2;
+            nHam2X2 = nHam2X1;
+            nHam2Y2 = nHam2Y1;
+            nHam2X1 += 20;
+            nHam2HeadX += 20;
+        } else if (Gdx.input.isKeyPressed(Input.Keys.W)) {
+            nHam2TailX = nHam2X3;
+            nHam2TailY = nHam2Y3;
+            nHam2X3 = nHam2X2;
+            nHam2Y3 = nHam2Y2;
+            nHam2X2 = nHam2X1;
+            nHam2Y2 = nHam2Y1;
+            nHam2Y1 += -20;
+            nHam2HeadY += -20;
+        } else if (Gdx.input.isKeyPressed(Input.Keys.S)) {
+            nHam2TailX = nHam2X3;
+            nHam2TailY = nHam2Y3 - 10;
+            nHam2X3 = nHam2X2;
+            nHam2Y3 = nHam2Y2;
+            nHam2X2 = nHam2X1;
+            nHam2Y2 = nHam2Y1;
+            nHam2Y1 += 20;
+            nHam2HeadY += 20;
         }
-        sprMhead.setX(nX);
-        sprMhead.setY(nY);
-        sprMtail.setX(nX2);
-        sprMtail.setY(nY2);
+
+        sprMhead1.setX(nHam1HeadX);
+        sprMhead1.setY(nHam1HeadY);
+        sprMtail1.setX(nHam1TailX);
+        sprMtail1.setY(nHam1TailY);
+
+        sprMhead2.setX(nHam2HeadX);
+        sprMhead2.setY(nHam2HeadY);
+        sprMtail2.setX(nHam2TailX);
+        sprMtail2.setY(nHam2TailY);
+
         batch.begin();
         batch.setProjectionMatrix(oc.combined);
         btnMenu.draw(batch);
         btnQuit.draw(batch);
-        batch.draw(txBar,nX2,nY2);
-        sprMhead.draw(batch);
-        sprMtail.draw(batch);
+        sprMtail1.draw(batch);
+        batch.draw(txBar, nHam1X1, nHam1Y1,20,20);
+        batch.draw(txBar, nHam1X2, nHam1Y2,20,20);
+        batch.draw(txBar, nHam1X3, nHam1Y3,20,20);
+        sprMhead1.draw(batch);
+        sprMtail2.draw(batch);
+        batch.draw(txBar, nHam2X1, nHam2Y1,20,20);
+        batch.draw(txBar, nHam2X2, nHam2Y2,20,20);
+        batch.draw(txBar, nHam2X3, nHam2Y3,20,20);
+        sprMhead2.draw(batch);
         batch.end();
 
     }
@@ -105,19 +194,6 @@ public class ScrTail implements Screen, InputProcessor {
 
     @Override
     public boolean keyDown(int keycode) {
-        if (keycode == Input.Keys.A) {
-            nDx=-1;
-            nDy=0;
-        } else if (keycode == Input.Keys.D) {
-            nDx=1;
-            nDy=0;
-        } else if (keycode == Input.Keys.W) {
-            nDy=-1;
-            nDx=0;
-        } else if (keycode == Input.Keys.S) {
-            nDy=1;
-            nDx=0;
-        }
         return false;
     }
 
@@ -172,9 +248,5 @@ public class ScrTail implements Screen, InputProcessor {
         } else {
             return false;
         }
-    }
-
-    public boolean isHitS(Sprite spr1, Sprite spr2) {
-        return spr1.getBoundingRectangle().overlaps(spr2.getBoundingRectangle());
     }
 }

@@ -236,6 +236,10 @@ public class ScrGame3 implements Screen, InputProcessor {
             n3Points2 = 0;
             nDir1 = 0;
             nDir2 = 2;
+            fSpeedBar1 = 1;
+            fSpeedBar2 = 1;
+            fSizeBar1 = 1;
+            fSizeBar2 = 1;
         }
 
         batch.begin();
@@ -322,6 +326,10 @@ public class ScrGame3 implements Screen, InputProcessor {
                 nDir2 = 2;
                 aniMouse1.reset();
                 aniMouse2.reset();
+                fSpeedBar1 = 1;
+                fSpeedBar2 = 1;
+                fSizeBar1 = 1;
+                fSizeBar2 = 1;
             } else if (isHitB(screenX, screenY, btnQuit)) {
                 System.out.println("Quit");
                 System.exit(0);

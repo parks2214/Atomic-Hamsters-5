@@ -7,7 +7,7 @@ import com.badlogic.gdx.math.Rectangle;
 
 public class AniSprite extends Sprite {
     public Sprite spTemp;
-    private int nFrame = 0, nPos = 0, nOrigX, nOrigY, nSizeX = 50, nSizeY = 50, nDir2;
+    private int nFrame = 0, nPos = 0, nOrigX, nOrigY, nSizeX = 50, nSizeY = 50;
     private Animation araniSprite[];
     private Texture txSheet;
     private float fDx, fDy, fSpeed = 0;
@@ -38,14 +38,13 @@ public class AniSprite extends Sprite {
 
     public void animation(int nFrame) {
         spTemp = (Sprite) araniSprite[nPos].getKeyFrame(nFrame, false);
-        spTemp.setPosition(getX(), getY());
+        spTemp.setPosition(getX(), getY());//We thought this was unnecessary, but the mice did not move once this was removed
         spTemp.setSize(getWidth(), getHeight());
         spTemp.setFlip(false, true);
     }
 
     public void move(int nDir) {
         //Direction instruction for mouse 1
-        nDir2 = nDir;
         if (nDir == 0) {
             fDy = 0;
             fDx = 1 + fSpeed;
@@ -69,8 +68,7 @@ public class AniSprite extends Sprite {
     }
 
     public boolean isHitS(Sprite spr) {
-        getThisRect();
-        return rMouseNew.overlaps(spr.getBoundingRectangle());
+        return getThisRect().overlaps(spr.getBoundingRectangle());
     }
 
     public void outOfBounds() {
